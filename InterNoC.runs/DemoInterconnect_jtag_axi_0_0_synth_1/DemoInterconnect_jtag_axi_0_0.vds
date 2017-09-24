@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Sep 24 18:24:09 2017
+# Process ID: 3196
+# Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_jtag_axi_0_0_synth_1
+# Command line: vivado.exe -log DemoInterconnect_jtag_axi_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_jtag_axi_0_0.tcl
+# Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_jtag_axi_0_0_synth_1/DemoInterconnect_jtag_axi_0_0.vds
+# Journal file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_jtag_axi_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DemoInterconnect_jtag_axi_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 292.039 ; gain = 82.359
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_jtag_axi_0_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/synth/DemoInterconnect_jtag_axi_0_0.vhd:103]
+INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_jtag_axi_0_0' (39#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/synth/DemoInterconnect_jtag_axi_0_0.vhd:103]
+Finished RTL Elaboration : Time (s): cpu = 00:03:23 ; elapsed = 00:04:03 . Memory (MB): peak = 529.938 ; gain = 320.258
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:24 ; elapsed = 00:04:04 . Memory (MB): peak = 529.938 ; gain = 320.258
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 643.797 ; gain = 0.059
+Finished Constraint Validation : Time (s): cpu = 00:03:42 ; elapsed = 00:04:24 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:42 ; elapsed = 00:04:24 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:42 ; elapsed = 00:04:24 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:46 ; elapsed = 00:04:28 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:52 ; elapsed = 00:04:35 . Memory (MB): peak = 643.797 ; gain = 434.117
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-------------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+-----------------------------+
+|Module Name              | RTL Object                                                                                                | Inference      | Size (Depth x Width) | Primitives                  | 
++-------------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+-----------------------------+
+|jtag_axi_v1_2_1_jtag_axi | jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 256 x 32             | RAM64X1D x 8  RAM64M x 40   | 
++-------------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+-----------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:08 ; elapsed = 00:04:51 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Timing Optimization : Time (s): cpu = 00:04:08 ; elapsed = 00:04:52 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Technology Mapping : Time (s): cpu = 00:04:10 ; elapsed = 00:04:54 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished IO Insertion : Time (s): cpu = 00:04:11 ; elapsed = 00:04:55 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:11 ; elapsed = 00:04:55 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:11 ; elapsed = 00:04:55 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:11 ; elapsed = 00:04:55 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:12 ; elapsed = 00:04:55 . Memory (MB): peak = 643.797 ; gain = 434.117
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:12 ; elapsed = 00:04:55 . Memory (MB): peak = 643.797 ; gain = 434.117
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    18|
+|2     |LUT2     |   110|
+|3     |LUT3     |   104|
+|4     |LUT4     |   126|
+|5     |LUT5     |   108|
+|6     |LUT6     |   122|
+|7     |RAM64M   |    40|
+|8     |RAM64X1D |     8|
+|9     |RAMB18E1 |     1|
+|10    |RAMB36E1 |     2|
+|11    |FDCE     |   320|
+|12    |FDPE     |    40|
+|13    |FDRE     |  1304|
+|14    |FDSE     |    12|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:12 ; elapsed = 00:04:55 . Memory (MB): peak = 643.797 ; gain = 434.117
+synth_design: Time (s): cpu = 00:04:12 ; elapsed = 00:04:52 . Memory (MB): peak = 643.797 ; gain = 433.160

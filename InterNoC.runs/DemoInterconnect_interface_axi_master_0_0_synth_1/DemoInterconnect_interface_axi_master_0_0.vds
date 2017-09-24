@@ -1,0 +1,466 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Sep 24 18:20:56 2017
+# Process ID: 6940
+# Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1
+# Command line: vivado.exe -log DemoInterconnect_interface_axi_master_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_interface_axi_master_0_0.tcl
+# Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.vds
+# Journal file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DemoInterconnect_interface_axi_master_0_0.tcl -notrace
+Command: synth_design -top DemoInterconnect_interface_axi_master_0_0 -part xc7a35tfgg484-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1528 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 285.742 ; gain = 75.453
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_interface_axi_master_0_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:88]
+	Parameter C_M00_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IF00_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_PACKET_WIDTH bound to: 40 - type: integer 
+	Parameter C_PACKET_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_PACKET_CTRL_WIDTH bound to: 3 - type: integer 
+	Parameter C_PACKET_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'interface_axi_master_v1_0' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0.vhd:5' bound to instance 'U0' of component 'interface_axi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'interface_axi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0.vhd:53]
+	Parameter C_IF00_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_PACKET_WIDTH bound to: 40 - type: integer 
+	Parameter C_PACKET_CTRL_WIDTH bound to: 3 - type: integer 
+	Parameter C_PACKET_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_PACKET_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_IF00_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_PACKET_WIDTH bound to: 40 - type: integer 
+	Parameter C_PACKET_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_PACKET_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'interface_axi_master_v1_0_M00_AXI' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0_M00_AXI.vhd:5' bound to instance 'interface_axi_master_v1_0_M00_AXI_inst' of component 'interface_axi_master_v1_0_M00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'interface_axi_master_v1_0_M00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0_M00_AXI.vhd:94]
+	Parameter C_IF00_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_PACKET_WIDTH bound to: 40 - type: integer 
+	Parameter C_PACKET_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_PACKET_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-4471] merging register 'init_rxn_ff2_reg' into 'init_txn_ff2_reg' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0_M00_AXI.vhd:205]
+WARNING: [Synth 8-3848] Net ERROR in module/entity interface_axi_master_v1_0_M00_AXI does not have driver. [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0_M00_AXI.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'interface_axi_master_v1_0_M00_AXI' (1#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0_M00_AXI.vhd:94]
+	Parameter DATA_WIDTH bound to: 40 - type: integer 
+	Parameter TX_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'serial2parallel' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/src/serial2parallel.vhd:16' bound to instance 'collecter' of component 'serial2parallel' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0.vhd:199]
+INFO: [Synth 8-638] synthesizing module 'serial2parallel' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/src/serial2parallel.vhd:30]
+	Parameter DATA_WIDTH bound to: 40 - type: integer 
+	Parameter TX_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/src/serial2parallel.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'serial2parallel' (2#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/src/serial2parallel.vhd:30]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter TX_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'parallel2serial' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/src/parallel2serial.vhd:13' bound to instance 'distributer' of component 'parallel2serial' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0.vhd:212]
+INFO: [Synth 8-638] synthesizing module 'parallel2serial' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/src/parallel2serial.vhd:30]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter TX_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'parallel2serial' (3#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/src/parallel2serial.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'interface_axi_master_v1_0' (4#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_interface_axi_master_0_0' (5#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:88]
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port ERROR
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port PACKET_TX[39]
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port PACKET_TX[38]
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port PACKET_TX[37]
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port M_AXI_BRESP[1]
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port M_AXI_BRESP[0]
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port M_AXI_RRESP[1]
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port M_AXI_RRESP[0]
+WARNING: [Synth 8-3331] design interface_axi_master_v1_0 has unconnected port if00_send_busy
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 324.184 ; gain = 113.895
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 324.184 ; gain = 113.895
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.495 . Memory (MB): peak = 606.012 ; gain = 0.016
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "rx_done" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'ifcomm_state_reg' in module 'interface_axi_master_v1_0'
+INFO: [Synth 8-5544] ROM "ifcomm_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "init_packet_tx" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ifcomm_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+              if_collect |                              001 |                              001
+          init_axi_trans |                              010 |                              100
+             axi_collect |                              011 |                              010
+            init_if_send |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ifcomm_state_reg' using encoding 'sequential' in module 'interface_axi_master_v1_0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 11    
+	   5 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module interface_axi_master_v1_0_M00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   6 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 4     
+Module serial2parallel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module parallel2serial 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module interface_axi_master_v1_0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[31] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[30] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[29] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[28] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[27] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[26] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[25] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[24] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[23] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[22] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[21] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[20] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[19] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[18] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[17] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[16] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[15] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[14] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[13] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[12] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[11] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[10] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[9] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[8] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[7] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[1] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[0] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awprot[2] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awprot[1] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awprot[0] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_wstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_wstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_wstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_wstrb[0] driven by constant 1
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[31] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[30] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[29] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[28] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[27] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[26] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[25] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[24] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[23] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[22] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[21] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[20] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[19] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[18] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[17] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[16] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[15] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[14] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[13] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[12] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[11] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[10] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[9] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[8] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[7] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[1] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_araddr[0] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_arprot[2] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_arprot[1] driven by constant 0
+INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_arprot[0] driven by constant 1
+WARNING: [Synth 8-3331] design DemoInterconnect_interface_axi_master_0_0 has unconnected port if00_send_busy
+WARNING: [Synth 8-3331] design DemoInterconnect_interface_axi_master_0_0 has unconnected port m00_axi_bresp[1]
+WARNING: [Synth 8-3331] design DemoInterconnect_interface_axi_master_0_0 has unconnected port m00_axi_bresp[0]
+WARNING: [Synth 8-3331] design DemoInterconnect_interface_axi_master_0_0 has unconnected port m00_axi_rresp[1]
+WARNING: [Synth 8-3331] design DemoInterconnect_interface_axi_master_0_0 has unconnected port m00_axi_rresp[0]
+INFO: [Synth 8-3886] merging instance 'shift_o_reg__0i_15' (FD) to 'shift_o_reg__0i_8'
+INFO: [Synth 8-3886] merging instance 'shift_o_reg__0i_14' (FD) to 'shift_o_reg__0i_8'
+INFO: [Synth 8-3886] merging instance 'shift_o_reg__0i_13' (FD) to 'shift_o_reg__0i_8'
+INFO: [Synth 8-3886] merging instance 'shift_o_reg__0i_12' (FD) to 'shift_o_reg__0i_8'
+INFO: [Synth 8-3886] merging instance 'shift_o_reg__0i_11' (FD) to 'shift_o_reg__0i_8'
+INFO: [Synth 8-3886] merging instance 'shift_o_reg__0i_10' (FD) to 'shift_o_reg__0i_8'
+INFO: [Synth 8-3886] merging instance 'shift_o_reg__0i_9' (FD) to 'shift_o_reg__0i_8'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop U0/distributer/ss_o_reg is being inverted and renamed to U0/distributer/ss_o_reg_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_0' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_1' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_2' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_3' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_4' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_5' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_6' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_7' to logic
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |    12|
+|3     |LUT3 |    12|
+|4     |LUT4 |     5|
+|5     |LUT5 |     7|
+|6     |LUT6 |    13|
+|7     |FDRE |   141|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+----------------------------------+------+
+|      |Instance                                   |Module                            |Cells |
++------+-------------------------------------------+----------------------------------+------+
+|1     |top                                        |                                  |   191|
+|2     |  U0                                       |interface_axi_master_v1_0         |   190|
+|3     |    collecter                              |serial2parallel                   |    57|
+|4     |    distributer                            |parallel2serial                   |    69|
+|5     |    interface_axi_master_v1_0_M00_AXI_inst |interface_axi_master_v1_0_M00_AXI |    59|
++------+-------------------------------------------+----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 606.012 ; gain = 395.723
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 8 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 606.012 ; gain = 113.895
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:58 . Memory (MB): peak = 606.012 ; gain = 395.723
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+104 Infos, 15 Warnings, 8 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:54 . Memory (MB): peak = 606.012 ; gain = 395.723
+INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 606.012 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 24 18:21:59 2017...

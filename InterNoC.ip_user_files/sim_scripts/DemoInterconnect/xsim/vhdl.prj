@@ -1,0 +1,18 @@
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ipshared/8aec/src/serial2parallel.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ipshared/8aec/src/parallel2serial.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0_M00_AXI.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ipshared/8aec/hdl/interface_axi_master_v1_0.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/sim/DemoInterconnect_interface_axi_master_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_1/sim/DemoInterconnect_interface_axi_master_0_1.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_0_0/sim/DemoInterconnect_axi_quad_spi_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_0_1/sim/DemoInterconnect_axi_quad_spi_0_1.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_1_0/sim/DemoInterconnect_axi_quad_spi_1_0.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_2_0/sim/DemoInterconnect_axi_quad_spi_2_0.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ipshared/fa19/uart_rx.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ipshared/fa19/uart_tx.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ipshared/fa19/uart_top.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/sim/DemoInterconnect_uart_transceiver_0_0.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_1/sim/DemoInterconnect_uart_transceiver_0_1.vhd" 
+vhdl xil_defaultlib "../../../bd/DemoInterconnect/hdl/DemoInterconnect.vhd" 
+
+nosort
