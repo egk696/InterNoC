@@ -30,8 +30,9 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity DemoInterconnect_TestBench is
     Generic(
+        CLKFREQ : integer := 100000000;
         SYSCLK_PERIOD : time := 10.000 ns; -- 100MHZ
-        SS_PERIOD : integer := 23;
+        BAUD_RATE : integer := 115200;
         TRACE_DLY : time := 3 ns
     );
     Port (
@@ -61,6 +62,7 @@ end DemoInterconnect_TestBench;
 
 architecture Behavioral of DemoInterconnect_TestBench is
 
+--comopennt declaration
 component DemoInterconnect_wrapper is
   port (
     UART_RX_0 : in STD_LOGIC;
@@ -91,6 +93,41 @@ component DemoInterconnect_wrapper is
   );
 end component;
 
+component parallel2serial is
+  generic (
+    DATA_WIDTH : integer := 8;
+    TX_WIDTH : integer := 1
+  );
+  port (
+    clk_i : in std_logic;
+    en_i : in std_logic;
+    send_i : in std_logic;
+    data_i : in std_logic_vector(DATA_WIDTH-1 downto 0);
+    busy_o : out std_logic;
+    done_o : out std_logic;
+    shift_o : out std_logic_vector(TX_WIDTH-1 downto 0);
+    ss_o : out std_logic
+  ) ;
+end component;
+
+entity UART_TX is
+  generic (
+    g_CLKS_PER_BIT : integer := 115     -- Needs to be set correctly
+    );
+  port (
+    i_Clk       : in  std_logic;
+    i_TX_DV     : in  std_logic;
+    i_TX_Byte   : in  std_logic_vector(7 downto 0);
+    o_TX_Active : out std_logic;
+    o_TX_Serial : out std_logic;
+    o_TX_Done   : out std_logic
+    );
+end UART_TX;
+
+--constant declaration
+constant c_CLKS_PER_BIT : integer := CLKFREQ/BAUD_RATE;     -- Needs to be set correctly
+
+--signal declaration
 signal SYSCLK : std_logic := '0';
 signal NSYSRESET : std_logic := '0';
 signal UART_RX_0_wire, UART_RX_1_wire : std_logic := '0';
@@ -159,6 +196,10 @@ begin
         end if;
     end if;
 end process;
+
+--component instances
+
+
 
 DemoInterconnect_Inst: DemoInterconnect_wrapper
 port map(

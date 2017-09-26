@@ -96,6 +96,10 @@
         <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_uart_transceiver_0_1/DemoInterconnect_uart_transceiver_0_1.xci">
           <Proxy FileSetName="DemoInterconnect_uart_transceiver_0_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="DemoInterconnect_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="hw_handoff/DemoInterconnect_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="hdl/DemoInterconnect.hwdef"/>
+        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="hw_handoff/DemoInterconnect.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd">
         <FileInfo>
@@ -130,6 +134,24 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sim_1/new/DemoInterconnect_TestBench.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip_repo/uart_transceiver_v1_0/uart_top.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip_repo/uart_transceiver_v1_0/uart_rx.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip_repo/uart_transceiver_v1_0/uart_tx.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
