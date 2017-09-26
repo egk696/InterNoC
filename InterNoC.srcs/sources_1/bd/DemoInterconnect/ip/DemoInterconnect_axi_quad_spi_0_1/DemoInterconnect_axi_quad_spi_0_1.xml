@@ -1422,7 +1422,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SPI_CLK.FREQ_HZ">20000000</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SPI_CLK.FREQ_HZ">50000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
@@ -1919,7 +1919,7 @@ When set to:   0 - Default.   1 - When the core is configured in dual/quad SPI m
             <spirit:description>SPI Transmit Data.
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">8</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">32</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -1953,7 +1953,7 @@ When set to:   0 - Default.   1 - When the core is configured in dual/quad SPI m
             <spirit:description>SPI Receive Data
 </spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">8</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_TRANSFER_BITS&apos;)))">32</spirit:bitWidth>
             <spirit:volatile>true</spirit:volatile>
             <spirit:access>read-only</spirit:access>
             <spirit:writeValueConstraint>
@@ -2826,7 +2826,7 @@ This bit has no significance in dual or quad mode.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>20f6fba1</spirit:value>
+            <spirit:value>25cf8664</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -2834,7 +2834,7 @@ This bit has no significance in dual or quad mode.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5ca6d647</spirit:value>
+            <spirit:value>394591fc</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -2853,11 +2853,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Sep 24 15:20:35 UTC 2017</spirit:value>
+            <spirit:value>Tue Sep 26 11:11:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>20f6fba1</spirit:value>
+            <spirit:value>25cf8664</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -2865,7 +2865,7 @@ This bit has no significance in dual or quad mode.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5ca6d647</spirit:value>
+            <spirit:value>394591fc</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -2911,7 +2911,7 @@ This bit has no significance in dual or quad mode.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>20f6fba1</spirit:value>
+            <spirit:value>25cf8664</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -2919,7 +2919,7 @@ This bit has no significance in dual or quad mode.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>3eac8431</spirit:value>
+            <spirit:value>a65eaa1d</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -2938,11 +2938,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Sep 24 15:20:35 UTC 2017</spirit:value>
+            <spirit:value>Tue Sep 26 11:11:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>20f6fba1</spirit:value>
+            <spirit:value>25cf8664</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -2950,7 +2950,7 @@ This bit has no significance in dual or quad mode.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>3eac8431</spirit:value>
+            <spirit:value>a65eaa1d</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -2968,11 +2968,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Sep 24 15:20:35 UTC 2017</spirit:value>
+            <spirit:value>Tue Sep 26 11:11:44 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>20f6fba1</spirit:value>
+            <spirit:value>25cf8664</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -2980,7 +2980,7 @@ This bit has no significance in dual or quad mode.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5ca6d647</spirit:value>
+            <spirit:value>394591fc</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -2998,11 +2998,11 @@ This bit has no significance in dual or quad mode.
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Sep 24 15:24:06 UTC 2017</spirit:value>
+            <spirit:value>Tue Sep 26 11:14:04 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRC</spirit:name>
-            <spirit:value>20f6fba1</spirit:value>
+            <spirit:value>25cf8664</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>boundaryCRCversion</spirit:name>
@@ -3010,7 +3010,7 @@ This bit has no significance in dual or quad mode.
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>5ca6d647</spirit:value>
+            <spirit:value>394591fc</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -4907,7 +4907,7 @@ This bit has no significance in dual or quad mode.
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.spisel" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.Master_mode&apos;)) = 0)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.spisel" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.Master_mode&apos;)) = 0)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -5439,7 +5439,7 @@ This bit has no significance in dual or quad mode.
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_SCK_RATIO</spirit:name>
         <spirit:displayName>SCK Ratio</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_SCK_RATIO">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_SCK_RATIO">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_DUAL_QUAD_MODE</spirit:name>
@@ -5454,7 +5454,7 @@ This bit has no significance in dual or quad mode.
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_TRANSFER_BITS</spirit:name>
         <spirit:displayName>Num Transfer Bits</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_TRANSFER_BITS">8</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_TRANSFER_BITS">32</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_SPI_MODE</spirit:name>
@@ -6146,7 +6146,7 @@ This bit has no significance in dual or quad mode.
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_USE_STARTUP">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_USE_STARTUP">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -6181,7 +6181,7 @@ This bit has no significance in dual or quad mode.
       <spirit:name>C_NUM_TRANSFER_BITS</spirit:name>
       <spirit:displayName>Num Transfer Bits</spirit:displayName>
       <spirit:description>This parameter should be set while choosing the no. of bits in single SPI transaction. Please refer PG for more reference. Allowed values are 8 or 16 or 32. The Standard SPI mode supports all the three values while Dual and Quad SPI mode supports only the 8-bit transfer mode.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_NUM_TRANSFER_BITS" spirit:choiceRef="choice_list_8112d406" spirit:order="60">8</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_NUM_TRANSFER_BITS" spirit:choiceRef="choice_list_8112d406" spirit:order="60">32</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -6211,7 +6211,7 @@ This bit has no significance in dual or quad mode.
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_NUM_SS_BITS">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_NUM_SS_BITS">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -6220,7 +6220,7 @@ This bit has no significance in dual or quad mode.
       <spirit:name>C_SCK_RATIO</spirit:name>
       <spirit:displayName>SCK Ratio</spirit:displayName>
       <spirit:description>This parameter should be set while choosing the division ratio for SPI clock. Please refer PG for more reference. Standard SPI mode has variable values for division ratio for SPI clock, while Dual and Quad mode allows only 2. XIP mode also allows division ratio of 2.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_SCK_RATIO" spirit:choiceRef="choice_list_552a89ba" spirit:order="90">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_SCK_RATIO" spirit:choiceRef="choice_list_552a89ba" spirit:order="90">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -6355,7 +6355,7 @@ This bit has no significance in dual or quad mode.
       <spirit:name>Master_mode</spirit:name>
       <spirit:displayName>Enable Master Mode</spirit:displayName>
       <spirit:description>This parameter should be set while choosing the core in Standard SPI mode. Please refer PG for more reference. Standard SPI mode can operate in Master SPI or Slave SPI mode, while Dual and Quad mode operates only in Master SPI mode.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Master_mode" spirit:choiceRef="choice_pairs_4873554b" spirit:order="200">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Master_mode" spirit:choiceRef="choice_pairs_4873554b" spirit:order="200">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -6518,6 +6518,7 @@ This bit has no significance in dual or quad mode.
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SPI_CLK.PHASE" xilinx:valueSource="ip_propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Async_Clk" xilinx:valueSource="propagated"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_NUM_SS_BITS" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_NUM_TRANSFER_BITS" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_SCK_RATIO" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_TYPE_OF_AXI4_INTERFACE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_USE_STARTUP" xilinx:valueSource="user"/>

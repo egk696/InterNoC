@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: ekyr.kth.se:user:interface_axi_master:1.0
--- IP Revision: 3
+-- IP Revision: 7
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -90,15 +90,13 @@ ARCHITECTURE DemoInterconnect_interface_axi_master_0_1_arch OF DemoInterconnect_
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF DemoInterconnect_interface_axi_master_0_1_arch: ARCHITECTURE IS "yes";
   COMPONENT interface_axi_master_v1_0 IS
     GENERIC (
-      C_M00_AXI_ADDR_WIDTH : INTEGER; -- Width of M_AXI address bus. 
-    -- The master generates the read and write addresses of width specified as C_M_AXI_ADDR_WIDTH.
-      C_M00_AXI_DATA_WIDTH : INTEGER; -- Width of M_AXI data bus. 
-    -- The master issues write data and accept read data where the width of the data bus is C_M_AXI_DATA_WIDTH
       C_IF00_DATA_WIDTH : INTEGER;
       C_PACKET_WIDTH : INTEGER;
       C_PACKET_DATA_WIDTH : INTEGER;
       C_PACKET_CTRL_WIDTH : INTEGER;
-      C_PACKET_ADDR_WIDTH : INTEGER
+      C_PACKET_ADDR_WIDTH : INTEGER;
+      C_AXI_PACKET_ADDR_OFFSET : INTEGER;
+      C_M00_AXI_ADDR_WIDTH : INTEGER
     );
     PORT (
       if00_data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -159,13 +157,13 @@ ARCHITECTURE DemoInterconnect_interface_axi_master_0_1_arch OF DemoInterconnect_
 BEGIN
   U0 : interface_axi_master_v1_0
     GENERIC MAP (
-      C_M00_AXI_ADDR_WIDTH => 32,
-      C_M00_AXI_DATA_WIDTH => 32,
       C_IF00_DATA_WIDTH => 8,
       C_PACKET_WIDTH => 40,
       C_PACKET_DATA_WIDTH => 32,
       C_PACKET_CTRL_WIDTH => 3,
-      C_PACKET_ADDR_WIDTH => 5
+      C_PACKET_ADDR_WIDTH => 5,
+      C_AXI_PACKET_ADDR_OFFSET => 16,
+      C_M00_AXI_ADDR_WIDTH => 32
     )
     PORT MAP (
       if00_data_in => if00_data_in,

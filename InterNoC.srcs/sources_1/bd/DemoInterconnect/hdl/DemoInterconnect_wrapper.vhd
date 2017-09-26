@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
---Date        : Sun Sep 24 18:41:20 2017
+--Date        : Tue Sep 26 14:11:41 2017
 --Host        : egk-pc running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect_wrapper.bd
 --Design      : DemoInterconnect_wrapper
@@ -20,12 +20,10 @@ entity DemoInterconnect_wrapper is
     spi_rtl_0_io0_io : inout STD_LOGIC;
     spi_rtl_0_io1_io : inout STD_LOGIC;
     spi_rtl_0_sck_io : inout STD_LOGIC;
-    spi_rtl_0_spisel : in STD_LOGIC;
     spi_rtl_0_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_1_io0_io : inout STD_LOGIC;
     spi_rtl_1_io1_io : inout STD_LOGIC;
     spi_rtl_1_sck_io : inout STD_LOGIC;
-    spi_rtl_1_spisel : in STD_LOGIC;
     spi_rtl_1_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_2_io0_io : inout STD_LOGIC;
     spi_rtl_2_io1_io : inout STD_LOGIC;
@@ -34,7 +32,6 @@ entity DemoInterconnect_wrapper is
     spi_rtl_3_io0_io : inout STD_LOGIC;
     spi_rtl_3_io1_io : inout STD_LOGIC;
     spi_rtl_3_sck_io : inout STD_LOGIC;
-    spi_rtl_3_spisel : in STD_LOGIC;
     spi_rtl_3_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     sys_clk : in STD_LOGIC;
     sys_resetn : in STD_LOGIC
@@ -53,7 +50,6 @@ architecture STRUCTURE of DemoInterconnect_wrapper is
     spi_rtl_0_sck_i : in STD_LOGIC;
     spi_rtl_0_sck_o : out STD_LOGIC;
     spi_rtl_0_sck_t : out STD_LOGIC;
-    spi_rtl_0_spisel : in STD_LOGIC;
     spi_rtl_0_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_t : out STD_LOGIC;
@@ -66,7 +62,6 @@ architecture STRUCTURE of DemoInterconnect_wrapper is
     spi_rtl_1_sck_i : in STD_LOGIC;
     spi_rtl_1_sck_o : out STD_LOGIC;
     spi_rtl_1_sck_t : out STD_LOGIC;
-    spi_rtl_1_spisel : in STD_LOGIC;
     spi_rtl_1_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_1_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_1_ss_t : out STD_LOGIC;
@@ -91,7 +86,6 @@ architecture STRUCTURE of DemoInterconnect_wrapper is
     spi_rtl_3_sck_i : in STD_LOGIC;
     spi_rtl_3_sck_o : out STD_LOGIC;
     spi_rtl_3_sck_t : out STD_LOGIC;
-    spi_rtl_3_spisel : in STD_LOGIC;
     spi_rtl_3_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_3_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_3_ss_t : out STD_LOGIC;
@@ -99,8 +93,8 @@ architecture STRUCTURE of DemoInterconnect_wrapper is
     sys_resetn : in STD_LOGIC;
     UART_RX_0 : in STD_LOGIC;
     UART_TX_0 : out STD_LOGIC;
-    UART_TX_1 : out STD_LOGIC;
-    UART_RX_1 : in STD_LOGIC
+    UART_RX_1 : in STD_LOGIC;
+    UART_TX_1 : out STD_LOGIC
   );
   end component DemoInterconnect;
   component IOBUF is
@@ -179,7 +173,6 @@ DemoInterconnect_i: component DemoInterconnect
       spi_rtl_0_sck_i => spi_rtl_0_sck_i,
       spi_rtl_0_sck_o => spi_rtl_0_sck_o,
       spi_rtl_0_sck_t => spi_rtl_0_sck_t,
-      spi_rtl_0_spisel => spi_rtl_0_spisel,
       spi_rtl_0_ss_i(0) => spi_rtl_0_ss_i_0(0),
       spi_rtl_0_ss_o(0) => spi_rtl_0_ss_o_0(0),
       spi_rtl_0_ss_t => spi_rtl_0_ss_t,
@@ -192,7 +185,6 @@ DemoInterconnect_i: component DemoInterconnect
       spi_rtl_1_sck_i => spi_rtl_1_sck_i,
       spi_rtl_1_sck_o => spi_rtl_1_sck_o,
       spi_rtl_1_sck_t => spi_rtl_1_sck_t,
-      spi_rtl_1_spisel => spi_rtl_1_spisel,
       spi_rtl_1_ss_i(0) => spi_rtl_1_ss_i_0(0),
       spi_rtl_1_ss_o(0) => spi_rtl_1_ss_o_0(0),
       spi_rtl_1_ss_t => spi_rtl_1_ss_t,
@@ -217,7 +209,6 @@ DemoInterconnect_i: component DemoInterconnect
       spi_rtl_3_sck_i => spi_rtl_3_sck_i,
       spi_rtl_3_sck_o => spi_rtl_3_sck_o,
       spi_rtl_3_sck_t => spi_rtl_3_sck_t,
-      spi_rtl_3_spisel => spi_rtl_3_spisel,
       spi_rtl_3_ss_i(0) => spi_rtl_3_ss_i_0(0),
       spi_rtl_3_ss_o(0) => spi_rtl_3_ss_o_0(0),
       spi_rtl_3_ss_t => spi_rtl_3_ss_t,

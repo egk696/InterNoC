@@ -10,9 +10,11 @@ entity interface_axi_master_v1_0 is
         C_PACKET_CTRL_WIDTH   : integer := 3;
         C_PACKET_ADDR_WIDTH   : integer := 5;
         C_PACKET_DATA_WIDTH   : integer := 32;
-		
-		C_M00_AXI_DATA_WIDTH  : integer := 32;
-		C_M00_AXI_ADDR_WIDTH  : integer := 32
+        
+        C_AXI_PACKET_ADDR_OFFSET : integer := 16;
+        
+        C_M00_AXI_ADDR_WIDTH    : integer	:= 32
+        
 	);
 	port (
 		-- Users to add ports here
@@ -32,8 +34,8 @@ entity interface_axi_master_v1_0 is
 		m00_axi_awprot	: out std_logic_vector(2 downto 0);
 		m00_axi_awvalid	: out std_logic;
 		m00_axi_awready	: in std_logic;
-		m00_axi_wdata	: out std_logic_vector(C_M00_AXI_DATA_WIDTH-1 downto 0);
-		m00_axi_wstrb	: out std_logic_vector(C_M00_AXI_DATA_WIDTH/8-1 downto 0);
+		m00_axi_wdata	: out std_logic_vector(C_PACKET_DATA_WIDTH-1 downto 0);
+		m00_axi_wstrb	: out std_logic_vector(C_PACKET_DATA_WIDTH/8-1 downto 0);
 		m00_axi_wvalid	: out std_logic;
 		m00_axi_wready	: in std_logic;
 		m00_axi_bresp	: in std_logic_vector(1 downto 0);
@@ -43,7 +45,7 @@ entity interface_axi_master_v1_0 is
 		m00_axi_arprot	: out std_logic_vector(2 downto 0);
 		m00_axi_arvalid	: out std_logic;
 		m00_axi_arready	: in std_logic;
-		m00_axi_rdata	: in std_logic_vector(C_M00_AXI_DATA_WIDTH-1 downto 0);
+		m00_axi_rdata	: in std_logic_vector(C_PACKET_DATA_WIDTH-1 downto 0);
 		m00_axi_rresp	: in std_logic_vector(1 downto 0);
 		m00_axi_rvalid	: in std_logic;
 		m00_axi_rready	: out std_logic
@@ -59,6 +61,7 @@ architecture arch_imp of interface_axi_master_v1_0 is
         C_PACKET_WIDTH      : integer;
         C_PACKET_ADDR_WIDTH : integer;
         C_PACKET_DATA_WIDTH : integer;
+        C_AXI_PACKET_ADDR_OFFSET : integer;
         C_M_AXI_DATA_WIDTH  : integer;
         C_M_AXI_ADDR_WIDTH  : integer
 		);
@@ -136,7 +139,7 @@ architecture arch_imp of interface_axi_master_v1_0 is
 	signal init_packet_rx : std_logic := '0';
 	
 	signal axi_data_received : std_logic := '0';
-	signal axi_data : std_logic_vector(C_M00_AXI_DATA_WIDTH-1 downto 0) := (others=>'0');
+	signal axi_data : std_logic_vector(C_PACKET_DATA_WIDTH-1 downto 0) := (others=>'0');
 	
 	type state is (IDLE,-- This state waits until interface has received something
 		 				   -- then transitions to COLLECT
@@ -162,8 +165,9 @@ interface_axi_master_v1_0_M00_AXI_inst : interface_axi_master_v1_0_M00_AXI
        C_PACKET_WIDTH       => C_PACKET_WIDTH,
        C_PACKET_ADDR_WIDTH  => C_PACKET_ADDR_WIDTH,
        C_PACKET_DATA_WIDTH  => C_PACKET_DATA_WIDTH,
+       C_AXI_PACKET_ADDR_OFFSET => C_AXI_PACKET_ADDR_OFFSET,
 	   C_M_AXI_ADDR_WIDTH	=> C_M00_AXI_ADDR_WIDTH,
-	   C_M_AXI_DATA_WIDTH	=> C_M00_AXI_DATA_WIDTH
+	   C_M_AXI_DATA_WIDTH	=> C_PACKET_DATA_WIDTH
 	)
 	port map (
 		PACKET_TX => interface_packet,
@@ -196,7 +200,7 @@ interface_axi_master_v1_0_M00_AXI_inst : interface_axi_master_v1_0_M00_AXI
 	);
 
 	-- Add user logic here
-collecter: serial2parallel
+interface2packet_inst: serial2parallel
 generic map(
     DATA_WIDTH => C_PACKET_WIDTH,
     TX_WIDTH => C_IF00_DATA_WIDTH
@@ -209,7 +213,7 @@ port map(
     data_o => interface_packet
 );
 
-distributer: parallel2serial
+packet2interface_inst: parallel2serial
 generic map(
     DATA_WIDTH => C_PACKET_DATA_WIDTH,
     TX_WIDTH => C_IF00_DATA_WIDTH

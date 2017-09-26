@@ -23,39 +23,39 @@ preplace inst uart_transceiver_1 -pg 1 -lvl 2 -y 640 -defaultsOSRD
 preplace inst axi_interconnect_0 -pg 1 -lvl 4 -y 430 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 490 -defaultsOSRD
 preplace netloc axi_quad_spi_0_SPI_0 1 5 1 NJ
-preplace netloc uart_transceiver_0_o_RX_Byte 1 2 1 430
+preplace netloc uart_transceiver_0_o_RX_Byte 1 2 1 360
 preplace netloc UART_RX_0_1 1 0 2 NJ 100 NJ
-preplace netloc interface_axi_master_0_if00_load_out 1 1 3 170 210 NJ 210 790
-preplace netloc clk_wiz_0_locked 1 1 4 NJ 500 450 220 830 170 1120
-preplace netloc interface_axi_master_1_if00_load_out 1 1 3 180 550 NJ 550 790
+preplace netloc interface_axi_master_0_if00_load_out 1 1 3 100 220 NJ 220 770
+preplace netloc clk_wiz_0_locked 1 1 4 NJ 520 420 540 820 160 1110
+preplace netloc interface_axi_master_1_if00_load_out 1 1 3 100 530 NJ 530 770
 preplace netloc axi_interconnect_0_M02_AXI 1 4 1 1100
-preplace netloc uart_transceiver_1_o_TX_Active 1 2 1 500
-preplace netloc uart_transceiver_0_o_TX_Serial 1 2 4 460J 190 810J 130 NJ 130 NJ
-preplace netloc interface_axi_master_0_if00_data_out 1 1 3 180 200 NJ 200 800
+preplace netloc uart_transceiver_1_o_TX_Active 1 2 1 440
+preplace netloc uart_transceiver_0_o_TX_Serial 1 2 4 380J 190 790J 130 NJ 130 NJ
+preplace netloc interface_axi_master_0_if00_data_out 1 1 3 110 210 NJ 210 780
 preplace netloc sys_clk_1 1 0 1 NJ
 preplace netloc jtag_axi_0_M_AXI 1 3 1 N
 preplace netloc UART_RX_1_1 1 0 2 NJ 630 NJ
 preplace netloc axi_quad_spi_1_SPI_0 1 5 1 NJ
-preplace netloc uart_transceiver_0_o_TX_Done 1 2 1 440
-preplace netloc uart_transceiver_1_o_RX_Done 1 2 1 470
-preplace netloc uart_transceiver_1_o_TX_Done 1 2 1 490
+preplace netloc uart_transceiver_0_o_TX_Done 1 2 1 370
+preplace netloc uart_transceiver_1_o_RX_Done 1 2 1 410
+preplace netloc uart_transceiver_1_o_TX_Done 1 2 1 430
 preplace netloc resetn_1 1 0 1 NJ
-preplace netloc interface_axi_master_1_M00_AXI 1 3 1 810
-preplace netloc clk_wiz_0_clk_out1 1 1 4 N 460 480 230 840 190 1110
+preplace netloc interface_axi_master_1_M00_AXI 1 3 1 790
+preplace netloc clk_wiz_0_clk_out1 1 1 4 N 460 390 230 830 190 1090
 preplace netloc axi_quad_spi_2_SPI_0 1 5 1 NJ
 preplace netloc axi_interconnect_0_M00_AXI 1 4 1 1100
-preplace netloc interface_axi_master_1_if00_data_out 1 1 3 170 530 NJ 530 800
-preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1140
-preplace netloc interface_axi_master_0_M00_AXI 1 3 1 820
-preplace netloc uart_transceiver_0_o_RX_Done 1 2 1 440
-preplace netloc uart_transceiver_1_o_RX_Byte 1 2 1 460
-preplace netloc clk_wiz_0_uart 1 1 1 160
+preplace netloc interface_axi_master_1_if00_data_out 1 1 3 110 550 NJ 550 780
+preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1130
+preplace netloc interface_axi_master_0_M00_AXI 1 3 1 810
+preplace netloc uart_transceiver_0_o_RX_Done 1 2 1 370
+preplace netloc uart_transceiver_1_o_RX_Byte 1 2 1 400
+preplace netloc clk_wiz_0_uart 1 1 1 90
 preplace netloc axi_quad_spi_3_SPI_0 1 5 1 NJ
 preplace netloc axi_interconnect_0_M03_AXI 1 4 1 N
-preplace netloc uart_transceiver_1_o_TX_Serial 1 2 4 430J 710 NJ 710 NJ 710 NJ
-preplace netloc uart_transceiver_0_o_TX_Active 1 2 1 480
-preplace netloc clk_wiz_0_spi 1 1 4 N 480 440J 670 NJ 670 1130
-levelinfo -pg 1 0 90 310 650 970 1260 1390 -top 0 -bot 730
+preplace netloc uart_transceiver_1_o_TX_Serial 1 2 4 380J 710 NJ 710 NJ 710 NJ
+preplace netloc uart_transceiver_0_o_TX_Active 1 2 1 390
+preplace netloc clk_wiz_0_spi 1 1 4 N 480 370J 200 800J 170 1120
+levelinfo -pg 1 -80 20 240 630 960 1250 1380 -top 0 -bot 1040
 ",
 }
 {

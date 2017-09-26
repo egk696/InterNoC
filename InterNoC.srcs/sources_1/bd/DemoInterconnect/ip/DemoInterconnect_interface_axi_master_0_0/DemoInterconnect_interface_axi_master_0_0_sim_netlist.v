@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Sep 24 18:21:59 2017
+// Date        : Tue Sep 26 14:15:32 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0_sim_netlist.v
@@ -80,7 +80,7 @@ module DemoInterconnect_interface_axi_master_0_0
   wire if00_load_out;
   wire if00_send_done;
   wire m00_axi_aclk;
-  wire [6:2]\^m00_axi_araddr ;
+  wire [20:16]\^m00_axi_araddr ;
   wire m00_axi_aresetn;
   wire m00_axi_arready;
   wire m00_axi_arvalid;
@@ -106,11 +106,7 @@ module DemoInterconnect_interface_axi_master_0_0
   assign m00_axi_araddr[23] = \<const0> ;
   assign m00_axi_araddr[22] = \<const0> ;
   assign m00_axi_araddr[21] = \<const0> ;
-  assign m00_axi_araddr[20] = \<const0> ;
-  assign m00_axi_araddr[19] = \<const0> ;
-  assign m00_axi_araddr[18] = \<const0> ;
-  assign m00_axi_araddr[17] = \<const0> ;
-  assign m00_axi_araddr[16] = \<const0> ;
+  assign m00_axi_araddr[20:16] = \^m00_axi_araddr [20:16];
   assign m00_axi_araddr[15] = \<const0> ;
   assign m00_axi_araddr[14] = \<const0> ;
   assign m00_axi_araddr[13] = \<const0> ;
@@ -120,7 +116,11 @@ module DemoInterconnect_interface_axi_master_0_0
   assign m00_axi_araddr[9] = \<const0> ;
   assign m00_axi_araddr[8] = \<const0> ;
   assign m00_axi_araddr[7] = \<const0> ;
-  assign m00_axi_araddr[6:2] = \^m00_axi_araddr [6:2];
+  assign m00_axi_araddr[6] = \<const0> ;
+  assign m00_axi_araddr[5] = \<const0> ;
+  assign m00_axi_araddr[4] = \<const0> ;
+  assign m00_axi_araddr[3] = \<const0> ;
+  assign m00_axi_araddr[2] = \<const0> ;
   assign m00_axi_araddr[1] = \<const0> ;
   assign m00_axi_araddr[0] = \<const0> ;
   assign m00_axi_arprot[2] = \<const0> ;
@@ -137,11 +137,7 @@ module DemoInterconnect_interface_axi_master_0_0
   assign m00_axi_awaddr[23] = \<const0> ;
   assign m00_axi_awaddr[22] = \<const0> ;
   assign m00_axi_awaddr[21] = \<const0> ;
-  assign m00_axi_awaddr[20] = \<const0> ;
-  assign m00_axi_awaddr[19] = \<const0> ;
-  assign m00_axi_awaddr[18] = \<const0> ;
-  assign m00_axi_awaddr[17] = \<const0> ;
-  assign m00_axi_awaddr[16] = \<const0> ;
+  assign m00_axi_awaddr[20:16] = \^m00_axi_araddr [20:16];
   assign m00_axi_awaddr[15] = \<const0> ;
   assign m00_axi_awaddr[14] = \<const0> ;
   assign m00_axi_awaddr[13] = \<const0> ;
@@ -151,7 +147,11 @@ module DemoInterconnect_interface_axi_master_0_0
   assign m00_axi_awaddr[9] = \<const0> ;
   assign m00_axi_awaddr[8] = \<const0> ;
   assign m00_axi_awaddr[7] = \<const0> ;
-  assign m00_axi_awaddr[6:2] = \^m00_axi_araddr [6:2];
+  assign m00_axi_awaddr[6] = \<const0> ;
+  assign m00_axi_awaddr[5] = \<const0> ;
+  assign m00_axi_awaddr[4] = \<const0> ;
+  assign m00_axi_awaddr[3] = \<const0> ;
+  assign m00_axi_awaddr[2] = \<const0> ;
   assign m00_axi_awaddr[1] = \<const0> ;
   assign m00_axi_awaddr[0] = \<const0> ;
   assign m00_axi_awprot[2] = \<const0> ;
@@ -245,11 +245,6 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   wire [31:0]DATA_RX;
   wire [36:0]Q;
   wire RXN_DONE;
-  wire collecter_n_0;
-  wire collecter_n_1;
-  wire collecter_n_2;
-  wire collecter_n_3;
-  wire collecter_n_4;
   wire [7:0]if00_data_in;
   wire [7:0]if00_data_out;
   wire \if00_data_out[7]_INST_0_i_1 ;
@@ -260,6 +255,11 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   (* RTL_KEEP = "yes" *) wire [2:0]ifcomm_state;
   wire init_packet_rx;
   wire init_packet_tx;
+  wire interface2packet_inst_n_0;
+  wire interface2packet_inst_n_1;
+  wire interface2packet_inst_n_2;
+  wire interface2packet_inst_n_3;
+  wire interface2packet_inst_n_4;
   wire interface_axi_master_v1_0_M00_AXI_inst_n_0;
   wire interface_axi_master_v1_0_M00_AXI_inst_n_6;
   wire m00_axi_aclk;
@@ -281,56 +281,29 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   FDRE \FSM_sequential_ifcomm_state_reg[0] 
        (.C(m00_axi_aclk),
         .CE(1'b1),
-        .D(collecter_n_4),
+        .D(interface2packet_inst_n_4),
         .Q(ifcomm_state[0]),
         .R(interface_axi_master_v1_0_M00_AXI_inst_n_0));
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_ifcomm_state_reg[1] 
        (.C(m00_axi_aclk),
         .CE(1'b1),
-        .D(collecter_n_3),
+        .D(interface2packet_inst_n_3),
         .Q(ifcomm_state[1]),
         .R(interface_axi_master_v1_0_M00_AXI_inst_n_0));
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_ifcomm_state_reg[2] 
        (.C(m00_axi_aclk),
         .CE(1'b1),
-        .D(collecter_n_2),
+        .D(interface2packet_inst_n_2),
         .Q(ifcomm_state[2]),
         .R(interface_axi_master_v1_0_M00_AXI_inst_n_0));
-  DemoInterconnect_interface_axi_master_0_0_serial2parallel collecter
-       (.\FSM_sequential_ifcomm_state_reg[0] (collecter_n_4),
-        .\FSM_sequential_ifcomm_state_reg[1] (collecter_n_3),
-        .\FSM_sequential_ifcomm_state_reg[2] (collecter_n_2),
-        .Q(Q),
-        .RXN_DONE(RXN_DONE),
-        .if00_data_in(if00_data_in),
-        .if00_load_in(if00_load_in),
-        .in0(ifcomm_state),
-        .init_packet_rx(init_packet_rx),
-        .init_packet_rx_reg(collecter_n_0),
-        .init_packet_tx(init_packet_tx),
-        .init_packet_tx_reg(collecter_n_1),
-        .m00_axi_aclk(m00_axi_aclk),
-        .m00_axi_aresetn(m00_axi_aresetn),
-        .out(ifcomm_state));
-  DemoInterconnect_interface_axi_master_0_0_parallel2serial distributer
-       (.E(interface_axi_master_v1_0_M00_AXI_inst_n_6),
-        .Q(DATA_RX),
-        .RXN_DONE(RXN_DONE),
-        .if00_data_out(if00_data_out),
-        .\if00_data_out[7]_INST_0_i_1 (\if00_data_out[7]_INST_0_i_1 ),
-        .\if00_data_out[7]_INST_0_i_1_0 (\if00_data_out[7]_INST_0_i_1_0 ),
-        .if00_load_out(if00_load_out),
-        .if00_send_done(if00_send_done),
-        .m00_axi_aclk(m00_axi_aclk),
-        .sending(sending));
   FDRE #(
     .INIT(1'b0)) 
     init_packet_rx_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
-        .D(collecter_n_0),
+        .D(interface2packet_inst_n_0),
         .Q(init_packet_rx),
         .R(1'b0));
   FDRE #(
@@ -338,9 +311,25 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
     init_packet_tx_reg
        (.C(m00_axi_aclk),
         .CE(1'b1),
-        .D(collecter_n_1),
+        .D(interface2packet_inst_n_1),
         .Q(init_packet_tx),
         .R(1'b0));
+  DemoInterconnect_interface_axi_master_0_0_serial2parallel interface2packet_inst
+       (.\FSM_sequential_ifcomm_state_reg[0] (interface2packet_inst_n_4),
+        .\FSM_sequential_ifcomm_state_reg[1] (interface2packet_inst_n_3),
+        .\FSM_sequential_ifcomm_state_reg[2] (interface2packet_inst_n_2),
+        .Q(Q),
+        .RXN_DONE(RXN_DONE),
+        .if00_data_in(if00_data_in),
+        .if00_load_in(if00_load_in),
+        .in0(ifcomm_state),
+        .init_packet_rx(init_packet_rx),
+        .init_packet_rx_reg(interface2packet_inst_n_0),
+        .init_packet_tx(init_packet_tx),
+        .init_packet_tx_reg(interface2packet_inst_n_1),
+        .m00_axi_aclk(m00_axi_aclk),
+        .m00_axi_aresetn(m00_axi_aresetn),
+        .out(ifcomm_state));
   DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_AXI interface_axi_master_v1_0_M00_AXI_inst
        (.E(interface_axi_master_v1_0_M00_AXI_inst_n_6),
         .Q(DATA_RX),
@@ -362,6 +351,17 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .m00_axi_wvalid(m00_axi_wvalid),
         .sending(sending),
         .start_single_write_reg_0(interface_axi_master_v1_0_M00_AXI_inst_n_0));
+  DemoInterconnect_interface_axi_master_0_0_parallel2serial packet2interface_inst
+       (.D(DATA_RX),
+        .E(interface_axi_master_v1_0_M00_AXI_inst_n_6),
+        .RXN_DONE(RXN_DONE),
+        .if00_data_out(if00_data_out),
+        .\if00_data_out[7]_INST_0_i_1 (\if00_data_out[7]_INST_0_i_1 ),
+        .\if00_data_out[7]_INST_0_i_1_0 (\if00_data_out[7]_INST_0_i_1_0 ),
+        .if00_load_out(if00_load_out),
+        .if00_send_done(if00_send_done),
+        .m00_axi_aclk(m00_axi_aclk),
+        .sending(sending));
 endmodule
 
 (* ORIG_REF_NAME = "interface_axi_master_v1_0_M00_AXI" *) 
@@ -687,7 +687,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .I1(init_txn_ff),
         .I2(m00_axi_aresetn),
         .O(axi_awvalid_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hAE)) 
     axi_awvalid_i_2
@@ -728,7 +728,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .D(axi_rready_i_1_n_0),
         .Q(m00_axi_rready),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hAE)) 
     axi_wvalid_i_1
@@ -760,7 +760,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .D(init_packet_tx),
         .Q(init_txn_ff),
         .R(start_single_write_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h0F04)) 
     \mst_exec_state[0]_i_1 
@@ -769,7 +769,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .I2(\mst_exec_state_reg_n_0_[1] ),
         .I3(\mst_exec_state_reg_n_0_[0] ),
         .O(\mst_exec_state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h00000002)) 
     \mst_exec_state[1]_i_1 
@@ -797,7 +797,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
        (.I0(RXN_DONE),
         .I1(sending),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hD4)) 
     start_single_read_i_1
@@ -811,7 +811,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .D(start_single_read_i_1_n_0),
         .Q(start_single_read_reg_n_0),
         .R(start_single_write_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB2)) 
     start_single_write_i_1
@@ -838,7 +838,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     if00_send_done,
     RXN_DONE,
     E,
-    Q);
+    D);
   output if00_load_out;
   output sending;
   output \if00_data_out[7]_INST_0_i_1 ;
@@ -848,10 +848,10 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
   input if00_send_done;
   input RXN_DONE;
   input [0:0]E;
-  input [31:0]Q;
+  input [31:0]D;
 
+  wire [31:0]D;
   wire [0:0]E;
-  wire [31:0]Q;
   wire RXN_DONE;
   wire [7:0]data1;
   wire [7:0]data2;
@@ -896,56 +896,56 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
   wire tx_done_i_1_n_0;
   wire tx_done_reg_n_0;
 
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \if00_data_out[0]_INST_0 
        (.I0(\shift_o_retimed_reg_n_0_[0] ),
         .I1(\if00_data_out[7]_INST_0_i_1_0 ),
         .O(if00_data_out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \if00_data_out[1]_INST_0 
        (.I0(\shift_o_retimed_reg_n_0_[1] ),
         .I1(\if00_data_out[7]_INST_0_i_1_0 ),
         .O(if00_data_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \if00_data_out[2]_INST_0 
        (.I0(\shift_o_retimed_reg_n_0_[2] ),
         .I1(\if00_data_out[7]_INST_0_i_1_0 ),
         .O(if00_data_out[2]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \if00_data_out[3]_INST_0 
        (.I0(\shift_o_retimed_reg_n_0_[3] ),
         .I1(\if00_data_out[7]_INST_0_i_1_0 ),
         .O(if00_data_out[3]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \if00_data_out[4]_INST_0 
        (.I0(\shift_o_retimed_reg_n_0_[4] ),
         .I1(\if00_data_out[7]_INST_0_i_1_0 ),
         .O(if00_data_out[4]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \if00_data_out[5]_INST_0 
        (.I0(\shift_o_retimed_reg_n_0_[5] ),
         .I1(\if00_data_out[7]_INST_0_i_1_0 ),
         .O(if00_data_out[5]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \if00_data_out[6]_INST_0 
        (.I0(\shift_o_retimed_reg_n_0_[6] ),
         .I1(\if00_data_out[7]_INST_0_i_1_0 ),
         .O(if00_data_out[6]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \if00_data_out[7]_INST_0 
@@ -963,7 +963,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[0] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[0]),
+        .D(D[0]),
         .Q(\send_data_reg_n_0_[0] ),
         .R(1'b0));
   FDRE #(
@@ -971,7 +971,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[10] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[10]),
+        .D(D[10]),
         .Q(data1[2]),
         .R(1'b0));
   FDRE #(
@@ -979,7 +979,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[11] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[11]),
+        .D(D[11]),
         .Q(data1[3]),
         .R(1'b0));
   FDRE #(
@@ -987,7 +987,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[12] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[12]),
+        .D(D[12]),
         .Q(data1[4]),
         .R(1'b0));
   FDRE #(
@@ -995,7 +995,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[13] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[13]),
+        .D(D[13]),
         .Q(data1[5]),
         .R(1'b0));
   FDRE #(
@@ -1003,7 +1003,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[14] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[14]),
+        .D(D[14]),
         .Q(data1[6]),
         .R(1'b0));
   FDRE #(
@@ -1011,7 +1011,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[15] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[15]),
+        .D(D[15]),
         .Q(data1[7]),
         .R(1'b0));
   FDRE #(
@@ -1019,7 +1019,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[16] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[16]),
+        .D(D[16]),
         .Q(data2[0]),
         .R(1'b0));
   FDRE #(
@@ -1027,7 +1027,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[17] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[17]),
+        .D(D[17]),
         .Q(data2[1]),
         .R(1'b0));
   FDRE #(
@@ -1035,7 +1035,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[18] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[18]),
+        .D(D[18]),
         .Q(data2[2]),
         .R(1'b0));
   FDRE #(
@@ -1043,7 +1043,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[19] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[19]),
+        .D(D[19]),
         .Q(data2[3]),
         .R(1'b0));
   FDRE #(
@@ -1051,7 +1051,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[1] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[1]),
+        .D(D[1]),
         .Q(\send_data_reg_n_0_[1] ),
         .R(1'b0));
   FDRE #(
@@ -1059,7 +1059,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[20] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[20]),
+        .D(D[20]),
         .Q(data2[4]),
         .R(1'b0));
   FDRE #(
@@ -1067,7 +1067,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[21] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[21]),
+        .D(D[21]),
         .Q(data2[5]),
         .R(1'b0));
   FDRE #(
@@ -1075,7 +1075,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[22] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[22]),
+        .D(D[22]),
         .Q(data2[6]),
         .R(1'b0));
   FDRE #(
@@ -1083,7 +1083,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[23] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[23]),
+        .D(D[23]),
         .Q(data2[7]),
         .R(1'b0));
   FDRE #(
@@ -1091,7 +1091,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[24] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[24]),
+        .D(D[24]),
         .Q(data3[0]),
         .R(1'b0));
   FDRE #(
@@ -1099,7 +1099,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[25] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[25]),
+        .D(D[25]),
         .Q(data3[1]),
         .R(1'b0));
   FDRE #(
@@ -1107,7 +1107,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[26] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[26]),
+        .D(D[26]),
         .Q(data3[2]),
         .R(1'b0));
   FDRE #(
@@ -1115,7 +1115,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[27] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[27]),
+        .D(D[27]),
         .Q(data3[3]),
         .R(1'b0));
   FDRE #(
@@ -1123,7 +1123,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[28] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[28]),
+        .D(D[28]),
         .Q(data3[4]),
         .R(1'b0));
   FDRE #(
@@ -1131,7 +1131,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[29] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[29]),
+        .D(D[29]),
         .Q(data3[5]),
         .R(1'b0));
   FDRE #(
@@ -1139,7 +1139,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[2] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[2]),
+        .D(D[2]),
         .Q(\send_data_reg_n_0_[2] ),
         .R(1'b0));
   FDRE #(
@@ -1147,7 +1147,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[30] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[30]),
+        .D(D[30]),
         .Q(data3[6]),
         .R(1'b0));
   FDRE #(
@@ -1155,7 +1155,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[31] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[31]),
+        .D(D[31]),
         .Q(data3[7]),
         .R(1'b0));
   FDRE #(
@@ -1163,7 +1163,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[3] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[3]),
+        .D(D[3]),
         .Q(\send_data_reg_n_0_[3] ),
         .R(1'b0));
   FDRE #(
@@ -1171,7 +1171,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[4] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[4]),
+        .D(D[4]),
         .Q(\send_data_reg_n_0_[4] ),
         .R(1'b0));
   FDRE #(
@@ -1179,7 +1179,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[5] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[5]),
+        .D(D[5]),
         .Q(\send_data_reg_n_0_[5] ),
         .R(1'b0));
   FDRE #(
@@ -1187,7 +1187,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[6] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[6]),
+        .D(D[6]),
         .Q(\send_data_reg_n_0_[6] ),
         .R(1'b0));
   FDRE #(
@@ -1195,7 +1195,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[7] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[7]),
+        .D(D[7]),
         .Q(\send_data_reg_n_0_[7] ),
         .R(1'b0));
   FDRE #(
@@ -1203,7 +1203,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[8] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[8]),
+        .D(D[8]),
         .Q(data1[0]),
         .R(1'b0));
   FDRE #(
@@ -1211,10 +1211,10 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     \send_data_reg[9] 
        (.C(m00_axi_aclk),
         .CE(E),
-        .D(Q[9]),
+        .D(D[9]),
         .Q(data1[1]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h4F4C)) 
     sending_i_1
@@ -1231,7 +1231,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .D(sending_i_1_n_0),
         .Q(sending),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hD2)) 
     \shift_count[0]_i_1 
@@ -1239,7 +1239,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .I1(tx_done_reg_n_0),
         .I2(shift_count[0]),
         .O(\shift_count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hFB04)) 
     \shift_count[1]_i_1 
@@ -1248,7 +1248,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .I2(tx_done_reg_n_0),
         .I3(shift_count[1]),
         .O(\shift_count[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hFFEF0000)) 
     \shift_count[2]_i_1 
@@ -1410,7 +1410,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .D(\shift_o_retimed[7]_i_1_n_0 ),
         .Q(\shift_o_retimed_reg_n_0_[7] ),
         .R(shift_count[2]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h4)) 
     ss_o_inv_i_1
@@ -1425,7 +1425,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .D(ss_o_inv_i_1_n_0),
         .Q(if00_load_out),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h00000100)) 
     tx_done_i_1

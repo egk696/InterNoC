@@ -84,7 +84,6 @@ ENTITY DemoInterconnect_axi_quad_spi_0_1 IS
     io1_i : IN STD_LOGIC;
     io1_o : OUT STD_LOGIC;
     io1_t : OUT STD_LOGIC;
-    spisel : IN STD_LOGIC;
     sck_i : IN STD_LOGIC;
     sck_o : OUT STD_LOGIC;
     sck_t : OUT STD_LOGIC;
@@ -262,7 +261,6 @@ ARCHITECTURE DemoInterconnect_axi_quad_spi_0_1_arch OF DemoInterconnect_axi_quad
   ATTRIBUTE X_INTERFACE_INFO OF io1_i: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 IO1_I";
   ATTRIBUTE X_INTERFACE_INFO OF io1_o: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 IO1_O";
   ATTRIBUTE X_INTERFACE_INFO OF io1_t: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 IO1_T";
-  ATTRIBUTE X_INTERFACE_INFO OF spisel: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SPISEL";
   ATTRIBUTE X_INTERFACE_INFO OF sck_i: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SCK_I";
   ATTRIBUTE X_INTERFACE_INFO OF sck_o: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SCK_O";
   ATTRIBUTE X_INTERFACE_INFO OF sck_t: SIGNAL IS "xilinx.com:interface:spi:1.0 SPI_0 SCK_T";
@@ -283,10 +281,10 @@ BEGIN
       C_XIP_MODE => 0,
       C_UC_FAMILY => 0,
       C_FIFO_DEPTH => 16,
-      C_SCK_RATIO => 16,
+      C_SCK_RATIO => 4,
       C_DUAL_QUAD_MODE => 0,
       C_NUM_SS_BITS => 1,
-      C_NUM_TRANSFER_BITS => 8,
+      C_NUM_TRANSFER_BITS => 32,
       C_SPI_MODE => 0,
       C_USE_STARTUP => 0,
       C_USE_STARTUP_EXT => 0,
@@ -360,7 +358,7 @@ BEGIN
       io1_1_i => '0',
       io2_1_i => '0',
       io3_1_i => '0',
-      spisel => spisel,
+      spisel => '1',
       sck_i => sck_i,
       sck_o => sck_o,
       sck_t => sck_t,

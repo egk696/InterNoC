@@ -9,13 +9,12 @@ entity interface_axi_master_v1_0_M00_AXI is
         C_PACKET_WIDTH      : integer := 40;
         C_PACKET_ADDR_WIDTH : integer := 5;
         C_PACKET_DATA_WIDTH : integer := 16;
-		-- User parameters ends
-		-- Do not modify the parameters beyond this line
-
-		-- Width of M_AXI address bus. 
+        
+        C_AXI_PACKET_ADDR_OFFSET : integer := 16;
+        
     -- The master generates the read and write addresses of width specified as C_M_AXI_ADDR_WIDTH.
 		C_M_AXI_ADDR_WIDTH	: integer	:= 5;
-		-- Width of M_AXI data bus. 
+		
     -- The master issues write data and accept read data where the width of the data bus is C_M_AXI_DATA_WIDTH
 		C_M_AXI_DATA_WIDTH	: integer	:= 32
 	);
@@ -182,7 +181,7 @@ begin
 	-- I/O Connections assignments
 
 	--Adding the offset address to the base addr of the slave
-	M_AXI_AWADDR	<= (C_M_AXI_ADDR_WIDTH-1 downto C_PACKET_ADDR_WIDTH+2=>'0') & packet_dest_address & "00";
+	M_AXI_AWADDR	<= (C_M_AXI_ADDR_WIDTH-1 downto C_AXI_PACKET_ADDR_OFFSET+C_PACKET_ADDR_WIDTH=>'0') & packet_dest_address & (C_AXI_PACKET_ADDR_OFFSET-1 downto 0=> '0');
 	--AXI 4 write data
 	M_AXI_WDATA	<= packet_dest_data;
 	M_AXI_AWPROT	<= "000";
@@ -194,7 +193,7 @@ begin
 	--Write Response (B)
 	M_AXI_BREADY	<= axi_bready;
 	--Read Address (AR)
-	M_AXI_ARADDR	<= (C_M_AXI_ADDR_WIDTH-1 downto C_PACKET_ADDR_WIDTH+2=>'0') & packet_dest_address & "00";
+	M_AXI_ARADDR	<= (C_M_AXI_ADDR_WIDTH-1 downto C_AXI_PACKET_ADDR_OFFSET+C_PACKET_ADDR_WIDTH=>'0') & packet_dest_address & (C_AXI_PACKET_ADDR_OFFSET-1 downto 0=> '0');
 	M_AXI_ARVALID	<= axi_arvalid;
 	M_AXI_ARPROT	<= "001";
 	--Read and Read Response (R)

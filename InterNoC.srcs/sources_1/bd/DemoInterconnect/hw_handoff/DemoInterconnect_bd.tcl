@@ -180,31 +180,34 @@ CONFIG.NUM_SI {3} \
   set axi_spi_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_spi_0 ]
   set_property -dict [ list \
 CONFIG.C_NUM_SS_BITS {1} \
-CONFIG.C_SCK_RATIO {16} \
+CONFIG.C_NUM_TRANSFER_BITS {32} \
+CONFIG.C_SCK_RATIO {4} \
 CONFIG.C_TYPE_OF_AXI4_INTERFACE {0} \
 CONFIG.C_USE_STARTUP {0} \
 CONFIG.C_USE_STARTUP_INT {0} \
 CONFIG.C_XIP_MODE {0} \
-CONFIG.Master_mode {0} \
+CONFIG.Master_mode {1} \
  ] $axi_spi_0
 
   # Create instance: axi_spi_1, and set properties
   set axi_spi_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_spi_1 ]
   set_property -dict [ list \
 CONFIG.C_NUM_SS_BITS {1} \
-CONFIG.C_SCK_RATIO {16} \
+CONFIG.C_NUM_TRANSFER_BITS {32} \
+CONFIG.C_SCK_RATIO {4} \
 CONFIG.C_TYPE_OF_AXI4_INTERFACE {0} \
 CONFIG.C_USE_STARTUP {0} \
 CONFIG.C_USE_STARTUP_INT {0} \
 CONFIG.C_XIP_MODE {0} \
-CONFIG.Master_mode {0} \
+CONFIG.Master_mode {1} \
  ] $axi_spi_1
 
   # Create instance: axi_spi_2, and set properties
   set axi_spi_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_spi_2 ]
   set_property -dict [ list \
 CONFIG.C_NUM_SS_BITS {1} \
-CONFIG.C_SCK_RATIO {16} \
+CONFIG.C_NUM_TRANSFER_BITS {32} \
+CONFIG.C_SCK_RATIO {4} \
 CONFIG.C_TYPE_OF_AXI4_INTERFACE {0} \
 CONFIG.C_USE_STARTUP {0} \
 CONFIG.C_USE_STARTUP_INT {0} \
@@ -216,12 +219,13 @@ CONFIG.Master_mode {1} \
   set axi_spi_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_spi_3 ]
   set_property -dict [ list \
 CONFIG.C_NUM_SS_BITS {1} \
-CONFIG.C_SCK_RATIO {16} \
+CONFIG.C_NUM_TRANSFER_BITS {32} \
+CONFIG.C_SCK_RATIO {4} \
 CONFIG.C_TYPE_OF_AXI4_INTERFACE {0} \
 CONFIG.C_USE_STARTUP {0} \
 CONFIG.C_USE_STARTUP_INT {0} \
 CONFIG.C_XIP_MODE {0} \
-CONFIG.Master_mode {0} \
+CONFIG.Master_mode {1} \
  ] $axi_spi_3
 
   # Create instance: clk_wiz_0, and set properties
@@ -231,9 +235,9 @@ CONFIG.CLKOUT1_DRIVES {BUFGCE} \
 CONFIG.CLKOUT1_JITTER {130.958} \
 CONFIG.CLKOUT1_PHASE_ERROR {98.575} \
 CONFIG.CLKOUT2_DRIVES {BUFGCE} \
-CONFIG.CLKOUT2_JITTER {183.243} \
+CONFIG.CLKOUT2_JITTER {151.636} \
 CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
-CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {20} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} \
 CONFIG.CLKOUT2_USED {true} \
 CONFIG.CLKOUT3_DRIVES {BUFGCE} \
 CONFIG.CLKOUT3_JITTER {130.958} \
@@ -251,7 +255,7 @@ CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} \
 CONFIG.MMCM_CLKIN1_PERIOD {10.0} \
 CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
 CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} \
-CONFIG.MMCM_CLKOUT1_DIVIDE {50} \
+CONFIG.MMCM_CLKOUT1_DIVIDE {20} \
 CONFIG.MMCM_CLKOUT2_DIVIDE {10} \
 CONFIG.MMCM_COMPENSATION {ZHOLD} \
 CONFIG.MMCM_DIVCLK_DIVIDE {1} \
@@ -325,14 +329,18 @@ CONFIG.MMCM_COMPENSATION.VALUE_SRC {DEFAULT} \
   connect_bd_net -net uart_transceiver_1_o_TX_Serial [get_bd_ports UART_TX_1] [get_bd_pins uart_transceiver_1/o_TX_Serial]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_0/AXI_LITE/Reg] SEG_axi_quad_spi_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A10000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_1/AXI_LITE/Reg] SEG_axi_quad_spi_1_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A20000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_2/AXI_LITE/Reg] SEG_axi_quad_spi_2_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A30000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_3/AXI_LITE/Reg] SEG_axi_quad_spi_3_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_0/AXI_LITE/Reg] SEG_axi_quad_spi_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A10000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_1/AXI_LITE/Reg] SEG_axi_quad_spi_1_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A20000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_2/AXI_LITE/Reg] SEG_axi_quad_spi_2_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x44A30000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_3/AXI_LITE/Reg] SEG_axi_quad_spi_3_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00000000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_0/AXI_LITE/Reg] SEG_axi_spi_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00010000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_1/AXI_LITE/Reg] SEG_axi_spi_1_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00020000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_2/AXI_LITE/Reg] SEG_axi_spi_2_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00030000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_3/AXI_LITE/Reg] SEG_axi_spi_3_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00000000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_0/AXI_LITE/Reg] SEG_axi_spi_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00010000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_1/AXI_LITE/Reg] SEG_axi_spi_1_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00020000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_2/AXI_LITE/Reg] SEG_axi_spi_2_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00030000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_3/AXI_LITE/Reg] SEG_axi_spi_3_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00000000 [get_bd_addr_spaces jtag_axi_0/Data] [get_bd_addr_segs axi_spi_0/AXI_LITE/Reg] SEG_axi_spi_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00010000 [get_bd_addr_spaces jtag_axi_0/Data] [get_bd_addr_segs axi_spi_1/AXI_LITE/Reg] SEG_axi_spi_1_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00020000 [get_bd_addr_spaces jtag_axi_0/Data] [get_bd_addr_segs axi_spi_2/AXI_LITE/Reg] SEG_axi_spi_2_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00030000 [get_bd_addr_spaces jtag_axi_0/Data] [get_bd_addr_segs axi_spi_3/AXI_LITE/Reg] SEG_axi_spi_3_Reg
 
   # Perform GUI Layout
   regenerate_bd_layout -layout_string {
@@ -360,39 +368,39 @@ preplace inst uart_transceiver_1 -pg 1 -lvl 2 -y 640 -defaultsOSRD
 preplace inst axi_interconnect_0 -pg 1 -lvl 4 -y 430 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 490 -defaultsOSRD
 preplace netloc axi_quad_spi_0_SPI_0 1 5 1 NJ
-preplace netloc uart_transceiver_0_o_RX_Byte 1 2 1 430
+preplace netloc uart_transceiver_0_o_RX_Byte 1 2 1 360
 preplace netloc UART_RX_0_1 1 0 2 NJ 100 NJ
-preplace netloc interface_axi_master_0_if00_load_out 1 1 3 170 210 NJ 210 790
-preplace netloc clk_wiz_0_locked 1 1 4 NJ 500 450 220 830 170 1120
-preplace netloc interface_axi_master_1_if00_load_out 1 1 3 180 550 NJ 550 790
+preplace netloc interface_axi_master_0_if00_load_out 1 1 3 100 220 NJ 220 770
+preplace netloc clk_wiz_0_locked 1 1 4 NJ 520 420 540 820 160 1110
+preplace netloc interface_axi_master_1_if00_load_out 1 1 3 100 530 NJ 530 770
 preplace netloc axi_interconnect_0_M02_AXI 1 4 1 1100
-preplace netloc uart_transceiver_1_o_TX_Active 1 2 1 500
-preplace netloc uart_transceiver_0_o_TX_Serial 1 2 4 460J 190 810J 130 NJ 130 NJ
-preplace netloc interface_axi_master_0_if00_data_out 1 1 3 180 200 NJ 200 800
+preplace netloc uart_transceiver_1_o_TX_Active 1 2 1 440
+preplace netloc uart_transceiver_0_o_TX_Serial 1 2 4 380J 190 790J 130 NJ 130 NJ
+preplace netloc interface_axi_master_0_if00_data_out 1 1 3 110 210 NJ 210 780
 preplace netloc sys_clk_1 1 0 1 NJ
 preplace netloc jtag_axi_0_M_AXI 1 3 1 N
 preplace netloc UART_RX_1_1 1 0 2 NJ 630 NJ
 preplace netloc axi_quad_spi_1_SPI_0 1 5 1 NJ
-preplace netloc uart_transceiver_0_o_TX_Done 1 2 1 440
-preplace netloc uart_transceiver_1_o_RX_Done 1 2 1 470
-preplace netloc uart_transceiver_1_o_TX_Done 1 2 1 490
+preplace netloc uart_transceiver_0_o_TX_Done 1 2 1 370
+preplace netloc uart_transceiver_1_o_RX_Done 1 2 1 410
+preplace netloc uart_transceiver_1_o_TX_Done 1 2 1 430
 preplace netloc resetn_1 1 0 1 NJ
-preplace netloc interface_axi_master_1_M00_AXI 1 3 1 810
-preplace netloc clk_wiz_0_clk_out1 1 1 4 N 460 480 230 840 190 1110
+preplace netloc interface_axi_master_1_M00_AXI 1 3 1 790
+preplace netloc clk_wiz_0_clk_out1 1 1 4 N 460 390 230 830 190 1090
 preplace netloc axi_quad_spi_2_SPI_0 1 5 1 NJ
 preplace netloc axi_interconnect_0_M00_AXI 1 4 1 1100
-preplace netloc interface_axi_master_1_if00_data_out 1 1 3 170 530 NJ 530 800
-preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1140
-preplace netloc interface_axi_master_0_M00_AXI 1 3 1 820
-preplace netloc uart_transceiver_0_o_RX_Done 1 2 1 440
-preplace netloc uart_transceiver_1_o_RX_Byte 1 2 1 460
-preplace netloc clk_wiz_0_uart 1 1 1 160
+preplace netloc interface_axi_master_1_if00_data_out 1 1 3 110 550 NJ 550 780
+preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1130
+preplace netloc interface_axi_master_0_M00_AXI 1 3 1 810
+preplace netloc uart_transceiver_0_o_RX_Done 1 2 1 370
+preplace netloc uart_transceiver_1_o_RX_Byte 1 2 1 400
+preplace netloc clk_wiz_0_uart 1 1 1 90
 preplace netloc axi_quad_spi_3_SPI_0 1 5 1 NJ
 preplace netloc axi_interconnect_0_M03_AXI 1 4 1 N
-preplace netloc uart_transceiver_1_o_TX_Serial 1 2 4 430J 710 NJ 710 NJ 710 NJ
-preplace netloc uart_transceiver_0_o_TX_Active 1 2 1 480
-preplace netloc clk_wiz_0_spi 1 1 4 N 480 440J 670 NJ 670 1130
-levelinfo -pg 1 0 90 310 650 970 1260 1390 -top 0 -bot 730
+preplace netloc uart_transceiver_1_o_TX_Serial 1 2 4 380J 710 NJ 710 NJ 710 NJ
+preplace netloc uart_transceiver_0_o_TX_Active 1 2 1 390
+preplace netloc clk_wiz_0_spi 1 1 4 N 480 370J 200 800J 170 1120
+levelinfo -pg 1 -80 20 240 630 960 1250 1380 -top 0 -bot 1040
 ",
 }
 

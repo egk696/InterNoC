@@ -1,11 +1,11 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Sep 24 18:24:04 2017
+// Date        : Tue Sep 26 14:14:02 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top DemoInterconnect_axi_quad_spi_2_0 -prefix
-//               DemoInterconnect_axi_quad_spi_2_0_ DemoInterconnect_axi_quad_spi_0_1_stub.v
-// Design      : DemoInterconnect_axi_quad_spi_0_1
+//               DemoInterconnect_axi_quad_spi_2_0_ DemoInterconnect_axi_quad_spi_0_0_stub.v
+// Design      : DemoInterconnect_axi_quad_spi_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tfgg484-2
 // --------------------------------------------------------------------------------
@@ -18,8 +18,8 @@ module DemoInterconnect_axi_quad_spi_2_0(ext_spi_clk, s_axi_aclk, s_axi_aresetn,
   s_axi_awaddr, s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, 
   s_axi_wready, s_axi_bresp, s_axi_bvalid, s_axi_bready, s_axi_araddr, s_axi_arvalid, 
   s_axi_arready, s_axi_rdata, s_axi_rresp, s_axi_rvalid, s_axi_rready, io0_i, io0_o, io0_t, io1_i, 
-  io1_o, io1_t, spisel, sck_i, sck_o, sck_t, ss_i, ss_o, ss_t, ip2intc_irpt)
-/* synthesis syn_black_box black_box_pad_pin="ext_spi_clk,s_axi_aclk,s_axi_aresetn,s_axi_awaddr[6:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[6:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,spisel,sck_i,sck_o,sck_t,ss_i[0:0],ss_o[0:0],ss_t,ip2intc_irpt" */;
+  io1_o, io1_t, sck_i, sck_o, sck_t, ss_i, ss_o, ss_t, ip2intc_irpt)
+/* synthesis syn_black_box black_box_pad_pin="ext_spi_clk,s_axi_aclk,s_axi_aresetn,s_axi_awaddr[6:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[6:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,sck_i,sck_o,sck_t,ss_i[0:0],ss_o[0:0],ss_t,ip2intc_irpt" */;
   input ext_spi_clk;
   input s_axi_aclk;
   input s_axi_aresetn;
@@ -46,7 +46,6 @@ module DemoInterconnect_axi_quad_spi_2_0(ext_spi_clk, s_axi_aclk, s_axi_aresetn,
   input io1_i;
   output io1_o;
   output io1_t;
-  input spisel;
   input sck_i;
   output sck_o;
   output sck_t;

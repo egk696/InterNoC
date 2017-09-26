@@ -1,20 +1,20 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Sep 24 18:24:04 2017
+// Date        : Sun Sep 24 18:24:31 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
-//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ DemoInterconnect_axi_quad_spi_0_0_sim_netlist.v
-// Design      : DemoInterconnect_axi_quad_spi_0_0
+// Command     : write_verilog -force -mode funcsim
+//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_1_0/DemoInterconnect_axi_quad_spi_1_0_sim_netlist.v
+// Design      : DemoInterconnect_axi_quad_spi_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a35tfgg484-2
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "DemoInterconnect_axi_quad_spi_0_0,axi_quad_spi,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_quad_spi,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "DemoInterconnect_axi_quad_spi_1_0,axi_quad_spi,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_quad_spi,Vivado 2016.4" *) 
 (* NotValidForBitStream *)
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
+module DemoInterconnect_axi_quad_spi_1_0
    (ext_spi_clk,
     s_axi_aclk,
     s_axi_aresetn,
@@ -41,7 +41,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     io1_i,
     io1_o,
     io1_t,
-    spisel,
     sck_i,
     sck_o,
     sck_t,
@@ -75,7 +74,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   (* x_interface_info = "xilinx.com:interface:spi:1.0 SPI_0 IO1_I" *) input io1_i;
   (* x_interface_info = "xilinx.com:interface:spi:1.0 SPI_0 IO1_O" *) output io1_o;
   (* x_interface_info = "xilinx.com:interface:spi:1.0 SPI_0 IO1_T" *) output io1_t;
-  (* x_interface_info = "xilinx.com:interface:spi:1.0 SPI_0 SPISEL" *) input spisel;
   (* x_interface_info = "xilinx.com:interface:spi:1.0 SPI_0 SCK_I" *) input sck_i;
   (* x_interface_info = "xilinx.com:interface:spi:1.0 SPI_0 SCK_O" *) output sck_o;
   (* x_interface_info = "xilinx.com:interface:spi:1.0 SPI_0 SCK_T" *) output sck_t;
@@ -114,7 +112,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire sck_i;
   wire sck_o;
   wire sck_t;
-  wire spisel;
   wire [0:0]ss_i;
   wire [0:0]ss_o;
   wire ss_t;
@@ -176,7 +173,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   (* C_USE_STARTUP_EXT = "0" *) 
   (* C_XIP_MODE = "0" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi U0
+  DemoInterconnect_axi_quad_spi_1_0_axi_quad_spi U0
        (.cfgclk(NLW_U0_cfgclk_UNCONNECTED),
         .cfgmclk(NLW_U0_cfgmclk_UNCONNECTED),
         .clk(1'b0),
@@ -271,7 +268,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .sck_i(sck_i),
         .sck_o(sck_o),
         .sck_t(sck_t),
-        .spisel(spisel),
+        .spisel(1'b1),
         .ss_1_i(1'b0),
         .ss_1_o(NLW_U0_ss_1_o_UNCONNECTED),
         .ss_1_t(NLW_U0_ss_1_t_UNCONNECTED),
@@ -283,7 +280,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .usrdonets(1'b0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_address_decoder
+(* ORIG_REF_NAME = "address_decoder" *) 
+module DemoInterconnect_axi_quad_spi_1_0_address_decoder
    (p_3_in,
     Receive_ip2bus_error_reg,
     Transmit_ip2bus_error_reg,
@@ -1335,79 +1333,79 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_address_decoder
         .I3(Transmit_ip2bus_error_reg),
         .I4(\LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_WrAck_core_reg_d1_i_2_n_0 ),
         .O(rd_ce_or_reduce_core_cmb));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized0 \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized0 \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (\MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized10 \MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized10 \MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_5_out(p_5_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized11 \MEM_DECODE_GEN[0].PER_CE_GEN[11].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized11 \MEM_DECODE_GEN[0].PER_CE_GEN[11].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_4_out(p_4_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized12 \MEM_DECODE_GEN[0].PER_CE_GEN[12].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized12 \MEM_DECODE_GEN[0].PER_CE_GEN[12].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_3_out(p_3_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized13 \MEM_DECODE_GEN[0].PER_CE_GEN[13].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized13 \MEM_DECODE_GEN[0].PER_CE_GEN[13].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_2_out(p_2_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized14 \MEM_DECODE_GEN[0].PER_CE_GEN[14].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized14 \MEM_DECODE_GEN[0].PER_CE_GEN[14].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_1_out(p_1_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized1 \MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized1 \MEM_DECODE_GEN[0].PER_CE_GEN[1].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_14_out(p_14_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized2 \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized2 \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_13_out(p_13_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized3 \MEM_DECODE_GEN[0].PER_CE_GEN[3].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized3 \MEM_DECODE_GEN[0].PER_CE_GEN[3].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_12_out(p_12_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized4 \MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized4 \MEM_DECODE_GEN[0].PER_CE_GEN[4].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_11_out(p_11_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized5 \MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized5 \MEM_DECODE_GEN[0].PER_CE_GEN[5].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_10_out(p_10_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized6 \MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized6 \MEM_DECODE_GEN[0].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_9_out(p_9_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized7 \MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized7 \MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_8_out(p_8_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized8 \MEM_DECODE_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized8 \MEM_DECODE_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_7_out(p_7_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized9 \MEM_DECODE_GEN[0].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized9 \MEM_DECODE_GEN[0].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ),
         .p_6_out(p_6_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized19 \MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19 \MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg[18] (\MEM_DECODE_GEN[1].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized23 \MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized23 \MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] (\MEM_DECODE_GEN[1].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized28 \MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28 \MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] (\MEM_DECODE_GEN[2].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized32 \MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32 \MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] (\MEM_DECODE_GEN[2].PER_CE_GEN[6].MULTIPLE_CES_THIS_CS_GEN.CE_I_n_0 ),
         .Q(Q),
         .\bus2ip_addr_i_reg[6] (\bus2ip_addr_i_reg[6] ));
@@ -1627,7 +1625,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_address_decoder
         .O(sw_rst_cond));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_async_fifo_fg
+(* ORIG_REF_NAME = "async_fifo_fg" *) 
+module DemoInterconnect_axi_quad_spi_1_0_async_fifo_fg
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -1687,7 +1686,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_async_fifo_fg
   wire scndry_out;
   wire spiXfer_done_int;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_5 \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM 
+  DemoInterconnect_axi_quad_spi_1_0_fifo_generator_v13_1_3_5 \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .E(E),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
@@ -1710,7 +1709,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_async_fifo_fg
 endmodule
 
 (* ORIG_REF_NAME = "async_fifo_fg" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_async_fifo_fg_1
+module DemoInterconnect_axi_quad_spi_1_0_async_fifo_fg_1
    (out,
     \gic0.gc1.count_reg[0] ,
     \OTHER_RATIO_GENERATE.Serial_Dout_reg ,
@@ -1752,7 +1751,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_async_fifo_fg_1
   wire [7:0]s_axi_wdata;
   wire spisel_d1_reg__0;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3 \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM 
+  DemoInterconnect_axi_quad_spi_1_0_fifo_generator_v13_1_3 \USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
@@ -1768,7 +1767,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_async_fifo_fg_1
         .spisel_d1_reg__0(spisel_d1_reg__0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif
+(* ORIG_REF_NAME = "axi_lite_ipif" *) 
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif
    (bus2ip_reset_ipif_inverted,
     p_3_in,
     p_5_in,
@@ -2074,7 +2074,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif
   wire [0:0]tx_fifo_count;
   wire wr_ce_or_reduce_core_cmb;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_slave_attachment I_SLAVE_ATTACHMENT
+  DemoInterconnect_axi_quad_spi_1_0_slave_attachment I_SLAVE_ATTACHMENT
        (.\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] (\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] ),
         .\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] (\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] ),
         .\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] (\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] ),
@@ -2179,7 +2179,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized0
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized0
    (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2204,7 +2204,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized1
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized1
    (p_14_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2229,7 +2229,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized10
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized10
    (p_5_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2254,7 +2254,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized11
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized11
    (p_4_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2279,7 +2279,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized12
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized12
    (p_3_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2304,7 +2304,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized13
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized13
    (p_2_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2329,7 +2329,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized14
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized14
    (p_1_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2354,7 +2354,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized19
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized19
    (\GEN_BKEND_CE_REGISTERS[18].ce_out_i_reg[18] ,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2379,7 +2379,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized2
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized2
    (p_13_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2404,7 +2404,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized23
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized23
    (\GEN_BKEND_CE_REGISTERS[22].ce_out_i_reg[22] ,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2429,7 +2429,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized28
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized28
    (\GEN_BKEND_CE_REGISTERS[26].ce_out_i_reg[26] ,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2454,7 +2454,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized3
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized3
    (p_12_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2479,7 +2479,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized32
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized32
    (\GEN_BKEND_CE_REGISTERS[30].ce_out_i_reg[30] ,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2504,7 +2504,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized4
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized4
    (p_11_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2529,7 +2529,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized5
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized5
    (p_10_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2554,7 +2554,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized6
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized6
    (p_9_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2579,7 +2579,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized7
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized7
    (p_8_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2604,7 +2604,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized8
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized8
    (p_7_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2629,7 +2629,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f_
 endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif_v3_0_4_pselect_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif_v3_0_4_pselect_f__parameterized9
+module DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif_v3_0_4_pselect_f__parameterized9
    (p_6_out,
     \bus2ip_addr_i_reg[6] ,
     Q);
@@ -2662,8 +2662,8 @@ endmodule
 (* C_S_AXI4_HIGHADDR = "0" *) (* C_S_AXI4_ID_WIDTH = "1" *) (* C_S_AXI_ADDR_WIDTH = "7" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TYPE_OF_AXI4_INTERFACE = "0" *) (* C_UC_FAMILY = "0" *) 
 (* C_USE_STARTUP = "0" *) (* C_USE_STARTUP_EXT = "0" *) (* C_XIP_MODE = "0" *) 
-(* downgradeipidentifiedwarnings = "yes" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi
+(* ORIG_REF_NAME = "axi_quad_spi" *) (* downgradeipidentifiedwarnings = "yes" *) 
+module DemoInterconnect_axi_quad_spi_1_0_axi_quad_spi
    (ext_spi_clk,
     s_axi_aclk,
     s_axi_aresetn,
@@ -3002,7 +3002,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi
   assign ss_1_t = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi_top \NO_DUAL_QUAD_MODE.QSPI_NORMAL 
+  DemoInterconnect_axi_quad_spi_1_0_axi_quad_spi_top \NO_DUAL_QUAD_MODE.QSPI_NORMAL 
        (.ext_spi_clk(ext_spi_clk),
         .io0_i(io0_i),
         .io0_o(io0_o),
@@ -3040,7 +3040,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi
        (.P(\<const1> ));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi_top
+(* ORIG_REF_NAME = "axi_quad_spi_top" *) 
+module DemoInterconnect_axi_quad_spi_1_0_axi_quad_spi_top
    (s_axi_rvalid,
     s_axi_bvalid,
     sck_t,
@@ -3257,7 +3258,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi_top
         .D(io1_i),
         .Q(io1_i_sync),
         .R(1'b0));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_lite_ipif \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I 
+  DemoInterconnect_axi_quad_spi_1_0_axi_lite_ipif \QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I 
        (.Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
         .\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] (spicr_8_tr_inhibit_frm_axi_clk),
         .\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] (spicr_7_ss_frm_axi_clk),
@@ -3359,7 +3360,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi_top
         .sw_rst_cond_d1(\SOFT_RESET_I/sw_rst_cond_d1 ),
         .tx_fifo_count(tx_fifo_count),
         .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I 
+  DemoInterconnect_axi_quad_spi_1_0_qspi_core_interface \QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I 
        (.Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
         .Bus_RNW_reg_reg(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_10 ),
         .Bus_RNW_reg_reg_0(\QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I_n_13 ),
@@ -3460,7 +3461,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_quad_spi_top
         .wr_ce_or_reduce_core_cmb(wr_ce_or_reduce_core_cmb));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync
+(* ORIG_REF_NAME = "cdc_sync" *) 
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync
    (\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ,
     scndry_out,
     drr_Overrun_int_cdc_from_spi_d3,
@@ -3546,7 +3548,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_28
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync_28
    (dtr_underrun_d1_reg,
     \DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg ,
     s_axi_aclk);
@@ -3608,7 +3610,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_28
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_29
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync_29
    (scndry_out,
     prmry_in,
     s_axi_aclk);
@@ -3670,7 +3672,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_29
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_30
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync_30
    (scndry_out,
     prmry_in,
     s_axi_aclk);
@@ -3732,7 +3734,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_30
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_31
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync_31
    (D,
     \ip_irpt_enable_reg_reg[8] ,
     s_axi_wdata,
@@ -3810,7 +3812,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_31
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_32
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync_32
    (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ,
     scndry_out,
     \icount_out_reg[3] ,
@@ -3981,7 +3983,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_32
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_33
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync_33
    (\GEN_IP_IRPT_STATUS_REG[6].GEN_REG_STATUS.ip_irpt_status_reg_reg[6] ,
     scndry_out,
     Tx_FIFO_Empty_intr,
@@ -4159,7 +4161,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_33
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized10
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized10
    (transfer_start_reg,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 ,
     scndry_out,
@@ -4235,7 +4237,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized10
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized11
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized11
    (\OTHER_RATIO_GENERATE.Shift_Reg_reg[7] ,
     \SPICR_data_int_reg[0] ,
     ext_spi_clk);
@@ -4285,7 +4287,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized11
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized12
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized12
    (scndry_out,
     modf_reg,
     ext_spi_clk);
@@ -4335,7 +4337,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized12
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized13
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized13
    (\SS_O_reg[0] ,
     \SS_O_reg[0]_0 ,
     transfer_start_reg,
@@ -4405,7 +4407,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized13
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized14
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized14
    (SPICR_RX_FIFO_Rst_en_d2,
     SPICR_RX_FIFO_Rst_en_d1,
     ext_spi_clk);
@@ -4431,7 +4433,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized14
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized15
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized15
    (scndry_out,
     spicr_bits_7_8_frm_axi_clk,
     ext_spi_clk);
@@ -4481,7 +4483,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized15
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized16
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized16
    (D_0,
     SPI_TRISTATE_CONTROL_V,
     scndry_out,
@@ -4567,7 +4569,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized16
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized17
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized17
    (scndry_out,
     prmry_in,
     ext_spi_clk);
@@ -4605,7 +4607,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized17
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized18
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized18
    (Rx_FIFO_Full_Fifo_d1_synced_i,
     scndry_out,
     \icount_out_reg[3] ,
@@ -4692,7 +4694,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized18
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized2
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized2
    (\OTHER_RATIO_GENERATE.Shift_Reg_reg[7] ,
     \OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7] ,
     \LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_reg ,
@@ -4811,7 +4813,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized2
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized3
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized3
    (Slave_MODF_strobe0,
     scndry_out,
     Allow_Slave_MODF_Strobe,
@@ -4877,7 +4879,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized3
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized4
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized4
    (Allow_Slave_MODF_Strobe_reg,
     scndry_out,
     transfer_start_reg,
@@ -4986,7 +4988,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized4
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized5
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized5
    (\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST ,
     \CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6] ,
     ext_spi_clk);
@@ -5036,7 +5038,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized5
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized6
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized6
    (\OTHER_RATIO_GENERATE.sck_o_int_reg ,
     \OTHER_RATIO_GENERATE.sck_o_int_reg_0 ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 ,
@@ -5098,7 +5100,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized6
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized9
+module DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized9
    (scndry_out,
     \CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] ,
     ext_spi_clk);
@@ -5147,7 +5149,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized9
         .R(1'b0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_f
+(* ORIG_REF_NAME = "counter_f" *) 
+module DemoInterconnect_axi_quad_spi_1_0_counter_f
    (rx_fifo_count,
     \icount_out_reg[0]_0 ,
     \icount_out_reg[3]_0 ,
@@ -5288,7 +5291,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_f
 endmodule
 
 (* ORIG_REF_NAME = "counter_f" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_f_0
+module DemoInterconnect_axi_quad_spi_1_0_counter_f_0
    (tx_fifo_count,
     \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.tx_fifo_count_d1_reg[3] ,
     \FIFO_EXISTS.TX_FULL_EMP_INTR_MD_0_GEN.Tx_FIFO_Full_i_reg ,
@@ -5428,7 +5431,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_f_0
         .R(1'b0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
+(* ORIG_REF_NAME = "cross_clk_sync_fifo_1" *) 
+module DemoInterconnect_axi_quad_spi_1_0_cross_clk_sync_fifo_1
    (\LOGIC_GENERATION_CDC.SPISEL_PULSE_S2AX_1_CDC_0 ,
     spiXfer_done_d3,
     scndry_out,
@@ -5830,7 +5834,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .I3(\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ),
         .I4(p_1_in17_in),
         .O(\GEN_IP_IRPT_STATUS_REG[7].GEN_REG_STATUS.ip_irpt_status_reg_reg[7] ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync \LOGIC_GENERATION_CDC.DRR_OVERRUN_S2AX_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync \LOGIC_GENERATION_CDC.DRR_OVERRUN_S2AX_1 
        (.\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ),
         .\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] (\GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5] ),
         .drr_Overrun_int_cdc_from_spi_d3(drr_Overrun_int_cdc_from_spi_d3),
@@ -5839,15 +5843,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata[2]),
         .scndry_out(drr_Overrun_int_cdc_from_spi_d2));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_28 \LOGIC_GENERATION_CDC.DTR_UNDERRUN_S2AX_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync_28 \LOGIC_GENERATION_CDC.DTR_UNDERRUN_S2AX_1 
        (.\DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg (\DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg ),
         .dtr_underrun_d1_reg(dtr_underrun_d1_reg),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_29 \LOGIC_GENERATION_CDC.MODF_STROBE_S2AX_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync_29 \LOGIC_GENERATION_CDC.MODF_STROBE_S2AX_1 
        (.prmry_in(modf_strobe_cdc_from_spi_int_2),
         .s_axi_aclk(s_axi_aclk),
         .scndry_out(modf_strobe_cdc_from_spi_d2));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized14 \LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized14 \LOGIC_GENERATION_CDC.RX_FIFO_RST_AX2S_1 
        (.SPICR_RX_FIFO_Rst_en_d1(SPICR_RX_FIFO_Rst_en_d1),
         .SPICR_RX_FIFO_Rst_en_d2(SPICR_RX_FIFO_Rst_en_d2),
         .ext_spi_clk(ext_spi_clk));
@@ -5871,11 +5875,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .D(reset_RcFIFO_ptr_cdc_from_axi_d1),
         .Q(reset_RcFIFO_ptr_cdc_from_axi_d2),
         .R(Rst_to_spi));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_30 \LOGIC_GENERATION_CDC.SLV_MODF_STRB_S2AX_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync_30 \LOGIC_GENERATION_CDC.SLV_MODF_STRB_S2AX_1 
        (.prmry_in(prmry_in),
         .s_axi_aclk(s_axi_aclk),
         .scndry_out(slave_MODF_strobe_cdc_from_spi_d2));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized2 \LOGIC_GENERATION_CDC.SPICR_0_LOOP_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized2 \LOGIC_GENERATION_CDC.SPICR_0_LOOP_AX2S_1 
        (.\CONTROL_REG_5_9_GENERATE[9].SPICR_data_int_reg[9] (\CONTROL_REG_5_9_GENERATE[9].SPICR_data_int_reg[9] ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1 (\OTHER_RATIO_GENERATE.Shift_Reg_reg[7]_0 ),
@@ -5893,14 +5897,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .scndry_out(\OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7]_0 ),
         .serial_dout_int(serial_dout_int),
         .spiXfer_done_int(spiXfer_done_int));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized3 \LOGIC_GENERATION_CDC.SPICR_1_SPE_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized3 \LOGIC_GENERATION_CDC.SPICR_1_SPE_AX2S_1 
        (.Allow_Slave_MODF_Strobe(Allow_Slave_MODF_Strobe),
         .\CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8] (\CONTROL_REG_5_9_GENERATE[8].SPICR_data_int_reg[8] ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 (transfer_start_reg),
         .Slave_MODF_strobe0(Slave_MODF_strobe0),
         .ext_spi_clk(ext_spi_clk),
         .scndry_out(Slave_MODF_strobe_reg));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized4 \LOGIC_GENERATION_CDC.SPICR_2_MST_N_SLV_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized4 \LOGIC_GENERATION_CDC.SPICR_2_MST_N_SLV_AX2S_1 
        (.Allow_MODF_Strobe(Allow_MODF_Strobe),
         .Allow_Slave_MODF_Strobe(Allow_Slave_MODF_Strobe),
         .Allow_Slave_MODF_Strobe_reg(Allow_Slave_MODF_Strobe_reg),
@@ -5914,21 +5918,21 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .spicr_2_mst_n_slv_frm_axi_clk(spicr_2_mst_n_slv_frm_axi_clk),
         .stop_clock(stop_clock),
         .transfer_start_reg(transfer_start_reg_0));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized5 \LOGIC_GENERATION_CDC.SPICR_3_CPOL_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized5 \LOGIC_GENERATION_CDC.SPICR_3_CPOL_AX2S_1 
        (.\CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6] (\CONTROL_REG_5_9_GENERATE[6].SPICR_data_int_reg[6] ),
         .\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST (\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST ),
         .ext_spi_clk(ext_spi_clk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized6 \LOGIC_GENERATION_CDC.SPICR_4_CPHA_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized6 \LOGIC_GENERATION_CDC.SPICR_4_CPHA_AX2S_1 
        (.\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] (\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 (\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST ),
         .\OTHER_RATIO_GENERATE.sck_o_int_reg (\OTHER_RATIO_GENERATE.sck_o_int_reg ),
         .\OTHER_RATIO_GENERATE.sck_o_int_reg_0 (\OTHER_RATIO_GENERATE.sck_o_int_reg_0 ),
         .ext_spi_clk(ext_spi_clk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized9 \LOGIC_GENERATION_CDC.SPICR_7_SS_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized9 \LOGIC_GENERATION_CDC.SPICR_7_SS_AX2S_1 
        (.\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] (\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] ),
         .ext_spi_clk(ext_spi_clk),
         .scndry_out(spicr_7_ss_to_spi_clk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized10 \LOGIC_GENERATION_CDC.SPICR_8_TR_INHIBIT_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized10 \LOGIC_GENERATION_CDC.SPICR_8_TR_INHIBIT_AX2S_1 
        (.\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] (\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 (Slave_MODF_strobe_reg),
         .RESET_SYNC_AX2S_2(RESET_SYNC_AX2S_2),
@@ -5937,11 +5941,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .out(out),
         .scndry_out(sr_3_modf_to_spi_clk),
         .transfer_start_reg(\LOGIC_GENERATION_CDC.SPICR_8_TR_INHIBIT_AX2S_1_n_0 ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized11 \LOGIC_GENERATION_CDC.SPICR_9_LSB_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized11 \LOGIC_GENERATION_CDC.SPICR_9_LSB_AX2S_1 
        (.\OTHER_RATIO_GENERATE.Shift_Reg_reg[7] (\OTHER_RATIO_GENERATE.Shift_Reg_reg[7]_0 ),
         .\SPICR_data_int_reg[0] (\SPICR_data_int_reg[0] ),
         .ext_spi_clk(ext_spi_clk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized16 \LOGIC_GENERATION_CDC.SPICR_BITS_7_8_SYNC_GEN_CDC[0].SPICR_BITS_7_8_AX2S_1_CDC 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized16 \LOGIC_GENERATION_CDC.SPICR_BITS_7_8_SYNC_GEN_CDC[0].SPICR_BITS_7_8_AX2S_1_CDC 
        (.D_0(D_0),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_0 (\OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7]_0 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3_1 (sr_3_modf_to_spi_clk),
@@ -5951,7 +5955,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .modf_strobe_int(modf_strobe_int),
         .scndry_out(spicr_bits_7_8_to_spi_clk),
         .spicr_bits_7_8_frm_axi_clk(spicr_bits_7_8_frm_axi_clk[0]));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized15 \LOGIC_GENERATION_CDC.SPICR_BITS_7_8_SYNC_GEN_CDC[1].SPICR_BITS_7_8_AX2S_1_CDC 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized15 \LOGIC_GENERATION_CDC.SPICR_BITS_7_8_SYNC_GEN_CDC[1].SPICR_BITS_7_8_AX2S_1_CDC 
        (.ext_spi_clk(ext_spi_clk),
         .scndry_out(spicr_bits_7_8_to_spi_clk),
         .spicr_bits_7_8_frm_axi_clk(spicr_bits_7_8_frm_axi_clk[1]));
@@ -5969,7 +5973,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .D(\LOGIC_GENERATION_CDC.SPICR_RX_FIFO_Rst_en_d1_i_1_n_0 ),
         .Q(SPICR_RX_FIFO_Rst_en_d1),
         .R(reset2ip_reset_int));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_31 \LOGIC_GENERATION_CDC.SPISEL_D1_REG_S2AX_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync_31 \LOGIC_GENERATION_CDC.SPISEL_D1_REG_S2AX_1 
        (.D(D),
         .\ip_irpt_enable_reg_reg[8] (\ip_irpt_enable_reg_reg[8] ),
         .s_axi_aclk(s_axi_aclk),
@@ -6016,7 +6020,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .D(spisel_pulse_cdc_from_spi_d3),
         .Q(spisel_pulse_cdc_from_spi_d4),
         .R(reset2ip_reset_int));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized13 \LOGIC_GENERATION_CDC.SPISSR_SYNC_GEN_CDC[0].SPISSR_AX2S_1_CDC 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized13 \LOGIC_GENERATION_CDC.SPISSR_SYNC_GEN_CDC[0].SPISSR_AX2S_1_CDC 
        (.Rst_to_spi(Rst_to_spi),
         .\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] (\SPISSR_WR_GEN[0].SPISSR_Data_reg_reg[0] ),
         .\SS_O_reg[0] (\SS_O_reg[0] ),
@@ -6024,11 +6028,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .ext_spi_clk(ext_spi_clk),
         .scndry_out(spicr_7_ss_to_spi_clk),
         .transfer_start_reg(transfer_start_reg_1));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized12 \LOGIC_GENERATION_CDC.SR_3_MODF_AX2S_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized12 \LOGIC_GENERATION_CDC.SR_3_MODF_AX2S_1 
        (.ext_spi_clk(ext_spi_clk),
         .modf_reg(modf_reg_0),
         .scndry_out(sr_3_modf_to_spi_clk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_32 \LOGIC_GENERATION_CDC.SYNC_SPIXFER_DONE_S2AX_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync_32 \LOGIC_GENERATION_CDC.SYNC_SPIXFER_DONE_S2AX_1 
        (.\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] ),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 (\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 ),
         .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] ),
@@ -6059,7 +6063,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .D(p_3_out),
         .Q(prmry_in),
         .R(Rst_to_spi));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync_33 \LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync_33 \LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] ),
         .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ),
@@ -6193,7 +6197,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1
         .O(rx_fifo_reset));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_interrupt_control
+(* ORIG_REF_NAME = "interrupt_control" *) 
+module DemoInterconnect_axi_quad_spi_1_0_interrupt_control
    (irpt_wrack_d1,
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ,
     p_1_in35_in,
@@ -6521,7 +6526,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_interrupt_control
         .R(reset2ip_reset_int));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_cntrl_reg
+(* ORIG_REF_NAME = "qspi_cntrl_reg" *) 
+module DemoInterconnect_axi_quad_spi_1_0_qspi_cntrl_reg
    (spicr_bits_7_8_frm_axi_clk,
     prmry_in,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to ,
@@ -6799,7 +6805,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_cntrl_reg
         .O(reset_TxFIFO_ptr_int));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
+(* ORIG_REF_NAME = "qspi_core_interface" *) 
+module DemoInterconnect_axi_quad_spi_1_0_qspi_core_interface
    (out,
     \gic0.gc1.count_reg[0] ,
     sck_t,
@@ -7218,7 +7225,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
   wire wr_ce_or_reduce_core_cmb;
   wire wrack;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_cntrl_reg CONTROL_REG_I
+  DemoInterconnect_axi_quad_spi_1_0_qspi_cntrl_reg CONTROL_REG_I
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 (spicr_6_rxfifo_rst_frm_axi_clk),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.Rx_FIFO_Full_int_reg (CONTROL_REG_I_n_16),
@@ -7257,7 +7264,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .s_axi_wdata(s_axi_wdata),
         .spiXfer_done_to_axi_1(spiXfer_done_to_axi_1),
         .spicr_bits_7_8_frm_axi_clk(spicr_bits_7_8_frm_axi_clk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cross_clk_sync_fifo_1 \FIFO_EXISTS.CLK_CROSS_I 
+  DemoInterconnect_axi_quad_spi_1_0_cross_clk_sync_fifo_1 \FIFO_EXISTS.CLK_CROSS_I 
        (.Allow_MODF_Strobe(Allow_MODF_Strobe),
         .Allow_Slave_MODF_Strobe(Allow_Slave_MODF_Strobe),
         .Allow_Slave_MODF_Strobe_reg(\FIFO_EXISTS.CLK_CROSS_I_n_5 ),
@@ -7372,7 +7379,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .tx_fifo_count_d2(tx_fifo_count_d2),
         .tx_occ_msb(tx_occ_msb),
         .tx_occ_msb_4(tx_occ_msb_4));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_fifo_ifmodule \FIFO_EXISTS.FIFO_IF_MODULE_I 
+  DemoInterconnect_axi_quad_spi_1_0_qspi_fifo_ifmodule \FIFO_EXISTS.FIFO_IF_MODULE_I 
        (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (dtr_underrun_to_axi_clk),
         .\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ),
         .\GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2] (\FIFO_EXISTS.FIFO_IF_MODULE_I_n_5 ),
@@ -7394,11 +7401,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .scndry_out(scndry_out),
         .tx_FIFO_Occpncy_MSB_d1(tx_FIFO_Occpncy_MSB_d1),
         .tx_occ_msb(tx_occ_msb));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized17 \FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized17 \FIFO_EXISTS.RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC 
        (.ext_spi_clk(ext_spi_clk),
         .prmry_in(out),
         .scndry_out(Rx_FIFO_Empty_Synced_in_SPI_domain));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_f \FIFO_EXISTS.RX_FIFO_FULL_CNTR_I 
+  DemoInterconnect_axi_quad_spi_1_0_counter_f \FIFO_EXISTS.RX_FIFO_FULL_CNTR_I 
        (.\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3] (spicr_6_rxfifo_rst_frm_axi_clk),
         .\CONTROL_REG_3_4_GENERATE[3].SPICR_data_int_reg[3]_0 (CONTROL_REG_I_n_14),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.Rx_FIFO_Full_i_reg (\FIFO_EXISTS.RX_FIFO_FULL_CNTR_I_n_4 ),
@@ -7415,7 +7422,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .s_axi_aclk(s_axi_aclk),
         .scndry_out(spiXfer_done_d2),
         .spiXfer_done_d3(spiXfer_done_d3));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_cdc_sync__parameterized18 \FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC 
+  DemoInterconnect_axi_quad_spi_1_0_cdc_sync__parameterized18 \FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC 
        (.\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_sig_reg (\FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC_n_3 ),
         .\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] (\GEN_BKEND_CE_REGISTERS[27].ce_out_i_reg[27] ),
         .Rx_FIFO_Full_Fifo_d1_flag(Rx_FIFO_Full_Fifo_d1_flag),
@@ -7427,7 +7434,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .reset2ip_reset_int(reset2ip_reset_int),
         .s_axi_aclk(s_axi_aclk),
         .scndry_out(scndry_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_async_fifo_fg \FIFO_EXISTS.RX_FIFO_II 
+  DemoInterconnect_axi_quad_spi_1_0_async_fifo_fg \FIFO_EXISTS.RX_FIFO_II 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .E(\USE_2N_DEPTH.V6_S6_AND_LATER.I_ASYNC_FIFO_BRAM/inst_fifo_gen/gconvfifo.rf/grf.rf/p_18_out ),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (rx_fifo_empty_i),
@@ -7483,7 +7490,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .D(\FIFO_EXISTS.RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC_n_3 ),
         .Q(Rx_FIFO_Full_Fifo_d1_sig),
         .R(1'b0));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_f_0 \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I 
+  DemoInterconnect_axi_quad_spi_1_0_counter_f_0 \FIFO_EXISTS.TX_FIFO_EMPTY_CNTR_I 
        (.Bus_RNW_reg_reg(Bus_RNW_reg_reg_0),
         .Bus_RNW_reg_reg_0(CONTROL_REG_I_n_12),
         .\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (spicr_5_txfifo_rst_frm_axi_clk),
@@ -7500,7 +7507,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .scndry_out(spiXfer_done_d2),
         .spiXfer_done_d3(spiXfer_done_d3),
         .tx_fifo_count(tx_fifo_count));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_async_fifo_fg_1 \FIFO_EXISTS.TX_FIFO_II 
+  DemoInterconnect_axi_quad_spi_1_0_async_fifo_fg_1 \FIFO_EXISTS.TX_FIFO_II 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (spicr_9_lsb_to_spi_clk),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\FIFO_EXISTS.TX_FIFO_II_n_2 ),
@@ -7597,7 +7604,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .D(tx_fifo_count_d2[3]),
         .Q(tx_occ_msb_4),
         .R(reset2ip_reset_int));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_interrupt_control INTERRUPT_CONTROL_I
+  DemoInterconnect_axi_quad_spi_1_0_interrupt_control INTERRUPT_CONTROL_I
        (.D({bus2IP_Data_for_interrupt_core,s_axi_wdata[7:0]}),
         .E(E),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (CONTROL_REG_I_n_15),
@@ -7816,7 +7823,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .D(read_ack_delay_6),
         .Q(read_ack_delay_7),
         .R(reset2ip_reset_int));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_mode_0_module \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I 
+  DemoInterconnect_axi_quad_spi_1_0_qspi_mode_0_module \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I 
        (.Allow_MODF_Strobe(Allow_MODF_Strobe),
         .Allow_Slave_MODF_Strobe(Allow_Slave_MODF_Strobe),
         .D(Serial_Din),
@@ -7878,7 +7885,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .ss_t(ss_t),
         .stop_clock(stop_clock),
         .transfer_start_d1_reg_0(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_sync_module RESET_SYNC_AXI_SPI_CLK_INST
+  DemoInterconnect_axi_quad_spi_1_0_reset_sync_module RESET_SYNC_AXI_SPI_CLK_INST
        (.Allow_MODF_Strobe_reg(RESET_SYNC_AXI_SPI_CLK_INST_n_0),
         .\DTR_UNDERRUN_FIFO_EXIST_GEN.DTR_underrun_reg (RESET_SYNC_AXI_SPI_CLK_INST_n_3),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (SPICR_2_MST_N_SLV_to_spi_clk),
@@ -7889,7 +7896,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .p_6_out(p_6_out),
         .reset2ip_reset_int(reset2ip_reset_int),
         .transfer_start_reg(\LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_11 ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_soft_reset SOFT_RESET_I
+  DemoInterconnect_axi_quad_spi_1_0_soft_reset SOFT_RESET_I
        (.\CONTROL_REG_3_4_GENERATE[4].SPICR_data_int_reg[4] (spicr_5_txfifo_rst_frm_axi_clk),
         .D(tx_fifo_count[0]),
         .bus2ip_reset_ipif_inverted(bus2ip_reset_ipif_inverted),
@@ -7901,7 +7908,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .sw_rst_cond(sw_rst_cond),
         .sw_rst_cond_d1(sw_rst_cond_d1),
         .wrack(wrack));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_status_slave_sel_reg \STATUS_REG_MODE_0_GEN.STATUS_SLAVE_SEL_REG_I 
+  DemoInterconnect_axi_quad_spi_1_0_qspi_status_slave_sel_reg \STATUS_REG_MODE_0_GEN.STATUS_SLAVE_SEL_REG_I 
        (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_5 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_6 ),
         .\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg[28] (\GEN_BKEND_CE_REGISTERS[28].ce_out_i_reg[28] ),
@@ -7934,7 +7941,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_core_interface
         .R(reset2ip_reset_int));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_fifo_ifmodule
+(* ORIG_REF_NAME = "qspi_fifo_ifmodule" *) 
+module DemoInterconnect_axi_quad_spi_1_0_qspi_fifo_ifmodule
    (\LEGACY_MD_WR_RD_ACK_GEN.IP2Bus_Error_reg ,
     p_4_in,
     tx_FIFO_Occpncy_MSB_d1,
@@ -8069,7 +8077,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_fifo_ifmodule
         .R(reset2ip_reset_int));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_mode_0_module
+(* ORIG_REF_NAME = "qspi_mode_0_module" *) 
+module DemoInterconnect_axi_quad_spi_1_0_qspi_mode_0_module
    (sck_t,
     io0_t,
     ss_t,
@@ -9596,7 +9605,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_mode_0_module
         .R(1'b0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_status_slave_sel_reg
+(* ORIG_REF_NAME = "qspi_status_slave_sel_reg" *) 
+module DemoInterconnect_axi_quad_spi_1_0_qspi_status_slave_sel_reg
    (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ,
     modf_reg_0,
@@ -9631,7 +9641,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_qspi_status_slave_sel_reg
         .R(1'b0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_sync_module
+(* ORIG_REF_NAME = "reset_sync_module" *) 
+module DemoInterconnect_axi_quad_spi_1_0_reset_sync_module
    (Allow_MODF_Strobe_reg,
     Rst_to_spi,
     p_6_out,
@@ -9716,7 +9727,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_sync_module
         .O(Allow_MODF_Strobe_reg));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_slave_attachment
+(* ORIG_REF_NAME = "slave_attachment" *) 
+module DemoInterconnect_axi_quad_spi_1_0_slave_attachment
    (SR,
     p_3_in,
     Receive_ip2bus_error_reg,
@@ -10147,7 +10159,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_slave_attachment
         .D(plusOp[5]),
         .Q(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [5]),
         .R(\INCLUDE_DPHASE_TIMER.dpto_cnt[5]_i_1_n_0 ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_address_decoder I_DECODER
+  DemoInterconnect_axi_quad_spi_1_0_address_decoder I_DECODER
        (.\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] (\CONTROL_REG_1_2_GENERATE[1].SPICR_data_int_reg[1] ),
         .\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] (\CONTROL_REG_1_2_GENERATE[2].SPICR_data_int_reg[2] ),
         .\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] (\CONTROL_REG_5_9_GENERATE[5].SPICR_data_int_reg[5] ),
@@ -10627,7 +10639,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_slave_attachment
         .R(SR));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_soft_reset
+(* ORIG_REF_NAME = "soft_reset" *) 
+module DemoInterconnect_axi_quad_spi_1_0_soft_reset
    (sw_rst_cond_d1,
     wrack,
     \icount_out_reg[0] ,
@@ -11061,7 +11074,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_soft_reset
         .R(bus2ip_reset_ipif_inverted));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs
+(* ORIG_REF_NAME = "clk_x_pntrs" *) 
+module DemoInterconnect_axi_quad_spi_1_0_clk_x_pntrs
    (out,
     ram_full_i_reg,
     Q,
@@ -11155,23 +11169,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs
         .I1(p_6_out[1]),
         .I2(p_6_out[3]),
         .O(\_inferred__3/i__n_0 ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized0 \gnxpm_cdc.gsync_stage[1].rd_stg_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized0 \gnxpm_cdc.gsync_stage[1].rd_stg_inst 
        (.D(p_3_out),
         .Q({\gnxpm_cdc.wr_pntr_gc_reg_n_0_[3] ,\gnxpm_cdc.wr_pntr_gc_reg_n_0_[2] ,\gnxpm_cdc.wr_pntr_gc_reg_n_0_[1] ,\gnxpm_cdc.wr_pntr_gc_reg_n_0_[0] }),
         .ext_spi_clk(ext_spi_clk),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized1 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized1 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
        (.AR(AR),
         .D(p_4_out),
         .Q({\gnxpm_cdc.rd_pntr_gc_reg_n_0_[3] ,\gnxpm_cdc.rd_pntr_gc_reg_n_0_[2] ,\gnxpm_cdc.rd_pntr_gc_reg_n_0_[1] ,\gnxpm_cdc.rd_pntr_gc_reg_n_0_[0] }),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized2 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized2 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
        (.D(\gnxpm_cdc.gsync_stage[2].rd_stg_inst_n_4 ),
         .\Q_reg_reg[3]_0 (p_3_out),
         .ext_spi_clk(ext_spi_clk),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .out(out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized3 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized3 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
        (.AR(AR),
         .D(\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_4 ),
         .\Q_reg_reg[3]_0 (p_4_out),
@@ -11363,7 +11377,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs
 endmodule
 
 (* ORIG_REF_NAME = "clk_x_pntrs" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs_9
+module DemoInterconnect_axi_quad_spi_1_0_clk_x_pntrs_9
    (out,
     ram_empty_i_reg,
     ram_empty_i_reg_0,
@@ -11444,23 +11458,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs_9
         .I1(p_6_out[1]),
         .I2(p_6_out[3]),
         .O(\_inferred__3/i__n_0 ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized0_24 \gnxpm_cdc.gsync_stage[1].rd_stg_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized0_24 \gnxpm_cdc.gsync_stage[1].rd_stg_inst 
        (.D(p_3_out),
         .Q(wr_pntr_gc),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized1_25 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized1_25 \gnxpm_cdc.gsync_stage[1].wr_stg_inst 
        (.AR(AR),
         .D(p_4_out),
         .Q(rd_pntr_gc),
         .ext_spi_clk(ext_spi_clk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized2_26 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized2_26 \gnxpm_cdc.gsync_stage[2].rd_stg_inst 
        (.D(gray2bin[2]),
         .\Q_reg_reg[3]_0 (p_3_out),
         .\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] (\ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1] ),
         .out(out),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized3_27 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized3_27 \gnxpm_cdc.gsync_stage[2].wr_stg_inst 
        (.AR(AR),
         .D(\gnxpm_cdc.gsync_stage[2].wr_stg_inst_n_4 ),
         .\Q_reg_reg[3]_0 (p_4_out),
@@ -11650,7 +11664,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs_9
         .O(ram_full_i_i_5_n_0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dmem
+(* ORIG_REF_NAME = "dmem" *) 
+module DemoInterconnect_axi_quad_spi_1_0_dmem
    (Q,
     s_axi_aclk,
     I104,
@@ -11791,7 +11806,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dmem
 endmodule
 
 (* ORIG_REF_NAME = "dmem" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dmem_18
+module DemoInterconnect_axi_quad_spi_1_0_dmem_18
    (\goreg_dm.dout_i_reg[7] ,
     ext_spi_clk,
     E,
@@ -11931,7 +11946,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dmem_18
         .Q(\goreg_dm.dout_i_reg[7] [7]));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
+module DemoInterconnect_axi_quad_spi_1_0_fifo_generator_ramfifo
    (out,
     \gic0.gc1.count_reg[0] ,
     \OTHER_RATIO_GENERATE.Serial_Dout_reg ,
@@ -11994,7 +12010,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
   wire [2:0]wr_pntr_plus2;
   wire [1:0]wr_rst_i;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx 
+  DemoInterconnect_axi_quad_spi_1_0_clk_x_pntrs \gntv_or_sync_fifo.gcx.clkx 
        (.AR(wr_rst_i[0]),
         .D({\gntv_or_sync_fifo.gl0.rd_n_3 ,\gntv_or_sync_fifo.gl0.rd_n_4 ,\gntv_or_sync_fifo.gl0.rd_n_5 }),
         .Q({p_23_out[3],p_23_out[1:0]}),
@@ -12019,7 +12035,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
         .I2(p_5_out_0[3]),
         .I3(p_5_out_0[2]),
         .O(\gntv_or_sync_fifo.gcx.clkx/_n_0 ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic \gntv_or_sync_fifo.gl0.rd 
+  DemoInterconnect_axi_quad_spi_1_0_rd_logic \gntv_or_sync_fifo.gl0.rd 
        (.AR(rd_rst_i[2]),
         .D({\gntv_or_sync_fifo.gl0.rd_n_3 ,\gntv_or_sync_fifo.gl0.rd_n_4 ,\gntv_or_sync_fifo.gl0.rd_n_5 }),
         .E(\gntv_or_sync_fifo.gl0.rd_n_1 ),
@@ -12030,7 +12046,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
         .\goreg_dm.dout_i_reg[7] (p_5_out),
         .out(out),
         .spisel_d1_reg__0(spisel_d1_reg__0));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic \gntv_or_sync_fifo.gl0.wr 
+  DemoInterconnect_axi_quad_spi_1_0_wr_logic \gntv_or_sync_fifo.gl0.wr 
        (.AR(wr_rst_i[1]),
         .Bus_RNW_reg(Bus_RNW_reg),
         .E(p_18_out),
@@ -12046,7 +12062,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
         .out(rst_full_ff_i),
         .p_6_in(p_6_in),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory \gntv_or_sync_fifo.mem 
+  DemoInterconnect_axi_quad_spi_1_0_memory \gntv_or_sync_fifo.mem 
        (.AR(rd_rst_i[0]),
         .E(\gntv_or_sync_fifo.gl0.rd_n_1 ),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ),
@@ -12059,7 +12075,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
         .\gpregsm1.curr_fwft_state_reg[1] (p_5_out),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_blk_ramfifo rstblk
+  DemoInterconnect_axi_quad_spi_1_0_reset_blk_ramfifo rstblk
        (.ext_spi_clk(ext_spi_clk),
         .\gc1.count_reg[0] (rd_rst_i),
         .\grstd1.grst_full.grst_f.rst_d3_reg_0 (rst_full_ff_i),
@@ -12070,7 +12086,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo_8
+module DemoInterconnect_axi_quad_spi_1_0_fifo_generator_ramfifo_8
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -12148,7 +12164,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo_8
   wire spiXfer_done_int;
   wire [1:0]wr_rst_i;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_x_pntrs_9 \gntv_or_sync_fifo.gcx.clkx 
+  DemoInterconnect_axi_quad_spi_1_0_clk_x_pntrs_9 \gntv_or_sync_fifo.gcx.clkx 
        (.AR(wr_rst_i[0]),
         .D(gray2bin),
         .Q(p_0_out),
@@ -12171,7 +12187,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo_8
         .I2(p_5_out_0[3]),
         .I3(p_5_out_0[2]),
         .O(gray2bin));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic_10 \gntv_or_sync_fifo.gl0.rd 
+  DemoInterconnect_axi_quad_spi_1_0_rd_logic_10 \gntv_or_sync_fifo.gl0.rd 
        (.AR(rd_rst_i[2]),
         .Bus_RNW_reg(Bus_RNW_reg),
         .E(\gntv_or_sync_fifo.gl0.rd_n_1 ),
@@ -12188,7 +12204,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo_8
         .out(out),
         .p_5_in(p_5_in),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic_11 \gntv_or_sync_fifo.gl0.wr 
+  DemoInterconnect_axi_quad_spi_1_0_wr_logic_11 \gntv_or_sync_fifo.gl0.wr 
        (.AR(wr_rst_i[1]),
         .E(E),
         .\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ),
@@ -12203,7 +12219,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo_8
         .ram_full_fb_i_reg(ram_full_fb_i_reg),
         .scndry_out(scndry_out),
         .spiXfer_done_int(spiXfer_done_int));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory_12 \gntv_or_sync_fifo.mem 
+  DemoInterconnect_axi_quad_spi_1_0_memory_12 \gntv_or_sync_fifo.mem 
        (.AR(rd_rst_i[0]),
         .E(E),
         .L(p_12_out),
@@ -12214,7 +12230,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo_8
         .\gpregsm1.curr_fwft_state_reg[1] (p_5_out),
         .ram_empty_fb_i_reg(\gntv_or_sync_fifo.gl0.rd_n_1 ),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_blk_ramfifo_13 rstblk
+  DemoInterconnect_axi_quad_spi_1_0_reset_blk_ramfifo_13 rstblk
        (.ext_spi_clk(ext_spi_clk),
         .\gc1.count_reg[0] (rd_rst_i),
         .\grstd1.grst_full.grst_f.rst_d3_reg_0 (rst_full_ff_i),
@@ -12224,7 +12240,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo_8
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
+module DemoInterconnect_axi_quad_spi_1_0_fifo_generator_top
    (out,
     \gic0.gc1.count_reg[0] ,
     \OTHER_RATIO_GENERATE.Serial_Dout_reg ,
@@ -12266,7 +12283,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top
   wire [7:0]s_axi_wdata;
   wire spisel_d1_reg__0;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo \grf.rf 
+  DemoInterconnect_axi_quad_spi_1_0_fifo_generator_ramfifo \grf.rf 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
@@ -12283,7 +12300,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_top" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top_7
+module DemoInterconnect_axi_quad_spi_1_0_fifo_generator_top_7
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -12343,7 +12360,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top_7
   wire scndry_out;
   wire spiXfer_done_int;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_ramfifo_8 \grf.rf 
+  DemoInterconnect_axi_quad_spi_1_0_fifo_generator_ramfifo_8 \grf.rf 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .E(E),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
@@ -12365,7 +12382,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top_7
         .spiXfer_done_int(spiXfer_done_int));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3
+(* ORIG_REF_NAME = "fifo_generator_v13_1_3" *) 
+module DemoInterconnect_axi_quad_spi_1_0_fifo_generator_v13_1_3
    (out,
     \gic0.gc1.count_reg[0] ,
     \OTHER_RATIO_GENERATE.Serial_Dout_reg ,
@@ -12407,7 +12425,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3
   wire [7:0]s_axi_wdata;
   wire spisel_d1_reg__0;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth inst_fifo_gen
+  DemoInterconnect_axi_quad_spi_1_0_fifo_generator_v13_1_3_synth inst_fifo_gen
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
@@ -12424,7 +12442,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_v13_1_3" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_5
+module DemoInterconnect_axi_quad_spi_1_0_fifo_generator_v13_1_3_5
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -12484,7 +12502,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_5
   wire scndry_out;
   wire spiXfer_done_int;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth_6 inst_fifo_gen
+  DemoInterconnect_axi_quad_spi_1_0_fifo_generator_v13_1_3_synth_6 inst_fifo_gen
        (.Bus_RNW_reg(Bus_RNW_reg),
         .E(E),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
@@ -12506,7 +12524,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_5
         .spiXfer_done_int(spiXfer_done_int));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth
+(* ORIG_REF_NAME = "fifo_generator_v13_1_3_synth" *) 
+module DemoInterconnect_axi_quad_spi_1_0_fifo_generator_v13_1_3_synth
    (out,
     \gic0.gc1.count_reg[0] ,
     \OTHER_RATIO_GENERATE.Serial_Dout_reg ,
@@ -12548,7 +12567,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth
   wire [7:0]s_axi_wdata;
   wire spisel_d1_reg__0;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top \gconvfifo.rf 
+  DemoInterconnect_axi_quad_spi_1_0_fifo_generator_top \gconvfifo.rf 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ),
         .\OTHER_RATIO_GENERATE.Serial_Dout_reg (\OTHER_RATIO_GENERATE.Serial_Dout_reg ),
@@ -12565,7 +12584,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_v13_1_3_synth" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth_6
+module DemoInterconnect_axi_quad_spi_1_0_fifo_generator_v13_1_3_synth_6
    (out,
     \FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
@@ -12625,7 +12644,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth_6
   wire scndry_out;
   wire spiXfer_done_int;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_top_7 \gconvfifo.rf 
+  DemoInterconnect_axi_quad_spi_1_0_fifo_generator_top_7 \gconvfifo.rf 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .E(E),
         .\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg (\FIFO_EXISTS.RX_FULL_EMP_MD_0_GEN.rx_fifo_empty_i_reg ),
@@ -12647,7 +12666,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_fifo_generator_v13_1_3_synth_6
         .spiXfer_done_int(spiXfer_done_int));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory
+(* ORIG_REF_NAME = "memory" *) 
+module DemoInterconnect_axi_quad_spi_1_0_memory
    (\OTHER_RATIO_GENERATE.Serial_Dout_reg ,
     Q,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ,
@@ -12701,7 +12721,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory
         .I1(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 ),
         .I2(Q[7]),
         .O(\OTHER_RATIO_GENERATE.Serial_Dout_reg ));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dmem \gdm.dm_gen.dm 
+  DemoInterconnect_axi_quad_spi_1_0_dmem \gdm.dm_gen.dm 
        (.AR(AR),
         .E(E),
         .I104(I104),
@@ -12778,7 +12798,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory
 endmodule
 
 (* ORIG_REF_NAME = "memory" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory_12
+module DemoInterconnect_axi_quad_spi_1_0_memory_12
    (\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] ,
     ext_spi_clk,
     E,
@@ -12819,7 +12839,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory_12
   wire [0:0]ram_empty_fb_i_reg;
   wire s_axi_aclk;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dmem_18 \gdm.dm_gen.dm 
+  DemoInterconnect_axi_quad_spi_1_0_dmem_18 \gdm.dm_gen.dm 
        (.AR(AR),
         .E(E),
         .L(L),
@@ -12895,7 +12915,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_memory_12
         .Q(\LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[24] [7]));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
+module DemoInterconnect_axi_quad_spi_1_0_rd_bin_cntr
    (D,
     Q,
     ram_empty_i_reg,
@@ -13087,7 +13108,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr
 endmodule
 
 (* ORIG_REF_NAME = "rd_bin_cntr" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr_23
+module DemoInterconnect_axi_quad_spi_1_0_rd_bin_cntr_23
    (ram_empty_i0,
     \gnxpm_cdc.rd_pntr_gc_reg[2] ,
     Q,
@@ -13289,7 +13310,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr_23
         .O(ram_empty_i_i_4_n_0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_fwft
+(* ORIG_REF_NAME = "rd_fwft" *) 
+module DemoInterconnect_axi_quad_spi_1_0_rd_fwft
    (out,
     E,
     ram_empty_i0,
@@ -13490,7 +13512,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_fwft
 endmodule
 
 (* ORIG_REF_NAME = "rd_fwft" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_fwft_21
+module DemoInterconnect_axi_quad_spi_1_0_rd_fwft_21
    (out,
     E,
     \goreg_dm.dout_i_reg[7] ,
@@ -13716,7 +13738,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_fwft_21
         .O(\icount_out_reg[3] ));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic
+(* ORIG_REF_NAME = "rd_logic" *) 
+module DemoInterconnect_axi_quad_spi_1_0_rd_logic
    (out,
     E,
     \goreg_dm.dout_i_reg[7] ,
@@ -13752,7 +13775,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic
   wire rpntr_n_7;
   wire spisel_d1_reg__0;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_fwft \gr1.gr1_int.rfwft 
+  DemoInterconnect_axi_quad_spi_1_0_rd_fwft \gr1.gr1_int.rfwft 
        (.AR(AR),
         .E(E),
         .ext_spi_clk(ext_spi_clk),
@@ -13763,12 +13786,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic
         .ram_empty_fb_i_reg(p_2_out),
         .ram_empty_i0(ram_empty_i0),
         .spisel_d1_reg__0(spisel_d1_reg__0));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as \gras.rsts 
+  DemoInterconnect_axi_quad_spi_1_0_rd_status_flags_as \gras.rsts 
        (.AR(AR),
         .ext_spi_clk(ext_spi_clk),
         .out(p_2_out),
         .ram_empty_i0(ram_empty_i0));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr rpntr
+  DemoInterconnect_axi_quad_spi_1_0_rd_bin_cntr rpntr
        (.AR(AR),
         .D(D),
         .E(E),
@@ -13779,7 +13802,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic
 endmodule
 
 (* ORIG_REF_NAME = "rd_logic" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic_10
+module DemoInterconnect_axi_quad_spi_1_0_rd_logic_10
    (out,
     E,
     \goreg_dm.dout_i_reg[7] ,
@@ -13832,7 +13855,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic_10
   wire ram_empty_i0;
   wire s_axi_aclk;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_fwft_21 \gr1.gr1_int.rfwft 
+  DemoInterconnect_axi_quad_spi_1_0_rd_fwft_21 \gr1.gr1_int.rfwft 
        (.AR(AR),
         .Bus_RNW_reg(Bus_RNW_reg),
         .E(E),
@@ -13846,12 +13869,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic_10
         .p_5_in(p_5_in),
         .ram_empty_fb_i_reg(p_2_out),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as_22 \gras.rsts 
+  DemoInterconnect_axi_quad_spi_1_0_rd_status_flags_as_22 \gras.rsts 
        (.AR(AR),
         .out(p_2_out),
         .ram_empty_i0(ram_empty_i0),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_bin_cntr_23 rpntr
+  DemoInterconnect_axi_quad_spi_1_0_rd_bin_cntr_23 rpntr
        (.AR(AR),
         .E(E),
         .Q(Q),
@@ -13862,7 +13885,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_logic_10
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as
+(* ORIG_REF_NAME = "rd_status_flags_as" *) 
+module DemoInterconnect_axi_quad_spi_1_0_rd_status_flags_as
    (out,
     ram_empty_i0,
     ext_spi_clk,
@@ -13904,7 +13928,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as
 endmodule
 
 (* ORIG_REF_NAME = "rd_status_flags_as" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as_22
+module DemoInterconnect_axi_quad_spi_1_0_rd_status_flags_as_22
    (out,
     ram_empty_i0,
     s_axi_aclk,
@@ -13945,7 +13969,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rd_status_flags_as_22
         .Q(ram_empty_i));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_blk_ramfifo
+(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
+module DemoInterconnect_axi_quad_spi_1_0_reset_blk_ramfifo
    (out,
     \gc1.count_reg[0] ,
     \grstd1.grst_full.grst_f.rst_d3_reg_0 ,
@@ -14019,22 +14044,22 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_blk_ramfifo
         .D(rst_d2),
         .PRE(rst_wr_reg2),
         .Q(rst_d3));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst 
        (.ext_spi_clk(ext_spi_clk),
         .in0(rd_rst_asreg),
         .\ngwrdrst.grst.g7serrst.rd_rst_asreg_reg (\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst_n_1 ),
         .out(p_7_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_2 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_2 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst 
        (.in0(wr_rst_asreg),
         .\ngwrdrst.grst.g7serrst.wr_rst_asreg_reg (\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst_n_1 ),
         .out(p_8_out),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_3 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_3 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst 
        (.AS(\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst_n_0 ),
         .ext_spi_clk(ext_spi_clk),
         .in0(rd_rst_asreg),
         .out(p_7_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_4 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_4 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst 
        (.AS(\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst_n_0 ),
         .in0(wr_rst_asreg),
         .out(p_8_out),
@@ -14168,7 +14193,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_blk_ramfifo
 endmodule
 
 (* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_blk_ramfifo_13
+module DemoInterconnect_axi_quad_spi_1_0_reset_blk_ramfifo_13
    (out,
     \gc1.count_reg[0] ,
     \grstd1.grst_full.grst_f.rst_d3_reg_0 ,
@@ -14242,22 +14267,22 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_blk_ramfifo_13
         .D(rst_d2),
         .PRE(rst_wr_reg2),
         .Q(rst_d3));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_14 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_14 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst 
        (.in0(rd_rst_asreg),
         .\ngwrdrst.grst.g7serrst.rd_rst_asreg_reg (\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].rrst_inst_n_1 ),
         .out(p_7_out),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_15 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_15 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst 
        (.ext_spi_clk(ext_spi_clk),
         .in0(wr_rst_asreg),
         .\ngwrdrst.grst.g7serrst.wr_rst_asreg_reg (\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[1].wrst_inst_n_1 ),
         .out(p_8_out));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_16 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_16 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst 
        (.AS(\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst_n_0 ),
         .in0(rd_rst_asreg),
         .out(p_7_out),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_17 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst 
+  DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_17 \ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst 
        (.AS(\ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst_n_0 ),
         .ext_spi_clk(ext_spi_clk),
         .in0(wr_rst_asreg),
@@ -14390,7 +14415,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_reset_blk_ramfifo_13
         .Q(wr_rst_reg[2]));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff
+(* ORIG_REF_NAME = "synchronizer_ff" *) 
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff
    (out,
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ,
     in0,
@@ -14426,7 +14452,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_14
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_14
    (out,
     \ngwrdrst.grst.g7serrst.rd_rst_asreg_reg ,
     in0,
@@ -14462,7 +14488,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_14
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_15
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_15
    (out,
     \ngwrdrst.grst.g7serrst.wr_rst_asreg_reg ,
     in0,
@@ -14498,7 +14524,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_15
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_16
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_16
    (AS,
     out,
     s_axi_aclk,
@@ -14534,7 +14560,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_16
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_17
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_17
    (AS,
     out,
     ext_spi_clk,
@@ -14570,7 +14596,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_17
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_2
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_2
    (out,
     \ngwrdrst.grst.g7serrst.wr_rst_asreg_reg ,
     in0,
@@ -14606,7 +14632,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_2
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_3
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_3
    (AS,
     out,
     ext_spi_clk,
@@ -14642,7 +14668,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_3
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_4
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff_4
    (AS,
     out,
     s_axi_aclk,
@@ -14678,7 +14704,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff_4
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized0
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized0
    (D,
     Q,
     ext_spi_clk,
@@ -14741,7 +14767,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized0
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized0_24
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized0_24
    (D,
     Q,
     s_axi_aclk,
@@ -14804,7 +14830,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized0
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized1
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized1
    (D,
     Q,
     s_axi_aclk,
@@ -14867,7 +14893,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized1
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized1_25
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized1_25
    (D,
     Q,
     ext_spi_clk,
@@ -14930,7 +14956,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized1
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized2
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized2
    (out,
     D,
     \Q_reg_reg[3]_0 ,
@@ -15002,7 +15028,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized2
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized2_26
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized2_26
    (out,
     D,
     \Q_reg_reg[3]_0 ,
@@ -15074,7 +15100,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized2
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized3
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized3
    (out,
     D,
     \Q_reg_reg[3]_0 ,
@@ -15146,7 +15172,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized3
 endmodule
 
 (* ORIG_REF_NAME = "synchronizer_ff" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized3_27
+module DemoInterconnect_axi_quad_spi_1_0_synchronizer_ff__parameterized3_27
    (out,
     D,
     \Q_reg_reg[3]_0 ,
@@ -15217,7 +15243,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_synchronizer_ff__parameterized3
         .O(D));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
+module DemoInterconnect_axi_quad_spi_1_0_wr_bin_cntr
    (ram_full_i_reg,
     \gic0.gc1.count_d2_reg[2]_0 ,
     Q,
@@ -15438,7 +15465,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr
 endmodule
 
 (* ORIG_REF_NAME = "wr_bin_cntr" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr_20
+module DemoInterconnect_axi_quad_spi_1_0_wr_bin_cntr_20
    (ram_full_fb_i_reg,
     Q,
     \gnxpm_cdc.wr_pntr_gc_reg[3] ,
@@ -15643,7 +15670,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr_20
         .O(ram_full_i_i_4__0_n_0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic
+(* ORIG_REF_NAME = "wr_logic" *) 
+module DemoInterconnect_axi_quad_spi_1_0_wr_logic
    (\gic0.gc1.count_reg[0] ,
     Q,
     E,
@@ -15692,7 +15720,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic
   wire s_axi_aclk;
   wire wpntr_n_0;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as \gwas.wsts 
+  DemoInterconnect_axi_quad_spi_1_0_wr_status_flags_as \gwas.wsts 
        (.Bus_RNW_reg(Bus_RNW_reg),
         .E(E),
         .\gic0.gc1.count_d2_reg[0] (wpntr_n_0),
@@ -15701,7 +15729,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic
         .out(out),
         .p_6_in(p_6_in),
         .s_axi_aclk(s_axi_aclk));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr wpntr
+  DemoInterconnect_axi_quad_spi_1_0_wr_bin_cntr wpntr
        (.AR(AR),
         .E(E),
         .Q(Q),
@@ -15716,7 +15744,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic
 endmodule
 
 (* ORIG_REF_NAME = "wr_logic" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic_11
+module DemoInterconnect_axi_quad_spi_1_0_wr_logic_11
    (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg,
     Rx_FIFO_Full_Fifo,
@@ -15762,7 +15790,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic_11
   wire spiXfer_done_int;
   wire wpntr_n_0;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as_19 \gwas.wsts 
+  DemoInterconnect_axi_quad_spi_1_0_wr_status_flags_as_19 \gwas.wsts 
        (.\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ),
         .Rx_FIFO_Full_Fifo(Rx_FIFO_Full_Fifo),
         .ext_spi_clk(ext_spi_clk),
@@ -15773,7 +15801,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic_11
         .ram_full_fb_i_reg_0(ram_full_fb_i_reg),
         .scndry_out(scndry_out),
         .spiXfer_done_int(spiXfer_done_int));
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_bin_cntr_20 wpntr
+  DemoInterconnect_axi_quad_spi_1_0_wr_bin_cntr_20 wpntr
        (.AR(AR),
         .E(E),
         .Q(Q),
@@ -15783,7 +15811,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_logic_11
         .ram_full_fb_i_reg(wpntr_n_0));
 endmodule
 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as
+(* ORIG_REF_NAME = "wr_status_flags_as" *) 
+module DemoInterconnect_axi_quad_spi_1_0_wr_status_flags_as
    (\gic0.gc1.count_reg[0] ,
     E,
     \gic0.gc1.count_d2_reg[0] ,
@@ -15846,7 +15875,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as
 endmodule
 
 (* ORIG_REF_NAME = "wr_status_flags_as" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_wr_status_flags_as_19
+module DemoInterconnect_axi_quad_spi_1_0_wr_status_flags_as_19
    (\FIFO_EXISTS.Rx_FIFO_Full_Fifo_d1_reg ,
     ram_full_fb_i_reg_0,
     Rx_FIFO_Full_Fifo,

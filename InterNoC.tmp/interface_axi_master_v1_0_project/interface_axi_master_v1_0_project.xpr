@@ -6,7 +6,7 @@
 <Project Version="7" Minor="17" Path="d:/development/fpga/internoc/internoc.tmp/interface_axi_master_v1_0_project/interface_axi_master_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="2b4c38aa9d0c441e898da229247d7745"/>
+    <Option Name="Id" Val="51797340a257429686fd7951e513d76a"/>
     <Option Name="Part" Val="xc7a35tfgg484-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -20,7 +20,8 @@
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../Development/FPGA/ip_repo/interface_axi_master_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/uart_transceiver_v1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -53,37 +54,37 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/ip_repo/interface_axi_master_1.0/src/serial2parallel.vhd">
+      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/src/serial2parallel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/ip_repo/interface_axi_master_1.0/src/parallel2serial.vhd">
+      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/src/parallel2serial.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/ip_repo/interface_axi_master_1.0/hdl/interface_axi_master_v1_0_M00_AXI.vhd">
+      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/hdl/interface_axi_master_v1_0_M00_AXI.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/ip_repo/interface_axi_master_1.0/hdl/interface_axi_master_v1_0.vhd">
+      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/hdl/interface_axi_master_v1_0.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/ip_repo/interface_axi_master_1.0/component.xml">
+      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="interface_axi_master_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../Development/FPGA/ip_repo/interface_axi_master_1.0/hdl/interface_axi_master_v1_0.vhd"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/hdl/interface_axi_master_v1_0.vhd"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

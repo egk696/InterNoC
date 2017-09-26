@@ -18,6 +18,7 @@
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val=""/>
+    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/ip_repo/uart_transceiver_v1_0"/>
@@ -38,13 +39,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
-    <Option Name="WTIesExportSim" Val="1"/>
-    <Option Name="WTVcsExportSim" Val="1"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTIesExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -60,9 +61,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_axi_quad_spi_2_0/DemoInterconnect_axi_quad_spi_2_0.xci">
-          <Proxy FileSetName="DemoInterconnect_axi_quad_spi_2_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_axi_quad_spi_1_0/DemoInterconnect_axi_quad_spi_1_0.xci">
           <Proxy FileSetName="DemoInterconnect_axi_quad_spi_1_0"/>
         </CompFileExtendedInfo>
@@ -88,18 +86,16 @@
         <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_jtag_axi_0_0/DemoInterconnect_jtag_axi_0_0.xci">
           <Proxy FileSetName="DemoInterconnect_jtag_axi_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_uart_transceiver_0_1/DemoInterconnect_uart_transceiver_0_1.xci">
-          <Proxy FileSetName="DemoInterconnect_uart_transceiver_0_1"/>
+        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_axi_quad_spi_2_0/DemoInterconnect_axi_quad_spi_2_0.xci">
+          <Proxy FileSetName="DemoInterconnect_axi_quad_spi_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_auto_pc_0/DemoInterconnect_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_uart_transceiver_0_0/DemoInterconnect_uart_transceiver_0_0.xci">
           <Proxy FileSetName="DemoInterconnect_uart_transceiver_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="hdl/DemoInterconnect.vhd"/>
-        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="hdl/DemoInterconnect.hwdef"/>
-        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="hw_handoff/DemoInterconnect_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="hw_handoff/DemoInterconnect.hwh"/>
-        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="DemoInterconnect_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_uart_transceiver_0_1/DemoInterconnect_uart_transceiver_0_1.xci">
+          <Proxy FileSetName="DemoInterconnect_uart_transceiver_0_1"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd">
         <FileInfo>
@@ -121,7 +117,7 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/new/DemoInterconnect_TestBench.vhd">
+      <File Path="$PPRDIR/ip_repo/interface_axi_master_1.0/src/serial2parallel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -129,14 +125,12 @@
       </File>
       <File Path="$PPRDIR/ip_repo/interface_axi_master_1.0/src/parallel2serial.vhd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/ip_repo/interface_axi_master_1.0/src/serial2parallel.vhd">
+      <File Path="$PSRCDIR/sim_1/new/DemoInterconnect_TestBench.vhd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -151,21 +145,9 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
-    <FileSet Name="DemoInterconnect_interface_axi_master_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_interface_axi_master_0_0">
-      <Config>
-        <Option Name="TopModule" Val="DemoInterconnect_interface_axi_master_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="DemoInterconnect_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_xbar_0">
       <Config>
         <Option Name="TopModule" Val="DemoInterconnect_xbar_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="DemoInterconnect_interface_axi_master_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_interface_axi_master_0_1">
-      <Config>
-        <Option Name="TopModule" Val="DemoInterconnect_interface_axi_master_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -217,6 +199,18 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="DemoInterconnect_interface_axi_master_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_interface_axi_master_0_0">
+      <Config>
+        <Option Name="TopModule" Val="DemoInterconnect_interface_axi_master_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="DemoInterconnect_interface_axi_master_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_interface_axi_master_0_1">
+      <Config>
+        <Option Name="TopModule" Val="DemoInterconnect_interface_axi_master_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -244,17 +238,79 @@
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="DemoInterconnect_interface_axi_master_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_interface_axi_master_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_interface_axi_master_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_interface_axi_master_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="DemoInterconnect_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_xbar_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_xbar_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_xbar_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="DemoInterconnect_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_xbar_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_xbar_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_xbar_0_synth_1" IncludeInArchive="true">
+    <Run Id="DemoInterconnect_axi_quad_spi_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_quad_spi_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_axi_quad_spi_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_quad_spi_0_1_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_quad_spi_0_1" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_axi_quad_spi_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_quad_spi_1_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_quad_spi_1_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_axi_quad_spi_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_quad_spi_2_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_quad_spi_2_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_2_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_axi_quad_spi_2_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_jtag_axi_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_jtag_axi_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_jtag_axi_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_jtag_axi_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_clk_wiz_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_clk_wiz_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_clk_wiz_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_uart_transceiver_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_uart_transceiver_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_uart_transceiver_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_uart_transceiver_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_uart_transceiver_0_1_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_uart_transceiver_0_1" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_uart_transceiver_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_uart_transceiver_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_interface_axi_master_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_interface_axi_master_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_interface_axi_master_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_interface_axi_master_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -274,87 +330,142 @@
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="DemoInterconnect_axi_quad_spi_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_quad_spi_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_axi_quad_spi_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_quad_spi_0_1_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_quad_spi_0_1" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_axi_quad_spi_0_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_quad_spi_1_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_quad_spi_1_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_axi_quad_spi_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_quad_spi_2_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_quad_spi_2_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_2_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_axi_quad_spi_2_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_jtag_axi_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_jtag_axi_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_jtag_axi_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_jtag_axi_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_clk_wiz_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_clk_wiz_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_clk_wiz_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_uart_transceiver_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_uart_transceiver_0_0" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_uart_transceiver_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_uart_transceiver_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_uart_transceiver_0_1_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_uart_transceiver_0_1" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_uart_transceiver_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/DemoInterconnect_uart_transceiver_0_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_xbar_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_xbar_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_quad_spi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_0_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_axi_quad_spi_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_quad_spi_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_0_1" Description="Default settings for Implementation." SynthRun="DemoInterconnect_axi_quad_spi_0_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_quad_spi_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_1_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_axi_quad_spi_1_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_quad_spi_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_2_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_axi_quad_spi_2_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_jtag_axi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_jtag_axi_0_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_jtag_axi_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_clk_wiz_0_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_clk_wiz_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_uart_transceiver_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_uart_transceiver_0_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_uart_transceiver_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_uart_transceiver_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_uart_transceiver_0_1" Description="Default settings for Implementation." SynthRun="DemoInterconnect_uart_transceiver_0_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
@@ -386,160 +497,7 @@
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="DemoInterconnect_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_xbar_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_xbar_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="DemoInterconnect_interface_axi_master_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_interface_axi_master_0_1" Description="Default settings for Implementation." SynthRun="DemoInterconnect_interface_axi_master_0_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_quad_spi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_0_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_axi_quad_spi_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_quad_spi_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_0_1" Description="Default settings for Implementation." SynthRun="DemoInterconnect_axi_quad_spi_0_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_quad_spi_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_1_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_axi_quad_spi_1_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_quad_spi_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_axi_quad_spi_2_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_axi_quad_spi_2_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_jtag_axi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_jtag_axi_0_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_jtag_axi_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_clk_wiz_0_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_clk_wiz_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_uart_transceiver_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_uart_transceiver_0_0" Description="Default settings for Implementation." SynthRun="DemoInterconnect_uart_transceiver_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_uart_transceiver_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tfgg484-2" ConstrsSet="DemoInterconnect_uart_transceiver_0_1" Description="Default settings for Implementation." SynthRun="DemoInterconnect_uart_transceiver_0_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
           <Desc>Default settings for Implementation.</Desc>
