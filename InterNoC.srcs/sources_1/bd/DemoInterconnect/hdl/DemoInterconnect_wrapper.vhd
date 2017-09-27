@@ -1,8 +1,8 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
---Date        : Tue Sep 26 14:11:41 2017
---Host        : egk-pc running 64-bit major release  (build 9200)
+--Date        : Wed Sep 27 17:19:05 2017
+--Host        : EMA-VAIO running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect_wrapper.bd
 --Design      : DemoInterconnect_wrapper
 --Purpose     : IP block netlist

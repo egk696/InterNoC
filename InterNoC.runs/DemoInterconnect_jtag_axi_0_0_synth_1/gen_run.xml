@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="DemoInterconnect_jtag_axi_0_0_synth_1" LaunchPart="xc7a35tfgg484-2" LaunchTime="1506266449">
-  <File Type="RDS-PROPCONSTRS" Name="DemoInterconnect_jtag_axi_0_0_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="DemoInterconnect_jtag_axi_0_0.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="DemoInterconnect_jtag_axi_0_0_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="DemoInterconnect_jtag_axi_0_0.vds"/>
   <File Type="RDS-UTIL" Name="DemoInterconnect_jtag_axi_0_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="DemoInterconnect_jtag_axi_0_0_utilization_synth.pb"/>

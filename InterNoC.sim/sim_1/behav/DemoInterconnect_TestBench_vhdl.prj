@@ -1,0 +1,27 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_0_0/sim/DemoInterconnect_axi_quad_spi_0_0.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_0_1/sim/DemoInterconnect_axi_quad_spi_0_1.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_1_0/sim/DemoInterconnect_axi_quad_spi_1_0.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ip/DemoInterconnect_axi_quad_spi_2_0/sim/DemoInterconnect_axi_quad_spi_2_0.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ipshared/fa19/uart_rx.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ipshared/fa19/uart_tx.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ipshared/fa19/uart_top.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/sim/DemoInterconnect_uart_transceiver_0_0.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_1/sim/DemoInterconnect_uart_transceiver_0_1.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ipshared/7fea/src/serial2parallel.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ipshared/7fea/src/parallel2serial.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ipshared/7fea/hdl/interface_axi_master_v1_0_M00_AXI.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ipshared/7fea/hdl/interface_axi_master_v1_0.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/sim/DemoInterconnect_interface_axi_master_0_0.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_1/sim/DemoInterconnect_interface_axi_master_0_1.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.ip_user_files/bd/DemoInterconnect/hdl/DemoInterconnect.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.srcs/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd"
+vhdl xil_defaultlib  "../../../ip_repo/interface_axi_master_1.0/src/serial2parallel.vhd"
+vhdl xil_defaultlib  "../../../ip_repo/interface_axi_master_1.0/src/parallel2serial.vhd"
+vhdl xil_defaultlib  "../../../InterNoC.srcs/sim_1/new/DemoInterconnect_TestBench.vhd"
+vhdl xil_defaultlib  "../../../ip_repo/uart_transceiver_v1_0/uart_top.vhd"
+vhdl xil_defaultlib  "../../../ip_repo/uart_transceiver_v1_0/uart_rx.vhd"
+vhdl xil_defaultlib  "../../../ip_repo/uart_transceiver_v1_0/uart_tx.vhd"
+
+# Do not sort compile order
+nosort
