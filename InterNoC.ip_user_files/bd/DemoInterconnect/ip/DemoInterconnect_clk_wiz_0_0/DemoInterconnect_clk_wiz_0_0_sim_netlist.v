@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Sep 24 18:25:35 2017
+// Date        : Thu Sep 28 17:37:55 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_clk_wiz_0_0 -prefix
+//               DemoInterconnect_clk_wiz_0_0_ DemoInterconnect_clk_wiz_0_0_sim_netlist.v
 // Design      : DemoInterconnect_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -43,7 +43,6 @@ module DemoInterconnect_clk_wiz_0_0
         .uart(uart));
 endmodule
 
-(* ORIG_REF_NAME = "DemoInterconnect_clk_wiz_0_0_clk_wiz" *) 
 module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
    (aclk,
     spi,
@@ -180,11 +179,11 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(50),
+    .CLKOUT1_DIVIDE(20),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(10),
+    .CLKOUT2_DIVIDE(100),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),

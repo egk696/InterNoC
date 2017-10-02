@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date         : Sun Sep 24 18:25:39 2017
+| Date         : Fri Sep 29 15:38:09 2017
 | Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_utilization -file DemoInterconnect_uart_transceiver_0_0_utilization_synth.rpt -pb DemoInterconnect_uart_transceiver_0_0_utilization_synth.pb
 | Design       : DemoInterconnect_uart_transceiver_0_0
@@ -151,8 +151,8 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |   48 |        Flop & Latch |
 | LUT6     |   35 |                 LUT |
-| LUT5     |   20 |                 LUT |
-| LUT4     |   14 |                 LUT |
+| LUT5     |   21 |                 LUT |
+| LUT4     |   13 |                 LUT |
 | LUT3     |    7 |                 LUT |
 | LUT2     |    5 |                 LUT |
 | LUT1     |    1 |                 LUT |

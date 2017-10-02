@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
---Date        : Tue Sep 26 14:11:40 2017
+--Date        : Mon Oct 02 16:35:46 2017
 --Host        : egk-pc running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect.bd
 --Design      : DemoInterconnect
@@ -2039,6 +2039,10 @@ entity DemoInterconnect is
     UART_RX_1 : in STD_LOGIC;
     UART_TX_0 : out STD_LOGIC;
     UART_TX_1 : out STD_LOGIC;
+    pll_aclk : out STD_LOGIC;
+    pll_lock : out STD_LOGIC;
+    pll_spi : out STD_LOGIC;
+    pll_uart : out STD_LOGIC;
     spi_rtl_0_io0_i : in STD_LOGIC;
     spi_rtl_0_io0_o : out STD_LOGIC;
     spi_rtl_0_io0_t : out STD_LOGIC;
@@ -2624,6 +2628,10 @@ begin
   axi_quad_spi_3_SPI_0_IO1_I <= spi_rtl_3_io1_i;
   axi_quad_spi_3_SPI_0_SCK_I <= spi_rtl_3_sck_i;
   axi_quad_spi_3_SPI_0_SS_I(0) <= spi_rtl_3_ss_i(0);
+  pll_aclk <= clk_wiz_0_clk_out1;
+  pll_lock <= clk_wiz_0_locked;
+  pll_spi <= clk_wiz_0_spi;
+  pll_uart <= clk_wiz_0_uart;
   resetn_1 <= sys_resetn;
   spi_rtl_0_io0_o <= axi_quad_spi_0_SPI_0_IO0_O;
   spi_rtl_0_io0_t <= axi_quad_spi_0_SPI_0_IO0_T;

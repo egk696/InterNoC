@@ -163,6 +163,10 @@ proc create_root_design { parentCell } {
   set UART_RX_1 [ create_bd_port -dir I -type data UART_RX_1 ]
   set UART_TX_0 [ create_bd_port -dir O UART_TX_0 ]
   set UART_TX_1 [ create_bd_port -dir O -type data UART_TX_1 ]
+  set pll_aclk [ create_bd_port -dir O -type clk pll_aclk ]
+  set pll_lock [ create_bd_port -dir O pll_lock ]
+  set pll_spi [ create_bd_port -dir O pll_spi ]
+  set pll_uart [ create_bd_port -dir O pll_uart ]
   set sys_clk [ create_bd_port -dir I -type clk sys_clk ]
   set_property -dict [ list \
 CONFIG.FREQ_HZ {100000000} \
@@ -248,8 +252,9 @@ CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
 CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} \
 CONFIG.CLKOUT2_USED {true} \
 CONFIG.CLKOUT3_DRIVES {BUFGCE} \
-CONFIG.CLKOUT3_JITTER {130.958} \
+CONFIG.CLKOUT3_JITTER {209.588} \
 CONFIG.CLKOUT3_PHASE_ERROR {98.575} \
+CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {10} \
 CONFIG.CLKOUT3_USED {true} \
 CONFIG.CLKOUT4_DRIVES {BUFGCE} \
 CONFIG.CLKOUT5_DRIVES {BUFGCE} \
@@ -264,7 +269,7 @@ CONFIG.MMCM_CLKIN1_PERIOD {10.0} \
 CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
 CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} \
 CONFIG.MMCM_CLKOUT1_DIVIDE {20} \
-CONFIG.MMCM_CLKOUT2_DIVIDE {10} \
+CONFIG.MMCM_CLKOUT2_DIVIDE {100} \
 CONFIG.MMCM_COMPENSATION {ZHOLD} \
 CONFIG.MMCM_DIVCLK_DIVIDE {1} \
 CONFIG.NUM_OUT_CLKS {3} \
@@ -315,10 +320,10 @@ CONFIG.MMCM_COMPENSATION.VALUE_SRC {DEFAULT} \
   # Create port connections
   connect_bd_net -net UART_RX_0_1 [get_bd_ports UART_RX_0] [get_bd_pins uart_transceiver_0/i_RX_Serial]
   connect_bd_net -net UART_RX_1_1 [get_bd_ports UART_RX_1] [get_bd_pins uart_transceiver_1/i_RX_Serial]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins axi_interconnect_0/S02_ACLK] [get_bd_pins axi_spi_0/s_axi_aclk] [get_bd_pins axi_spi_1/s_axi_aclk] [get_bd_pins axi_spi_2/s_axi_aclk] [get_bd_pins axi_spi_3/s_axi_aclk] [get_bd_pins clk_wiz_0/aclk] [get_bd_pins interface_axi_master_0/m00_axi_aclk] [get_bd_pins interface_axi_master_1/m00_axi_aclk] [get_bd_pins jtag_axi_0/aclk]
-  connect_bd_net -net clk_wiz_0_locked [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins axi_interconnect_0/S02_ARESETN] [get_bd_pins axi_spi_0/s_axi_aresetn] [get_bd_pins axi_spi_1/s_axi_aresetn] [get_bd_pins axi_spi_2/s_axi_aresetn] [get_bd_pins axi_spi_3/s_axi_aresetn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins interface_axi_master_0/m00_axi_aresetn] [get_bd_pins interface_axi_master_1/m00_axi_aresetn] [get_bd_pins jtag_axi_0/aresetn]
-  connect_bd_net -net clk_wiz_0_spi [get_bd_pins axi_spi_0/ext_spi_clk] [get_bd_pins axi_spi_1/ext_spi_clk] [get_bd_pins axi_spi_2/ext_spi_clk] [get_bd_pins axi_spi_3/ext_spi_clk] [get_bd_pins clk_wiz_0/spi]
-  connect_bd_net -net clk_wiz_0_uart [get_bd_pins clk_wiz_0/uart] [get_bd_pins uart_transceiver_0/i_Clk] [get_bd_pins uart_transceiver_1/i_Clk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports pll_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins axi_interconnect_0/S02_ACLK] [get_bd_pins axi_spi_0/s_axi_aclk] [get_bd_pins axi_spi_1/s_axi_aclk] [get_bd_pins axi_spi_2/s_axi_aclk] [get_bd_pins axi_spi_3/s_axi_aclk] [get_bd_pins clk_wiz_0/aclk] [get_bd_pins interface_axi_master_0/m00_axi_aclk] [get_bd_pins interface_axi_master_1/m00_axi_aclk] [get_bd_pins jtag_axi_0/aclk]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_ports pll_lock] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins axi_interconnect_0/S02_ARESETN] [get_bd_pins axi_spi_0/s_axi_aresetn] [get_bd_pins axi_spi_1/s_axi_aresetn] [get_bd_pins axi_spi_2/s_axi_aresetn] [get_bd_pins axi_spi_3/s_axi_aresetn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins interface_axi_master_0/m00_axi_aresetn] [get_bd_pins interface_axi_master_1/m00_axi_aresetn] [get_bd_pins jtag_axi_0/aresetn]
+  connect_bd_net -net clk_wiz_0_spi [get_bd_ports pll_spi] [get_bd_pins axi_spi_0/ext_spi_clk] [get_bd_pins axi_spi_1/ext_spi_clk] [get_bd_pins axi_spi_2/ext_spi_clk] [get_bd_pins axi_spi_3/ext_spi_clk] [get_bd_pins clk_wiz_0/spi]
+  connect_bd_net -net clk_wiz_0_uart [get_bd_ports pll_uart] [get_bd_pins clk_wiz_0/uart] [get_bd_pins uart_transceiver_0/i_Clk] [get_bd_pins uart_transceiver_1/i_Clk]
   connect_bd_net -net interface_axi_master_0_if00_data_out [get_bd_pins interface_axi_master_0/if00_data_out] [get_bd_pins uart_transceiver_0/i_TX_Byte]
   connect_bd_net -net interface_axi_master_0_if00_load_out [get_bd_pins interface_axi_master_0/if00_load_out] [get_bd_pins uart_transceiver_0/i_TX_Load]
   connect_bd_net -net interface_axi_master_1_if00_data_out [get_bd_pins interface_axi_master_1/if00_data_out] [get_bd_pins uart_transceiver_1/i_TX_Byte]
@@ -354,61 +359,65 @@ CONFIG.MMCM_COMPENSATION.VALUE_SRC {DEFAULT} \
   regenerate_bd_layout -layout_string {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port spi_rtl_0 -pg 1 -y 200 -defaultsOSRD
-preplace port spi_rtl_1 -pg 1 -y 340 -defaultsOSRD
-preplace port spi_rtl_2 -pg 1 -y 620 -defaultsOSRD
-preplace port spi_rtl_3 -pg 1 -y 480 -defaultsOSRD
-preplace port sys_clk -pg 1 -y 500 -defaultsOSRD
-preplace port sys_resetn -pg 1 -y 480 -defaultsOSRD
-preplace port UART_TX_0 -pg 1 -y 130 -defaultsOSRD
-preplace port UART_TX_1 -pg 1 -y 710 -defaultsOSRD
-preplace port UART_RX_0 -pg 1 -y 100 -defaultsOSRD
-preplace port UART_RX_1 -pg 1 -y 630 -defaultsOSRD
-preplace inst interface_axi_master_0 -pg 1 -lvl 3 -y 90 -defaultsOSRD
-preplace inst axi_spi_0 -pg 1 -lvl 5 -y 210 -defaultsOSRD
-preplace inst interface_axi_master_1 -pg 1 -lvl 3 -y 430 -defaultsOSRD
-preplace inst axi_spi_1 -pg 1 -lvl 5 -y 350 -defaultsOSRD
-preplace inst jtag_axi_0 -pg 1 -lvl 3 -y 290 -defaultsOSRD
-preplace inst axi_spi_2 -pg 1 -lvl 5 -y 630 -defaultsOSRD
-preplace inst uart_transceiver_0 -pg 1 -lvl 2 -y 110 -defaultsOSRD
-preplace inst axi_spi_3 -pg 1 -lvl 5 -y 490 -defaultsOSRD
-preplace inst uart_transceiver_1 -pg 1 -lvl 2 -y 640 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 4 -y 430 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 490 -defaultsOSRD
-preplace netloc axi_quad_spi_0_SPI_0 1 5 1 NJ
-preplace netloc uart_transceiver_0_o_RX_Byte 1 2 1 360
-preplace netloc UART_RX_0_1 1 0 2 NJ 100 NJ
-preplace netloc interface_axi_master_0_if00_load_out 1 1 3 100 220 NJ 220 770
-preplace netloc clk_wiz_0_locked 1 1 4 NJ 520 420 540 820 160 1110
-preplace netloc interface_axi_master_1_if00_load_out 1 1 3 100 530 NJ 530 770
-preplace netloc axi_interconnect_0_M02_AXI 1 4 1 1100
-preplace netloc uart_transceiver_1_o_TX_Active 1 2 1 440
-preplace netloc uart_transceiver_0_o_TX_Serial 1 2 4 380J 190 790J 130 NJ 130 NJ
-preplace netloc interface_axi_master_0_if00_data_out 1 1 3 110 210 NJ 210 780
-preplace netloc sys_clk_1 1 0 1 NJ
-preplace netloc jtag_axi_0_M_AXI 1 3 1 N
-preplace netloc UART_RX_1_1 1 0 2 NJ 630 NJ
-preplace netloc axi_quad_spi_1_SPI_0 1 5 1 NJ
-preplace netloc uart_transceiver_0_o_TX_Done 1 2 1 370
-preplace netloc uart_transceiver_1_o_RX_Done 1 2 1 410
-preplace netloc uart_transceiver_1_o_TX_Done 1 2 1 430
-preplace netloc resetn_1 1 0 1 NJ
-preplace netloc interface_axi_master_1_M00_AXI 1 3 1 790
-preplace netloc clk_wiz_0_clk_out1 1 1 4 N 460 390 230 830 190 1090
-preplace netloc axi_quad_spi_2_SPI_0 1 5 1 NJ
-preplace netloc axi_interconnect_0_M00_AXI 1 4 1 1100
-preplace netloc interface_axi_master_1_if00_data_out 1 1 3 110 550 NJ 550 780
-preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1130
-preplace netloc interface_axi_master_0_M00_AXI 1 3 1 810
-preplace netloc uart_transceiver_0_o_RX_Done 1 2 1 370
-preplace netloc uart_transceiver_1_o_RX_Byte 1 2 1 400
-preplace netloc clk_wiz_0_uart 1 1 1 90
-preplace netloc axi_quad_spi_3_SPI_0 1 5 1 NJ
-preplace netloc axi_interconnect_0_M03_AXI 1 4 1 N
-preplace netloc uart_transceiver_1_o_TX_Serial 1 2 4 380J 710 NJ 710 NJ 710 NJ
-preplace netloc uart_transceiver_0_o_TX_Active 1 2 1 390
-preplace netloc clk_wiz_0_spi 1 1 4 N 480 370J 200 800J 170 1120
-levelinfo -pg 1 -80 20 240 630 960 1250 1380 -top 0 -bot 1040
+preplace port spi_rtl_0 -pg 1 -y 300 -defaultsOSRD
+preplace port spi_rtl_1 -pg 1 -y 460 -defaultsOSRD
+preplace port spi_rtl_2 -pg 1 -y 600 -defaultsOSRD
+preplace port pll_uart -pg 1 -y 200 -defaultsOSRD
+preplace port spi_rtl_3 -pg 1 -y 780 -defaultsOSRD
+preplace port pll_lock -pg 1 -y 390 -defaultsOSRD
+preplace port sys_clk -pg 1 -y 820 -defaultsOSRD
+preplace port pll_aclk -pg 1 -y 690 -defaultsOSRD
+preplace port sys_resetn -pg 1 -y 800 -defaultsOSRD
+preplace port pll_spi -pg 1 -y 870 -defaultsOSRD
+preplace port UART_TX_0 -pg 1 -y 120 -defaultsOSRD
+preplace port UART_TX_1 -pg 1 -y 170 -defaultsOSRD
+preplace port UART_RX_0 -pg 1 -y 90 -defaultsOSRD
+preplace port UART_RX_1 -pg 1 -y 310 -defaultsOSRD
+preplace inst interface_axi_master_0 -pg 1 -lvl 2 -y 90 -defaultsOSRD
+preplace inst axi_spi_0 -pg 1 -lvl 4 -y 310 -defaultsOSRD
+preplace inst interface_axi_master_1 -pg 1 -lvl 2 -y 310 -defaultsOSRD
+preplace inst axi_spi_1 -pg 1 -lvl 4 -y 470 -defaultsOSRD
+preplace inst jtag_axi_0 -pg 1 -lvl 2 -y 480 -defaultsOSRD
+preplace inst axi_spi_2 -pg 1 -lvl 4 -y 610 -defaultsOSRD
+preplace inst uart_transceiver_0 -pg 1 -lvl 1 -y 100 -defaultsOSRD
+preplace inst axi_spi_3 -pg 1 -lvl 4 -y 790 -defaultsOSRD
+preplace inst uart_transceiver_1 -pg 1 -lvl 1 -y 320 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -y 450 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 3 -y 810 -defaultsOSRD
+preplace netloc axi_quad_spi_0_SPI_0 1 4 1 NJ
+preplace netloc uart_transceiver_0_o_RX_Byte 1 1 1 280
+preplace netloc UART_RX_0_1 1 0 1 NJ
+preplace netloc interface_axi_master_0_if00_load_out 1 0 3 0 550 NJ 550 630
+preplace netloc clk_wiz_0_locked 1 1 4 320 570 680 180 960 390 NJ
+preplace netloc interface_axi_master_1_if00_load_out 1 0 3 40 420 NJ 420 620
+preplace netloc axi_interconnect_0_M02_AXI 1 3 1 980
+preplace netloc uart_transceiver_1_o_TX_Active 1 1 1 N
+preplace netloc uart_transceiver_0_o_TX_Serial 1 1 4 300J 190 650J 120 NJ 120 NJ
+preplace netloc interface_axi_master_0_if00_data_out 1 0 3 10 540 NJ 540 640
+preplace netloc sys_clk_1 1 0 3 NJ 820 NJ 820 NJ
+preplace netloc jtag_axi_0_M_AXI 1 2 1 670
+preplace netloc UART_RX_1_1 1 0 1 NJ
+preplace netloc axi_quad_spi_1_SPI_0 1 4 1 NJ
+preplace netloc uart_transceiver_0_o_TX_Done 1 1 1 290
+preplace netloc uart_transceiver_1_o_RX_Done 1 1 1 N
+preplace netloc uart_transceiver_1_o_TX_Done 1 1 1 300
+preplace netloc resetn_1 1 0 3 NJ 800 NJ 800 NJ
+preplace netloc interface_axi_master_1_M00_AXI 1 2 1 N
+preplace netloc clk_wiz_0_clk_out1 1 1 4 310 690 690 690 990 690 NJ
+preplace netloc axi_quad_spi_2_SPI_0 1 4 1 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 3 1 980
+preplace netloc interface_axi_master_1_if00_data_out 1 0 3 30 210 NJ 210 620
+preplace netloc axi_interconnect_0_M01_AXI 1 3 1 N
+preplace netloc interface_axi_master_0_M00_AXI 1 2 1 670
+preplace netloc uart_transceiver_0_o_RX_Done 1 1 1 N
+preplace netloc uart_transceiver_1_o_RX_Byte 1 1 1 280
+preplace netloc clk_wiz_0_uart 1 0 5 20 200 NJ 200 NJ 200 950 200 NJ
+preplace netloc axi_quad_spi_3_SPI_0 1 4 1 NJ
+preplace netloc axi_interconnect_0_M03_AXI 1 3 1 970
+preplace netloc uart_transceiver_1_o_TX_Serial 1 1 4 280J 410 660J 170 NJ 170 NJ
+preplace netloc uart_transceiver_0_o_TX_Active 1 1 1 N
+preplace netloc clk_wiz_0_spi 1 3 2 1000 870 NJ
+levelinfo -pg 1 -20 160 480 820 1110 1240 -top 0 -bot 890
 ",
 }
 

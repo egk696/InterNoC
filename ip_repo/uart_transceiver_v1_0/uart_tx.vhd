@@ -60,6 +60,7 @@ begin
           if i_TX_DV = '1' then
             r_TX_Data <= i_TX_Byte;
             r_SM_Main <= s_TX_Start_Bit;
+            o_TX_Active <= '1';
           else
             r_SM_Main <= s_Idle;
           end if;
@@ -67,7 +68,6 @@ begin
            
         -- Send out Start Bit. Start bit = 0
         when s_TX_Start_Bit =>
-          o_TX_Active <= '1';
           o_TX_Serial <= '0';
  
           -- Wait g_CLKS_PER_BIT-1 clock cycles for start bit to finish

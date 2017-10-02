@@ -1,7 +1,7 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Sep 24 18:25:38 2017
+// Date        : Fri Sep 29 15:38:09 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ DemoInterconnect_uart_transceiver_0_0_sim_netlist.v
@@ -897,15 +897,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_UART_TX
   wire r_TX_Done_i_2_n_0;
   wire r_TX_Done_i_3_n_0;
 
-  LUT5 #(
-    .INIT(32'h04404040)) 
-    \/i_ 
-       (.I0(r_SM_Main[2]),
-        .I1(r_SM_Main[1]),
-        .I2(\r_Bit_Index_reg_n_0_[2] ),
-        .I3(\r_Bit_Index_reg_n_0_[1] ),
-        .I4(\r_Bit_Index_reg_n_0_[0] ),
-        .O(r_Bit_Index));
   LUT6 #(
     .INIT(64'h3030013330300100)) 
     \FSM_sequential_r_SM_Main[0]_i_1 
@@ -966,13 +957,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_UART_TX
         .D(\FSM_sequential_r_SM_Main[2]_i_1_n_0 ),
         .Q(r_SM_Main[2]),
         .R(1'b0));
-  LUT4 #(
-    .INIT(16'hFA10)) 
+  LUT5 #(
+    .INIT(32'h04404040)) 
+    \__4/i_ 
+       (.I0(r_SM_Main[2]),
+        .I1(r_SM_Main[1]),
+        .I2(\r_Bit_Index_reg_n_0_[2] ),
+        .I3(\r_Bit_Index_reg_n_0_[1] ),
+        .I4(\r_Bit_Index_reg_n_0_[0] ),
+        .O(r_Bit_Index));
+  LUT5 #(
+    .INIT(32'hFFF20002)) 
     o_TX_Active_i_1
-       (.I0(r_SM_Main[1]),
+       (.I0(i_TX_Load),
         .I1(r_SM_Main[2]),
         .I2(r_SM_Main[0]),
-        .I3(o_TX_Active),
+        .I3(r_SM_Main[1]),
+        .I4(o_TX_Active),
         .O(o_TX_Active_i_1_n_0));
   FDRE o_TX_Active_reg
        (.C(i_Clk),
@@ -1331,8 +1332,8 @@ endmodule
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_uart_top
    (o_RX_Byte,
     o_RX_Done,
-    o_TX_Done,
     o_TX_Active,
+    o_TX_Done,
     o_TX_Serial,
     i_TX_Load,
     i_Clk,
@@ -1340,8 +1341,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_uart_top
     i_TX_Byte);
   output [7:0]o_RX_Byte;
   output o_RX_Done;
-  output o_TX_Done;
   output o_TX_Active;
+  output o_TX_Done;
   output o_TX_Serial;
   input i_TX_Load;
   input i_Clk;

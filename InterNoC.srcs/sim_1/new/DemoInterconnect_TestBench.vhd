@@ -31,33 +31,31 @@ use IEEE.NUMERIC_STD.ALL;
 entity DemoInterconnect_TestBench is
     Generic(
         CLKFREQ : integer := 100000000;
+        UARTFREQ : integer := 10000000;
         SYSCLK_PERIOD : time := 10.000 ns; -- 100MHZ
+        UARTCLK_PERIOD : time := 100.000 ns; --10MHz
         BAUD_RATE : integer := 115200;
         TRACE_DLY : time := 3 ns
     );
     Port (
         UART_TX_0_wire : out STD_LOGIC;
         UART_TX_1_wire : out STD_LOGIC;
-        spi_rtl_0_io0_io_wire : inout STD_LOGIC;
-        spi_rtl_0_io1_io_wire : inout STD_LOGIC;
-        spi_rtl_0_sck_io_wire : inout STD_LOGIC;
-        spi_rtl_0_spisel_wire : in STD_LOGIC;
-        spi_rtl_0_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
-        spi_rtl_1_io0_io_wire : inout STD_LOGIC;
-        spi_rtl_1_io1_io_wire : inout STD_LOGIC;
-        spi_rtl_1_sck_io_wire : inout STD_LOGIC;
-        spi_rtl_1_spisel_wire : in STD_LOGIC;
-        spi_rtl_1_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
-        spi_rtl_2_io0_io_wire : inout STD_LOGIC;
-        spi_rtl_2_io1_io_wire : inout STD_LOGIC;
-        spi_rtl_2_sck_io_wire : inout STD_LOGIC;
-        spi_rtl_2_spisel_wire : in STD_LOGIC;
-        spi_rtl_2_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
-        spi_rtl_3_io0_io_wire : inout STD_LOGIC;
-        spi_rtl_3_io1_io_wire : inout STD_LOGIC;
-        spi_rtl_3_sck_io_wire : inout STD_LOGIC;
-        spi_rtl_3_spisel_wire : in STD_LOGIC;
-        spi_rtl_3_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 )
+        spi_0_mosi_io_wire : inout STD_LOGIC;
+        spi_0_miso_io_wire : inout STD_LOGIC;
+        spi_0_sck_io_wire : inout STD_LOGIC;
+        spi_0_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
+        spi_1_mosi_io_wire : inout STD_LOGIC;
+        spi_1_miso_io_wire : inout STD_LOGIC;
+        spi_1_sck_io_wire : inout STD_LOGIC;
+        spi_1_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
+        spi_2_mosi_io_wire : inout STD_LOGIC;
+        spi_2_miso_io_wire : inout STD_LOGIC;
+        spi_2_sck_io_wire : inout STD_LOGIC;
+        spi_2_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
+        spi_3_mosi_io_wire : inout STD_LOGIC;
+        spi_3_miso_io_wire : inout STD_LOGIC;
+        spi_3_sck_io_wire : inout STD_LOGIC;
+        spi_3_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 )
     );
 end DemoInterconnect_TestBench;
 
@@ -70,25 +68,25 @@ component DemoInterconnect_wrapper is
     UART_RX_1 : in STD_LOGIC;
     UART_TX_0 : out STD_LOGIC;
     UART_TX_1 : out STD_LOGIC;
+    pll_aclk : out STD_LOGIC;
+    pll_lock : out STD_LOGIC;
+    pll_spi : out STD_LOGIC;
+    pll_uart : out STD_LOGIC;
     spi_rtl_0_io0_io : inout STD_LOGIC;
     spi_rtl_0_io1_io : inout STD_LOGIC;
     spi_rtl_0_sck_io : inout STD_LOGIC;
-    spi_rtl_0_spisel : in STD_LOGIC;
     spi_rtl_0_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_1_io0_io : inout STD_LOGIC;
     spi_rtl_1_io1_io : inout STD_LOGIC;
     spi_rtl_1_sck_io : inout STD_LOGIC;
-    spi_rtl_1_spisel : in STD_LOGIC;
     spi_rtl_1_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_2_io0_io : inout STD_LOGIC;
     spi_rtl_2_io1_io : inout STD_LOGIC;
     spi_rtl_2_sck_io : inout STD_LOGIC;
-    spi_rtl_2_spisel : in STD_LOGIC;
     spi_rtl_2_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_3_io0_io : inout STD_LOGIC;
     spi_rtl_3_io1_io : inout STD_LOGIC;
     spi_rtl_3_sck_io : inout STD_LOGIC;
-    spi_rtl_3_spisel : in STD_LOGIC;
     spi_rtl_3_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     sys_clk : in STD_LOGIC;
     sys_resetn : in STD_LOGIC
@@ -131,24 +129,29 @@ constant c_CLKS_PER_BIT : integer := CLKFREQ/BAUD_RATE;     -- Needs to be set c
 
 --signal declaration
 signal SYSCLK : std_logic := '0';
+signal AXICLK : std_logic := '0';
+signal UARTCLK : std_logic := '0';
+signal SPICLK : std_logic := '0';
 signal NSYSRESET : std_logic := '0';
-signal UART_RX_0_wire, UART_RX_1_wire : std_logic := '0';
+signal UART_RX_0_wire, UART_RX_1_wire : std_logic := 'Z';
 
 signal dest_address : unsigned(4 downto 0) := (others=>'0'); --5bits
 signal dest_data : unsigned(31 downto 0) := (others=>'0'); --32bits
 signal dest_ctrl : std_logic_vector(2 downto 0) := (others=>'0'); --3bits
 
 signal master_packet : std_logic_vector(39 downto 0) := (others=>'0'); --40bits
+signal master_packet_send_en : std_logic := '0';
 
-signal p2s_en, p2s_send, p2s_done, p2s_ss : std_logic := '0';
+signal p2s_en, p2s_send, p2s_busy, p2s_done, p2s_ss : std_logic := '0';
 
 signal uart_tx_en, uart_tx_done, uart_tx_active : std_logic := '0';
 signal uart_tx_byte : std_logic_vector(7 downto 0) := (others=>'0');
+signal resetn_ext_logic : std_logic := '1';
 
-constant slave_0_addr : unsigned(4 downto 0) := X"00000";
-constant slave_1_addr : unsigned(4 downto 0) := X"00001";
-constant slave_2_addr : unsigned(4 downto 0) := X"00002";
-constant slave_3_addr : unsigned(4 downto 0) := X"00003";
+constant slave_0_addr : unsigned(4 downto 0) := "00000";
+constant slave_1_addr : unsigned(4 downto 0) := "00001";
+constant slave_2_addr : unsigned(4 downto 0) := "00010";
+constant slave_3_addr : unsigned(4 downto 0) := "00011";
 
 begin
 
@@ -169,12 +172,12 @@ end process;
 SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
 
 --Address Generator
-addr_gen: process(SYSCLK)
+addr_gen: process(AXICLK)
 begin
-    if rising_edge(SYSCLK) then
-        if (NSYSRESET = '0') then
+    if rising_edge(AXICLK) then
+        if (resetn_ext_logic = '0') then
             dest_address <= (others=>'0');
-        elsif (p2s_en = '1') then
+        elsif (p2s_done = '1') then
             if (dest_address = slave_0_addr) then
                 dest_address <= slave_1_addr;
             elsif (dest_address = slave_1_addr) then
@@ -190,22 +193,22 @@ begin
 end process;
 
 --Data Generator
-data_gen: process(SYSCLK)
+data_gen: process(AXICLK)
 begin
-    if rising_edge(SYSCLK) then
-        if (NSYSRESET = '0') then
-            dest_data <= (others=>'0');
+    if rising_edge(AXICLK) then
+        if (resetn_ext_logic = '0') then
+            dest_data <= X"4433_2211";
         else
-            dest_data <= dest_data + 1;
+            dest_data <= X"4433_2211";
         end if;
     end if;
 end process;
 
 --Packet generate
-packet_gen: process(SYSCLK)
+packet_gen: process(AXICLK)
 begin
-    if rising_edge(SYSCLK) then
-        if (NSYSRESET = '0') then
+    if rising_edge(AXICLK) then
+        if (resetn_ext_logic = '0') then
             master_packet <= (others=>'0');
         else
             master_packet <= dest_ctrl & std_logic_vector(dest_address) & std_logic_vector(dest_data);
@@ -214,25 +217,31 @@ begin
 end process;
 
 --Send packet
-send_packet: process(SYSCLK)
+send_packet: process(AXICLK)
 begin
-    if rising_edge(SYSCLK) then
-        if (NSYSRESET = '0') then
-            p2s_en <= '1';
+    if rising_edge(AXICLK) then
+        if (resetn_ext_logic = '0') then
+            master_packet_send_en <= '0';
+            p2s_en <= '0';
         else
-            if (p2s_done = '1' and uart_tx_done = '1') then
+            if (master_packet_send_en='0' and p2s_en='0' and p2s_busy='0' and uart_tx_active='0' and uart_tx_en='0') then
+                master_packet_send_en <= '1';
+            else
+                master_packet_send_en <= '0';
+            end if;
+            if (master_packet_send_en <= '1' and p2s_en='0' and p2s_busy='0' and uart_tx_en='0') then
                 p2s_en <= '1';
             else
                 p2s_en <= '0';
-            end if;
+            end if; 
         end if;
     end if;
 end process;
 
 --signal connection
-uart_tx_en <= not(p2s_ss);
-p2s_send <= not(uart_tx_active);
-UART_RX_1_wire <= '1';
+p2s_send <= not(uart_tx_active) and not(uart_tx_en);
+uart_tx_en <=  not(p2s_ss);
+UART_RX_1_wire <= 'Z';
 
 --component instances
 p2s_inst: parallel2serial
@@ -241,11 +250,11 @@ generic map(
     TX_WIDTH => 8
 )
 port map(
-    clk_i => SYSCLK,
+    clk_i => AXICLK,
     en_i => p2s_en,
     send_i => p2s_send,
     data_i => master_packet,
-    busy_o => open,
+    busy_o => p2s_busy,
     done_o => p2s_done,
     shift_o => uart_tx_byte,
     ss_o => p2s_ss
@@ -256,7 +265,7 @@ generic map(
     g_CLKS_PER_BIT => c_CLKS_PER_BIT
 )
 port map(
-    i_Clk       => SYSCLK,
+    i_Clk       => AXICLK,
     i_TX_DV     => uart_tx_en,
     i_TX_Byte   => uart_tx_byte,
     o_TX_Active => uart_tx_active,
@@ -267,32 +276,32 @@ port map(
 
 DemoInterconnect_Inst: DemoInterconnect_wrapper
 port map(
-    UART_RX_0 => UART_RX_0_wire,
-    UART_RX_1 => UART_RX_1_wire,
-    UART_TX_0 => UART_TX_0_wire,
-    UART_TX_1 => UART_TX_1_wire,
-    spi_rtl_0_io0_io => spi_rtl_0_io0_io_wire,
-    spi_rtl_0_io1_io => spi_rtl_0_io1_io_wire,
-    spi_rtl_0_sck_io => spi_rtl_0_sck_io_wire,
-    spi_rtl_0_spisel => spi_rtl_0_spisel_wire,
-    spi_rtl_0_ss_io => spi_rtl_0_ss_io_wire,
-    spi_rtl_1_io0_io => spi_rtl_1_io0_io_wire,
-    spi_rtl_1_io1_io => spi_rtl_1_io1_io_wire,
-    spi_rtl_1_sck_io => spi_rtl_1_sck_io_wire,
-    spi_rtl_1_spisel => spi_rtl_1_spisel_wire,
-    spi_rtl_1_ss_io => spi_rtl_1_ss_io_wire,
-    spi_rtl_2_io0_io > spi_rtl_2_io0_io_wire,
-    spi_rtl_2_io1_io => spi_rtl_2_io1_io_wire,
-    spi_rtl_2_sck_io => spi_rtl_2_sck_io_wire,
-    spi_rtl_2_spisel => spi_rtl_2_spisel_wire,
-    spi_rtl_2_ss_io => spi_rtl_2_ss_io_wire,
-    spi_rtl_3_io0_io => spi_rtl_3_io0_io_wire,
-    spi_rtl_3_io1_io => spi_rtl_3_io1_io_wire, 
-    spi_rtl_3_sck_io => spi_rtl_3_sck_io_wire,
-    spi_rtl_3_spisel => spi_rtl_3_spisel_wire,
-    spi_rtl_3_ss_io => spi_rtl_3_ss_io_wire,
-    sys_clk => SYSCLK,
-    sys_resetn => NSYSRESET
+    UART_RX_0   => UART_RX_0_wire,
+    UART_RX_1   => UART_RX_1_wire,
+    UART_TX_0   => UART_TX_0_wire,
+    UART_TX_1   => UART_TX_1_wire,
+    pll_aclk    => AXICLK,
+    pll_lock    => resetn_ext_logic,
+    pll_spi     => SPICLK,
+    pll_uart    => UARTCLK, 
+    spi_rtl_0_io0_io    => spi_0_mosi_io_wire,
+    spi_rtl_0_io1_io    => spi_0_miso_io_wire,
+    spi_rtl_0_sck_io    => spi_0_sck_io_wire,
+    spi_rtl_0_ss_io     => spi_0_ss_io_wire,
+    spi_rtl_1_io0_io    => spi_1_mosi_io_wire,
+    spi_rtl_1_io1_io    => spi_1_miso_io_wire,
+    spi_rtl_1_sck_io    => spi_1_sck_io_wire,
+    spi_rtl_1_ss_io     => spi_1_ss_io_wire,
+    spi_rtl_2_io0_io    => spi_2_mosi_io_wire,
+    spi_rtl_2_io1_io    => spi_2_miso_io_wire,
+    spi_rtl_2_sck_io    => spi_2_sck_io_wire,
+    spi_rtl_2_ss_io     => spi_2_ss_io_wire,
+    spi_rtl_3_io0_io    => spi_3_mosi_io_wire,
+    spi_rtl_3_io1_io    => spi_3_miso_io_wire, 
+    spi_rtl_3_sck_io    => spi_3_sck_io_wire,
+    spi_rtl_3_ss_io     => spi_3_ss_io_wire,
+    sys_clk     => SYSCLK,
+    sys_resetn  => NSYSRESET
 );
 
 end Behavioral;
