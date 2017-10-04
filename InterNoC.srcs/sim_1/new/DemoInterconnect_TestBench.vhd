@@ -40,22 +40,22 @@ entity DemoInterconnect_TestBench is
     Port (
         UART_TX_0_wire : out STD_LOGIC;
         UART_TX_1_wire : out STD_LOGIC;
-        spi_0_mosi_io_wire : inout STD_LOGIC;
-        spi_0_miso_io_wire : inout STD_LOGIC;
-        spi_0_sck_io_wire : inout STD_LOGIC;
-        spi_0_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
-        spi_1_mosi_io_wire : inout STD_LOGIC;
-        spi_1_miso_io_wire : inout STD_LOGIC;
-        spi_1_sck_io_wire : inout STD_LOGIC;
-        spi_1_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
-        spi_2_mosi_io_wire : inout STD_LOGIC;
-        spi_2_miso_io_wire : inout STD_LOGIC;
-        spi_2_sck_io_wire : inout STD_LOGIC;
-        spi_2_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 );
-        spi_3_mosi_io_wire : inout STD_LOGIC;
-        spi_3_miso_io_wire : inout STD_LOGIC;
-        spi_3_sck_io_wire : inout STD_LOGIC;
-        spi_3_ss_io_wire : inout STD_LOGIC_VECTOR ( 0 to 0 )
+        spi_0_mosi_wire : out STD_LOGIC;
+        spi_0_miso_wire : in STD_LOGIC;
+        spi_0_sck_wire : out STD_LOGIC;
+        spi_0_ss_wire : out STD_LOGIC;
+        spi_1_mosi_wire : out STD_LOGIC;
+        spi_1_miso_wire : in STD_LOGIC;
+        spi_1_sck_wire : out STD_LOGIC;
+        spi_1_ss_wire : out STD_LOGIC;
+        spi_2_mosi_wire : out STD_LOGIC;
+        spi_2_miso_wire : in STD_LOGIC;
+        spi_2_sck_wire : out STD_LOGIC;
+        spi_2_ss_wire : out STD_LOGIC;
+        spi_3_mosi_wire : out STD_LOGIC;
+        spi_3_miso_wire : in STD_LOGIC;
+        spi_3_sck_wire : out STD_LOGIC;
+        spi_3_ss_wire : out STD_LOGIC
     );
 end DemoInterconnect_TestBench;
 
@@ -64,33 +64,33 @@ architecture Behavioral of DemoInterconnect_TestBench is
 --comopennt declaration
 component DemoInterconnect_wrapper is
   port (
-    UART_RX_0 : in STD_LOGIC;
-    UART_RX_1 : in STD_LOGIC;
-    UART_TX_0 : out STD_LOGIC;
-    UART_TX_1 : out STD_LOGIC;
-    pll_aclk : out STD_LOGIC;
-    pll_lock : out STD_LOGIC;
-    pll_spi : out STD_LOGIC;
-    pll_uart : out STD_LOGIC;
-    spi_rtl_0_io0_io : inout STD_LOGIC;
-    spi_rtl_0_io1_io : inout STD_LOGIC;
-    spi_rtl_0_sck_io : inout STD_LOGIC;
-    spi_rtl_0_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
-    spi_rtl_1_io0_io : inout STD_LOGIC;
-    spi_rtl_1_io1_io : inout STD_LOGIC;
-    spi_rtl_1_sck_io : inout STD_LOGIC;
-    spi_rtl_1_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
-    spi_rtl_2_io0_io : inout STD_LOGIC;
-    spi_rtl_2_io1_io : inout STD_LOGIC;
-    spi_rtl_2_sck_io : inout STD_LOGIC;
-    spi_rtl_2_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
-    spi_rtl_3_io0_io : inout STD_LOGIC;
-    spi_rtl_3_io1_io : inout STD_LOGIC;
-    spi_rtl_3_sck_io : inout STD_LOGIC;
-    spi_rtl_3_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
-    sys_clk : in STD_LOGIC;
-    sys_resetn : in STD_LOGIC
-  );
+  UART_RX_0 : in STD_LOGIC;
+  UART_RX_1 : in STD_LOGIC;
+  UART_TX_0 : out STD_LOGIC;
+  UART_TX_1 : out STD_LOGIC;
+  m_spi_miso : in STD_LOGIC;
+  m_spi_miso_1 : in STD_LOGIC;
+  m_spi_miso_2 : in STD_LOGIC;
+  m_spi_miso_3 : in STD_LOGIC;
+  m_spi_mosi : out STD_LOGIC;
+  m_spi_mosi_1 : out STD_LOGIC;
+  m_spi_mosi_2 : out STD_LOGIC;
+  m_spi_mosi_3 : out STD_LOGIC;
+  m_spi_sclk : out STD_LOGIC;
+  m_spi_sclk_1 : out STD_LOGIC;
+  m_spi_sclk_2 : out STD_LOGIC;
+  m_spi_sclk_3 : out STD_LOGIC;
+  m_spi_ss : out STD_LOGIC;
+  m_spi_ss_1 : out STD_LOGIC;
+  m_spi_ss_2 : out STD_LOGIC;
+  m_spi_ss_3 : out STD_LOGIC;
+  pll_aclk : out STD_LOGIC;
+  pll_lock : out STD_LOGIC;
+  pll_spi : out STD_LOGIC;
+  pll_uart : out STD_LOGIC;
+  sys_clk : in STD_LOGIC;
+  sys_resetn : in STD_LOGIC
+);
 end component;
 
 component parallel2serial is
@@ -284,22 +284,22 @@ port map(
     pll_lock    => resetn_ext_logic,
     pll_spi     => SPICLK,
     pll_uart    => UARTCLK, 
-    spi_rtl_0_io0_io    => spi_0_mosi_io_wire,
-    spi_rtl_0_io1_io    => spi_0_miso_io_wire,
-    spi_rtl_0_sck_io    => spi_0_sck_io_wire,
-    spi_rtl_0_ss_io     => spi_0_ss_io_wire,
-    spi_rtl_1_io0_io    => spi_1_mosi_io_wire,
-    spi_rtl_1_io1_io    => spi_1_miso_io_wire,
-    spi_rtl_1_sck_io    => spi_1_sck_io_wire,
-    spi_rtl_1_ss_io     => spi_1_ss_io_wire,
-    spi_rtl_2_io0_io    => spi_2_mosi_io_wire,
-    spi_rtl_2_io1_io    => spi_2_miso_io_wire,
-    spi_rtl_2_sck_io    => spi_2_sck_io_wire,
-    spi_rtl_2_ss_io     => spi_2_ss_io_wire,
-    spi_rtl_3_io0_io    => spi_3_mosi_io_wire,
-    spi_rtl_3_io1_io    => spi_3_miso_io_wire, 
-    spi_rtl_3_sck_io    => spi_3_sck_io_wire,
-    spi_rtl_3_ss_io     => spi_3_ss_io_wire,
+    m_spi_mosi  => spi_0_mosi_wire,
+    m_spi_miso  => spi_0_miso_wire,
+    m_spi_sclk   => spi_0_sck_wire,
+    m_spi_ss    => spi_0_ss_wire,
+    m_spi_mosi_1  => spi_1_mosi_wire,
+    m_spi_miso_1  => spi_1_miso_wire,
+    m_spi_sclk_1   => spi_1_sck_wire,
+    m_spi_ss_1    => spi_1_ss_wire,
+    m_spi_mosi_2  => spi_2_mosi_wire,
+    m_spi_miso_2  => spi_2_miso_wire,
+    m_spi_sclk_2   => spi_2_sck_wire,
+    m_spi_ss_2    => spi_2_ss_wire,
+    m_spi_mosi_3  => spi_3_mosi_wire,
+    m_spi_miso_3  => spi_3_miso_wire,
+    m_spi_sclk_3   => spi_3_sck_wire,
+    m_spi_ss_3    => spi_3_ss_wire,      
     sys_clk     => SYSCLK,
     sys_resetn  => NSYSRESET
 );

@@ -19,6 +19,7 @@ set_property target_language VHDL [current_project]
 set_property ip_repo_paths {
   d:/Development/FPGA/InterNoC/ip_repo/uart_transceiver_v1_0
   d:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0
+  d:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0
 } [current_project]
 set_property ip_output_repo d:/Development/FPGA/InterNoC/InterNoC.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

@@ -2,32 +2,63 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Tue Oct 03 14:09:21 2017
-# Process ID: 3416
-# Current directory: C:/Users/egk69/Documents/Development/InterNoC/ip_repo
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4056 C:\Users\egk69\Documents\Development\InterNoC\ip_repo\edit_axi_spi_master_v1_0.xpr
-# Log file: C:/Users/egk69/Documents/Development/InterNoC/ip_repo/vivado.log
-# Journal file: C:/Users/egk69/Documents/Development/InterNoC/ip_repo\vivado.jou
+# Start of session at: Wed Oct 04 14:07:18 2017
+# Process ID: 1204
+# Current directory: D:/Development/FPGA/InterNoC/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7752 D:\Development\FPGA\InterNoC\ip_repo\edit_interface_axi_master_v1_0.xpr
+# Log file: D:/Development/FPGA/InterNoC/ip_repo/vivado.log
+# Journal file: D:/Development/FPGA/InterNoC/ip_repo\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/egk69/Documents/Development/InterNoC/ip_repo/edit_axi_spi_master_v1_0.xpr
-set_property source_mgmt_mode DisplayOnly [current_project]
-update_files -from_files C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0.vhd -to_files C:/Users/Users/egk69/Documents/Development/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0.vhd -filesets [get_filesets *]
-update_files -from_files C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0_S00_AXI.vhd -to_files C:/Users/Users/egk69/Documents/Development/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0_S00_AXI.vhd -filesets [get_filesets *]
-update_files -from_files C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/component.xml -to_files C:/Users/Users/egk69/Documents/Development/ip_repo/axi_spi_master_1.0/component.xml -filesets [get_filesets *]
-add_files -norecurse -scan_for_includes {C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/src/SPI_Slave.vhd C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/src/SPI_Master.vhd}
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top spi_master [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode DisplayOnly [current_project]
-synth_design -rtl -name rtl_1
-synth_design -rtl -name rtl_1
+open_project D:/Development/FPGA/InterNoC/ip_repo/edit_interface_axi_mastersynth_design -rtl -name rtl_1
+ipx::open_ipxact_file D:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/component.xml
+ipx::merge_project_changes files [ipx::current_core]
 refresh_design
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top axi_spi_master_v1_0 [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode DisplayOnly [current_project]
 refresh_design
-add_files -norecurse -scan_for_includes {C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/src/parallel2serial.vhd C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/src/serial2parallel.vhd}
+report_methodology -name ultrafast_methodology_1 -checks {XDCH-2 XDCH-1 XDCC-8 XDCC-7 XDCC-6 XDCC-5 XDCC-4 XDCC-3 XDCC-2 XDCC-1 XDCB-4 XDCB-3 XDCB-2 XDCB-1 CLKC-53 CLKC-52 CLKC-51 CLKC-50 CLKC-49 CLKC-48 CLKC-47 CLKC-46 CLKC-45 CLKC-44 CLKC-34 CLKC-43 CLKC-33 CLKC-42 CLKC-40 CLKC-32 CLKC-30 CLKC-28 CLKC-26 CLKC-24 CLKC-22 CLKC-41 CLKC-39 CLKC-31 CLKC-29 CLKC-27 CLKC-25 CLKC-23 CLKC-21 CLKC-17 CLKC-13 CLKC-16 CLKC-12 CLKC-15 CLKC-11 CLKC-14 CLKC-10 CLKC-8 CLKC-7 CLKC-6 CLKC-9 CLKC-5 CLKC-38 CLKC-37 CLKC-36 CLKC-35 CLKC-4 CLKC-20 CLKC-19 CLKC-18 CLKC-3 CLKC-2 CLKC-1 HPDR-1 RRRS-1 RROR-1 ROAS-1 RMOR-1 RMIR-1 RFTL-1 RFRC-1 RFRA-1 RFFI-1 RFFH-1 RFCF-1 RCCL-1 RCBG-1 RAMP-1 RAMF-1 RAMD-1 RAKN-1}
+report_ssn -name ssn_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property value_validation_type range_long [ipx::get_user_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 4 [ipx::get_user_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 32 [ipx::get_user_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+ipgui::add_param -name {SPI_DATA_WIDTH} -component [ipx::current_core] -display_name {SPI Data Buffer Width} -show_label {true} -show_range {true} -widget {}
+set_property widget {comboBox} [ipgui::get_guiparamspec -name "SPI_DATA_WIDTH" -component [ipx::current_core] ]
+set_property value 4 [ipx::get_user_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+set_property value 4 [ipx::get_hdl_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_type list [ipx::get_user_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+set_property value_validation_list {4 8 16 32} [ipx::get_user_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+ipgui::add_param -name {SPI_CLK_DIV} -component [ipx::current_core] -display_name {SPI clock cycles divider value} -show_label {true} -show_range {true} -widget {}
+ipx::infer_bus_interface m_spi_mosi xilinx.com:signal:data_rtl:1.0 [ipx::current_core]
+ipx::infer_bus_interface m_spi_miso xilinx.com:signal:data_rtl:1.0 [ipx::current_core]
+ipx::infer_bus_interface m_spi_ss xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+ipx::remove_bus_interface m_spi_ss [ipx::current_core]
+ipx::infer_bus_interface m_spi_ss xilinx.com:signal:clockenable_rtl:1.0 [ipx::current_core]
+ipx::infer_bus_interface m_spi_sclk xilinx.com:signal:clock_rtl:1.0 [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+set_property value 8 [ipx::get_user_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+set_property value 8 [ipx::get_hdl_parameters SPI_DATA_WIDTH -of_objects [ipx::current_core]]
+ipgui::move_param -component [ipx::current_core] -order 0 [ipgui::get_guiparamspec -name "SPI_DATA_WIDTH" -component [ipx::current_core]] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core]]
+ipgui::move_param -component [ipx::current_core] -order 1 [ipgui::get_guiparamspec -name "SPI_CLK_DIV" -component [ipx::current_core]] -parent [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  {d:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0 d:Users/egk69/Documents/Development/ip_repo/axi_spi_master_1.0 d:/Development/FPGA/InterNoC/ip_repo/uart_transceiver_v1_0 d:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0} [current_project]
+update_ip_catalog
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {d:\Development\FPGA\InterNoC\ip_repo\axi_spi_master_1.0\ekyr.kth.se_user_axi_spi_master_1.0.zip} [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {d:\Development\FPGA\InterNoC\ip_repo\axi_spi_master_1.0\ekyr.kth.se_user_axi_spi_master_1.0.zip} [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path d:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {d:\Development\FPGA\InterNoC\ip_repo\axi_spi_master_1.0\ekyr.kth.se_user_axi_spi_master_1.0.zip} [ipx::current_core]
