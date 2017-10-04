@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Oct 03 14:09:21 2017
+# Process ID: 3416
+# Current directory: C:/Users/egk69/Documents/Development/InterNoC/ip_repo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4056 C:\Users\egk69\Documents\Development\InterNoC\ip_repo\edit_axi_spi_master_v1_0.xpr
+# Log file: C:/Users/egk69/Documents/Development/InterNoC/ip_repo/vivado.log
+# Journal file: C:/Users/egk69/Documents/Development/InterNoC/ip_repo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/egk69/Documents/Development/InterNoC/ip_repo/edit_axi_spi_master_v1_0.xpr
+set_property source_mgmt_mode DisplayOnly [current_project]
+update_files -from_files C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0.vhd -to_files C:/Users/Users/egk69/Documents/Development/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0_S00_AXI.vhd -to_files C:/Users/Users/egk69/Documents/Development/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0_S00_AXI.vhd -filesets [get_filesets *]
+update_files -from_files C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/component.xml -to_files C:/Users/Users/egk69/Documents/Development/ip_repo/axi_spi_master_1.0/component.xml -filesets [get_filesets *]
+add_files -norecurse -scan_for_includes {C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/src/SPI_Slave.vhd C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/src/SPI_Master.vhd}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top spi_master [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top axi_spi_master_v1_0 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+refresh_design
+add_files -norecurse -scan_for_includes {C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/src/parallel2serial.vhd C:/Users/egk69/Documents/Development/InterNoC/ip_repo/axi_spi_master_1.0/src/serial2parallel.vhd}
