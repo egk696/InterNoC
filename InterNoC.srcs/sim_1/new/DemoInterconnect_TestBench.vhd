@@ -41,19 +41,15 @@ entity DemoInterconnect_TestBench is
         UART_TX_0_wire : out STD_LOGIC;
         UART_TX_1_wire : out STD_LOGIC;
         spi_0_mosi_wire : out STD_LOGIC;
-        spi_0_miso_wire : in STD_LOGIC;
         spi_0_sck_wire : out STD_LOGIC;
         spi_0_ss_wire : out STD_LOGIC;
         spi_1_mosi_wire : out STD_LOGIC;
-        spi_1_miso_wire : in STD_LOGIC;
         spi_1_sck_wire : out STD_LOGIC;
         spi_1_ss_wire : out STD_LOGIC;
         spi_2_mosi_wire : out STD_LOGIC;
-        spi_2_miso_wire : in STD_LOGIC;
         spi_2_sck_wire : out STD_LOGIC;
         spi_2_ss_wire : out STD_LOGIC;
         spi_3_mosi_wire : out STD_LOGIC;
-        spi_3_miso_wire : in STD_LOGIC;
         spi_3_sck_wire : out STD_LOGIC;
         spi_3_ss_wire : out STD_LOGIC
     );
@@ -133,7 +129,8 @@ signal AXICLK : std_logic := '0';
 signal UARTCLK : std_logic := '0';
 signal SPICLK : std_logic := '0';
 signal NSYSRESET : std_logic := '0';
-signal UART_RX_0_wire, UART_RX_1_wire : std_logic := 'Z';
+signal UART_RX_0_wire, UART_RX_1_wire : std_logic := '1';
+signal spi_0_miso_wire, spi_1_miso_wire, spi_2_miso_wire, spi_3_miso_wire : std_logic := '1';
 
 signal dest_address : unsigned(4 downto 0) := (others=>'0'); --5bits
 signal dest_data : unsigned(31 downto 0) := (others=>'0'); --32bits

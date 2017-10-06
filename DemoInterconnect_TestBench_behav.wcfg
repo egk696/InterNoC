@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="874998514120fs"></ZoomEndTime>
-      <Cursor1Time time="500000000000fs"></Cursor1Time>
+      <ZoomStartTime time="429896500000fs"></ZoomStartTime>
+      <ZoomEndTime time="430723500001fs"></ZoomEndTime>
+      <Cursor1Time time="430496500000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="257"></NameColumnWidth>
-      <ValueColumnWidth column_width="50"></ValueColumnWidth>
+      <NameColumnWidth column_width="176"></NameColumnWidth>
+      <ValueColumnWidth column_width="73"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="9" />
    <wvobject fp_name="/DemoInterconnect_TestBench/UART_TX_0_wire" type="logic">
@@ -505,6 +505,66 @@
       <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/p2s_ss" type="logic">
          <obj_property name="ElementShortName">p2s_ss</obj_property>
          <obj_property name="ObjectShortName">p2s_ss</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/clk_i" type="logic">
+         <obj_property name="ElementShortName">clk_i</obj_property>
+         <obj_property name="ObjectShortName">clk_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/en_i" type="logic">
+         <obj_property name="ElementShortName">en_i</obj_property>
+         <obj_property name="ObjectShortName">en_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/send_i" type="logic">
+         <obj_property name="ElementShortName">send_i</obj_property>
+         <obj_property name="ObjectShortName">send_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/data_i" type="array">
+         <obj_property name="ElementShortName">data_i[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_i[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/busy_o" type="logic">
+         <obj_property name="ElementShortName">busy_o</obj_property>
+         <obj_property name="ObjectShortName">busy_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/done_o" type="logic">
+         <obj_property name="ElementShortName">done_o</obj_property>
+         <obj_property name="ObjectShortName">done_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/shift_o" type="array">
+         <obj_property name="ElementShortName">shift_o[7:0]</obj_property>
+         <obj_property name="ObjectShortName">shift_o[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/ss_o" type="logic">
+         <obj_property name="ElementShortName">ss_o</obj_property>
+         <obj_property name="ObjectShortName">ss_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/shift_count" type="other">
+         <obj_property name="ElementShortName">shift_count</obj_property>
+         <obj_property name="ObjectShortName">shift_count</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/send_data" type="array">
+         <obj_property name="ElementShortName">send_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">send_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/sending" type="logic">
+         <obj_property name="ElementShortName">sending</obj_property>
+         <obj_property name="ObjectShortName">sending</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/tx_done" type="logic">
+         <obj_property name="ElementShortName">tx_done</obj_property>
+         <obj_property name="ObjectShortName">tx_done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/DATA_WIDTH" type="other">
+         <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
+         <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/TX_WIDTH" type="other">
+         <obj_property name="ElementShortName">TX_WIDTH</obj_property>
+         <obj_property name="ObjectShortName">TX_WIDTH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/word2byte/SHIFT_STAGES" type="other">
+         <obj_property name="ElementShortName">SHIFT_STAGES</obj_property>
+         <obj_property name="ObjectShortName">SHIFT_STAGES</obj_property>
       </wvobject>
       <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/p2s_done" type="logic">
          <obj_property name="ElementShortName">p2s_done</obj_property>

@@ -254,7 +254,7 @@ wr_data_valid:    process (S_AXI_ACLK)
 	-- Slave register write enable is asserted when valid address and data are available
 	-- and the slave is ready to accept the write address and write data.
 	p2s_load <= axi_wready and S_AXI_WVALID and axi_awready and S_AXI_AWVALID ;
-	p2s_send <= not(spi_tx_rx_busy);
+	p2s_send <= not(spi_tx_rx_busy) and not(spi_tx_rx_start);
     spi_tx_rx_start <= not(p2s_ss);
     
 	-- Implement write response logic generation
