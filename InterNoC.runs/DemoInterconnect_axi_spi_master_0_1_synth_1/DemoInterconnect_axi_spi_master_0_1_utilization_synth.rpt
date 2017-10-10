@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date         : Wed Oct 04 18:44:08 2017
+| Date         : Fri Oct 06 17:29:59 2017
 | Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_utilization -file DemoInterconnect_axi_spi_master_0_1_utilization_synth.rpt -pb DemoInterconnect_axi_spi_master_0_1_utilization_synth.pb
 | Design       : DemoInterconnect_axi_spi_master_0_1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  112 |     0 |     20800 |  0.54 |
-|   LUT as Logic          |  112 |     0 |     20800 |  0.54 |
+| Slice LUTs*             |  108 |     0 |     20800 |  0.52 |
+|   LUT as Logic          |  108 |     0 |     20800 |  0.52 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  112 |     0 |     41600 |  0.27 |
-|   Register as Flip Flop |  110 |     0 |     41600 |  0.26 |
+| Slice Registers         |  107 |     0 |     41600 |  0.26 |
+|   Register as Flip Flop |  105 |     0 |     41600 |  0.25 |
 |   Register as Latch     |    2 |     0 |     41600 | <0.01 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 12    |          Yes |           - |        Reset |
+| 9     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 100   |          Yes |       Reset |            - |
+| 98    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,15 +149,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  100 |        Flop & Latch |
+| FDRE     |   98 |        Flop & Latch |
 | LUT2     |   76 |                 LUT |
 | LUT1     |   34 |                 LUT |
-| LUT6     |   20 |                 LUT |
-| LUT4     |   15 |                 LUT |
+| LUT6     |   16 |                 LUT |
+| LUT4     |   13 |                 LUT |
 | CARRY4   |   12 |          CarryLogic |
-| FDCE     |   10 |        Flop & Latch |
-| LUT3     |    7 |                 LUT |
-| LUT5     |    6 |                 LUT |
+| LUT5     |    8 |                 LUT |
+| FDCE     |    7 |        Flop & Latch |
+| LUT3     |    5 |                 LUT |
 | LDCE     |    2 |        Flop & Latch |
 +----------+------+---------------------+
 

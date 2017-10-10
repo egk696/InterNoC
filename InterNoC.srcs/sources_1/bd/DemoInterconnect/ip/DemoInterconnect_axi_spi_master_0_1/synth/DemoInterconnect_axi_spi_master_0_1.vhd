@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: ekyr.kth.se:user:axi_spi_master:1.0
--- IP Revision: 4
+-- IP Revision: 5
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -157,7 +157,7 @@ BEGIN
       C_S00_AXI_DATA_WIDTH => 32,
       C_S00_AXI_ADDR_WIDTH => 4,
       SPI_DATA_WIDTH => 8,
-      SPI_CLK_DIV => 100
+      SPI_CLK_DIV => 8
     )
     PORT MAP (
       m_spi_mosi => m_spi_mosi,

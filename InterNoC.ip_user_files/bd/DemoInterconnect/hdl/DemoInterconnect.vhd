@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
---Date        : Wed Oct 04 18:43:03 2017
+--Date        : Fri Oct 06 17:33:09 2017
 --Host        : egk-pc running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect.bd
 --Design      : DemoInterconnect
@@ -2149,7 +2149,6 @@ entity DemoInterconnect is
     m_spi_ss_3 : out STD_LOGIC;
     pll_aclk : out STD_LOGIC;
     pll_lock : out STD_LOGIC;
-    pll_spi : out STD_LOGIC;
     pll_uart : out STD_LOGIC;
     sys_clk : in STD_LOGIC;
     sys_resetn : in STD_LOGIC
@@ -2209,7 +2208,6 @@ architecture STRUCTURE of DemoInterconnect is
     resetn : in STD_LOGIC;
     clk_in1 : in STD_LOGIC;
     aclk : out STD_LOGIC;
-    spi : out STD_LOGIC;
     uart : out STD_LOGIC;
     locked : out STD_LOGIC
   );
@@ -2510,7 +2508,6 @@ architecture STRUCTURE of DemoInterconnect is
   signal axi_spi_master_3_m_spi_ss : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
-  signal clk_wiz_0_spi : STD_LOGIC;
   signal clk_wiz_0_uart : STD_LOGIC;
   signal interface_axi_master_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal interface_axi_master_0_M00_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -2630,7 +2627,6 @@ begin
   m_spi_ss_3 <= axi_spi_master_3_m_spi_ss;
   pll_aclk <= clk_wiz_0_clk_out1;
   pll_lock <= clk_wiz_0_locked;
-  pll_spi <= clk_wiz_0_spi;
   pll_uart <= clk_wiz_0_uart;
   resetn_1 <= sys_resetn;
   sys_clk_1 <= sys_clk;
@@ -2922,7 +2918,6 @@ clk_wiz_0: component DemoInterconnect_clk_wiz_0_0
       clk_in1 => sys_clk_1,
       locked => clk_wiz_0_locked,
       resetn => resetn_1,
-      spi => clk_wiz_0_spi,
       uart => clk_wiz_0_uart
     );
 interface_axi_master_0: component DemoInterconnect_interface_axi_master_0_0

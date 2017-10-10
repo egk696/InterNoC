@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Sep 24 18:29:14 2017
+// Date        : Sun Sep 24 18:29:12 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/DemoInterconnect_jtag_axi_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top DemoInterconnect_jtag_axi_0_0 -prefix
+//               DemoInterconnect_jtag_axi_0_0_ DemoInterconnect_jtag_axi_0_0_stub.v
 // Design      : DemoInterconnect_jtag_axi_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tfgg484-2

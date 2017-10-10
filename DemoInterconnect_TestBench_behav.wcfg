@@ -12,555 +12,188 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="874998514120fs"></ZoomEndTime>
-      <Cursor1Time time="500000000000fs"></Cursor1Time>
+      <ZoomEndTime time="1501000000000fs"></ZoomEndTime>
+      <Cursor1Time time="227737931000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="257"></NameColumnWidth>
-      <ValueColumnWidth column_width="50"></ValueColumnWidth>
+      <NameColumnWidth column_width="185"></NameColumnWidth>
+      <ValueColumnWidth column_width="75"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
-   <wvobject fp_name="/DemoInterconnect_TestBench/UART_TX_0_wire" type="logic">
-      <obj_property name="ElementShortName">UART_TX_0_wire</obj_property>
-      <obj_property name="ObjectShortName">UART_TX_0_wire</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DemoInterconnect_TestBench/UART_TX_1_wire" type="logic">
-      <obj_property name="ElementShortName">UART_TX_1_wire</obj_property>
-      <obj_property name="ObjectShortName">UART_TX_1_wire</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DemoInterconnect_TestBench/SYSCLK" type="logic">
-      <obj_property name="ElementShortName">SYSCLK</obj_property>
-      <obj_property name="ObjectShortName">SYSCLK</obj_property>
-   </wvobject>
-   <wvobject fp_name="/DemoInterconnect_TestBench/NSYSRESET" type="logic">
-      <obj_property name="ElementShortName">NSYSRESET</obj_property>
-      <obj_property name="ObjectShortName">NSYSRESET</obj_property>
-   </wvobject>
+   <WVObjectSize size="3" />
+   <wave_markers>
+      <marker time="869545000000" label="" />
+   </wave_markers>
    <wvobject fp_name="group121" type="group">
       <obj_property name="label">TESTBENCH_SIGNALS</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/DemoInterconnect_TestBench/resetn_ext_logic" type="logic">
-         <obj_property name="ElementShortName">resetn_ext_logic</obj_property>
-         <obj_property name="ObjectShortName">resetn_ext_logic</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/AXICLK" type="logic">
-         <obj_property name="ElementShortName">AXICLK</obj_property>
-         <obj_property name="ObjectShortName">AXICLK</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/UARTCLK" type="logic">
-         <obj_property name="ElementShortName">UARTCLK</obj_property>
-         <obj_property name="ObjectShortName">UARTCLK</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/SPICLK" type="logic">
-         <obj_property name="ElementShortName">SPICLK</obj_property>
-         <obj_property name="ObjectShortName">SPICLK</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/dest_data" type="array">
+         <obj_property name="ElementShortName">dest_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dest_data[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/DemoInterconnect_TestBench/dest_address" type="array">
          <obj_property name="ElementShortName">dest_address[4:0]</obj_property>
          <obj_property name="ObjectShortName">dest_address[4:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/dest_data" type="array">
-         <obj_property name="ElementShortName">dest_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">dest_data[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/DemoInterconnect_TestBench/dest_ctrl" type="array">
          <obj_property name="ElementShortName">dest_ctrl[2:0]</obj_property>
          <obj_property name="ObjectShortName">dest_ctrl[2:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/DemoInterconnect_TestBench/master_packet" type="array">
          <obj_property name="ElementShortName">master_packet[39:0]</obj_property>
          <obj_property name="ObjectShortName">master_packet[39:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/DemoInterconnect_TestBench/master_packet_send_en" type="logic">
          <obj_property name="ElementShortName">master_packet_send_en</obj_property>
          <obj_property name="ObjectShortName">master_packet_send_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/p2s_en" type="logic">
-         <obj_property name="ElementShortName">p2s_en</obj_property>
-         <obj_property name="ObjectShortName">p2s_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/p2s_send" type="logic">
-         <obj_property name="ElementShortName">p2s_send</obj_property>
-         <obj_property name="ObjectShortName">p2s_send</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/p2s_busy" type="logic">
-         <obj_property name="ElementShortName">p2s_busy</obj_property>
-         <obj_property name="ObjectShortName">p2s_busy</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/p2s_done" type="logic">
-         <obj_property name="ElementShortName">p2s_done</obj_property>
-         <obj_property name="ObjectShortName">p2s_done</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/p2s_ss" type="logic">
-         <obj_property name="ElementShortName">p2s_ss</obj_property>
-         <obj_property name="ObjectShortName">p2s_ss</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/uart_tx_en" type="logic">
-         <obj_property name="ElementShortName">uart_tx_en</obj_property>
-         <obj_property name="ObjectShortName">uart_tx_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/uart_tx_active" type="logic">
-         <obj_property name="ElementShortName">uart_tx_active</obj_property>
-         <obj_property name="ObjectShortName">uart_tx_active</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/uart_tx_done" type="logic">
-         <obj_property name="ElementShortName">uart_tx_done</obj_property>
-         <obj_property name="ObjectShortName">uart_tx_done</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="/DemoInterconnect_TestBench/uart_tx_byte" type="array">
-      <obj_property name="ElementShortName">uart_tx_byte[7:0]</obj_property>
-      <obj_property name="ObjectShortName">uart_tx_byte[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="group98" type="group">
-      <obj_property name="label">UART_TRANSCEIVER</obj_property>
+   <wvobject fp_name="group157" type="group">
+      <obj_property name="label">MASTER IO INTERFACES</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/i_Clk" type="logic">
-         <obj_property name="ElementShortName">i_Clk</obj_property>
-         <obj_property name="ObjectShortName">i_Clk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/i_RX_Serial" type="logic">
-         <obj_property name="ElementShortName">i_RX_Serial</obj_property>
-         <obj_property name="ObjectShortName">i_RX_Serial</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/o_RX_Done" type="logic">
-         <obj_property name="ElementShortName">o_RX_Done</obj_property>
-         <obj_property name="ObjectShortName">o_RX_Done</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/o_RX_Byte" type="array">
-         <obj_property name="ElementShortName">o_RX_Byte[7:0]</obj_property>
-         <obj_property name="ObjectShortName">o_RX_Byte[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/i_TX_Load" type="logic">
-         <obj_property name="ElementShortName">i_TX_Load</obj_property>
-         <obj_property name="ObjectShortName">i_TX_Load</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/i_TX_Byte" type="array">
-         <obj_property name="ElementShortName">i_TX_Byte[7:0]</obj_property>
-         <obj_property name="ObjectShortName">i_TX_Byte[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/o_TX_Active" type="logic">
-         <obj_property name="ElementShortName">o_TX_Active</obj_property>
-         <obj_property name="ObjectShortName">o_TX_Active</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/o_TX_Serial" type="logic">
-         <obj_property name="ElementShortName">o_TX_Serial</obj_property>
-         <obj_property name="ObjectShortName">o_TX_Serial</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/o_TX_Done" type="logic">
-         <obj_property name="ElementShortName">o_TX_Done</obj_property>
-         <obj_property name="ObjectShortName">o_TX_Done</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/CLK_FREQ" type="other">
-         <obj_property name="ElementShortName">CLK_FREQ</obj_property>
-         <obj_property name="ObjectShortName">CLK_FREQ</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/BAUD_RATE" type="other">
-         <obj_property name="ElementShortName">BAUD_RATE</obj_property>
-         <obj_property name="ObjectShortName">BAUD_RATE</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/c_CLKS_PER_BIT" type="other">
-         <obj_property name="ElementShortName">c_CLKS_PER_BIT</obj_property>
-         <obj_property name="ObjectShortName">c_CLKS_PER_BIT</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group76" type="group">
-      <obj_property name="label">INTERFACE_AXI_MASTER_0</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_data_in" type="array">
-         <obj_property name="ElementShortName">if00_data_in[7:0]</obj_property>
-         <obj_property name="ObjectShortName">if00_data_in[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_load_in" type="logic">
-         <obj_property name="ElementShortName">if00_load_in</obj_property>
-         <obj_property name="ObjectShortName">if00_load_in</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_data_out" type="array">
-         <obj_property name="ElementShortName">if00_data_out[7:0]</obj_property>
-         <obj_property name="ObjectShortName">if00_data_out[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_load_out" type="logic">
-         <obj_property name="ElementShortName">if00_load_out</obj_property>
-         <obj_property name="ObjectShortName">if00_load_out</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_send_done" type="logic">
-         <obj_property name="ElementShortName">if00_send_done</obj_property>
-         <obj_property name="ObjectShortName">if00_send_done</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_send_busy" type="logic">
-         <obj_property name="ElementShortName">if00_send_busy</obj_property>
-         <obj_property name="ObjectShortName">if00_send_busy</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/m00_axi_aclk" type="logic">
-         <obj_property name="ElementShortName">m00_axi_aclk</obj_property>
-         <obj_property name="ObjectShortName">m00_axi_aclk</obj_property>
-      </wvobject>
-      <wvobject fp_name="group119" type="group">
-         <obj_property name="label">axi_transactions</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/UART_RX_0_wire" type="logic">
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/mst_exec_state" type="other">
-            <obj_property name="ElementShortName">mst_exec_state</obj_property>
-            <obj_property name="ObjectShortName">mst_exec_state</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/axi_awvalid" type="logic">
-            <obj_property name="ElementShortName">axi_awvalid</obj_property>
-            <obj_property name="ObjectShortName">axi_awvalid</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/axi_wvalid" type="logic">
-            <obj_property name="ElementShortName">axi_wvalid</obj_property>
-            <obj_property name="ObjectShortName">axi_wvalid</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/axi_arvalid" type="logic">
-            <obj_property name="ElementShortName">axi_arvalid</obj_property>
-            <obj_property name="ObjectShortName">axi_arvalid</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/axi_rready" type="logic">
-            <obj_property name="ElementShortName">axi_rready</obj_property>
-            <obj_property name="ObjectShortName">axi_rready</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/axi_bready" type="logic">
-            <obj_property name="ElementShortName">axi_bready</obj_property>
-            <obj_property name="ObjectShortName">axi_bready</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/axi_awaddr" type="array">
-            <obj_property name="ElementShortName">axi_awaddr[31:0]</obj_property>
-            <obj_property name="ObjectShortName">axi_awaddr[31:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/axi_wdata" type="array">
-            <obj_property name="ElementShortName">axi_wdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">axi_wdata[31:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/axi_araddr" type="array">
-            <obj_property name="ElementShortName">axi_araddr[31:0]</obj_property>
-            <obj_property name="ObjectShortName">axi_araddr[31:0]</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/write_resp_error" type="logic">
-            <obj_property name="ElementShortName">write_resp_error</obj_property>
-            <obj_property name="ObjectShortName">write_resp_error</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/read_resp_error" type="logic">
-            <obj_property name="ElementShortName">read_resp_error</obj_property>
-            <obj_property name="ObjectShortName">read_resp_error</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/start_single_write" type="logic">
-            <obj_property name="ElementShortName">start_single_write</obj_property>
-            <obj_property name="ObjectShortName">start_single_write</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/start_single_read" type="logic">
-            <obj_property name="ElementShortName">start_single_read</obj_property>
-            <obj_property name="ObjectShortName">start_single_read</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/writes_done" type="logic">
-            <obj_property name="ElementShortName">writes_done</obj_property>
-            <obj_property name="ObjectShortName">writes_done</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/reads_done" type="logic">
-            <obj_property name="ElementShortName">reads_done</obj_property>
-            <obj_property name="ObjectShortName">reads_done</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/error_reg" type="logic">
-            <obj_property name="ElementShortName">error_reg</obj_property>
-            <obj_property name="ObjectShortName">error_reg</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/init_txn_ff" type="logic">
-            <obj_property name="ElementShortName">init_txn_ff</obj_property>
-            <obj_property name="ObjectShortName">init_txn_ff</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/init_txn_ff2" type="logic">
-            <obj_property name="ElementShortName">init_txn_ff2</obj_property>
-            <obj_property name="ObjectShortName">init_txn_ff2</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/init_txn_edge" type="logic">
-            <obj_property name="ElementShortName">init_txn_edge</obj_property>
-            <obj_property name="ObjectShortName">init_txn_edge</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/init_txn_pulse" type="logic">
-            <obj_property name="ElementShortName">init_txn_pulse</obj_property>
-            <obj_property name="ObjectShortName">init_txn_pulse</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/init_rxn_ff" type="logic">
-            <obj_property name="ElementShortName">init_rxn_ff</obj_property>
-            <obj_property name="ObjectShortName">init_rxn_ff</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/init_rxn_ff2" type="logic">
-            <obj_property name="ElementShortName">init_rxn_ff2</obj_property>
-            <obj_property name="ObjectShortName">init_rxn_ff2</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/init_rxn_edge" type="logic">
-            <obj_property name="ElementShortName">init_rxn_edge</obj_property>
-            <obj_property name="ObjectShortName">init_rxn_edge</obj_property>
-         </wvobject>
-         <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_axi_master_v1_0_M00_AXI_inst/init_rxn_pulse" type="logic">
-            <obj_property name="ElementShortName">init_rxn_pulse</obj_property>
-            <obj_property name="ObjectShortName">init_rxn_pulse</obj_property>
-         </wvobject>
+         <obj_property name="ElementShortName">UART_RX_0_wire</obj_property>
+         <obj_property name="ObjectShortName">UART_RX_0_wire</obj_property>
+         <obj_property name="label">UART_RX_0_wire</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/m00_axi_aresetn" type="logic">
-         <obj_property name="ElementShortName">m00_axi_aresetn</obj_property>
-         <obj_property name="ObjectShortName">m00_axi_aresetn</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/UART_TX_0_wire" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">UART_TX_0_wire</obj_property>
+         <obj_property name="ObjectShortName">UART_TX_0_wire</obj_property>
+         <obj_property name="label">UART_TX_0_wire</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/ss_to_ifload_out" type="logic">
-         <obj_property name="ElementShortName">ss_to_ifload_out</obj_property>
-         <obj_property name="ObjectShortName">ss_to_ifload_out</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/UART_RX_1_wire" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">UART_RX_1_wire</obj_property>
+         <obj_property name="ObjectShortName">UART_RX_1_wire</obj_property>
+         <obj_property name="label">UART_RX_1_wire</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/ifbusy_to_en_send" type="logic">
-         <obj_property name="ElementShortName">ifbusy_to_en_send</obj_property>
-         <obj_property name="ObjectShortName">ifbusy_to_en_send</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_packet_received" type="logic">
-         <obj_property name="ElementShortName">interface_packet_received</obj_property>
-         <obj_property name="ObjectShortName">interface_packet_received</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_packet_sent" type="logic">
-         <obj_property name="ElementShortName">interface_packet_sent</obj_property>
-         <obj_property name="ObjectShortName">interface_packet_sent</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/interface_packet" type="array">
-         <obj_property name="ElementShortName">interface_packet[39:0]</obj_property>
-         <obj_property name="ObjectShortName">interface_packet[39:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/init_packet_tx" type="logic">
-         <obj_property name="ElementShortName">init_packet_tx</obj_property>
-         <obj_property name="ObjectShortName">init_packet_tx</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/init_packet_rx" type="logic">
-         <obj_property name="ElementShortName">init_packet_rx</obj_property>
-         <obj_property name="ObjectShortName">init_packet_rx</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/axi_data_received" type="logic">
-         <obj_property name="ElementShortName">axi_data_received</obj_property>
-         <obj_property name="ObjectShortName">axi_data_received</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/axi_data" type="array">
-         <obj_property name="ElementShortName">axi_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_data[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/ifcomm_state" type="other">
-         <obj_property name="ElementShortName">ifcomm_state</obj_property>
-         <obj_property name="ObjectShortName">ifcomm_state</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/C_IF00_DATA_WIDTH" type="other">
-         <obj_property name="ElementShortName">C_IF00_DATA_WIDTH</obj_property>
-         <obj_property name="ObjectShortName">C_IF00_DATA_WIDTH</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/C_PACKET_WIDTH" type="other">
-         <obj_property name="ElementShortName">C_PACKET_WIDTH</obj_property>
-         <obj_property name="ObjectShortName">C_PACKET_WIDTH</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/UART_TX_1_wire" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">UART_TX_1_wire</obj_property>
+         <obj_property name="ObjectShortName">UART_TX_1_wire</obj_property>
+         <obj_property name="label">UART_TX_1_wire</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group144" type="group">
-      <obj_property name="label">AXI_SPI_MASTER_0</obj_property>
+   <wvobject fp_name="group158" type="group">
+      <obj_property name="label">SLAVE IO INTERFACES</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_mosi" type="logic">
-         <obj_property name="ElementShortName">spi_mosi</obj_property>
-         <obj_property name="ObjectShortName">spi_mosi</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_0_mosi_wire" type="logic">
+         <obj_property name="ElementShortName">spi_0_mosi_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_0_mosi_wire</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_miso" type="logic">
-         <obj_property name="ElementShortName">spi_miso</obj_property>
-         <obj_property name="ObjectShortName">spi_miso</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_0_miso_wire" type="logic">
+         <obj_property name="ElementShortName">spi_0_miso_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_0_miso_wire</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_ss" type="logic">
-         <obj_property name="ElementShortName">spi_ss</obj_property>
-         <obj_property name="ObjectShortName">spi_ss</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_0_sck_wire" type="logic">
+         <obj_property name="ElementShortName">spi_0_sck_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_0_sck_wire</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_sclk" type="logic">
-         <obj_property name="ElementShortName">spi_sclk</obj_property>
-         <obj_property name="ObjectShortName">spi_sclk</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_0_ss_wire" type="logic">
+         <obj_property name="ElementShortName">spi_0_ss_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_0_ss_wire</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_ACLK" type="logic">
-         <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_1_mosi_wire" type="logic">
+         <obj_property name="ElementShortName">spi_1_mosi_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_1_mosi_wire</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_ARESETN" type="logic">
-         <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_1_miso_wire" type="logic">
+         <obj_property name="ElementShortName">spi_1_miso_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_1_miso_wire</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_AWADDR" type="array">
-         <obj_property name="ElementShortName">S_AXI_AWADDR[3:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_AWADDR[3:0]</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_1_sck_wire" type="logic">
+         <obj_property name="ElementShortName">spi_1_sck_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_1_sck_wire</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_AWPROT" type="array">
-         <obj_property name="ElementShortName">S_AXI_AWPROT[2:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_AWPROT[2:0]</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_1_ss_wire" type="logic">
+         <obj_property name="ElementShortName">spi_1_ss_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_1_ss_wire</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_AWVALID" type="logic">
-         <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_2_mosi_wire" type="logic">
+         <obj_property name="ElementShortName">spi_2_mosi_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_2_mosi_wire</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_AWREADY" type="logic">
-         <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_2_miso_wire" type="logic">
+         <obj_property name="ElementShortName">spi_2_miso_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_2_miso_wire</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_WDATA" type="array">
-         <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_2_sck_wire" type="logic">
+         <obj_property name="ElementShortName">spi_2_sck_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_2_sck_wire</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_WSTRB" type="array">
-         <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_2_ss_wire" type="logic">
+         <obj_property name="ElementShortName">spi_2_ss_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_2_ss_wire</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_WVALID" type="logic">
-         <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_3_mosi_wire" type="logic">
+         <obj_property name="ElementShortName">spi_3_mosi_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_3_mosi_wire</obj_property>
+         <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_WREADY" type="logic">
-         <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_3_miso_wire" type="logic">
+         <obj_property name="ElementShortName">spi_3_miso_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_3_miso_wire</obj_property>
+         <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_BRESP" type="array">
-         <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_3_sck_wire" type="logic">
+         <obj_property name="ElementShortName">spi_3_sck_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_3_sck_wire</obj_property>
+         <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_BVALID" type="logic">
-         <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_BREADY" type="logic">
-         <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_ARADDR" type="array">
-         <obj_property name="ElementShortName">S_AXI_ARADDR[3:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_ARADDR[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_ARPROT" type="array">
-         <obj_property name="ElementShortName">S_AXI_ARPROT[2:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_ARPROT[2:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_ARVALID" type="logic">
-         <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_ARREADY" type="logic">
-         <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_RDATA" type="array">
-         <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_RRESP" type="array">
-         <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_RVALID" type="logic">
-         <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/S_AXI_RREADY" type="logic">
-         <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
-         <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_awaddr" type="array">
-         <obj_property name="ElementShortName">axi_awaddr[3:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_awaddr[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_awready" type="logic">
-         <obj_property name="ElementShortName">axi_awready</obj_property>
-         <obj_property name="ObjectShortName">axi_awready</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_wready" type="logic">
-         <obj_property name="ElementShortName">axi_wready</obj_property>
-         <obj_property name="ObjectShortName">axi_wready</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bresp" type="array">
-         <obj_property name="ElementShortName">axi_bresp[1:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_bresp[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bvalid" type="logic">
-         <obj_property name="ElementShortName">axi_bvalid</obj_property>
-         <obj_property name="ObjectShortName">axi_bvalid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_araddr" type="array">
-         <obj_property name="ElementShortName">axi_araddr[3:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_araddr[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_arready" type="logic">
-         <obj_property name="ElementShortName">axi_arready</obj_property>
-         <obj_property name="ObjectShortName">axi_arready</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata" type="array">
-         <obj_property name="ElementShortName">axi_rdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_rdata[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rresp" type="array">
-         <obj_property name="ElementShortName">axi_rresp[1:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_rresp[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rvalid" type="logic">
-         <obj_property name="ElementShortName">axi_rvalid</obj_property>
-         <obj_property name="ObjectShortName">axi_rvalid</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/p2s_load" type="logic">
-         <obj_property name="ElementShortName">p2s_load</obj_property>
-         <obj_property name="ObjectShortName">p2s_load</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/p2s_send" type="logic">
-         <obj_property name="ElementShortName">p2s_send</obj_property>
-         <obj_property name="ObjectShortName">p2s_send</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/p2s_ss" type="logic">
-         <obj_property name="ElementShortName">p2s_ss</obj_property>
-         <obj_property name="ObjectShortName">p2s_ss</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/p2s_done" type="logic">
-         <obj_property name="ElementShortName">p2s_done</obj_property>
-         <obj_property name="ObjectShortName">p2s_done</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/st_current" type="other">
-         <obj_property name="ElementShortName">st_current</obj_property>
-         <obj_property name="ObjectShortName">st_current</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_tx_rx_start" type="logic">
-         <obj_property name="ElementShortName">spi_tx_rx_start</obj_property>
-         <obj_property name="ObjectShortName">spi_tx_rx_start</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_tx_rx_busy" type="logic">
-         <obj_property name="ElementShortName">spi_tx_rx_busy</obj_property>
-         <obj_property name="ObjectShortName">spi_tx_rx_busy</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_tx_rx_done" type="logic">
-         <obj_property name="ElementShortName">spi_tx_rx_done</obj_property>
-         <obj_property name="ObjectShortName">spi_tx_rx_done</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_tx_byte" type="array">
-         <obj_property name="ElementShortName">spi_tx_byte[7:0]</obj_property>
-         <obj_property name="ObjectShortName">spi_tx_byte[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_rx_byte" type="array">
-         <obj_property name="ElementShortName">spi_rx_byte[7:0]</obj_property>
-         <obj_property name="ObjectShortName">spi_rx_byte[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/s2p_en" type="logic">
-         <obj_property name="ElementShortName">s2p_en</obj_property>
-         <obj_property name="ObjectShortName">s2p_en</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/s2p_done" type="logic">
-         <obj_property name="ElementShortName">s2p_done</obj_property>
-         <obj_property name="ObjectShortName">s2p_done</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/axi_reg_rdata" type="array">
-         <obj_property name="ElementShortName">axi_reg_rdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">axi_reg_rdata[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/SPI_DATA_WIDTH" type="other">
-         <obj_property name="ElementShortName">SPI_DATA_WIDTH</obj_property>
-         <obj_property name="ObjectShortName">SPI_DATA_WIDTH</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/SPI_CLK_DIV" type="other">
-         <obj_property name="ElementShortName">SPI_CLK_DIV</obj_property>
-         <obj_property name="ObjectShortName">SPI_CLK_DIV</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/C_S_AXI_DATA_WIDTH" type="other">
-         <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH</obj_property>
-         <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH</obj_property>
-      </wvobject>
-      <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH" type="other">
-         <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH</obj_property>
-         <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH</obj_property>
+      <wvobject fp_name="/DemoInterconnect_TestBench/spi_3_ss_wire" type="logic">
+         <obj_property name="ElementShortName">spi_3_ss_wire</obj_property>
+         <obj_property name="ObjectShortName">spi_3_ss_wire</obj_property>
+         <obj_property name="CustomSignalColor">#A52A2A</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

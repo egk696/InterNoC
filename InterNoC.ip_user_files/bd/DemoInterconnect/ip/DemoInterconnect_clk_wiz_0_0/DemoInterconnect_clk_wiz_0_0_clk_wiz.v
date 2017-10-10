@@ -57,7 +57,6 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // ____aclk___100.000______0.000______50.0______130.958_____98.575
-// _____spi____50.000______0.000______50.0______151.636_____98.575
 // ____uart____10.000______0.000______50.0______209.588_____98.575
 //
 //----------------------------------------------------------------------------
@@ -72,7 +71,6 @@ module DemoInterconnect_clk_wiz_0_0_clk_wiz
  (// Clock in ports
   // Clock out ports
   output        aclk,
-  output        spi,
   output        uart,
   // Status and control signals
   input         resetn,
@@ -96,8 +94,8 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
   //    * Unused outputs are labeled unused
 
   wire        aclk_DemoInterconnect_clk_wiz_0_0;
-  wire        spi_DemoInterconnect_clk_wiz_0_0;
   wire        uart_DemoInterconnect_clk_wiz_0_0;
+  wire        clk_out3_DemoInterconnect_clk_wiz_0_0;
   wire        clk_out4_DemoInterconnect_clk_wiz_0_0;
   wire        clk_out5_DemoInterconnect_clk_wiz_0_0;
   wire        clk_out6_DemoInterconnect_clk_wiz_0_0;
@@ -112,6 +110,7 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
+   wire clkout2_unused;
    wire clkout2b_unused;
    wire clkout3_unused;
    wire clkout3b_unused;
@@ -127,9 +126,6 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
   (* KEEP = "TRUE" *) 
   (* ASYNC_REG = "TRUE" *)
   reg  [7 :0] seq_reg2 = 0;
-  (* KEEP = "TRUE" *) 
-  (* ASYNC_REG = "TRUE" *)
-  reg  [7 :0] seq_reg3 = 0;
 
   MMCME2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
@@ -144,14 +140,10 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (20),
+    .CLKOUT1_DIVIDE       (100),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKOUT2_DIVIDE       (100),
-    .CLKOUT2_PHASE        (0.000),
-    .CLKOUT2_DUTY_CYCLE   (0.500),
-    .CLKOUT2_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (10.0))
   mmcm_adv_inst
     // Output clocks
@@ -160,9 +152,9 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
     .CLKFBOUTB           (clkfboutb_unused),
     .CLKOUT0             (aclk_DemoInterconnect_clk_wiz_0_0),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (spi_DemoInterconnect_clk_wiz_0_0),
+    .CLKOUT1             (uart_DemoInterconnect_clk_wiz_0_0),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (uart_DemoInterconnect_clk_wiz_0_0),
+    .CLKOUT2             (clkout2_unused),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT3B            (clkout3b_unused),
@@ -223,29 +215,16 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
 
 
   BUFGCE clkout2_buf
-   (.O   (spi),
-    .CE  (seq_reg2[7]),
-    .I   (spi_DemoInterconnect_clk_wiz_0_0));
- 
-  BUFH clkout2_buf_en
-   (.O   (spi_DemoInterconnect_clk_wiz_0_0_en_clk),
-    .I   (spi_DemoInterconnect_clk_wiz_0_0));
- 
-  always @(posedge spi_DemoInterconnect_clk_wiz_0_0_en_clk)
-        seq_reg2 <= {seq_reg2[6:0],locked_int};
-
-
-  BUFGCE clkout3_buf
    (.O   (uart),
-    .CE  (seq_reg3[7]),
+    .CE  (seq_reg2[7]),
     .I   (uart_DemoInterconnect_clk_wiz_0_0));
  
-  BUFH clkout3_buf_en
+  BUFH clkout2_buf_en
    (.O   (uart_DemoInterconnect_clk_wiz_0_0_en_clk),
     .I   (uart_DemoInterconnect_clk_wiz_0_0));
  
   always @(posedge uart_DemoInterconnect_clk_wiz_0_0_en_clk)
-        seq_reg3 <= {seq_reg3[6:0],locked_int};
+        seq_reg2 <= {seq_reg2[6:0],locked_int};
 
 
 

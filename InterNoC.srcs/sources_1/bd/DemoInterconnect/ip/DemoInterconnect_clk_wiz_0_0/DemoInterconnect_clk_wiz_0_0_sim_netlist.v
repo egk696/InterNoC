@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Thu Sep 28 17:37:55 2017
+// Date        : Fri Oct 06 17:34:09 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_clk_wiz_0_0 -prefix
-//               DemoInterconnect_clk_wiz_0_0_ DemoInterconnect_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0_sim_netlist.v
 // Design      : DemoInterconnect_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,13 +15,11 @@
 (* NotValidForBitStream *)
 module DemoInterconnect_clk_wiz_0_0
    (aclk,
-    spi,
     uart,
     resetn,
     locked,
     clk_in1);
   output aclk;
-  output spi;
   output uart;
   input resetn;
   output locked;
@@ -31,7 +29,6 @@ module DemoInterconnect_clk_wiz_0_0
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire locked;
   wire resetn;
-  wire spi;
   wire uart;
 
   DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz inst
@@ -39,19 +36,17 @@ module DemoInterconnect_clk_wiz_0_0
         .clk_in1(clk_in1),
         .locked(locked),
         .resetn(resetn),
-        .spi(spi),
         .uart(uart));
 endmodule
 
+(* ORIG_REF_NAME = "DemoInterconnect_clk_wiz_0_0_clk_wiz" *) 
 module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
    (aclk,
-    spi,
     uart,
     resetn,
     locked,
     clk_in1);
   output aclk;
-  output spi;
   output uart;
   input resetn;
   output locked;
@@ -69,10 +64,6 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   wire resetn;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg1;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg2;
-  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg3;
-  wire spi;
-  wire spi_DemoInterconnect_clk_wiz_0_0;
-  wire spi_DemoInterconnect_clk_wiz_0_0_en_clk;
   wire uart;
   wire uart_DemoInterconnect_clk_wiz_0_0;
   wire uart_DemoInterconnect_clk_wiz_0_0_en_clk;
@@ -81,6 +72,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
+  wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
@@ -135,27 +127,6 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
     clkout2_buf
        (.CE0(seq_reg2[7]),
         .CE1(1'b0),
-        .I0(spi_DemoInterconnect_clk_wiz_0_0),
-        .I1(1'b1),
-        .IGNORE0(1'b0),
-        .IGNORE1(1'b1),
-        .O(spi),
-        .S0(1'b1),
-        .S1(1'b0));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFH clkout2_buf_en
-       (.I(spi_DemoInterconnect_clk_wiz_0_0),
-        .O(spi_DemoInterconnect_clk_wiz_0_0_en_clk));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
-  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
-  BUFGCTRL #(
-    .INIT_OUT(0),
-    .PRESELECT_I0("TRUE"),
-    .PRESELECT_I1("FALSE")) 
-    clkout3_buf
-       (.CE0(seq_reg3[7]),
-        .CE1(1'b0),
         .I0(uart_DemoInterconnect_clk_wiz_0_0),
         .I1(1'b1),
         .IGNORE0(1'b0),
@@ -164,7 +135,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
         .S0(1'b1),
         .S1(1'b0));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFH clkout3_buf_en
+  BUFH clkout2_buf_en
        (.I(uart_DemoInterconnect_clk_wiz_0_0),
         .O(uart_DemoInterconnect_clk_wiz_0_0_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
@@ -179,11 +150,11 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(20),
+    .CLKOUT1_DIVIDE(100),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(100),
+    .CLKOUT2_DIVIDE(1),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
@@ -228,9 +199,9 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(aclk_DemoInterconnect_clk_wiz_0_0),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(spi_DemoInterconnect_clk_wiz_0_0),
+        .CLKOUT1(uart_DemoInterconnect_clk_wiz_0_0),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(uart_DemoInterconnect_clk_wiz_0_0),
+        .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
         .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
@@ -332,7 +303,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[0] 
-       (.C(spi_DemoInterconnect_clk_wiz_0_0_en_clk),
+       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(locked),
         .Q(seq_reg2[0]),
@@ -341,7 +312,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[1] 
-       (.C(spi_DemoInterconnect_clk_wiz_0_0_en_clk),
+       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[0]),
         .Q(seq_reg2[1]),
@@ -350,7 +321,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[2] 
-       (.C(spi_DemoInterconnect_clk_wiz_0_0_en_clk),
+       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[1]),
         .Q(seq_reg2[2]),
@@ -359,7 +330,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[3] 
-       (.C(spi_DemoInterconnect_clk_wiz_0_0_en_clk),
+       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[2]),
         .Q(seq_reg2[3]),
@@ -368,7 +339,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[4] 
-       (.C(spi_DemoInterconnect_clk_wiz_0_0_en_clk),
+       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[3]),
         .Q(seq_reg2[4]),
@@ -377,7 +348,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[5] 
-       (.C(spi_DemoInterconnect_clk_wiz_0_0_en_clk),
+       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[4]),
         .Q(seq_reg2[5]),
@@ -386,7 +357,7 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[6] 
-       (.C(spi_DemoInterconnect_clk_wiz_0_0_en_clk),
+       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[5]),
         .Q(seq_reg2[6]),
@@ -395,82 +366,10 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[7] 
-       (.C(spi_DemoInterconnect_clk_wiz_0_0_en_clk),
+       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[6]),
         .Q(seq_reg2[7]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[0] 
-       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(locked),
-        .Q(seq_reg3[0]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[1] 
-       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[0]),
-        .Q(seq_reg3[1]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[2] 
-       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[1]),
-        .Q(seq_reg3[2]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[3] 
-       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[2]),
-        .Q(seq_reg3[3]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[4] 
-       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[3]),
-        .Q(seq_reg3[4]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[5] 
-       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[4]),
-        .Q(seq_reg3[5]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[6] 
-       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[5]),
-        .Q(seq_reg3[6]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[7] 
-       (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[6]),
-        .Q(seq_reg3[7]),
         .R(1'b0));
 endmodule
 `ifndef GLBL

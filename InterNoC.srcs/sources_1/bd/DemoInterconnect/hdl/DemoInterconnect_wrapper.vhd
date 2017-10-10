@@ -1,7 +1,7 @@
 --Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
---Date        : Wed Oct 04 18:43:03 2017
+--Date        : Fri Oct 06 17:33:09 2017
 --Host        : egk-pc running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect_wrapper.bd
 --Design      : DemoInterconnect_wrapper
@@ -35,7 +35,6 @@ entity DemoInterconnect_wrapper is
     m_spi_ss_3 : out STD_LOGIC;
     pll_aclk : out STD_LOGIC;
     pll_lock : out STD_LOGIC;
-    pll_spi : out STD_LOGIC;
     pll_uart : out STD_LOGIC;
     sys_clk : in STD_LOGIC;
     sys_resetn : in STD_LOGIC
@@ -49,7 +48,6 @@ architecture STRUCTURE of DemoInterconnect_wrapper is
     pll_lock : out STD_LOGIC;
     sys_clk : in STD_LOGIC;
     sys_resetn : in STD_LOGIC;
-    pll_spi : out STD_LOGIC;
     pll_uart : out STD_LOGIC;
     UART_RX_0 : in STD_LOGIC;
     UART_TX_0 : out STD_LOGIC;
@@ -98,7 +96,6 @@ DemoInterconnect_i: component DemoInterconnect
       m_spi_ss_3 => m_spi_ss_3,
       pll_aclk => pll_aclk,
       pll_lock => pll_lock,
-      pll_spi => pll_spi,
       pll_uart => pll_uart,
       sys_clk => sys_clk,
       sys_resetn => sys_resetn

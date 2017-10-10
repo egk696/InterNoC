@@ -177,7 +177,6 @@ proc create_root_design { parentCell } {
   set m_spi_ss_3 [ create_bd_port -dir O -type ce m_spi_ss_3 ]
   set pll_aclk [ create_bd_port -dir O -type clk pll_aclk ]
   set pll_lock [ create_bd_port -dir O pll_lock ]
-  set pll_spi [ create_bd_port -dir O pll_spi ]
   set pll_uart [ create_bd_port -dir O pll_uart ]
   set sys_clk [ create_bd_port -dir I -type clk sys_clk ]
   set_property -dict [ list \
@@ -202,15 +201,27 @@ CONFIG.S02_HAS_REGSLICE {3} \
 
   # Create instance: axi_spi_master_0, and set properties
   set axi_spi_master_0 [ create_bd_cell -type ip -vlnv ekyr.kth.se:user:axi_spi_master:1.0 axi_spi_master_0 ]
+  set_property -dict [ list \
+CONFIG.SPI_CLK_DIV {8} \
+ ] $axi_spi_master_0
 
   # Create instance: axi_spi_master_1, and set properties
   set axi_spi_master_1 [ create_bd_cell -type ip -vlnv ekyr.kth.se:user:axi_spi_master:1.0 axi_spi_master_1 ]
+  set_property -dict [ list \
+CONFIG.SPI_CLK_DIV {8} \
+ ] $axi_spi_master_1
 
   # Create instance: axi_spi_master_2, and set properties
   set axi_spi_master_2 [ create_bd_cell -type ip -vlnv ekyr.kth.se:user:axi_spi_master:1.0 axi_spi_master_2 ]
+  set_property -dict [ list \
+CONFIG.SPI_CLK_DIV {8} \
+ ] $axi_spi_master_2
 
   # Create instance: axi_spi_master_3, and set properties
   set axi_spi_master_3 [ create_bd_cell -type ip -vlnv ekyr.kth.se:user:axi_spi_master:1.0 axi_spi_master_3 ]
+  set_property -dict [ list \
+CONFIG.SPI_CLK_DIV {8} \
+ ] $axi_spi_master_3
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.3 clk_wiz_0 ]
@@ -219,32 +230,32 @@ CONFIG.CLKOUT1_DRIVES {BUFGCE} \
 CONFIG.CLKOUT1_JITTER {130.958} \
 CONFIG.CLKOUT1_PHASE_ERROR {98.575} \
 CONFIG.CLKOUT2_DRIVES {BUFGCE} \
-CONFIG.CLKOUT2_JITTER {151.636} \
+CONFIG.CLKOUT2_JITTER {209.588} \
 CONFIG.CLKOUT2_PHASE_ERROR {98.575} \
-CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {10} \
 CONFIG.CLKOUT2_USED {true} \
 CONFIG.CLKOUT3_DRIVES {BUFGCE} \
 CONFIG.CLKOUT3_JITTER {209.588} \
 CONFIG.CLKOUT3_PHASE_ERROR {98.575} \
 CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {10} \
-CONFIG.CLKOUT3_USED {true} \
+CONFIG.CLKOUT3_USED {false} \
 CONFIG.CLKOUT4_DRIVES {BUFGCE} \
 CONFIG.CLKOUT5_DRIVES {BUFGCE} \
 CONFIG.CLKOUT6_DRIVES {BUFGCE} \
 CONFIG.CLKOUT7_DRIVES {BUFGCE} \
 CONFIG.CLK_OUT1_PORT {aclk} \
-CONFIG.CLK_OUT2_PORT {spi} \
-CONFIG.CLK_OUT3_PORT {uart} \
+CONFIG.CLK_OUT2_PORT {uart} \
+CONFIG.CLK_OUT3_PORT {clk_out3} \
 CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
 CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} \
 CONFIG.MMCM_CLKIN1_PERIOD {10.0} \
 CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
 CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} \
-CONFIG.MMCM_CLKOUT1_DIVIDE {20} \
-CONFIG.MMCM_CLKOUT2_DIVIDE {100} \
+CONFIG.MMCM_CLKOUT1_DIVIDE {100} \
+CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
 CONFIG.MMCM_COMPENSATION {ZHOLD} \
 CONFIG.MMCM_DIVCLK_DIVIDE {1} \
-CONFIG.NUM_OUT_CLKS {3} \
+CONFIG.NUM_OUT_CLKS {2} \
 CONFIG.RESET_PORT {resetn} \
 CONFIG.RESET_TYPE {ACTIVE_LOW} \
 CONFIG.USE_SAFE_CLOCK_STARTUP {true} \
@@ -302,7 +313,6 @@ CONFIG.MMCM_COMPENSATION.VALUE_SRC {DEFAULT} \
   connect_bd_net -net axi_spi_master_3_m_spi_ss [get_bd_ports m_spi_ss_3] [get_bd_pins axi_spi_master_3/m_spi_ss]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports pll_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins axi_interconnect_0/S02_ACLK] [get_bd_pins axi_spi_master_0/s00_axi_aclk] [get_bd_pins axi_spi_master_1/s00_axi_aclk] [get_bd_pins axi_spi_master_2/s00_axi_aclk] [get_bd_pins axi_spi_master_3/s00_axi_aclk] [get_bd_pins clk_wiz_0/aclk] [get_bd_pins interface_axi_master_0/m00_axi_aclk] [get_bd_pins interface_axi_master_1/m00_axi_aclk] [get_bd_pins jtag_axi_0/aclk]
   connect_bd_net -net clk_wiz_0_locked [get_bd_ports pll_lock] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins axi_interconnect_0/S02_ARESETN] [get_bd_pins axi_spi_master_0/s00_axi_aresetn] [get_bd_pins axi_spi_master_1/s00_axi_aresetn] [get_bd_pins axi_spi_master_2/s00_axi_aresetn] [get_bd_pins axi_spi_master_3/s00_axi_aresetn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins interface_axi_master_0/m00_axi_aresetn] [get_bd_pins interface_axi_master_1/m00_axi_aresetn] [get_bd_pins jtag_axi_0/aresetn]
-  connect_bd_net -net clk_wiz_0_spi [get_bd_ports pll_spi] [get_bd_pins clk_wiz_0/spi]
   connect_bd_net -net clk_wiz_0_uart [get_bd_ports pll_uart] [get_bd_pins clk_wiz_0/uart] [get_bd_pins uart_transceiver_0/i_Clk] [get_bd_pins uart_transceiver_1/i_Clk]
   connect_bd_net -net interface_axi_master_0_if00_data_out [get_bd_pins interface_axi_master_0/if00_data_out] [get_bd_pins uart_transceiver_0/i_TX_Byte]
   connect_bd_net -net interface_axi_master_0_if00_load_out [get_bd_pins interface_axi_master_0/if00_load_out] [get_bd_pins uart_transceiver_0/i_TX_Load]
@@ -363,7 +373,6 @@ preplace port sys_resetn -pg 1 -y 810 -defaultsOSRD
 preplace port pll_aclk -pg 1 -y 190 -defaultsOSRD
 preplace port m_spi_mosi_3 -pg 1 -y 700 -defaultsOSRD
 preplace port UART_TX_0 -pg 1 -y 130 -defaultsOSRD
-preplace port pll_spi -pg 1 -y 810 -defaultsOSRD
 preplace port UART_TX_1 -pg 1 -y 150 -defaultsOSRD
 preplace port UART_RX_0 -pg 1 -y 100 -defaultsOSRD
 preplace port UART_RX_1 -pg 1 -y 310 -defaultsOSRD
@@ -424,7 +433,6 @@ preplace netloc axi_interconnect_0_M03_AXI 1 3 1 950
 preplace netloc axi_spi_master_0_m_spi_ss 1 4 1 NJ
 preplace netloc uart_transceiver_1_o_TX_Serial 1 1 4 280J 410 650J 150 NJ 150 NJ
 preplace netloc uart_transceiver_0_o_TX_Active 1 1 1 310
-preplace netloc clk_wiz_0_spi 1 3 2 NJ 810 NJ
 levelinfo -pg 1 -10 160 460 810 1120 1250 -top 0 -bot 990
 ",
 }

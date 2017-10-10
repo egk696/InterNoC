@@ -2,8 +2,8 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Wed Oct 04 18:43:13 2017
-# Process ID: 13040
+# Start of session at: Fri Oct 06 17:30:01 2017
+# Process ID: 3528
 # Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_0_synth_1
 # Command line: vivado.exe -log DemoInterconnect_axi_spi_master_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_axi_spi_master_1_0.tcl
 # Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_0_synth_1/DemoInterconnect_axi_spi_master_1_0.vds
@@ -15,57 +15,57 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9928 
+INFO: Helper process launched with PID 8532 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 289.406 ; gain = 79.586
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 289.305 ; gain = 78.984
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_0/synth/DemoInterconnect_axi_spi_master_1_0.vhd:86]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter SPI_DATA_WIDTH bound to: 8 - type: integer 
-	Parameter SPI_CLK_DIV bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'axi_spi_master_v1_0' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0.vhd:5' bound to instance 'U0' of component 'axi_spi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_0/synth/DemoInterconnect_axi_spi_master_1_0.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0.vhd:53]
+	Parameter SPI_CLK_DIV bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'axi_spi_master_v1_0' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:5' bound to instance 'U0' of component 'axi_spi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_0/synth/DemoInterconnect_axi_spi_master_1_0.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:53]
 	Parameter SPI_DATA_WIDTH bound to: 8 - type: integer 
-	Parameter SPI_CLK_DIV bound to: 100 - type: integer 
+	Parameter SPI_CLK_DIV bound to: 8 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter SPI_DATA_WIDTH bound to: 8 - type: integer 
-	Parameter SPI_CLK_DIV bound to: 100 - type: integer 
+	Parameter SPI_CLK_DIV bound to: 8 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'axi_spi_master_v1_0_S00_AXI' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0_S00_AXI.vhd:5' bound to instance 'axi_spi_master_v1_0_S00_AXI_inst' of component 'axi_spi_master_v1_0_S00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0_S00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
+INFO: [Synth 8-3491] module 'axi_spi_master_v1_0_S00_AXI' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:5' bound to instance 'axi_spi_master_v1_0_S00_AXI_inst' of component 'axi_spi_master_v1_0_S00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0_S00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
 	Parameter SPI_DATA_WIDTH bound to: 8 - type: integer 
-	Parameter SPI_CLK_DIV bound to: 100 - type: integer 
+	Parameter SPI_CLK_DIV bound to: 8 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter TX_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'parallel2serial' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/parallel2serial.vhd:13' bound to instance 'word2byte' of component 'parallel2serial' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0_S00_AXI.vhd:337]
-INFO: [Synth 8-638] synthesizing module 'parallel2serial' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/parallel2serial.vhd:30]
+INFO: [Synth 8-3491] module 'parallel2serial' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:13' bound to instance 'word2byte' of component 'parallel2serial' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:337]
+INFO: [Synth 8-638] synthesizing module 'parallel2serial' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:30]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter TX_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'parallel2serial' (1#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/parallel2serial.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'parallel2serial' (1#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:30]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter TX_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'serial2parallel' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/serial2parallel.vhd:16' bound to instance 'byte2word' of component 'serial2parallel' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0_S00_AXI.vhd:352]
-INFO: [Synth 8-638] synthesizing module 'serial2parallel' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/serial2parallel.vhd:30]
+INFO: [Synth 8-3491] module 'serial2parallel' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:16' bound to instance 'byte2word' of component 'serial2parallel' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:352]
+INFO: [Synth 8-638] synthesizing module 'serial2parallel' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:30]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter TX_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/serial2parallel.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'serial2parallel' (2#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/serial2parallel.vhd:30]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'serial2parallel' (2#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:30]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter CLK_DIV bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'spi_master' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/SPI_Master.vhd:6' bound to instance 'spi_master_inst' of component 'spi_master' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0_S00_AXI.vhd:365]
-INFO: [Synth 8-638] synthesizing module 'spi_master' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/SPI_Master.vhd:29]
+	Parameter CLK_DIV bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'spi_master' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:6' bound to instance 'spi_master_inst' of component 'spi_master' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'spi_master' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:29]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
-	Parameter CLK_DIV bound to: 100 - type: integer 
-INFO: [Synth 8-226] default block is never used [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/SPI_Master.vhd:113]
-INFO: [Synth 8-226] default block is never used [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/SPI_Master.vhd:142]
-INFO: [Synth 8-256] done synthesizing module 'spi_master' (3#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/SPI_Master.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0_S00_AXI' (4#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
-INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0' (5#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/hdl/axi_spi_master_v1_0.vhd:53]
+	Parameter CLK_DIV bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:105]
+INFO: [Synth 8-226] default block is never used [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:134]
+INFO: [Synth 8-256] done synthesizing module 'spi_master' (3#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0_S00_AXI' (4#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0' (5#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:53]
 INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_axi_spi_master_1_0' (6#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_0/synth/DemoInterconnect_axi_spi_master_1_0.vhd:86]
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[3]
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[2]
@@ -86,7 +86,7 @@ WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port 
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 327.793 ; gain = 117.973
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 327.723 ; gain = 117.402
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -96,7 +96,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 327.793 ; gain = 117.973
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 327.723 ; gain = 117.402
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tfgg484-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -108,29 +108,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 610.563 ; gain = 0.023
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 611.613 ; gain = 0.063
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rx_done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "sclk_fall" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'st_next_reg' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/53f2/src/SPI_Master.vhd:77]
+WARNING: [Synth 8-327] inferring latch for variable 'st_next_reg' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:69]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -144,27 +144,29 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 4     
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 23    
+	                1 Bit    Registers := 19    
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
-	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 10    
 	   4 Input      1 Bit        Muxes := 11    
 	   3 Input      1 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -184,7 +186,7 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module serial2parallel 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -200,22 +202,23 @@ Module spi_master
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	                8 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 11    
+	                1 Bit    Registers := 7     
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 1     
-	   3 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      5 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 Module axi_spi_master_v1_0_S00_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -239,8 +242,6 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "O50" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_fall" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_1_0 has unconnected port s00_axi_awaddr[3]
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_1_0 has unconnected port s00_axi_awaddr[2]
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_1_0 has unconnected port s00_axi_awaddr[1]
@@ -264,8 +265,8 @@ INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_r
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/init_rx_ff_reg' (FD) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/init_rx_ff2_reg'
 INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/init_rx_ff2_reg' (FD) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_en_reg'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/init_rx_ff_reg' (FD) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_en_reg'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_en_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[1] )
@@ -275,21 +276,21 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_s
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[5] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[7] )
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[8]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[9]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[10]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[11]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[12]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[13]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[8]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[9]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[10]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[11]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[12]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[13]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[14]'
 INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[14]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15] )
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[16]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[17]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[18]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[19]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[20]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[21]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[22]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[16]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[17]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[18]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[19]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[20]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[21]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[22]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
 INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
 INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[24]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
 INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[25]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
@@ -360,7 +361,7 @@ INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byt
 INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[31]) is unused and will be removed from module DemoInterconnect_axi_spi_master_1_0.
 INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module DemoInterconnect_axi_spi_master_1_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -375,10 +376,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -390,7 +391,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -413,8 +414,9 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'axi_spi_master_v1_0_S00_AXI_insti_0' to logic
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -427,7 +429,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -439,25 +441,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -476,12 +478,12 @@ Report Cell Usage:
 |1     |CARRY4 |    12|
 |2     |LUT1   |    34|
 |3     |LUT2   |    76|
-|4     |LUT3   |     7|
-|5     |LUT4   |    15|
-|6     |LUT5   |     6|
-|7     |LUT6   |    20|
-|8     |FDCE   |    10|
-|9     |FDRE   |   100|
+|4     |LUT3   |     5|
+|5     |LUT4   |    13|
+|6     |LUT5   |     8|
+|7     |LUT6   |    16|
+|8     |FDCE   |     7|
+|9     |FDRE   |    98|
 |10    |LD     |     2|
 +------+-------+------+
 
@@ -489,18 +491,18 @@ Report Instance Areas:
 +------+-------------------------------------+----------------------------+------+
 |      |Instance                             |Module                      |Cells |
 +------+-------------------------------------+----------------------------+------+
-|1     |top                                  |                            |   282|
-|2     |  U0                                 |axi_spi_master_v1_0         |   282|
-|3     |    axi_spi_master_v1_0_S00_AXI_inst |axi_spi_master_v1_0_S00_AXI |   282|
-|4     |      spi_master_inst                |spi_master                  |   204|
-|5     |      word2byte                      |parallel2serial             |    70|
+|1     |top                                  |                            |   271|
+|2     |  U0                                 |axi_spi_master_v1_0         |   270|
+|3     |    axi_spi_master_v1_0_S00_AXI_inst |axi_spi_master_v1_0_S00_AXI |   270|
+|4     |      spi_master_inst                |spi_master                  |   189|
+|5     |      word2byte                      |parallel2serial             |    73|
 +------+-------------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 610.563 ; gain = 400.742
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 611.613 ; gain = 401.293
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 610.563 ; gain = 115.547
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 610.563 ; gain = 400.742
+Synthesis finished with 0 errors, 1 critical warnings and 19 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 611.613 ; gain = 115.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 611.613 ; gain = 401.293
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -511,11 +513,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-136 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+134 Infos, 37 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 610.563 ; gain = 398.906
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 611.613 ; gain = 399.414
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_0_synth_1/DemoInterconnect_axi_spi_master_1_0.dcp' has been generated.
 INFO: [Coretcl 2-1174] Renamed 4 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_0_synth_1/DemoInterconnect_axi_spi_master_1_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 610.563 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 04 18:44:08 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 611.613 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 06 17:30:47 2017...

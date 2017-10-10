@@ -2,8 +2,8 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Fri Sep 29 15:36:47 2017
-# Process ID: 15708
+# Start of session at: Fri Oct 06 17:28:00 2017
+# Process ID: 6920
 # Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_uart_transceiver_0_0_synth_1
 # Command line: vivado.exe -log DemoInterconnect_uart_transceiver_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_uart_transceiver_0_0.tcl
 # Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_uart_transceiver_0_0_synth_1/DemoInterconnect_uart_transceiver_0_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7680 
+INFO: Helper process launched with PID 10388 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 288.199 ; gain = 78.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 289.391 ; gain = 79.340
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_uart_transceiver_0_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/synth/DemoInterconnect_uart_transceiver_0_0.vhd:70]
 	Parameter CLK_FREQ bound to: 10000000 - type: integer 
@@ -39,7 +39,7 @@ INFO: [Synth 8-256] done synthesizing module 'UART_TX' (2#1) [d:/Development/FPG
 INFO: [Synth 8-256] done synthesizing module 'uart_top' (3#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/fa19/uart_top.vhd:35]
 INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_uart_transceiver_0_0' (4#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/synth/DemoInterconnect_uart_transceiver_0_0.vhd:70]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 326.473 ; gain = 116.781
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 326.832 ; gain = 116.781
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -49,7 +49,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 326.473 ; gain = 116.781
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 326.832 ; gain = 116.781
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tfgg484-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -61,22 +61,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.390 . Memory (MB): peak = 608.691 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.357 . Memory (MB): peak = 609.766 ; gain = 0.027
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tfgg484-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'UART_RX'
 INFO: [Synth 8-5544] ROM "r_SM_Main" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -109,7 +109,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'UART_TX'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:46 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -199,7 +199,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:48 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -214,10 +214,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:10 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:10 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:52 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -229,7 +229,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:01:10 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -253,7 +253,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -266,7 +266,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -278,25 +278,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -331,11 +331,11 @@ Report Instance Areas:
 |4     |    uart_tx_inst |UART_TX  |    51|
 +------+-----------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 608.691 ; gain = 399.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 609.766 ; gain = 399.715
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 608.691 ; gain = 114.848
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:11 . Memory (MB): peak = 608.691 ; gain = 399.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 609.766 ; gain = 114.984
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:53 . Memory (MB): peak = 609.766 ; gain = 399.715
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -345,9 +345,9 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 32 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:03 . Memory (MB): peak = 608.691 ; gain = 397.066
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 609.766 ; gain = 397.918
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_uart_transceiver_0_0_synth_1/DemoInterconnect_uart_transceiver_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_uart_transceiver_0_0_synth_1/DemoInterconnect_uart_transceiver_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 608.691 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 29 15:38:09 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 609.766 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 06 17:28:59 2017...
