@@ -10,4 +10,4 @@ This project aims to build an open-source FPGA-based NoC where devices can be co
 https://hackaday.io/project/27083-internoc
 
 ## Setup
-The presented uses as target the prototype board: https://github.com/cgkiokas/InterNoC
+The presented FPGA hardware design uses as target the prototype board: https://github.com/cgkiokas/InterNoC
