@@ -56,7 +56,7 @@ begin
 	if rising_edge(clk_i) then
         if sending = '1' and tx_done='0' and send_i='1' then
             shift_o <= send_data((shift_count)*(TX_WIDTH)+(TX_WIDTH)-1 downto (shift_count)*(TX_WIDTH)); --MSB first
-        else
+        elsif sending = '0' or tx_done = '1' then
             shift_o <= (others=>'0'); 
         end if;
 	end if;
