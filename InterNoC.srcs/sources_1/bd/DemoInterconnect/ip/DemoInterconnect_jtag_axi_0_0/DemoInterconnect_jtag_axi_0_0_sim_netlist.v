@@ -1,14 +1,14 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 20:16:02 2017
-// Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/DemoInterconnect_jtag_axi_0_0_sim_netlist.v
+// Date        : Mon Oct 23 23:29:26 2017
+// Host        : CHRIS-PC running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_jtag_axi_0_0 -prefix
+//               DemoInterconnect_jtag_axi_0_0_ DemoInterconnect_jtag_axi_0_0_sim_netlist.v
 // Design      : DemoInterconnect_jtag_axi_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a35tfgg484-2
+// Device      : xc7a15tcpg236-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -193,10 +193,9 @@ module DemoInterconnect_jtag_axi_0_0
         .sl_oport0(NLW_U0_sl_oport0_UNCONNECTED[16:0]));
 endmodule
 
-(* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_gray" *) 
-(* REG_OUTPUT = "1" *) (* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) 
-(* VERSION = "0" *) (* WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) 
-(* xpm_cdc = "GRAY" *) 
+(* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) (* REG_OUTPUT = "1" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SIM_LOSSLESS_GRAY_CHK = "0" *) (* VERSION = "0" *) 
+(* WIDTH = "8" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "GRAY" *) 
 module DemoInterconnect_jtag_axi_0_0_xpm_cdc_gray
    (src_clk,
     src_in_bin,
@@ -2333,7 +2332,6 @@ module DemoInterconnect_jtag_axi_0_0_xpm_cdc_gray__parameterized0__4
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_generic_cstr
    (D,
     ENB_dly_D,
@@ -2486,7 +2484,6 @@ module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_generic_cstr__parameterized0_16
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_prim_width
    (D,
     ENB_dly_D,
@@ -2764,7 +2761,6 @@ module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_prim_width__parameterized0_17
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_prim_wrapper
    (D,
     s_dclk_o,
@@ -3449,7 +3445,6 @@ module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_prim_wrapper__parameterized0_18
         .WEBWE({p_20_out,p_20_out,p_20_out,p_20_out,p_20_out,p_20_out,p_20_out,p_20_out}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_top
    (D,
     ENB_dly_D,
@@ -3602,7 +3597,6 @@ module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_top__parameterized0_15
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_0" *) 
 module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_v8_4_0
    (D,
     ENB_dly_D,
@@ -3755,7 +3749,6 @@ module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_v8_4_0__parameterized1_13
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_0_synth" *) 
 module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_v8_4_0_synth
    (D,
     ENB_dly_D,
@@ -3908,7 +3901,6 @@ module DemoInterconnect_jtag_axi_0_0_blk_mem_gen_v8_4_0_synth__parameterized0_14
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "clk_x_pntrs" *) 
 module DemoInterconnect_jtag_axi_0_0_clk_x_pntrs
    (ram_empty_i_reg,
     WR_PNTR_RD,
@@ -4332,7 +4324,6 @@ module DemoInterconnect_jtag_axi_0_0_clk_x_pntrs__xdcDup__1
         .src_in_bin(WR_PNTR));
 endmodule
 
-(* ORIG_REF_NAME = "dmem" *) 
 module DemoInterconnect_jtag_axi_0_0_dmem
    (D,
     s_dclk_o,
@@ -5908,7 +5899,6 @@ module DemoInterconnect_jtag_axi_0_0_dmem
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module DemoInterconnect_jtag_axi_0_0_fifo_generator_ramfifo
    (out,
     \gic0.gc0.count_d1_reg[7] ,
@@ -6448,7 +6438,6 @@ module DemoInterconnect_jtag_axi_0_0_fifo_generator_ramfifo__parameterized1__xdc
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module DemoInterconnect_jtag_axi_0_0_fifo_generator_top
    (out,
     \gic0.gc0.count_d1_reg[7] ,
@@ -6812,7 +6801,6 @@ module DemoInterconnect_jtag_axi_0_0_fifo_generator_top__parameterized1__xdcDup_
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_2_0" *) 
 module DemoInterconnect_jtag_axi_0_0_fifo_generator_v13_2_0
    (out,
     \gic0.gc0.count_d1_reg[7] ,
@@ -7176,7 +7164,6 @@ module DemoInterconnect_jtag_axi_0_0_fifo_generator_v13_2_0__parameterized1__xdc
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_2_0_synth" *) 
 module DemoInterconnect_jtag_axi_0_0_fifo_generator_v13_2_0_synth
    (out,
     \gic0.gc0.count_d1_reg[7] ,
@@ -7540,7 +7527,6 @@ module DemoInterconnect_jtag_axi_0_0_fifo_generator_v13_2_0_synth__parameterized
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "jtag_axi_v1_2_4_axi_bridge" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_axi_bridge
    (out,
     SR,
@@ -7734,7 +7720,6 @@ module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_axi_bridge
         .\wr_cmd_fifo_data_out_reg[63] (\wr_cmd_fifo_data_out_reg[63] ));
 endmodule
 
-(* ORIG_REF_NAME = "jtag_axi_v1_2_4_cmd_decode" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_cmd_decode
    (axi_rd_done_ff,
     rd_cmd_fifo_read_en,
@@ -7958,10 +7943,9 @@ endmodule
 
 (* AXI_64BIT_ADDR = "0" *) (* FAMILY = "artix7" *) (* GC_XSDB_S_IPORT_WIDTH = "37" *) 
 (* GC_XSDB_S_OPORT_WIDTH = "17" *) (* M_AXI_ADDR_WIDTH = "32" *) (* M_AXI_DATA_WIDTH = "32" *) 
-(* M_AXI_ID_WIDTH = "1" *) (* M_HAS_BURST = "1" *) (* ORIG_REF_NAME = "jtag_axi_v1_2_4_jtag_axi" *) 
-(* PROTOCOL = "0" *) (* RD_CMDFIFO_DATA_WIDTH = "64" *) (* RD_TXN_QUEUE_LENGTH = "1" *) 
-(* WR_CMDFIFO_DATA_WIDTH = "64" *) (* WR_TXN_QUEUE_LENGTH = "1" *) (* dont_touch = "true" *) 
-(* downgradeipidentifiedwarnings = "yes" *) 
+(* M_AXI_ID_WIDTH = "1" *) (* M_HAS_BURST = "1" *) (* PROTOCOL = "0" *) 
+(* RD_CMDFIFO_DATA_WIDTH = "64" *) (* RD_TXN_QUEUE_LENGTH = "1" *) (* WR_CMDFIFO_DATA_WIDTH = "64" *) 
+(* WR_TXN_QUEUE_LENGTH = "1" *) (* dont_touch = "true" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_jtag_axi
    (aclk,
     aresetn,
@@ -8290,7 +8274,6 @@ module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_jtag_axi
         .sl_oport_o(sl_oport0));
 endmodule
 
-(* ORIG_REF_NAME = "jtag_axi_v1_2_4_jtag_axi_engine" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_jtag_axi_engine
    (sl_oport_o,
     aempty_fwft_fb_i_reg,
@@ -11211,7 +11194,6 @@ module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_jtag_axi_engine
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "jtag_axi_v1_2_4_read_axi" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_read_axi
    (out,
     rx_fifo_wr_en,
@@ -12275,7 +12257,6 @@ module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_read_axi
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "jtag_axi_v1_2_4_rxfifo2xsdb" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_rxfifo2xsdb
    (xsdb_drdy_xsdb_rxfifo,
     select_reg,
@@ -13303,7 +13284,6 @@ module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_rxfifo2xsdb
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "jtag_axi_v1_2_4_write_axi" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_write_axi
    (axi_wr_done,
     axi_wr_busy,
@@ -14422,7 +14402,6 @@ module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_write_axi
         .O(E));
 endmodule
 
-(* ORIG_REF_NAME = "jtag_axi_v1_2_4_xsdb2txfifo" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_xsdb2txfifo
    (xsdb_drdy_xsdb_txfifo,
     tx_fifo_wr,
@@ -16913,7 +16892,6 @@ module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_xsdb2txfifo__parameterized0
         .R(rst_xsdbfifo_large_reg));
 endmodule
 
-(* ORIG_REF_NAME = "jtag_axi_v1_2_4_xsdb_fifo_interface" *) 
 module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_xsdb_fifo_interface
    (fifo_rst_xsdb,
     tx_fifo_wr,
@@ -18001,7 +17979,6 @@ module DemoInterconnect_jtag_axi_0_0_jtag_axi_v1_2_4_xsdb_fifo_interface
         .R(fifo_rst_xsdb));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
 module DemoInterconnect_jtag_axi_0_0_memory
    (m_axi_wdata,
     s_dclk_o,
@@ -19699,7 +19676,6 @@ module DemoInterconnect_jtag_axi_0_0_memory__parameterized1_12
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module DemoInterconnect_jtag_axi_0_0_rd_bin_cntr
    (\gc0.count_d1_reg[4]_0 ,
     \gc0.count_d1_reg[2]_0 ,
@@ -20526,7 +20502,6 @@ module DemoInterconnect_jtag_axi_0_0_rd_bin_cntr__parameterized0_23
         .O(ram_empty_i_i_4__2_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_fwft" *) 
 module DemoInterconnect_jtag_axi_0_0_rd_fwft
    (out,
     E,
@@ -21480,7 +21455,6 @@ module DemoInterconnect_jtag_axi_0_0_rd_fwft_7
         .O(rx_fifo_rden_reg_reg));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
 module DemoInterconnect_jtag_axi_0_0_rd_logic
    (out,
     \gc0.count_d1_reg[4] ,
@@ -21874,7 +21848,6 @@ module DemoInterconnect_jtag_axi_0_0_rd_logic__parameterized0_10
         .ram_empty_i_reg(ram_empty_i_reg));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_as" *) 
 module DemoInterconnect_jtag_axi_0_0_rd_status_flags_as
    (out,
     \dest_out_bin_ff_reg[6] ,
@@ -22063,7 +22036,6 @@ module DemoInterconnect_jtag_axi_0_0_rd_status_flags_as__parameterized0_22
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module DemoInterconnect_jtag_axi_0_0_wr_bin_cntr
    (ram_full_i_reg,
     \gpr1.dout_i_reg[31] ,
@@ -23279,7 +23251,6 @@ module DemoInterconnect_jtag_axi_0_0_wr_bin_cntr__parameterized0_20
         .O(ram_full_i_i_4__0_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
 module DemoInterconnect_jtag_axi_0_0_wr_logic
    (out,
     \gpr1.dout_i_reg[31] ,
@@ -23472,7 +23443,6 @@ module DemoInterconnect_jtag_axi_0_0_wr_logic__parameterized0_11
         .s_dclk_o(s_dclk_o));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_as" *) 
 module DemoInterconnect_jtag_axi_0_0_wr_status_flags_as
    (out,
     \gic0.gc0.count_d1_reg[5] ,
@@ -23680,8 +23650,7 @@ endmodule
 (* C_CORE_MAJOR_VER = "1" *) (* C_CORE_MINOR_VER = "2" *) (* C_CORE_TYPE = "7" *) 
 (* C_CSE_DRV_VER = "1" *) (* C_MAJOR_VERSION = "2016" *) (* C_MINOR_VERSION = "3" *) 
 (* C_NEXT_SLAVE = "0" *) (* C_PIPE_IFACE = "0" *) (* C_USE_TEST_REG = "1" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* C_XSDB_SLAVE_TYPE = "16'b0000000001110001" *) (* ORIG_REF_NAME = "xsdbs_v1_0_2_xsdbs" *) 
-(* dont_touch = "true" *) 
+(* C_XDEVICEFAMILY = "artix7" *) (* C_XSDB_SLAVE_TYPE = "16'b0000000001110001" *) (* dont_touch = "true" *) 
 module DemoInterconnect_jtag_axi_0_0_xsdbs_v1_0_2_xsdbs
    (s_rst_o,
     s_dclk_o,

@@ -74,7 +74,7 @@ module DemoInterconnect_clk_wiz_0_0
   output        aclk,
   output        uart,
   // Status and control signals
-  input         resetn,
+  input         reset,
   output        locked,
  // Clock in ports
   input         clk_in1
@@ -86,7 +86,7 @@ module DemoInterconnect_clk_wiz_0_0
   .aclk(aclk),
   .uart(uart),
   // Status and control signals               
-  .resetn(resetn), 
+  .reset(reset), 
   .locked(locked),
  // Clock in ports
   .clk_in1(clk_in1)

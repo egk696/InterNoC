@@ -43,7 +43,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 set list_projs [get_projects -quiet]
 if { $list_projs eq "" } {
-   create_project project_1 myproj -part xc7a35tfgg484-2
+   create_project project_1 myproj -part xc7a15tcpg236-1
 }
 
 
@@ -177,14 +177,14 @@ proc create_root_design { parentCell } {
   set m_spi_ss_1 [ create_bd_port -dir O -type ce m_spi_ss_1 ]
   set m_spi_ss_2 [ create_bd_port -dir O -type ce m_spi_ss_2 ]
   set m_spi_ss_3 [ create_bd_port -dir O -type ce m_spi_ss_3 ]
-  set pll_aclk [ create_bd_port -dir O -type clk pll_aclk ]
-  set pll_lock [ create_bd_port -dir O pll_lock ]
-  set pll_uart [ create_bd_port -dir O pll_uart ]
   set sys_clk [ create_bd_port -dir I -type clk sys_clk ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
  ] $sys_clk
-  set sys_resetn [ create_bd_port -dir I -type rst sys_resetn ]
+  set sys_reset [ create_bd_port -dir I -type rst sys_reset ]
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] $sys_reset
 
   # Create instance: axi_spi_master_0, and set properties
   set axi_spi_master_0 [ create_bd_cell -type ip -vlnv ekyr.kth.se:user:axi_spi_master:1.0 axi_spi_master_0 ]
@@ -238,8 +238,8 @@ proc create_root_design { parentCell } {
    CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.NUM_OUT_CLKS {2} \
-   CONFIG.RESET_PORT {resetn} \
-   CONFIG.RESET_TYPE {ACTIVE_LOW} \
+   CONFIG.RESET_PORT {reset} \
+   CONFIG.RESET_TYPE {ACTIVE_HIGH} \
    CONFIG.USE_SAFE_CLOCK_STARTUP {true} \
  ] $clk_wiz_0
 
@@ -310,9 +310,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_spi_master_3_m_spi_mosi [get_bd_ports m_spi_mosi_3] [get_bd_pins axi_spi_master_3/m_spi_mosi]
   connect_bd_net -net axi_spi_master_3_m_spi_sclk [get_bd_ports m_spi_sclk_3] [get_bd_pins axi_spi_master_3/m_spi_sclk]
   connect_bd_net -net axi_spi_master_3_m_spi_ss [get_bd_ports m_spi_ss_3] [get_bd_pins axi_spi_master_3/m_spi_ss]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports pll_aclk] [get_bd_pins axi_spi_master_0/s00_axi_aclk] [get_bd_pins axi_spi_master_1/s00_axi_aclk] [get_bd_pins axi_spi_master_2/s00_axi_aclk] [get_bd_pins axi_spi_master_3/s00_axi_aclk] [get_bd_pins clk_wiz_0/aclk] [get_bd_pins interconnect/ACLK] [get_bd_pins interconnect/M00_ACLK] [get_bd_pins interconnect/M01_ACLK] [get_bd_pins interconnect/M02_ACLK] [get_bd_pins interconnect/M03_ACLK] [get_bd_pins interconnect/M04_ACLK] [get_bd_pins interconnect/M05_ACLK] [get_bd_pins interconnect/M06_ACLK] [get_bd_pins interconnect/S00_ACLK] [get_bd_pins interconnect/S01_ACLK] [get_bd_pins interconnect/S02_ACLK] [get_bd_pins interface_axi_master_0/m00_axi_aclk] [get_bd_pins interface_axi_master_1/m00_axi_aclk] [get_bd_pins jtag_axi_0/aclk] [get_bd_pins master_comm_mutex/S0_AXI_ACLK] [get_bd_pins master_comm_mutex/S1_AXI_ACLK] [get_bd_pins master_comm_mutex/S2_AXI_ACLK]
-  connect_bd_net -net clk_wiz_0_locked [get_bd_ports pll_lock] [get_bd_pins axi_spi_master_0/s00_axi_aresetn] [get_bd_pins axi_spi_master_1/s00_axi_aresetn] [get_bd_pins axi_spi_master_2/s00_axi_aresetn] [get_bd_pins axi_spi_master_3/s00_axi_aresetn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins interconnect/ARESETN] [get_bd_pins interconnect/M00_ARESETN] [get_bd_pins interconnect/M01_ARESETN] [get_bd_pins interconnect/M02_ARESETN] [get_bd_pins interconnect/M03_ARESETN] [get_bd_pins interconnect/M04_ARESETN] [get_bd_pins interconnect/M05_ARESETN] [get_bd_pins interconnect/M06_ARESETN] [get_bd_pins interconnect/S00_ARESETN] [get_bd_pins interconnect/S01_ARESETN] [get_bd_pins interconnect/S02_ARESETN] [get_bd_pins interface_axi_master_0/m00_axi_aresetn] [get_bd_pins interface_axi_master_1/m00_axi_aresetn] [get_bd_pins jtag_axi_0/aresetn] [get_bd_pins master_comm_mutex/S0_AXI_ARESETN] [get_bd_pins master_comm_mutex/S1_AXI_ARESETN] [get_bd_pins master_comm_mutex/S2_AXI_ARESETN]
-  connect_bd_net -net clk_wiz_0_uart [get_bd_ports pll_uart] [get_bd_pins clk_wiz_0/uart] [get_bd_pins uart_transceiver_0/i_Clk] [get_bd_pins uart_transceiver_1/i_Clk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_spi_master_0/s00_axi_aclk] [get_bd_pins axi_spi_master_1/s00_axi_aclk] [get_bd_pins axi_spi_master_2/s00_axi_aclk] [get_bd_pins axi_spi_master_3/s00_axi_aclk] [get_bd_pins clk_wiz_0/aclk] [get_bd_pins interconnect/ACLK] [get_bd_pins interconnect/M00_ACLK] [get_bd_pins interconnect/M01_ACLK] [get_bd_pins interconnect/M02_ACLK] [get_bd_pins interconnect/M03_ACLK] [get_bd_pins interconnect/M04_ACLK] [get_bd_pins interconnect/M05_ACLK] [get_bd_pins interconnect/M06_ACLK] [get_bd_pins interconnect/S00_ACLK] [get_bd_pins interconnect/S01_ACLK] [get_bd_pins interconnect/S02_ACLK] [get_bd_pins interface_axi_master_0/m00_axi_aclk] [get_bd_pins interface_axi_master_1/m00_axi_aclk] [get_bd_pins jtag_axi_0/aclk] [get_bd_pins master_comm_mutex/S0_AXI_ACLK] [get_bd_pins master_comm_mutex/S1_AXI_ACLK] [get_bd_pins master_comm_mutex/S2_AXI_ACLK]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins axi_spi_master_0/s00_axi_aresetn] [get_bd_pins axi_spi_master_1/s00_axi_aresetn] [get_bd_pins axi_spi_master_2/s00_axi_aresetn] [get_bd_pins axi_spi_master_3/s00_axi_aresetn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins interconnect/ARESETN] [get_bd_pins interconnect/M00_ARESETN] [get_bd_pins interconnect/M01_ARESETN] [get_bd_pins interconnect/M02_ARESETN] [get_bd_pins interconnect/M03_ARESETN] [get_bd_pins interconnect/M04_ARESETN] [get_bd_pins interconnect/M05_ARESETN] [get_bd_pins interconnect/M06_ARESETN] [get_bd_pins interconnect/S00_ARESETN] [get_bd_pins interconnect/S01_ARESETN] [get_bd_pins interconnect/S02_ARESETN] [get_bd_pins interface_axi_master_0/m00_axi_aresetn] [get_bd_pins interface_axi_master_1/m00_axi_aresetn] [get_bd_pins jtag_axi_0/aresetn] [get_bd_pins master_comm_mutex/S0_AXI_ARESETN] [get_bd_pins master_comm_mutex/S1_AXI_ARESETN] [get_bd_pins master_comm_mutex/S2_AXI_ARESETN]
+  connect_bd_net -net clk_wiz_0_uart [get_bd_pins clk_wiz_0/uart] [get_bd_pins uart_transceiver_0/i_Clk] [get_bd_pins uart_transceiver_1/i_Clk]
   connect_bd_net -net interface_axi_master_0_if00_data_out [get_bd_pins interface_axi_master_0/if00_data_out] [get_bd_pins uart_transceiver_0/i_TX_Byte]
   connect_bd_net -net interface_axi_master_0_if00_load_out [get_bd_pins interface_axi_master_0/if00_load_out] [get_bd_pins uart_transceiver_0/i_TX_Load]
   connect_bd_net -net interface_axi_master_1_if00_data_out [get_bd_pins interface_axi_master_1/if00_data_out] [get_bd_pins uart_transceiver_1/i_TX_Byte]
@@ -321,8 +321,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net m_spi_miso_1_1 [get_bd_ports m_spi_miso_1] [get_bd_pins axi_spi_master_1/m_spi_miso]
   connect_bd_net -net m_spi_miso_2_1 [get_bd_ports m_spi_miso_2] [get_bd_pins axi_spi_master_2/m_spi_miso]
   connect_bd_net -net m_spi_miso_3_1 [get_bd_ports m_spi_miso_3] [get_bd_pins axi_spi_master_3/m_spi_miso]
-  connect_bd_net -net resetn_1 [get_bd_ports sys_resetn] [get_bd_pins clk_wiz_0/resetn]
   connect_bd_net -net sys_clk_1 [get_bd_ports sys_clk] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net sys_reset [get_bd_ports sys_reset] [get_bd_pins clk_wiz_0/reset]
   connect_bd_net -net uart_transceiver_0_o_RX_Byte [get_bd_pins interface_axi_master_0/if00_data_in] [get_bd_pins uart_transceiver_0/o_RX_Byte]
   connect_bd_net -net uart_transceiver_0_o_RX_Done [get_bd_pins interface_axi_master_0/if00_load_in] [get_bd_pins uart_transceiver_0/o_RX_Done]
   connect_bd_net -net uart_transceiver_0_o_TX_Active [get_bd_pins interface_axi_master_0/if00_send_busy] [get_bd_pins uart_transceiver_0/o_TX_Active]

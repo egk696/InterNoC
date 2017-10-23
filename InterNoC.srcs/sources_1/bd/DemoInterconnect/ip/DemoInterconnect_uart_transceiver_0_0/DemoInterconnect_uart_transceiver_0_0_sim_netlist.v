@@ -1,14 +1,14 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 20:11:00 2017
-// Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/DemoInterconnect_uart_transceiver_0_0_sim_netlist.v
+// Date        : Mon Oct 23 23:26:24 2017
+// Host        : CHRIS-PC running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_uart_transceiver_0_0 -prefix
+//               DemoInterconnect_uart_transceiver_0_0_ DemoInterconnect_uart_transceiver_0_0_sim_netlist.v
 // Design      : DemoInterconnect_uart_transceiver_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a35tfgg484-2
+// Device      : xc7a15tcpg236-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -56,7 +56,6 @@ module DemoInterconnect_uart_transceiver_0_0
         .o_TX_Serial(o_TX_Serial));
 endmodule
 
-(* ORIG_REF_NAME = "UART_RX" *) 
 module DemoInterconnect_uart_transceiver_0_0_UART_RX
    (o_RX_Done,
     o_RX_Byte,
@@ -825,7 +824,6 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "UART_TX" *) 
 module DemoInterconnect_uart_transceiver_0_0_UART_TX
    (o_TX_Active,
     o_TX_Done,
@@ -1322,7 +1320,6 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "uart_top" *) 
 module DemoInterconnect_uart_transceiver_0_0_uart_top
    (o_RX_Byte,
     o_RX_Done,

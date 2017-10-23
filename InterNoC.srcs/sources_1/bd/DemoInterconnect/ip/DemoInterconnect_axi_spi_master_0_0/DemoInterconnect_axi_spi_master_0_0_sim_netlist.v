@@ -1,14 +1,14 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 20:11:00 2017
-// Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/DemoInterconnect_axi_spi_master_0_0_sim_netlist.v
+// Date        : Mon Oct 23 23:26:21 2017
+// Host        : CHRIS-PC running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_axi_spi_master_0_0 -prefix
+//               DemoInterconnect_axi_spi_master_0_0_ DemoInterconnect_axi_spi_master_0_0_sim_netlist.v
 // Design      : DemoInterconnect_axi_spi_master_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a35tfgg484-2
+// Device      : xc7a15tcpg236-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -63,7 +63,7 @@ module DemoInterconnect_axi_spi_master_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input s00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S00_AXI" *) input s00_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST, xilinx.com:signal:reset:1.0 s00_axi_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, XIL_INTERFACENAME s00_axi_aresetn, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
 
   wire \<const0> ;
@@ -152,7 +152,6 @@ module DemoInterconnect_axi_spi_master_0_0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_spi_master_v1_0" *) 
 module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0
    (E,
     m_spi_ss,
@@ -227,7 +226,6 @@ module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_spi_master_v1_0_S00_AXI" *) 
 module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0_S00_AXI
    (E,
     m_spi_ss,
@@ -380,7 +378,6 @@ module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0_S00_AXI
         .ss_o(ss_o));
 endmodule
 
-(* ORIG_REF_NAME = "parallel2serial" *) 
 module DemoInterconnect_axi_spi_master_0_0_parallel2serial
    (ss_o,
     spi_tx_rx_start,
@@ -1031,7 +1028,6 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "spi_master" *) 
 module DemoInterconnect_axi_spi_master_0_0_spi_master
    (E,
     SR,

@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue Oct 24 00:01:09 2017
+# Process ID: 5832
+# Current directory: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoConfigDesign_dlmb_v10_0_synth_1
+# Command line: vivado.exe -log DemoConfigDesign_dlmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoConfigDesign_dlmb_v10_0.tcl
+# Log file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoConfigDesign_dlmb_v10_0_synth_1/DemoConfigDesign_dlmb_v10_0.vds
+# Journal file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoConfigDesign_dlmb_v10_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DemoConfigDesign_dlmb_v10_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 344.676 ; gain = 94.941
+INFO: [Synth 8-638] synthesizing module 'DemoConfigDesign_dlmb_v10_0' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoConfigDesign/ip/DemoConfigDesign_dlmb_v10_0/synth/DemoConfigDesign_dlmb_v10_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoConfigDesign/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'FDS' [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:4087]
+INFO: [Synth 8-256] done synthesizing module 'FDS' (1#1) [C:/Xilinx/Vivado/2017.3/scripts/rt/data/unisim_comp.v:4087]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (2#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoConfigDesign/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'DemoConfigDesign_dlmb_v10_0' (3#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoConfigDesign/ip/DemoConfigDesign_dlmb_v10_0/synth/DemoConfigDesign_dlmb_v10_0.vhd:89]
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 386.758 ; gain = 137.023
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 386.758 ; gain = 137.023
+INFO: [Device 21-403] Loading part xc7a15tcpg236-1
+create_clock: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 598.246 ; gain = 8.016
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 602.316 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:02:14 . Memory (MB): peak = 602.316 ; gain = 352.582
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:02:14 . Memory (MB): peak = 602.316 ; gain = 352.582
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:02:15 . Memory (MB): peak = 602.316 ; gain = 352.582
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:02:16 . Memory (MB): peak = 602.316 ; gain = 352.582
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:02:20 . Memory (MB): peak = 602.316 ; gain = 352.582
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:02:55 . Memory (MB): peak = 630.941 ; gain = 381.207
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:02:58 . Memory (MB): peak = 630.941 ; gain = 381.207
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:03:00 . Memory (MB): peak = 640.078 ; gain = 390.344
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:03:03 . Memory (MB): peak = 640.078 ; gain = 390.344
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:03:03 . Memory (MB): peak = 640.078 ; gain = 390.344
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:03:04 . Memory (MB): peak = 640.078 ; gain = 390.344
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:03:04 . Memory (MB): peak = 640.078 ; gain = 390.344
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:03:04 . Memory (MB): peak = 640.078 ; gain = 390.344
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:03:04 . Memory (MB): peak = 640.078 ; gain = 390.344
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |FDS  |     1|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:03:04 . Memory (MB): peak = 640.078 ; gain = 390.344
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:03:25 . Memory (MB): peak = 653.605 ; gain = 412.328

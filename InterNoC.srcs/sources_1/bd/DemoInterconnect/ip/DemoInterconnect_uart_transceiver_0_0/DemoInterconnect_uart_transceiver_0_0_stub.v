@@ -1,13 +1,13 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 20:11:00 2017
-// Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/DemoInterconnect_uart_transceiver_0_0_stub.v
+// Date        : Mon Oct 23 23:26:24 2017
+// Host        : CHRIS-PC running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub -rename_top DemoInterconnect_uart_transceiver_0_0 -prefix
+//               DemoInterconnect_uart_transceiver_0_0_ DemoInterconnect_uart_transceiver_0_0_stub.v
 // Design      : DemoInterconnect_uart_transceiver_0_0
 // Purpose     : Stub declaration of top-level module interface
-// Device      : xc7a35tfgg484-2
+// Device      : xc7a15tcpg236-1
 // --------------------------------------------------------------------------------
 
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.

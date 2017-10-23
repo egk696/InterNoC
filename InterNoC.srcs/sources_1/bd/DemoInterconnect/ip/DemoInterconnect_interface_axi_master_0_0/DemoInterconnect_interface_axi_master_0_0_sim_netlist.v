@@ -1,14 +1,14 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 20:11:00 2017
-// Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0_sim_netlist.v
+// Date        : Mon Oct 23 23:26:22 2017
+// Host        : CHRIS-PC running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_interface_axi_master_0_0 -prefix
+//               DemoInterconnect_interface_axi_master_0_0_ DemoInterconnect_interface_axi_master_0_0_sim_netlist.v
 // Design      : DemoInterconnect_interface_axi_master_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a35tfgg484-2
+// Device      : xc7a15tcpg236-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -67,7 +67,7 @@ module DemoInterconnect_interface_axi_master_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI RRESP" *) input [1:0]m00_axi_rresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI RVALID" *) input m00_axi_rvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI RREADY" *) output m00_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 M00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 m00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXI_CLK, ASSOCIATED_BUSIF M00_AXI, ASSOCIATED_RESET m00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, XIL_INTERFACENAME m00_axi_aclk, ASSOCIATED_RESET m00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input m00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 M00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 m00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXI_CLK, ASSOCIATED_BUSIF M00_AXI, ASSOCIATED_RESET m00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, XIL_INTERFACENAME m00_axi_aclk, ASSOCIATED_RESET m00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF M00_AXI" *) input m00_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 M00_AXI_RST RST, xilinx.com:signal:reset:1.0 m00_axi_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXI_RST, POLARITY ACTIVE_LOW, XIL_INTERFACENAME m00_axi_aresetn, POLARITY ACTIVE_LOW" *) input m00_axi_aresetn;
 
   wire \<const0> ;
@@ -185,7 +185,6 @@ module DemoInterconnect_interface_axi_master_0_0
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "interface_axi_master_v1_0" *) 
 module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
    (m00_axi_bready,
     m00_axi_rready,
@@ -381,7 +380,6 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .\shift_count_reg[2]_0 (packet2interface_inst_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "interface_axi_master_v1_0_M00_AXI" *) 
 module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_AXI
    (\FSM_sequential_mst_exec_state_reg[0]_0 ,
     m00_axi_rready,
@@ -897,7 +895,6 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .R(\FSM_sequential_mst_exec_state_reg[0]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "parallel2serial" *) 
 module DemoInterconnect_interface_axi_master_0_0_parallel2serial
    (\shift_count_reg[2]_0 ,
     if00_load_out,
@@ -1507,7 +1504,6 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "serial2parallel" *) 
 module DemoInterconnect_interface_axi_master_0_0_serial2parallel
    (done_o,
     \FSM_sequential_ifcomm_state_reg[1] ,

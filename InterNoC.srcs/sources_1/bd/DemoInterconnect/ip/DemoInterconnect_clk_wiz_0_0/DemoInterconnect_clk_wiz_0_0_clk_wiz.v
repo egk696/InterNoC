@@ -73,7 +73,7 @@ module DemoInterconnect_clk_wiz_0_0_clk_wiz
   output        aclk,
   output        uart,
   // Status and control signals
-  input         resetn,
+  input         reset,
   output        locked,
   input         clk_in1
  );
@@ -188,7 +188,7 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
     .CLKFBSTOPPED        (clkfbstopped_unused),
     .PWRDWN              (1'b0),
     .RST                 (reset_high));
-  assign reset_high = ~resetn; 
+  assign reset_high = reset; 
 
   assign locked = locked_int;
 // Clock Monitor clock assigning

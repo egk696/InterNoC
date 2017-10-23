@@ -1,14 +1,14 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 20:12:42 2017
-// Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_mutex_0_0/DemoInterconnect_mutex_0_0_sim_netlist.v
+// Date        : Mon Oct 23 23:26:24 2017
+// Host        : CHRIS-PC running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_mutex_0_0 -prefix
+//               DemoInterconnect_mutex_0_0_ DemoInterconnect_mutex_0_0_sim_netlist.v
 // Design      : DemoInterconnect_mutex_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xc7a35tfgg484-2
+// Device      : xc7a15tcpg236-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -423,7 +423,6 @@ module DemoInterconnect_mutex_0_0
         .S7_AXI_WVALID(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "Gen_DRAM" *) 
 module DemoInterconnect_mutex_0_0_Gen_DRAM
    (D,
     do,
@@ -1433,7 +1432,6 @@ module DemoInterconnect_mutex_0_0_Gen_DRAM__parameterized1
         .WE(Write_Strobe));
 endmodule
 
-(* ORIG_REF_NAME = "axi_decode" *) 
 module DemoInterconnect_mutex_0_0_axi_decode
    (S0_AXI_RDATA,
     S0_AXI_AWREADY,
@@ -4413,7 +4411,6 @@ module DemoInterconnect_mutex_0_0_axi_decode__parameterized3
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "multi_channel_mutex" *) 
 module DemoInterconnect_mutex_0_0_multi_channel_mutex
    (D,
     Q,
@@ -4600,7 +4597,6 @@ module DemoInterconnect_mutex_0_0_multi_channel_mutex
         .O(di[9]));
 endmodule
 
-(* ORIG_REF_NAME = "multi_channel_register" *) 
 module DemoInterconnect_mutex_0_0_multi_channel_register
    (D,
     do,
@@ -4763,7 +4759,7 @@ endmodule
 (* C_S5_AXI_DATA_WIDTH = "32" *) (* C_S5_AXI_HIGHADDR = "0" *) (* C_S6_AXI_ADDR_WIDTH = "32" *) 
 (* C_S6_AXI_BASEADDR = "-1" *) (* C_S6_AXI_DATA_WIDTH = "32" *) (* C_S6_AXI_HIGHADDR = "0" *) 
 (* C_S7_AXI_ADDR_WIDTH = "32" *) (* C_S7_AXI_BASEADDR = "-1" *) (* C_S7_AXI_DATA_WIDTH = "32" *) 
-(* C_S7_AXI_HIGHADDR = "0" *) (* ORIG_REF_NAME = "mutex" *) 
+(* C_S7_AXI_HIGHADDR = "0" *) 
 module DemoInterconnect_mutex_0_0_mutex
    (S0_AXI_ACLK,
     S0_AXI_ARESETN,
@@ -5482,7 +5478,6 @@ module DemoInterconnect_mutex_0_0_mutex
         .end_write_reg_0(\Using_AXI_2.AXI_If_2_n_32 ));
 endmodule
 
-(* ORIG_REF_NAME = "mutex_core" *) 
 module DemoInterconnect_mutex_0_0_mutex_core
    (SR,
     \Using_MultiIf_Mutex.Mutex_HW_Id_I_reg[1]_0 ,
