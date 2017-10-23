@@ -86,6 +86,8 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
     .I (clk_in1));
 
 
+
+
   // Clocking PRIMITIVE
   //------------------------------------
 
@@ -144,7 +146,7 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKIN1_PERIOD        (10.0))
+    .CLKIN1_PERIOD        (10.000))
   mmcm_adv_inst
     // Output clocks
    (
@@ -201,17 +203,26 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
 
 
 
+
+
+
   BUFGCE clkout1_buf
    (.O   (aclk),
     .CE  (seq_reg1[7]),
     .I   (aclk_DemoInterconnect_clk_wiz_0_0));
- 
+
   BUFH clkout1_buf_en
    (.O   (aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
     .I   (aclk_DemoInterconnect_clk_wiz_0_0));
-
-  always @(posedge aclk_DemoInterconnect_clk_wiz_0_0_en_clk)
+  always @(posedge aclk_DemoInterconnect_clk_wiz_0_0_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	    seq_reg1 <= 8'h00;
+    end
+    else begin
         seq_reg1 <= {seq_reg1[6:0],locked_int};
+  
+    end
+  end
 
 
   BUFGCE clkout2_buf
@@ -223,8 +234,15 @@ wire clk_in2_DemoInterconnect_clk_wiz_0_0;
    (.O   (uart_DemoInterconnect_clk_wiz_0_0_en_clk),
     .I   (uart_DemoInterconnect_clk_wiz_0_0));
  
-  always @(posedge uart_DemoInterconnect_clk_wiz_0_0_en_clk)
+  always @(posedge uart_DemoInterconnect_clk_wiz_0_0_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	  seq_reg2 <= 8'h00;
+    end
+    else begin
         seq_reg2 <= {seq_reg2[6:0],locked_int};
+  
+    end
+  end
 
 
 

@@ -1,10 +1,10 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Sun Sep 24 18:29:12 2017
+// Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+// Date        : Mon Oct 23 20:16:02 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top DemoInterconnect_jtag_axi_0_0 -prefix
-//               DemoInterconnect_jtag_axi_0_0_ DemoInterconnect_jtag_axi_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/DemoInterconnect_jtag_axi_0_0_stub.v
 // Design      : DemoInterconnect_jtag_axi_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tfgg484-2
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "jtag_axi_v1_2_1_jtag_axi,Vivado 2016.4" *)
+(* x_core_info = "jtag_axi_v1_2_4_jtag_axi,Vivado 2017.3" *)
 module DemoInterconnect_jtag_axi_0_0(aclk, aresetn, m_axi_awid, m_axi_awaddr, 
   m_axi_awlen, m_axi_awsize, m_axi_awburst, m_axi_awlock, m_axi_awcache, m_axi_awprot, 
   m_axi_awqos, m_axi_awvalid, m_axi_awready, m_axi_wdata, m_axi_wstrb, m_axi_wlast, 

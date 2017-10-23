@@ -88,10 +88,12 @@ ARCHITECTURE DemoInterconnect_uart_transceiver_0_1_arch OF DemoInterconnect_uart
     );
   END COMPONENT uart_top;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF DemoInterconnect_uart_transceiver_0_1_arch: ARCHITECTURE IS "uart_top,Vivado 2016.4";
+  ATTRIBUTE X_CORE_INFO OF DemoInterconnect_uart_transceiver_0_1_arch: ARCHITECTURE IS "uart_top,Vivado 2017.3";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF DemoInterconnect_uart_transceiver_0_1_arch : ARCHITECTURE IS "DemoInterconnect_uart_transceiver_0_1,uart_top,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF i_Clk: SIGNAL IS "XIL_INTERFACENAME i_Clk, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1";
   ATTRIBUTE X_INTERFACE_INFO OF i_Clk: SIGNAL IS "xilinx.com:signal:clock:1.0 i_Clk CLK";
 BEGIN
   U0 : uart_top

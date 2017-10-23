@@ -1,7 +1,7 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Oct 06 17:28:59 2017
+// Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+// Date        : Mon Oct 23 20:11:00 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/DemoInterconnect_uart_transceiver_0_0_stub.v
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "uart_top,Vivado 2016.4" *)
+(* x_core_info = "uart_top,Vivado 2017.3" *)
 module DemoInterconnect_uart_transceiver_0_0(i_Clk, i_RX_Serial, o_RX_Done, o_RX_Byte, 
   i_TX_Load, i_TX_Byte, o_TX_Active, o_TX_Serial, o_TX_Done)
 /* synthesis syn_black_box black_box_pad_pin="i_Clk,i_RX_Serial,o_RX_Done,o_RX_Byte[7:0],i_TX_Load,i_TX_Byte[7:0],o_TX_Active,o_TX_Serial,o_TX_Done" */;

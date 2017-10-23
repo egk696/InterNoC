@@ -1,7 +1,7 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Oct 06 17:28:59 2017
+// Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+// Date        : Mon Oct 23 20:11:00 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/DemoInterconnect_uart_transceiver_0_0_sim_netlist.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "DemoInterconnect_uart_transceiver_0_0,uart_top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "uart_top,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "DemoInterconnect_uart_transceiver_0_0,uart_top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "uart_top,Vivado 2017.3" *) 
 (* NotValidForBitStream *)
 module DemoInterconnect_uart_transceiver_0_0
    (i_Clk,
@@ -24,7 +24,7 @@ module DemoInterconnect_uart_transceiver_0_0
     o_TX_Active,
     o_TX_Serial,
     o_TX_Done);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) input i_Clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME i_Clk, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input i_Clk;
   input i_RX_Serial;
   output o_RX_Done;
   output [7:0]o_RX_Byte;
@@ -89,9 +89,8 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
   wire \r_Clk_Count[0]_i_4_n_0 ;
   wire \r_Clk_Count[1]_i_1_n_0 ;
   wire \r_Clk_Count[1]_i_2_n_0 ;
-  wire \r_Clk_Count[2]_i_1_n_0 ;
+  wire \r_Clk_Count[2]_i_1__0_n_0 ;
   wire \r_Clk_Count[2]_i_2_n_0 ;
-  wire \r_Clk_Count[2]_i_3_n_0 ;
   wire \r_Clk_Count[3]_i_1_n_0 ;
   wire \r_Clk_Count[3]_i_2__0_n_0 ;
   wire \r_Clk_Count[3]_i_3_n_0 ;
@@ -211,6 +210,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I2(r_RX_DV_i_2_n_0),
         .I3(r_SM_Main[0]),
         .O(\FSM_sequential_r_SM_Main[2]_i_1_n_0 ));
+  (* FSM_ENCODED_STATES = "s_idle:000,s_rx_start_bit:001,s_rx_data_bits:010,s_rx_stop_bit:011,s_cleanup:100" *) 
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -220,6 +220,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .D(\FSM_sequential_r_SM_Main[0]_i_1_n_0 ),
         .Q(r_SM_Main[0]),
         .R(1'b0));
+  (* FSM_ENCODED_STATES = "s_idle:000,s_rx_start_bit:001,s_rx_data_bits:010,s_rx_stop_bit:011,s_cleanup:100" *) 
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -229,6 +230,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .D(\FSM_sequential_r_SM_Main[1]_i_1_n_0 ),
         .Q(r_SM_Main[1]),
         .R(1'b0));
+  (* FSM_ENCODED_STATES = "s_idle:000,s_rx_start_bit:001,s_rx_data_bits:010,s_rx_stop_bit:011,s_cleanup:100" *) 
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -291,13 +293,12 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .D(\r_Bit_Index[2]_i_1_n_0 ),
         .Q(r_Bit_Index[2]),
         .R(1'b0));
-  LUT4 #(
-    .INIT(16'h00A3)) 
+  LUT3 #(
+    .INIT(8'hA3)) 
     \r_Clk_Count[0]_i_1 
        (.I0(\r_Clk_Count[0]_i_2_n_0 ),
         .I1(\r_Clk_Count[0]_i_3_n_0 ),
         .I2(r_SM_Main[1]),
-        .I3(r_SM_Main[2]),
         .O(\r_Clk_Count[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h000055550000FF57)) 
@@ -326,15 +327,14 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I1(\r_Clk_Count_reg_n_0_[2] ),
         .I2(\r_Clk_Count_reg_n_0_[4] ),
         .O(\r_Clk_Count[0]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000282800FF)) 
+  LUT5 #(
+    .INIT(32'h282800FF)) 
     \r_Clk_Count[1]_i_1 
        (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
         .I1(\r_Clk_Count_reg_n_0_[1] ),
         .I2(\r_Clk_Count_reg_n_0_[0] ),
         .I3(\r_Clk_Count[1]_i_2_n_0 ),
         .I4(r_SM_Main[1]),
-        .I5(r_SM_Main[2]),
         .O(\r_Clk_Count[1]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hF55FF75F)) 
@@ -345,42 +345,34 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I3(\r_Clk_Count_reg_n_0_[1] ),
         .I4(r_RX_Data),
         .O(\r_Clk_Count[1]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'h0000880F)) 
-    \r_Clk_Count[2]_i_1 
-       (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
-        .I1(\r_Clk_Count[2]_i_2_n_0 ),
-        .I2(\r_Clk_Count[2]_i_3_n_0 ),
-        .I3(r_SM_Main[1]),
-        .I4(r_SM_Main[2]),
-        .O(\r_Clk_Count[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    \r_Clk_Count[2]_i_2 
+  LUT6 #(
+    .INIT(64'h780078000000FFFF)) 
+    \r_Clk_Count[2]_i_1__0 
        (.I0(\r_Clk_Count_reg_n_0_[1] ),
         .I1(\r_Clk_Count_reg_n_0_[0] ),
         .I2(\r_Clk_Count_reg_n_0_[2] ),
-        .O(\r_Clk_Count[2]_i_2_n_0 ));
+        .I3(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
+        .I4(\r_Clk_Count[2]_i_2_n_0 ),
+        .I5(r_SM_Main[1]),
+        .O(\r_Clk_Count[2]_i_1__0_n_0 ));
   LUT6 #(
     .INIT(64'hF555F7555DFF5FFF)) 
-    \r_Clk_Count[2]_i_3 
+    \r_Clk_Count[2]_i_2 
        (.I0(r_SM_Main[0]),
         .I1(\r_Clk_Count[6]_i_6_n_0 ),
         .I2(\r_Clk_Count_reg_n_0_[0] ),
         .I3(\r_Clk_Count_reg_n_0_[1] ),
         .I4(r_RX_Data),
         .I5(\r_Clk_Count_reg_n_0_[2] ),
-        .O(\r_Clk_Count[2]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000008888F000)) 
+        .O(\r_Clk_Count[2]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h8888F000)) 
     \r_Clk_Count[3]_i_1 
        (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
         .I1(\r_Clk_Count[3]_i_2__0_n_0 ),
         .I2(r_SM_Main[0]),
         .I3(\r_Clk_Count[3]_i_3_n_0 ),
         .I4(r_SM_Main[1]),
-        .I5(r_SM_Main[2]),
         .O(\r_Clk_Count[3]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
@@ -401,14 +393,13 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I4(\r_Clk_Count_reg_n_0_[0] ),
         .I5(\r_Clk_Count[6]_i_6_n_0 ),
         .O(\r_Clk_Count[3]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'h0000880F)) 
+  LUT4 #(
+    .INIT(16'h880F)) 
     \r_Clk_Count[4]_i_1 
        (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
         .I1(\r_Clk_Count[4]_i_2_n_0 ),
         .I2(\r_Clk_Count[4]_i_3_n_0 ),
         .I3(r_SM_Main[1]),
-        .I4(r_SM_Main[2]),
         .O(\r_Clk_Count[4]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
@@ -430,14 +421,13 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I4(r_RX_Data),
         .I5(\r_Clk_Count[4]_i_2_n_0 ),
         .O(\r_Clk_Count[4]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'h0000880F)) 
+  LUT4 #(
+    .INIT(16'h880F)) 
     \r_Clk_Count[5]_i_1 
        (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
         .I1(\r_Clk_Count[5]_i_2_n_0 ),
         .I2(\r_Clk_Count[5]_i_3_n_0 ),
         .I3(r_SM_Main[1]),
-        .I4(r_SM_Main[2]),
         .O(\r_Clk_Count[5]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h7FFFFFFF80000000)) 
@@ -467,15 +457,14 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I2(\r_Clk_Count[6]_i_3_n_0 ),
         .I3(r_SM_Main[2]),
         .O(\r_Clk_Count[6]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000008888F000)) 
+  LUT5 #(
+    .INIT(32'h8888F000)) 
     \r_Clk_Count[6]_i_2 
        (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
         .I1(\r_Clk_Count[6]_i_4_n_0 ),
         .I2(r_SM_Main[0]),
         .I3(\r_Clk_Count[6]_i_5_n_0 ),
         .I4(r_SM_Main[1]),
-        .I5(r_SM_Main[2]),
         .O(\r_Clk_Count[6]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
@@ -515,7 +504,6 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I3(\r_Clk_Count_reg_n_0_[6] ),
         .I4(\r_Clk_Count_reg_n_0_[4] ),
         .O(\r_Clk_Count[6]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \r_Clk_Count[6]_i_7 
@@ -554,7 +542,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
     \r_Clk_Count_reg[2] 
        (.C(i_Clk),
         .CE(\r_Clk_Count[6]_i_1_n_0 ),
-        .D(\r_Clk_Count[2]_i_1_n_0 ),
+        .D(\r_Clk_Count[2]_i_1__0_n_0 ),
         .Q(\r_Clk_Count_reg_n_0_[2] ),
         .R(1'b0));
   FDRE #(
@@ -609,6 +597,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I4(\r_RX_Byte[7]_i_3_n_0 ),
         .I5(o_RX_Byte[1]),
         .O(\r_RX_Byte[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \r_RX_Byte[1]_i_2 
@@ -635,7 +624,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I4(\r_RX_Byte[7]_i_3_n_0 ),
         .I5(o_RX_Byte[3]),
         .O(\r_RX_Byte[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \r_RX_Byte[3]_i_2 
@@ -662,7 +651,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I4(\r_RX_Byte[7]_i_3_n_0 ),
         .I5(o_RX_Byte[5]),
         .O(\r_RX_Byte[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \r_RX_Byte[5]_i_2 
@@ -679,7 +668,6 @@ module DemoInterconnect_uart_transceiver_0_0_UART_RX
         .I4(\r_RX_Byte[7]_i_3_n_0 ),
         .I5(o_RX_Byte[6]),
         .O(\r_RX_Byte[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \r_RX_Byte[6]_i_2 
@@ -852,10 +840,10 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
   input i_TX_Load;
   input [7:0]i_TX_Byte;
 
-  wire \FSM_sequential_r_SM_Main[0]_i_1_n_0 ;
+  wire \/FSM_sequential_r_SM_Main[0]_i_1_n_0 ;
+  wire \/FSM_sequential_r_SM_Main[2]_i_1_n_0 ;
   wire \FSM_sequential_r_SM_Main[0]_i_2__0_n_0 ;
   wire \FSM_sequential_r_SM_Main[1]_i_1__0_n_0 ;
-  wire \FSM_sequential_r_SM_Main[2]_i_1_n_0 ;
   wire i_Clk;
   wire [7:0]i_TX_Byte;
   wire i_TX_Load;
@@ -877,7 +865,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
   wire [6:0]r_Clk_Count;
   wire \r_Clk_Count[0]_i_1__0_n_0 ;
   wire \r_Clk_Count[1]_i_1__0_n_0 ;
-  wire \r_Clk_Count[2]_i_1__0_n_0 ;
+  wire \r_Clk_Count[2]_i_1_n_0 ;
   wire \r_Clk_Count[3]_i_1__0_n_0 ;
   wire \r_Clk_Count[3]_i_2_n_0 ;
   wire \r_Clk_Count[4]_i_1__0_n_0 ;
@@ -901,14 +889,22 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
 
   LUT6 #(
     .INIT(64'h3030013330300100)) 
-    \FSM_sequential_r_SM_Main[0]_i_1 
+    \/FSM_sequential_r_SM_Main[0]_i_1 
        (.I0(\FSM_sequential_r_SM_Main[0]_i_2__0_n_0 ),
         .I1(r_SM_Main[2]),
         .I2(r_TX_Done_i_2_n_0),
         .I3(r_SM_Main[1]),
         .I4(r_SM_Main[0]),
         .I5(i_TX_Load),
-        .O(\FSM_sequential_r_SM_Main[0]_i_1_n_0 ));
+        .O(\/FSM_sequential_r_SM_Main[0]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h1000)) 
+    \/FSM_sequential_r_SM_Main[2]_i_1 
+       (.I0(r_SM_Main[2]),
+        .I1(r_TX_Done_i_2_n_0),
+        .I2(r_SM_Main[0]),
+        .I3(r_SM_Main[1]),
+        .O(\/FSM_sequential_r_SM_Main[2]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h7F)) 
     \FSM_sequential_r_SM_Main[0]_i_2__0 
@@ -924,23 +920,17 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
         .I2(r_TX_Done_i_2_n_0),
         .I3(r_SM_Main[2]),
         .O(\FSM_sequential_r_SM_Main[1]_i_1__0_n_0 ));
-  LUT4 #(
-    .INIT(16'h1000)) 
-    \FSM_sequential_r_SM_Main[2]_i_1 
-       (.I0(r_SM_Main[2]),
-        .I1(r_TX_Done_i_2_n_0),
-        .I2(r_SM_Main[0]),
-        .I3(r_SM_Main[1]),
-        .O(\FSM_sequential_r_SM_Main[2]_i_1_n_0 ));
+  (* FSM_ENCODED_STATES = "s_idle:000,s_tx_start_bit:001,s_tx_data_bits:010,s_tx_stop_bit:011,s_cleanup:100" *) 
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_r_SM_Main_reg[0] 
        (.C(i_Clk),
         .CE(1'b1),
-        .D(\FSM_sequential_r_SM_Main[0]_i_1_n_0 ),
+        .D(\/FSM_sequential_r_SM_Main[0]_i_1_n_0 ),
         .Q(r_SM_Main[0]),
         .R(1'b0));
+  (* FSM_ENCODED_STATES = "s_idle:000,s_tx_start_bit:001,s_tx_data_bits:010,s_tx_stop_bit:011,s_cleanup:100" *) 
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -950,13 +940,14 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
         .D(\FSM_sequential_r_SM_Main[1]_i_1__0_n_0 ),
         .Q(r_SM_Main[1]),
         .R(1'b0));
+  (* FSM_ENCODED_STATES = "s_idle:000,s_tx_start_bit:001,s_tx_data_bits:010,s_tx_stop_bit:011,s_cleanup:100" *) 
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
     \FSM_sequential_r_SM_Main_reg[2] 
        (.C(i_Clk),
         .CE(1'b1),
-        .D(\FSM_sequential_r_SM_Main[2]_i_1_n_0 ),
+        .D(\/FSM_sequential_r_SM_Main[2]_i_1_n_0 ),
         .Q(r_SM_Main[2]),
         .R(1'b0));
   LUT5 #(
@@ -1096,14 +1087,14 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
         .O(\r_Clk_Count[1]_i_1__0_n_0 ));
   LUT6 #(
     .INIT(64'h7800780078000000)) 
-    \r_Clk_Count[2]_i_1__0 
+    \r_Clk_Count[2]_i_1 
        (.I0(r_Clk_Count[0]),
         .I1(r_Clk_Count[1]),
         .I2(r_Clk_Count[2]),
         .I3(r_TX_Done_i_2_n_0),
         .I4(r_SM_Main[1]),
         .I5(r_SM_Main[0]),
-        .O(\r_Clk_Count[2]_i_1__0_n_0 ));
+        .O(\r_Clk_Count[2]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h000000007F800000)) 
     \r_Clk_Count[3]_i_1__0 
@@ -1129,7 +1120,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
         .I3(r_SM_Main[1]),
         .I4(r_SM_Main[0]),
         .O(\r_Clk_Count[4]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \r_Clk_Count[4]_i_2__0 
@@ -1157,7 +1148,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
         .I4(r_SM_Main[1]),
         .I5(r_SM_Main[0]),
         .O(\r_Clk_Count[6]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \r_Clk_Count[6]_i_2__0 
@@ -1188,7 +1179,7 @@ module DemoInterconnect_uart_transceiver_0_0_UART_TX
     \r_Clk_Count_reg[2] 
        (.C(i_Clk),
         .CE(o_TX_Serial_i_1_n_0),
-        .D(\r_Clk_Count[2]_i_1__0_n_0 ),
+        .D(\r_Clk_Count[2]_i_1_n_0 ),
         .Q(r_Clk_Count[2]),
         .R(1'b0));
   FDRE #(
@@ -1425,8 +1416,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

@@ -1,7 +1,7 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Oct 06 17:34:09 2017
+// Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+// Date        : Mon Oct 23 20:12:39 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0_sim_netlist.v
@@ -228,149 +228,149 @@ module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
        (.I0(resetn),
         .O(reset_high));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg1_reg[0] 
        (.C(aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(locked),
-        .Q(seq_reg1[0]),
-        .R(1'b0));
+        .Q(seq_reg1[0]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg1_reg[1] 
        (.C(aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg1[0]),
-        .Q(seq_reg1[1]),
-        .R(1'b0));
+        .Q(seq_reg1[1]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg1_reg[2] 
        (.C(aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg1[1]),
-        .Q(seq_reg1[2]),
-        .R(1'b0));
+        .Q(seq_reg1[2]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg1_reg[3] 
        (.C(aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg1[2]),
-        .Q(seq_reg1[3]),
-        .R(1'b0));
+        .Q(seq_reg1[3]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg1_reg[4] 
        (.C(aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg1[3]),
-        .Q(seq_reg1[4]),
-        .R(1'b0));
+        .Q(seq_reg1[4]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg1_reg[5] 
        (.C(aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg1[4]),
-        .Q(seq_reg1[5]),
-        .R(1'b0));
+        .Q(seq_reg1[5]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg1_reg[6] 
        (.C(aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg1[5]),
-        .Q(seq_reg1[6]),
-        .R(1'b0));
+        .Q(seq_reg1[6]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg1_reg[7] 
        (.C(aclk_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg1[6]),
-        .Q(seq_reg1[7]),
-        .R(1'b0));
+        .Q(seq_reg1[7]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[0] 
        (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(locked),
-        .Q(seq_reg2[0]),
-        .R(1'b0));
+        .Q(seq_reg2[0]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[1] 
        (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg2[0]),
-        .Q(seq_reg2[1]),
-        .R(1'b0));
+        .Q(seq_reg2[1]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[2] 
        (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg2[1]),
-        .Q(seq_reg2[2]),
-        .R(1'b0));
+        .Q(seq_reg2[2]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[3] 
        (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg2[2]),
-        .Q(seq_reg2[3]),
-        .R(1'b0));
+        .Q(seq_reg2[3]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[4] 
        (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg2[3]),
-        .Q(seq_reg2[4]),
-        .R(1'b0));
+        .Q(seq_reg2[4]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[5] 
        (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg2[4]),
-        .Q(seq_reg2[5]),
-        .R(1'b0));
+        .Q(seq_reg2[5]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[6] 
        (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg2[5]),
-        .Q(seq_reg2[6]),
-        .R(1'b0));
+        .Q(seq_reg2[6]));
   (* ASYNC_REG *) 
-  FDRE #(
+  FDCE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[7] 
        (.C(uart_DemoInterconnect_clk_wiz_0_0_en_clk),
         .CE(1'b1),
+        .CLR(reset_high),
         .D(seq_reg2[6]),
-        .Q(seq_reg2[7]),
-        .R(1'b0));
+        .Q(seq_reg2[7]));
 endmodule
 `ifndef GLBL
 `define GLBL
@@ -422,8 +422,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin

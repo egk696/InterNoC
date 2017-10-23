@@ -1,11 +1,11 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Oct 06 17:29:59 2017
+// Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+// Date        : Mon Oct 23 20:10:59 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_1/DemoInterconnect_axi_spi_master_0_1_stub.v
-// Design      : DemoInterconnect_axi_spi_master_0_1
+// Command     : write_verilog -force -mode synth_stub -rename_top DemoInterconnect_axi_spi_master_0_1 -prefix
+//               DemoInterconnect_axi_spi_master_0_1_ DemoInterconnect_axi_spi_master_0_0_stub.v
+// Design      : DemoInterconnect_axi_spi_master_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tfgg484-2
 // --------------------------------------------------------------------------------
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "axi_spi_master_v1_0,Vivado 2016.4" *)
+(* x_core_info = "axi_spi_master_v1_0,Vivado 2017.3" *)
 module DemoInterconnect_axi_spi_master_0_1(m_spi_mosi, m_spi_miso, m_spi_ss, m_spi_sclk, 
   s00_axi_awaddr, s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, s00_axi_wdata, 
   s00_axi_wstrb, s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, 

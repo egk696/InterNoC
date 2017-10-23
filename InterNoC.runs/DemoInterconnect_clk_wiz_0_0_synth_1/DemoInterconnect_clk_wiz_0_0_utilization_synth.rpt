@@ -1,7 +1,7 @@
-Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-| Date         : Fri Oct 06 17:34:09 2017
+| Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+| Date         : Mon Oct 23 20:12:39 2017
 | Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_utilization -file DemoInterconnect_clk_wiz_0_0_utilization_synth.rpt -pb DemoInterconnect_clk_wiz_0_0_utilization_synth.pb
 | Design       : DemoInterconnect_clk_wiz_0_0
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 16    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 16    |          Yes |       Reset |            - |
+| 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,7 +149,7 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| FDRE       |   16 |        Flop & Latch |
+| FDCE       |   16 |        Flop & Latch |
 | BUFH       |    2 |               Clock |
 | BUFGCTRL   |    2 |               Clock |
 | MMCME2_ADV |    1 |               Clock |

@@ -1,7 +1,7 @@
-// Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
-// Date        : Fri Oct 06 17:28:59 2017
+// Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+// Date        : Mon Oct 23 20:11:00 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0_sim_netlist.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "DemoInterconnect_interface_axi_master_0_0,interface_axi_master_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "interface_axi_master_v1_0,Vivado 2016.4" *) 
+(* CHECK_LICENSE_TYPE = "DemoInterconnect_interface_axi_master_0_0,interface_axi_master_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "interface_axi_master_v1_0,Vivado 2017.3" *) 
 (* NotValidForBitStream *)
 module DemoInterconnect_interface_axi_master_0_0
    (if00_data_in,
@@ -48,7 +48,7 @@ module DemoInterconnect_interface_axi_master_0_0
   output if00_load_out;
   input if00_send_done;
   input if00_send_busy;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI AWADDR" *) output [31:0]m00_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXI, WIZ_DATA_WIDTH 32, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output [31:0]m00_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI AWPROT" *) output [2:0]m00_axi_awprot;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI AWVALID" *) output m00_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI AWREADY" *) input m00_axi_awready;
@@ -67,8 +67,8 @@ module DemoInterconnect_interface_axi_master_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI RRESP" *) input [1:0]m00_axi_rresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI RVALID" *) input m00_axi_rvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M00_AXI RREADY" *) output m00_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 M00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 m00_axi_aclk CLK" *) input m00_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 M00_AXI_RST RST, xilinx.com:signal:reset:1.0 m00_axi_aresetn RST" *) input m00_axi_aresetn;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 M00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 m00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXI_CLK, ASSOCIATED_BUSIF M00_AXI, ASSOCIATED_RESET m00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, XIL_INTERFACENAME m00_axi_aclk, ASSOCIATED_RESET m00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input m00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 M00_AXI_RST RST, xilinx.com:signal:reset:1.0 m00_axi_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME M00_AXI_RST, POLARITY ACTIVE_LOW, XIL_INTERFACENAME m00_axi_aresetn, POLARITY ACTIVE_LOW" *) input m00_axi_aresetn;
 
   wire \<const0> ;
   wire \<const1> ;
@@ -298,6 +298,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
        (.I0(init_packet_tx_reg_n_0),
         .I1(init_packet_rx_reg_n_0),
         .O(ifcomm_state1));
+  (* FSM_ENCODED_STATES = "idle:00,if_collect:01,init_axi_trans:10,axi_collect:010,init_if_send:011,error:11" *) 
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_ifcomm_state_reg[0] 
        (.C(m00_axi_aclk),
@@ -305,6 +306,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .D(interface2packet_inst_n_2),
         .Q(ifcomm_state[0]),
         .R(interface_axi_master_v1_0_M00_AXI_inst_n_0));
+  (* FSM_ENCODED_STATES = "idle:00,if_collect:01,init_axi_trans:10,axi_collect:010,init_if_send:011,error:11" *) 
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_ifcomm_state_reg[1] 
        (.C(m00_axi_aclk),
@@ -422,6 +424,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   input [31:0]m00_axi_rdata;
   input m00_axi_rvalid;
 
+  wire \/i___0/i__n_0 ;
   wire [0:0]E;
   wire \FSM_sequential_mst_exec_state[0]_i_1_n_0 ;
   wire \FSM_sequential_mst_exec_state[0]_i_2_n_0 ;
@@ -431,7 +434,6 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   wire [31:0]Q;
   wire RXN_DONE;
   wire \__1/i__n_0 ;
-  wire \__2/i__n_0 ;
   wire axi_arvalid_i_1_n_0;
   wire axi_awvalid_i_1_n_0;
   wire axi_awvalid_i_2_n_0;
@@ -465,6 +467,16 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   wire start_single_write_i_1_n_0;
   wire start_single_write_reg_n_0;
 
+  LUT6 #(
+    .INIT(64'h000000000000FF02)) 
+    \/i___0/i_ 
+       (.I0(init_rxn_ff),
+        .I1(init_txn_ff2),
+        .I2(init_txn_ff),
+        .I3(mst_exec_state[0]),
+        .I4(mst_exec_state[2]),
+        .I5(mst_exec_state[1]),
+        .O(\/i___0/i__n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
@@ -487,7 +499,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   LUT3 #(
     .INIT(8'hB8)) 
     \FSM_sequential_mst_exec_state[1]_i_1 
-       (.I0(\__2/i__n_0 ),
+       (.I0(\/i___0/i__n_0 ),
         .I1(\__1/i__n_0 ),
         .I2(mst_exec_state[1]),
         .O(\FSM_sequential_mst_exec_state[1]_i_1_n_0 ));
@@ -506,6 +518,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .I4(mst_exec_state[2]),
         .I5(mst_exec_state[2]),
         .O(\FSM_sequential_mst_exec_state[2]_i_2_n_0 ));
+  (* FSM_ENCODED_STATES = "idle:000,init_write:001,op_write:010,init_read:011,op_read:100" *) 
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_mst_exec_state_reg[0] 
        (.C(m00_axi_aclk),
@@ -513,6 +526,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .D(\FSM_sequential_mst_exec_state[0]_i_1_n_0 ),
         .Q(mst_exec_state[0]),
         .R(\FSM_sequential_mst_exec_state_reg[0]_0 ));
+  (* FSM_ENCODED_STATES = "idle:000,init_write:001,op_write:010,init_read:011,op_read:100" *) 
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_mst_exec_state_reg[1] 
        (.C(m00_axi_aclk),
@@ -520,6 +534,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .D(\FSM_sequential_mst_exec_state[1]_i_1_n_0 ),
         .Q(mst_exec_state[1]),
         .R(\FSM_sequential_mst_exec_state_reg[0]_0 ));
+  (* FSM_ENCODED_STATES = "idle:000,init_write:001,op_write:010,init_read:011,op_read:100" *) 
   (* KEEP = "yes" *) 
   FDRE \FSM_sequential_mst_exec_state_reg[2] 
        (.C(m00_axi_aclk),
@@ -536,16 +551,6 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .I3(m00_axi_rready),
         .I4(mst_exec_state[2]),
         .O(\__1/i__n_0 ));
-  LUT6 #(
-    .INIT(64'h000000000000FF02)) 
-    \__2/i_ 
-       (.I0(init_rxn_ff),
-        .I1(init_txn_ff2),
-        .I2(init_txn_ff),
-        .I3(mst_exec_state[0]),
-        .I4(mst_exec_state[2]),
-        .I5(mst_exec_state[1]),
-        .O(\__2/i__n_0 ));
   LUT3 #(
     .INIT(8'hAE)) 
     axi_arvalid_i_1
@@ -898,16 +903,16 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
     if00_load_out,
     if00_data_out,
     m00_axi_aclk,
-    if00_send_done,
     RXN_DONE,
+    if00_send_done,
     E,
     D);
   output \shift_count_reg[2]_0 ;
   output if00_load_out;
   output [7:0]if00_data_out;
   input m00_axi_aclk;
-  input if00_send_done;
   input RXN_DONE;
+  input if00_send_done;
   input [0:0]E;
   input [31:0]D;
 
@@ -1370,7 +1375,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .I4(shift_count[0]),
         .I5(\send_data_reg_n_0_[4] ),
         .O(\shift_o[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[5]_i_1 
@@ -1387,7 +1392,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .I4(shift_count[0]),
         .I5(\send_data_reg_n_0_[5] ),
         .O(\shift_o[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[6]_i_1 
@@ -1411,7 +1416,7 @@ module DemoInterconnect_interface_axi_master_0_0_parallel2serial
         .I1(\shift_count_reg[2]_0 ),
         .I2(tx_done_reg_n_0),
         .O(\shift_o[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[7]_i_2 
@@ -2089,8 +2094,8 @@ module glbl ();
     reg JTAG_USER_TDO3_GLBL = 1'bz;
     reg JTAG_USER_TDO4_GLBL = 1'bz;
 
-    assign (weak1, weak0) GSR = GSR_int;
-    assign (weak1, weak0) GTS = GTS_int;
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
 
     initial begin
