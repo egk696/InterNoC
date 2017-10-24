@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 23:26:21 2017
-// Host        : CHRIS-PC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_axi_spi_master_0_0 -prefix
-//               DemoInterconnect_axi_spi_master_0_0_ DemoInterconnect_axi_spi_master_0_0_sim_netlist.v
+// Date        : Tue Oct 24 22:23:41 2017
+// Host        : egk-pc running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/DemoInterconnect_axi_spi_master_0_0_sim_netlist.v
 // Design      : DemoInterconnect_axi_spi_master_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -44,7 +44,7 @@ module DemoInterconnect_axi_spi_master_0_0
   (* x_interface_info = "xilinx.com:signal:data:1.0 m_spi_miso DATA" *) (* x_interface_parameter = "XIL_INTERFACENAME m_spi_miso, LAYERED_METADATA undef" *) input m_spi_miso;
   (* x_interface_info = "xilinx.com:signal:clockenable:1.0 m_spi_ss CE" *) (* x_interface_parameter = "XIL_INTERFACENAME m_spi_ss, FREQ_HZ 100000000, PHASE 0, POLARITY ACTIVE_LOW" *) output m_spi_ss;
   (* x_interface_info = "xilinx.com:signal:clock:1.0 m_spi_sclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME m_spi_sclk, ASSOCIATED_CLKEN m_spi_ss, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN DemoInterconnect_axi_spi_master_0_0_m_spi_sclk" *) output m_spi_sclk;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 48000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [3:0]s00_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *) input [2:0]s00_axi_awprot;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID" *) input s00_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY" *) output s00_axi_awready;
@@ -63,7 +63,7 @@ module DemoInterconnect_axi_spi_master_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RVALID" *) output s00_axi_rvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *) input s00_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S00_AXI" *) input s00_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK, xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 48000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S00_AXI" *) input s00_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST, xilinx.com:signal:reset:1.0 s00_axi_aresetn RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, XIL_INTERFACENAME s00_axi_aresetn, POLARITY ACTIVE_LOW" *) input s00_axi_aresetn;
 
   wire \<const0> ;
@@ -152,6 +152,7 @@ module DemoInterconnect_axi_spi_master_0_0
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_spi_master_v1_0" *) 
 module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0
    (E,
     m_spi_ss,
@@ -226,6 +227,7 @@ module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axi_spi_master_v1_0_S00_AXI" *) 
 module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0_S00_AXI
    (E,
     m_spi_ss,
@@ -303,7 +305,7 @@ module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0_S00_AXI
         .D(axi_arready_i_1_n_0),
         .Q(s00_axi_arready),
         .R(spi_master_inst_n_1));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h08)) 
     axi_awready_i_2
@@ -333,7 +335,7 @@ module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0_S00_AXI
         .D(axi_bvalid_i_1_n_0),
         .Q(s00_axi_bvalid),
         .R(spi_master_inst_n_1));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h08)) 
     axi_wready_i_1
@@ -378,6 +380,7 @@ module DemoInterconnect_axi_spi_master_0_0_axi_spi_master_v1_0_S00_AXI
         .ss_o(ss_o));
 endmodule
 
+(* ORIG_REF_NAME = "parallel2serial" *) 
 module DemoInterconnect_axi_spi_master_0_0_parallel2serial
    (ss_o,
     spi_tx_rx_start,
@@ -744,14 +747,14 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .D(sending_i_1_n_0),
         .Q(sending_reg_n_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \shift_count[0]_i_1 
        (.I0(\shift_count[2]_i_2_n_0 ),
         .I1(shift_count[0]),
         .O(\shift_count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB4)) 
     \shift_count[1]_i_1 
@@ -759,7 +762,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .I1(\shift_count[2]_i_2_n_0 ),
         .I2(shift_count[1]),
         .O(\shift_count[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT4 #(
     .INIT(16'hEF00)) 
     \shift_count[2]_i_1 
@@ -768,7 +771,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .I2(\shift_count[2]_i_2_n_0 ),
         .I3(shift_count[2]),
         .O(\shift_count[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'h00000040)) 
     \shift_count[2]_i_2 
@@ -802,7 +805,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .D(\shift_count[2]_i_1_n_0 ),
         .Q(shift_count[2]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[0]_i_1 
@@ -819,7 +822,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .I4(shift_count[0]),
         .I5(\send_data_reg_n_0_[0] ),
         .O(\shift_o[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[1]_i_1 
@@ -836,7 +839,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .I4(shift_count[0]),
         .I5(\send_data_reg_n_0_[1] ),
         .O(\shift_o[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[2]_i_1 
@@ -853,7 +856,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .I4(shift_count[0]),
         .I5(\send_data_reg_n_0_[2] ),
         .O(\shift_o[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[3]_i_1 
@@ -870,7 +873,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .I4(shift_count[0]),
         .I5(\send_data_reg_n_0_[3] ),
         .O(\shift_o[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[4]_i_1 
@@ -887,7 +890,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .I4(shift_count[0]),
         .I5(\send_data_reg_n_0_[4] ),
         .O(\shift_o[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[5]_i_1 
@@ -904,7 +907,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .I4(shift_count[0]),
         .I5(\send_data_reg_n_0_[5] ),
         .O(\shift_o[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[6]_i_1 
@@ -927,7 +930,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
        (.I0(sending_reg_n_0),
         .I1(tx_done_reg_n_0),
         .O(\shift_o[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \shift_o[7]_i_3 
@@ -992,7 +995,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .D(\shift_o[7]_i_3_n_0 ),
         .Q(shift_o[7]),
         .R(\shift_o[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'hFFFFEFFF)) 
     ss_o_i_1
@@ -1008,7 +1011,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .D(ss_o_i_1_n_0),
         .Q(ss_o),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'hAAAB0000)) 
     tx_done_i_1
@@ -1028,6 +1031,7 @@ module DemoInterconnect_axi_spi_master_0_0_parallel2serial
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "spi_master" *) 
 module DemoInterconnect_axi_spi_master_0_0_spi_master
    (E,
     SR,
@@ -1176,12 +1180,11 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
   wire \Tx_Data_reg_n_0_[6] ;
   wire \Tx_Data_reg_n_0_[7] ;
   wire Tx_start;
-  wire [4:0]clock_counter;
+  wire [3:0]clock_counter;
   wire \clock_counter[0]_i_1_n_0 ;
   wire \clock_counter[1]_i_1_n_0 ;
   wire \clock_counter[2]_i_1_n_0 ;
   wire \clock_counter[3]_i_1_n_0 ;
-  wire \clock_counter[4]_i_1_n_0 ;
   wire m_spi_mosi;
   wire m_spi_mosi_INST_0_i_1;
   wire m_spi_mosi_INST_0_i_1_0;
@@ -1262,7 +1265,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
   wire [3:0]NLW_w_tc_counter_data1_carry__1_O_UNCONNECTED;
   wire [3:0]NLW_w_tc_counter_data1_carry__2_O_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'hDFFFFDDD)) 
     \Bit_Index[0]_i_1 
@@ -1272,21 +1275,21 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .I3(w_tc_counter_data1_carry__2_n_0),
         .I4(Bit_Index[0]),
         .O(\Bit_Index[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[10]_i_1 
        (.I0(Bit_Index0[10]),
         .I1(Q),
         .O(\Bit_Index[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[11]_i_1 
        (.I0(Bit_Index0[11]),
         .I1(Q),
         .O(\Bit_Index[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[12]_i_1 
@@ -1313,28 +1316,28 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
     \Bit_Index[12]_i_6 
        (.I0(Bit_Index[9]),
         .O(\Bit_Index[12]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[13]_i_1 
        (.I0(Bit_Index0[13]),
         .I1(Q),
         .O(\Bit_Index[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[14]_i_1 
        (.I0(Bit_Index0[14]),
         .I1(Q),
         .O(\Bit_Index[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[15]_i_1 
        (.I0(Bit_Index0[15]),
         .I1(Q),
         .O(\Bit_Index[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[16]_i_1 
@@ -1361,21 +1364,21 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
     \Bit_Index[16]_i_6 
        (.I0(Bit_Index[13]),
         .O(\Bit_Index[16]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[17]_i_1 
        (.I0(Bit_Index0[17]),
         .I1(Q),
         .O(\Bit_Index[17]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[18]_i_1 
        (.I0(Bit_Index0[18]),
         .I1(Q),
         .O(\Bit_Index[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[19]_i_1 
@@ -1392,7 +1395,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .I4(w_tc_counter_data1_carry__2_n_0),
         .I5(Bit_Index[1]),
         .O(\Bit_Index[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[20]_i_1 
@@ -1419,28 +1422,28 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
     \Bit_Index[20]_i_6 
        (.I0(Bit_Index[17]),
         .O(\Bit_Index[20]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[21]_i_1 
        (.I0(Bit_Index0[21]),
         .I1(Q),
         .O(\Bit_Index[21]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[22]_i_1 
        (.I0(Bit_Index0[22]),
         .I1(Q),
         .O(\Bit_Index[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[23]_i_1 
        (.I0(Bit_Index0[23]),
         .I1(Q),
         .O(\Bit_Index[23]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[24]_i_1 
@@ -1467,28 +1470,28 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
     \Bit_Index[24]_i_6 
        (.I0(Bit_Index[21]),
         .O(\Bit_Index[24]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[25]_i_1 
        (.I0(Bit_Index0[25]),
         .I1(Q),
         .O(\Bit_Index[25]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[26]_i_1 
        (.I0(Bit_Index0[26]),
         .I1(Q),
         .O(\Bit_Index[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[27]_i_1 
        (.I0(Bit_Index0[27]),
         .I1(Q),
         .O(\Bit_Index[27]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[28]_i_1 
@@ -1515,7 +1518,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
     \Bit_Index[28]_i_6 
        (.I0(Bit_Index[25]),
         .O(\Bit_Index[28]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[29]_i_1 
@@ -1532,7 +1535,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .I4(w_tc_counter_data1_carry__2_n_0),
         .I5(Bit_Index[2]),
         .O(\Bit_Index[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[30]_i_1 
@@ -1546,7 +1549,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .I1(sclk_rise),
         .I2(w_tc_counter_data1_carry__2_n_0),
         .O(\Bit_Index[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[31]_i_2 
@@ -1568,14 +1571,14 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
     \Bit_Index[31]_i_6 
        (.I0(Bit_Index[29]),
         .O(\Bit_Index[31]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[3]_i_1 
        (.I0(Bit_Index0[3]),
         .I1(Q),
         .O(\Bit_Index[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[4]_i_1 
@@ -1602,28 +1605,28 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
     \Bit_Index[4]_i_6 
        (.I0(Bit_Index[1]),
         .O(\Bit_Index[4]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[5]_i_1 
        (.I0(Bit_Index0[5]),
         .I1(Q),
         .O(\Bit_Index[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[6]_i_1 
        (.I0(Bit_Index0[6]),
         .I1(Q),
         .O(\Bit_Index[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[7]_i_1 
        (.I0(Bit_Index0[7]),
         .I1(Q),
         .O(\Bit_Index[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Bit_Index[8]_i_1 
@@ -1969,7 +1972,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .D(\Bit_Index[9]_i_1_n_0 ),
         .Q(Bit_Index[9]),
         .R(st_current));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \Tx_Data[0]_i_1 
@@ -2016,7 +2019,6 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .I2(\Tx_Data_reg_n_0_[4] ),
         .I3(Q),
         .O(\Tx_Data[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'hF888)) 
     \Tx_Data[6]_i_1 
@@ -2025,6 +2027,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .I2(\Tx_Data_reg_n_0_[5] ),
         .I3(Q),
         .O(\Tx_Data[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'hF888)) 
     \Tx_Data[7]_i_1 
@@ -2122,38 +2125,28 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
     .INIT(8'h28)) 
     \clock_counter[1]_i_1 
        (.I0(sclk_enable),
-        .I1(clock_counter[0]),
-        .I2(clock_counter[1]),
+        .I1(clock_counter[1]),
+        .I2(clock_counter[0]),
         .O(\clock_counter[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'h2888)) 
+    .INIT(16'h2A80)) 
     \clock_counter[2]_i_1 
        (.I0(sclk_enable),
-        .I1(clock_counter[2]),
+        .I1(clock_counter[1]),
         .I2(clock_counter[0]),
-        .I3(clock_counter[1]),
+        .I3(clock_counter[2]),
         .O(\clock_counter[2]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'h28888888)) 
+    .INIT(32'h2AAA0000)) 
     \clock_counter[3]_i_1 
        (.I0(sclk_enable),
-        .I1(clock_counter[3]),
-        .I2(clock_counter[2]),
-        .I3(clock_counter[0]),
-        .I4(clock_counter[1]),
+        .I1(clock_counter[1]),
+        .I2(clock_counter[0]),
+        .I3(clock_counter[2]),
+        .I4(clock_counter[3]),
         .O(\clock_counter[3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h2AAAAAAA00000000)) 
-    \clock_counter[4]_i_1 
-       (.I0(sclk_enable),
-        .I1(clock_counter[3]),
-        .I2(clock_counter[2]),
-        .I3(clock_counter[0]),
-        .I4(clock_counter[1]),
-        .I5(clock_counter[4]),
-        .O(\clock_counter[4]_i_1_n_0 ));
   FDCE \clock_counter_reg[0] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
@@ -2178,19 +2171,13 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .CLR(SR),
         .D(\clock_counter[3]_i_1_n_0 ),
         .Q(clock_counter[3]));
-  FDCE \clock_counter_reg[4] 
-       (.C(s00_axi_aclk),
-        .CE(1'b1),
-        .CLR(SR),
-        .D(\clock_counter[4]_i_1_n_0 ),
-        .Q(clock_counter[4]));
   LUT2 #(
     .INIT(4'h8)) 
     m_spi_mosi_INST_0
        (.I0(o_mosi_retimed_reg_n_0),
         .I1(m_spi_mosi_INST_0_i_1_0),
         .O(m_spi_mosi));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h8)) 
     m_spi_mosi_INST_0_i_2
@@ -2213,7 +2200,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .D(\Tx_Data_reg_n_0_[7] ),
         .Q(o_mosi_retimed_reg_n_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFFDF55DD)) 
     o_sclk_i_1
@@ -2244,7 +2231,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .D(o_ss_i_1_n_0),
         .Q(m_spi_ss),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     sclk_enable_i_1
@@ -2260,15 +2247,15 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .D(sclk_enable_i_1_n_0),
         .Q(sclk_enable),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0000000008000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'h00000080)) 
     sclk_fall_i_1
        (.I0(sclk_enable),
-        .I1(clock_counter[2]),
-        .I2(clock_counter[4]),
-        .I3(clock_counter[0]),
-        .I4(clock_counter[1]),
-        .I5(clock_counter[3]),
+        .I1(clock_counter[1]),
+        .I2(clock_counter[0]),
+        .I3(clock_counter[2]),
+        .I4(clock_counter[3]),
         .O(sclk_fall2_out));
   FDCE #(
     .INIT(1'b0)) 
@@ -2278,15 +2265,15 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .CLR(SR),
         .D(sclk_fall2_out),
         .Q(sclk_fall));
-  LUT6 #(
-    .INIT(64'h2000000000000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h20000000)) 
     sclk_rise_i_1
        (.I0(sclk_enable),
-        .I1(clock_counter[4]),
-        .I2(clock_counter[3]),
-        .I3(clock_counter[2]),
-        .I4(clock_counter[0]),
-        .I5(clock_counter[1]),
+        .I1(clock_counter[3]),
+        .I2(clock_counter[1]),
+        .I3(clock_counter[0]),
+        .I4(clock_counter[2]),
         .O(sclk_rise3_out));
   FDCE #(
     .INIT(1'b0)) 
@@ -2296,7 +2283,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .CLR(SR),
         .D(sclk_rise3_out),
         .Q(sclk_rise));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \shift_o[7]_i_2 
@@ -2325,7 +2312,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .G(\st_next_reg[1]_i_2_n_0 ),
         .GE(1'b1),
         .Q(st_next[0]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hBA55)) 
     \st_next_reg[0]_i_1 
@@ -2343,7 +2330,7 @@ module DemoInterconnect_axi_spi_master_0_0_spi_master
         .G(\st_next_reg[1]_i_2_n_0 ),
         .GE(1'b1),
         .Q(st_next[1]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'h10AA)) 
     \st_next_reg[1]_i_1 

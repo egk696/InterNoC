@@ -1,8 +1,8 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 23:26:24 2017
-// Host        : CHRIS-PC running 64-bit major release  (build 9200)
+// Date        : Tue Oct 24 22:21:51 2017
+// Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_uart_transceiver_0_1 -prefix
 //               DemoInterconnect_uart_transceiver_0_1_ DemoInterconnect_uart_transceiver_0_0_sim_netlist.v
 // Design      : DemoInterconnect_uart_transceiver_0_0
@@ -24,7 +24,7 @@ module DemoInterconnect_uart_transceiver_0_1
     o_TX_Active,
     o_TX_Serial,
     o_TX_Done);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME i_Clk, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input i_Clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 i_Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME i_Clk, FREQ_HZ 12000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input i_Clk;
   input i_RX_Serial;
   output o_RX_Done;
   output [7:0]o_RX_Byte;
@@ -68,11 +68,11 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
 
   wire \FSM_sequential_r_SM_Main[0]_i_1_n_0 ;
   wire \FSM_sequential_r_SM_Main[0]_i_2_n_0 ;
-  wire \FSM_sequential_r_SM_Main[0]_i_3_n_0 ;
   wire \FSM_sequential_r_SM_Main[1]_i_1_n_0 ;
   wire \FSM_sequential_r_SM_Main[1]_i_2_n_0 ;
   wire \FSM_sequential_r_SM_Main[1]_i_3_n_0 ;
   wire \FSM_sequential_r_SM_Main[1]_i_4_n_0 ;
+  wire \FSM_sequential_r_SM_Main[1]_i_5_n_0 ;
   wire \FSM_sequential_r_SM_Main[2]_i_1_n_0 ;
   wire i_Clk;
   wire i_RX_Serial;
@@ -82,31 +82,31 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
   wire \r_Bit_Index[0]_i_1_n_0 ;
   wire \r_Bit_Index[1]_i_1_n_0 ;
   wire \r_Bit_Index[2]_i_1_n_0 ;
+  wire r_Clk_Count;
   wire \r_Clk_Count[0]_i_1_n_0 ;
   wire \r_Clk_Count[0]_i_2_n_0 ;
   wire \r_Clk_Count[0]_i_3_n_0 ;
   wire \r_Clk_Count[0]_i_4_n_0 ;
   wire \r_Clk_Count[1]_i_1_n_0 ;
   wire \r_Clk_Count[1]_i_2_n_0 ;
-  wire \r_Clk_Count[2]_i_1__0_n_0 ;
+  wire \r_Clk_Count[2]_i_1_n_0 ;
   wire \r_Clk_Count[2]_i_2_n_0 ;
+  wire \r_Clk_Count[2]_i_3_n_0 ;
+  wire \r_Clk_Count[2]_i_4_n_0 ;
   wire \r_Clk_Count[3]_i_1_n_0 ;
-  wire \r_Clk_Count[3]_i_2__0_n_0 ;
+  wire \r_Clk_Count[3]_i_2_n_0 ;
   wire \r_Clk_Count[3]_i_3_n_0 ;
   wire \r_Clk_Count[4]_i_1_n_0 ;
   wire \r_Clk_Count[4]_i_2_n_0 ;
-  wire \r_Clk_Count[4]_i_3_n_0 ;
+  wire \r_Clk_Count[4]_i_3__0_n_0 ;
   wire \r_Clk_Count[5]_i_1_n_0 ;
   wire \r_Clk_Count[5]_i_2_n_0 ;
   wire \r_Clk_Count[5]_i_3_n_0 ;
-  wire \r_Clk_Count[6]_i_1_n_0 ;
   wire \r_Clk_Count[6]_i_2_n_0 ;
   wire \r_Clk_Count[6]_i_3_n_0 ;
   wire \r_Clk_Count[6]_i_4_n_0 ;
   wire \r_Clk_Count[6]_i_5_n_0 ;
   wire \r_Clk_Count[6]_i_6_n_0 ;
-  wire \r_Clk_Count[6]_i_7_n_0 ;
-  wire \r_Clk_Count[6]_i_8_n_0 ;
   wire \r_Clk_Count_reg_n_0_[0] ;
   wire \r_Clk_Count_reg_n_0_[1] ;
   wire \r_Clk_Count_reg_n_0_[2] ;
@@ -131,76 +131,77 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
   wire \r_RX_Byte[7]_i_3_n_0 ;
   wire r_RX_DV_i_1_n_0;
   wire r_RX_DV_i_2_n_0;
-  wire r_RX_DV_i_3_n_0;
   wire r_RX_Data;
   wire r_RX_Data_R;
   (* RTL_KEEP = "yes" *) wire [2:0]r_SM_Main;
 
   LUT6 #(
-    .INIT(64'h2000222220022222)) 
+    .INIT(64'h222A222A2200222A)) 
     \FSM_sequential_r_SM_Main[0]_i_1 
-       (.I0(\FSM_sequential_r_SM_Main[0]_i_2_n_0 ),
-        .I1(\FSM_sequential_r_SM_Main[0]_i_3_n_0 ),
-        .I2(r_SM_Main[0]),
-        .I3(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
-        .I4(r_SM_Main[1]),
-        .I5(\r_RX_Byte[7]_i_2_n_0 ),
-        .O(\FSM_sequential_r_SM_Main[0]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    \FSM_sequential_r_SM_Main[0]_i_2 
-       (.I0(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
-        .I1(\r_Clk_Count_reg_n_0_[4] ),
-        .I2(\r_Clk_Count_reg_n_0_[1] ),
+       (.I0(\FSM_sequential_r_SM_Main[1]_i_3_n_0 ),
+        .I1(\FSM_sequential_r_SM_Main[0]_i_2_n_0 ),
+        .I2(r_SM_Main[2]),
         .I3(r_SM_Main[1]),
-        .O(\FSM_sequential_r_SM_Main[0]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hABAA)) 
-    \FSM_sequential_r_SM_Main[0]_i_3 
+        .I4(r_RX_Data),
+        .I5(r_SM_Main[0]),
+        .O(\FSM_sequential_r_SM_Main[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFAFAAAFFEFEFFFE)) 
+    \FSM_sequential_r_SM_Main[0]_i_2 
        (.I0(r_SM_Main[2]),
-        .I1(r_SM_Main[1]),
-        .I2(r_SM_Main[0]),
-        .I3(r_RX_Data),
-        .O(\FSM_sequential_r_SM_Main[0]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFF00D0)) 
+        .I1(\r_RX_Byte[7]_i_2_n_0 ),
+        .I2(\r_Clk_Count[0]_i_3_n_0 ),
+        .I3(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
+        .I4(\r_RX_Byte[6]_i_3_n_0 ),
+        .I5(r_SM_Main[0]),
+        .O(\FSM_sequential_r_SM_Main[0]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000D0D00000D0FF)) 
     \FSM_sequential_r_SM_Main[1]_i_1 
        (.I0(r_SM_Main[0]),
         .I1(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
         .I2(r_SM_Main[1]),
-        .I3(r_SM_Main[2]),
-        .I4(\FSM_sequential_r_SM_Main[1]_i_3_n_0 ),
-        .O(\FSM_sequential_r_SM_Main[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h05051555FFFFFFFF)) 
-    \FSM_sequential_r_SM_Main[1]_i_2 
-       (.I0(\r_Clk_Count_reg_n_0_[5] ),
-        .I1(r_RX_DV_i_3_n_0),
-        .I2(\r_Clk_Count_reg_n_0_[4] ),
-        .I3(\r_Clk_Count_reg_n_0_[2] ),
-        .I4(\r_Clk_Count_reg_n_0_[3] ),
-        .I5(\r_Clk_Count_reg_n_0_[6] ),
-        .O(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000004)) 
-    \FSM_sequential_r_SM_Main[1]_i_3 
-       (.I0(r_RX_Data),
-        .I1(\r_Clk_Count_reg_n_0_[1] ),
-        .I2(\r_Clk_Count_reg_n_0_[4] ),
-        .I3(r_SM_Main[1]),
+        .I3(\FSM_sequential_r_SM_Main[1]_i_3_n_0 ),
         .I4(r_SM_Main[2]),
-        .I5(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
-        .O(\FSM_sequential_r_SM_Main[1]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFBFFFFFFFFFF)) 
-    \FSM_sequential_r_SM_Main[1]_i_4 
-       (.I0(\r_Clk_Count_reg_n_0_[0] ),
+        .I5(r_RX_Data),
+        .O(\FSM_sequential_r_SM_Main[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h10FFFFFF)) 
+    \FSM_sequential_r_SM_Main[1]_i_2 
+       (.I0(\r_Clk_Count_reg_n_0_[3] ),
+        .I1(\r_Clk_Count_reg_n_0_[4] ),
+        .I2(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
+        .I3(\r_Clk_Count_reg_n_0_[6] ),
+        .I4(\r_Clk_Count_reg_n_0_[5] ),
+        .O(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT4 #(
+    .INIT(16'hBFFF)) 
+    \FSM_sequential_r_SM_Main[1]_i_3 
+       (.I0(\FSM_sequential_r_SM_Main[1]_i_5_n_0 ),
         .I1(\r_Clk_Count_reg_n_0_[5] ),
+        .I2(\r_Clk_Count_reg_n_0_[1] ),
+        .I3(\r_Clk_Count_reg_n_0_[0] ),
+        .O(\FSM_sequential_r_SM_Main[1]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \FSM_sequential_r_SM_Main[1]_i_4 
+       (.I0(\r_Clk_Count_reg_n_0_[1] ),
+        .I1(\r_Clk_Count_reg_n_0_[0] ),
+        .I2(\r_Clk_Count_reg_n_0_[2] ),
+        .O(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFDFFFFFFFF)) 
+    \FSM_sequential_r_SM_Main[1]_i_5 
+       (.I0(r_SM_Main[0]),
+        .I1(r_SM_Main[1]),
         .I2(\r_Clk_Count_reg_n_0_[2] ),
         .I3(\r_Clk_Count_reg_n_0_[3] ),
         .I4(\r_Clk_Count_reg_n_0_[6] ),
-        .I5(r_SM_Main[0]),
-        .O(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ));
+        .I5(\r_Clk_Count_reg_n_0_[4] ),
+        .O(\FSM_sequential_r_SM_Main[1]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h4000)) 
     \FSM_sequential_r_SM_Main[2]_i_1 
@@ -292,39 +293,38 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
         .D(\r_Bit_Index[2]_i_1_n_0 ),
         .Q(r_Bit_Index[2]),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'hA3)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFF00AA0002)) 
     \r_Clk_Count[0]_i_1 
        (.I0(\r_Clk_Count[0]_i_2_n_0 ),
-        .I1(\r_Clk_Count[0]_i_3_n_0 ),
-        .I2(r_SM_Main[1]),
-        .O(\r_Clk_Count[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h000055550000FF57)) 
-    \r_Clk_Count[0]_i_2 
-       (.I0(\r_Clk_Count_reg_n_0_[6] ),
         .I1(\r_Clk_Count_reg_n_0_[3] ),
-        .I2(\r_Clk_Count_reg_n_0_[1] ),
-        .I3(\r_Clk_Count[0]_i_4_n_0 ),
-        .I4(\r_Clk_Count_reg_n_0_[0] ),
-        .I5(\r_Clk_Count_reg_n_0_[5] ),
-        .O(\r_Clk_Count[0]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'hF5F7F5F5)) 
-    \r_Clk_Count[0]_i_3 
-       (.I0(r_SM_Main[0]),
-        .I1(\r_Clk_Count[6]_i_6_n_0 ),
-        .I2(\r_Clk_Count_reg_n_0_[0] ),
-        .I3(r_RX_Data),
-        .I4(\r_Clk_Count_reg_n_0_[1] ),
-        .O(\r_Clk_Count[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h1F)) 
-    \r_Clk_Count[0]_i_4 
-       (.I0(\r_Clk_Count_reg_n_0_[3] ),
-        .I1(\r_Clk_Count_reg_n_0_[2] ),
         .I2(\r_Clk_Count_reg_n_0_[4] ),
+        .I3(\r_Clk_Count_reg_n_0_[0] ),
+        .I4(\r_Clk_Count[0]_i_3_n_0 ),
+        .I5(\r_Clk_Count[0]_i_4_n_0 ),
+        .O(\r_Clk_Count[0]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \r_Clk_Count[0]_i_2 
+       (.I0(r_SM_Main[1]),
+        .I1(r_SM_Main[2]),
+        .O(\r_Clk_Count[0]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \r_Clk_Count[0]_i_3 
+       (.I0(\r_Clk_Count_reg_n_0_[5] ),
+        .I1(\r_Clk_Count_reg_n_0_[6] ),
+        .O(\r_Clk_Count[0]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h2000AAAA00000000)) 
+    \r_Clk_Count[0]_i_4 
+       (.I0(\r_Clk_Count[6]_i_6_n_0 ),
+        .I1(\r_Clk_Count[2]_i_4_n_0 ),
+        .I2(\r_Clk_Count_reg_n_0_[1] ),
+        .I3(r_RX_Data),
+        .I4(\r_Clk_Count_reg_n_0_[0] ),
+        .I5(r_SM_Main[0]),
         .O(\r_Clk_Count[0]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'h282800FF)) 
@@ -336,195 +336,198 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
         .I4(r_SM_Main[1]),
         .O(\r_Clk_Count[1]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hF55FF75F)) 
+    .INIT(32'hD757D7D7)) 
     \r_Clk_Count[1]_i_2 
        (.I0(r_SM_Main[0]),
-        .I1(\r_Clk_Count[6]_i_6_n_0 ),
-        .I2(\r_Clk_Count_reg_n_0_[0] ),
-        .I3(\r_Clk_Count_reg_n_0_[1] ),
+        .I1(\r_Clk_Count_reg_n_0_[0] ),
+        .I2(\r_Clk_Count_reg_n_0_[1] ),
+        .I3(\r_Clk_Count[2]_i_4_n_0 ),
         .I4(r_RX_Data),
         .O(\r_Clk_Count[1]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h780078000000FFFF)) 
-    \r_Clk_Count[2]_i_1__0 
-       (.I0(\r_Clk_Count_reg_n_0_[1] ),
-        .I1(\r_Clk_Count_reg_n_0_[0] ),
-        .I2(\r_Clk_Count_reg_n_0_[2] ),
-        .I3(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
-        .I4(\r_Clk_Count[2]_i_2_n_0 ),
-        .I5(r_SM_Main[1]),
-        .O(\r_Clk_Count[2]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hF555F7555DFF5FFF)) 
+  LUT5 #(
+    .INIT(32'h828200FF)) 
+    \r_Clk_Count[2]_i_1 
+       (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
+        .I1(\r_Clk_Count_reg_n_0_[2] ),
+        .I2(\r_Clk_Count[2]_i_2_n_0 ),
+        .I3(\r_Clk_Count[2]_i_3_n_0 ),
+        .I4(r_SM_Main[1]),
+        .O(\r_Clk_Count[2]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
     \r_Clk_Count[2]_i_2 
+       (.I0(\r_Clk_Count_reg_n_0_[0] ),
+        .I1(\r_Clk_Count_reg_n_0_[1] ),
+        .O(\r_Clk_Count[2]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hD555D5D57F7F7FFF)) 
+    \r_Clk_Count[2]_i_3 
        (.I0(r_SM_Main[0]),
-        .I1(\r_Clk_Count[6]_i_6_n_0 ),
-        .I2(\r_Clk_Count_reg_n_0_[0] ),
-        .I3(\r_Clk_Count_reg_n_0_[1] ),
+        .I1(\r_Clk_Count_reg_n_0_[0] ),
+        .I2(\r_Clk_Count_reg_n_0_[1] ),
+        .I3(\r_Clk_Count[2]_i_4_n_0 ),
         .I4(r_RX_Data),
         .I5(\r_Clk_Count_reg_n_0_[2] ),
-        .O(\r_Clk_Count[2]_i_2_n_0 ));
+        .O(\r_Clk_Count[2]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'h8888F000)) 
+    .INIT(32'hFFFFFFBF)) 
+    \r_Clk_Count[2]_i_4 
+       (.I0(\r_Clk_Count_reg_n_0_[2] ),
+        .I1(\r_Clk_Count_reg_n_0_[4] ),
+        .I2(\r_Clk_Count_reg_n_0_[5] ),
+        .I3(\r_Clk_Count_reg_n_0_[6] ),
+        .I4(\r_Clk_Count_reg_n_0_[3] ),
+        .O(\r_Clk_Count[2]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEEAAEAAAAAAAAAA)) 
     \r_Clk_Count[3]_i_1 
-       (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
-        .I1(\r_Clk_Count[3]_i_2__0_n_0 ),
-        .I2(r_SM_Main[0]),
-        .I3(\r_Clk_Count[3]_i_3_n_0 ),
-        .I4(r_SM_Main[1]),
+       (.I0(\r_Clk_Count[3]_i_2_n_0 ),
+        .I1(r_SM_Main[0]),
+        .I2(\r_Clk_Count[6]_i_3_n_0 ),
+        .I3(r_RX_Data),
+        .I4(\r_Clk_Count[3]_i_3_n_0 ),
+        .I5(\r_Clk_Count[6]_i_6_n_0 ),
         .O(\r_Clk_Count[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'h09990000)) 
+    \r_Clk_Count[3]_i_2 
+       (.I0(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
+        .I1(\r_Clk_Count_reg_n_0_[3] ),
+        .I2(\r_Clk_Count_reg_n_0_[6] ),
+        .I3(\r_Clk_Count_reg_n_0_[5] ),
+        .I4(\r_Clk_Count[0]_i_2_n_0 ),
+        .O(\r_Clk_Count[3]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
-    \r_Clk_Count[3]_i_2__0 
+    \r_Clk_Count[3]_i_3 
        (.I0(\r_Clk_Count_reg_n_0_[2] ),
         .I1(\r_Clk_Count_reg_n_0_[0] ),
         .I2(\r_Clk_Count_reg_n_0_[1] ),
         .I3(\r_Clk_Count_reg_n_0_[3] ),
-        .O(\r_Clk_Count[3]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h66CCCCCC66CCF0CC)) 
-    \r_Clk_Count[3]_i_3 
-       (.I0(\r_Clk_Count_reg_n_0_[2] ),
-        .I1(\r_Clk_Count_reg_n_0_[3] ),
-        .I2(r_RX_Data),
-        .I3(\r_Clk_Count_reg_n_0_[1] ),
-        .I4(\r_Clk_Count_reg_n_0_[0] ),
-        .I5(\r_Clk_Count[6]_i_6_n_0 ),
         .O(\r_Clk_Count[3]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'h880F)) 
+  LUT6 #(
+    .INIT(64'hEEEAAEAAAAAAAAAA)) 
     \r_Clk_Count[4]_i_1 
-       (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
-        .I1(\r_Clk_Count[4]_i_2_n_0 ),
-        .I2(\r_Clk_Count[4]_i_3_n_0 ),
-        .I3(r_SM_Main[1]),
+       (.I0(\r_Clk_Count[4]_i_2_n_0 ),
+        .I1(r_SM_Main[0]),
+        .I2(\r_Clk_Count[6]_i_3_n_0 ),
+        .I3(r_RX_Data),
+        .I4(\r_Clk_Count[4]_i_3__0_n_0 ),
+        .I5(\r_Clk_Count[6]_i_6_n_0 ),
         .O(\r_Clk_Count[4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00B4B4B400000000)) 
+    \r_Clk_Count[4]_i_2 
+       (.I0(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
+        .I1(\r_Clk_Count_reg_n_0_[3] ),
+        .I2(\r_Clk_Count_reg_n_0_[4] ),
+        .I3(\r_Clk_Count_reg_n_0_[6] ),
+        .I4(\r_Clk_Count_reg_n_0_[5] ),
+        .I5(\r_Clk_Count[0]_i_2_n_0 ),
+        .O(\r_Clk_Count[4]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
-    \r_Clk_Count[4]_i_2 
-       (.I0(\r_Clk_Count_reg_n_0_[3] ),
-        .I1(\r_Clk_Count_reg_n_0_[1] ),
-        .I2(\r_Clk_Count_reg_n_0_[0] ),
-        .I3(\r_Clk_Count_reg_n_0_[2] ),
+    \r_Clk_Count[4]_i_3__0 
+       (.I0(\r_Clk_Count_reg_n_0_[1] ),
+        .I1(\r_Clk_Count_reg_n_0_[0] ),
+        .I2(\r_Clk_Count_reg_n_0_[2] ),
+        .I3(\r_Clk_Count_reg_n_0_[3] ),
         .I4(\r_Clk_Count_reg_n_0_[4] ),
-        .O(\r_Clk_Count[4]_i_2_n_0 ));
+        .O(\r_Clk_Count[4]_i_3__0_n_0 ));
   LUT6 #(
-    .INIT(64'h55555755FDFFFFFF)) 
-    \r_Clk_Count[4]_i_3 
-       (.I0(r_SM_Main[0]),
-        .I1(\r_Clk_Count[6]_i_6_n_0 ),
-        .I2(\r_Clk_Count_reg_n_0_[0] ),
-        .I3(\r_Clk_Count_reg_n_0_[1] ),
-        .I4(r_RX_Data),
-        .I5(\r_Clk_Count[4]_i_2_n_0 ),
-        .O(\r_Clk_Count[4]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'h880F)) 
+    .INIT(64'hEEEAAEAAAAAAAAAA)) 
     \r_Clk_Count[5]_i_1 
-       (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
-        .I1(\r_Clk_Count[5]_i_2_n_0 ),
-        .I2(\r_Clk_Count[5]_i_3_n_0 ),
-        .I3(r_SM_Main[1]),
+       (.I0(\r_Clk_Count[5]_i_2_n_0 ),
+        .I1(r_SM_Main[0]),
+        .I2(\r_Clk_Count[6]_i_3_n_0 ),
+        .I3(r_RX_Data),
+        .I4(\r_Clk_Count[5]_i_3_n_0 ),
+        .I5(\r_Clk_Count[6]_i_6_n_0 ),
         .O(\r_Clk_Count[5]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
+    .INIT(64'h0240BF4000000000)) 
     \r_Clk_Count[5]_i_2 
+       (.I0(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
+        .I1(\r_Clk_Count_reg_n_0_[3] ),
+        .I2(\r_Clk_Count_reg_n_0_[4] ),
+        .I3(\r_Clk_Count_reg_n_0_[5] ),
+        .I4(\r_Clk_Count_reg_n_0_[6] ),
+        .I5(\r_Clk_Count[0]_i_2_n_0 ),
+        .O(\r_Clk_Count[5]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h7FFFFFFF80000000)) 
+    \r_Clk_Count[5]_i_3 
        (.I0(\r_Clk_Count_reg_n_0_[1] ),
         .I1(\r_Clk_Count_reg_n_0_[0] ),
         .I2(\r_Clk_Count_reg_n_0_[2] ),
         .I3(\r_Clk_Count_reg_n_0_[3] ),
         .I4(\r_Clk_Count_reg_n_0_[4] ),
         .I5(\r_Clk_Count_reg_n_0_[5] ),
-        .O(\r_Clk_Count[5]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h55555755FDFFFFFF)) 
-    \r_Clk_Count[5]_i_3 
-       (.I0(r_SM_Main[0]),
-        .I1(\r_Clk_Count[6]_i_6_n_0 ),
-        .I2(\r_Clk_Count_reg_n_0_[0] ),
-        .I3(\r_Clk_Count_reg_n_0_[1] ),
-        .I4(r_RX_Data),
-        .I5(\r_Clk_Count[5]_i_2_n_0 ),
         .O(\r_Clk_Count[5]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'h00FB)) 
+  LUT5 #(
+    .INIT(32'h0000FBFF)) 
     \r_Clk_Count[6]_i_1 
        (.I0(r_SM_Main[1]),
         .I1(r_SM_Main[0]),
         .I2(\r_Clk_Count[6]_i_3_n_0 ),
-        .I3(r_SM_Main[2]),
-        .O(\r_Clk_Count[6]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h8888F000)) 
-    \r_Clk_Count[6]_i_2 
-       (.I0(\FSM_sequential_r_SM_Main[1]_i_2_n_0 ),
-        .I1(\r_Clk_Count[6]_i_4_n_0 ),
-        .I2(r_SM_Main[0]),
-        .I3(\r_Clk_Count[6]_i_5_n_0 ),
-        .I4(r_SM_Main[1]),
-        .O(\r_Clk_Count[6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'hEFFF)) 
-    \r_Clk_Count[6]_i_3 
-       (.I0(\r_Clk_Count[6]_i_6_n_0 ),
-        .I1(\r_Clk_Count_reg_n_0_[0] ),
-        .I2(\r_Clk_Count_reg_n_0_[1] ),
         .I3(r_RX_Data),
-        .O(\r_Clk_Count[6]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \r_Clk_Count[6]_i_4 
-       (.I0(\r_Clk_Count[6]_i_7_n_0 ),
-        .I1(\r_Clk_Count_reg_n_0_[4] ),
-        .I2(\r_Clk_Count_reg_n_0_[5] ),
-        .I3(\r_Clk_Count_reg_n_0_[3] ),
-        .I4(\r_Clk_Count_reg_n_0_[6] ),
-        .O(\r_Clk_Count[6]_i_4_n_0 ));
+        .I4(r_SM_Main[2]),
+        .O(r_Clk_Count));
   LUT6 #(
-    .INIT(64'h666666666666F066)) 
-    \r_Clk_Count[6]_i_5 
-       (.I0(\r_Clk_Count[6]_i_8_n_0 ),
-        .I1(\r_Clk_Count_reg_n_0_[6] ),
-        .I2(r_RX_Data),
-        .I3(\r_Clk_Count_reg_n_0_[1] ),
-        .I4(\r_Clk_Count_reg_n_0_[0] ),
+    .INIT(64'hEEEAAEAAAAAAAAAA)) 
+    \r_Clk_Count[6]_i_2 
+       (.I0(\r_Clk_Count[6]_i_4_n_0 ),
+        .I1(r_SM_Main[0]),
+        .I2(\r_Clk_Count[6]_i_3_n_0 ),
+        .I3(r_RX_Data),
+        .I4(\r_Clk_Count[6]_i_5_n_0 ),
         .I5(\r_Clk_Count[6]_i_6_n_0 ),
-        .O(\r_Clk_Count[6]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFBF)) 
-    \r_Clk_Count[6]_i_6 
-       (.I0(\r_Clk_Count_reg_n_0_[2] ),
+        .O(\r_Clk_Count[6]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFEFFF)) 
+    \r_Clk_Count[6]_i_3 
+       (.I0(\r_Clk_Count_reg_n_0_[3] ),
+        .I1(\r_Clk_Count_reg_n_0_[6] ),
+        .I2(\r_Clk_Count_reg_n_0_[5] ),
+        .I3(\r_Clk_Count_reg_n_0_[4] ),
+        .I4(\r_Clk_Count_reg_n_0_[2] ),
+        .I5(\r_Clk_Count[2]_i_2_n_0 ),
+        .O(\r_Clk_Count[6]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F2F400000000000)) 
+    \r_Clk_Count[6]_i_4 
+       (.I0(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
         .I1(\r_Clk_Count_reg_n_0_[3] ),
         .I2(\r_Clk_Count_reg_n_0_[5] ),
-        .I3(\r_Clk_Count_reg_n_0_[6] ),
-        .I4(\r_Clk_Count_reg_n_0_[4] ),
+        .I3(\r_Clk_Count_reg_n_0_[4] ),
+        .I4(\r_Clk_Count_reg_n_0_[6] ),
+        .I5(\r_Clk_Count[0]_i_2_n_0 ),
+        .O(\r_Clk_Count[6]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'hBFFF4000)) 
+    \r_Clk_Count[6]_i_5 
+       (.I0(\FSM_sequential_r_SM_Main[1]_i_4_n_0 ),
+        .I1(\r_Clk_Count_reg_n_0_[3] ),
+        .I2(\r_Clk_Count_reg_n_0_[5] ),
+        .I3(\r_Clk_Count_reg_n_0_[4] ),
+        .I4(\r_Clk_Count_reg_n_0_[6] ),
+        .O(\r_Clk_Count[6]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h1)) 
+    \r_Clk_Count[6]_i_6 
+       (.I0(r_SM_Main[1]),
+        .I1(r_SM_Main[2]),
         .O(\r_Clk_Count[6]_i_6_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \r_Clk_Count[6]_i_7 
-       (.I0(\r_Clk_Count_reg_n_0_[1] ),
-        .I1(\r_Clk_Count_reg_n_0_[0] ),
-        .I2(\r_Clk_Count_reg_n_0_[2] ),
-        .O(\r_Clk_Count[6]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    \r_Clk_Count[6]_i_8 
-       (.I0(\r_Clk_Count_reg_n_0_[3] ),
-        .I1(\r_Clk_Count_reg_n_0_[5] ),
-        .I2(\r_Clk_Count_reg_n_0_[4] ),
-        .I3(\r_Clk_Count_reg_n_0_[2] ),
-        .I4(\r_Clk_Count_reg_n_0_[0] ),
-        .I5(\r_Clk_Count_reg_n_0_[1] ),
-        .O(\r_Clk_Count[6]_i_8_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \r_Clk_Count_reg[0] 
        (.C(i_Clk),
-        .CE(\r_Clk_Count[6]_i_1_n_0 ),
+        .CE(r_Clk_Count),
         .D(\r_Clk_Count[0]_i_1_n_0 ),
         .Q(\r_Clk_Count_reg_n_0_[0] ),
         .R(1'b0));
@@ -532,7 +535,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
     .INIT(1'b0)) 
     \r_Clk_Count_reg[1] 
        (.C(i_Clk),
-        .CE(\r_Clk_Count[6]_i_1_n_0 ),
+        .CE(r_Clk_Count),
         .D(\r_Clk_Count[1]_i_1_n_0 ),
         .Q(\r_Clk_Count_reg_n_0_[1] ),
         .R(1'b0));
@@ -540,15 +543,15 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
     .INIT(1'b0)) 
     \r_Clk_Count_reg[2] 
        (.C(i_Clk),
-        .CE(\r_Clk_Count[6]_i_1_n_0 ),
-        .D(\r_Clk_Count[2]_i_1__0_n_0 ),
+        .CE(r_Clk_Count),
+        .D(\r_Clk_Count[2]_i_1_n_0 ),
         .Q(\r_Clk_Count_reg_n_0_[2] ),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \r_Clk_Count_reg[3] 
        (.C(i_Clk),
-        .CE(\r_Clk_Count[6]_i_1_n_0 ),
+        .CE(r_Clk_Count),
         .D(\r_Clk_Count[3]_i_1_n_0 ),
         .Q(\r_Clk_Count_reg_n_0_[3] ),
         .R(1'b0));
@@ -556,7 +559,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
     .INIT(1'b0)) 
     \r_Clk_Count_reg[4] 
        (.C(i_Clk),
-        .CE(\r_Clk_Count[6]_i_1_n_0 ),
+        .CE(r_Clk_Count),
         .D(\r_Clk_Count[4]_i_1_n_0 ),
         .Q(\r_Clk_Count_reg_n_0_[4] ),
         .R(1'b0));
@@ -564,7 +567,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
     .INIT(1'b0)) 
     \r_Clk_Count_reg[5] 
        (.C(i_Clk),
-        .CE(\r_Clk_Count[6]_i_1_n_0 ),
+        .CE(r_Clk_Count),
         .D(\r_Clk_Count[5]_i_1_n_0 ),
         .Q(\r_Clk_Count_reg_n_0_[5] ),
         .R(1'b0));
@@ -572,7 +575,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
     .INIT(1'b0)) 
     \r_Clk_Count_reg[6] 
        (.C(i_Clk),
-        .CE(\r_Clk_Count[6]_i_1_n_0 ),
+        .CE(r_Clk_Count),
         .D(\r_Clk_Count[6]_i_2_n_0 ),
         .Q(\r_Clk_Count_reg_n_0_[6] ),
         .R(1'b0));
@@ -596,7 +599,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
         .I4(\r_RX_Byte[7]_i_3_n_0 ),
         .I5(o_RX_Byte[1]),
         .O(\r_RX_Byte[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \r_RX_Byte[1]_i_2 
@@ -623,7 +626,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
         .I4(\r_RX_Byte[7]_i_3_n_0 ),
         .I5(o_RX_Byte[3]),
         .O(\r_RX_Byte[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \r_RX_Byte[3]_i_2 
@@ -650,7 +653,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
         .I4(\r_RX_Byte[7]_i_3_n_0 ),
         .I5(o_RX_Byte[5]),
         .O(\r_RX_Byte[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \r_RX_Byte[5]_i_2 
@@ -667,22 +670,22 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
         .I4(\r_RX_Byte[7]_i_3_n_0 ),
         .I5(o_RX_Byte[6]),
         .O(\r_RX_Byte[6]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h08)) 
-    \r_RX_Byte[6]_i_2 
-       (.I0(\r_Clk_Count_reg_n_0_[6] ),
-        .I1(\r_RX_Byte[6]_i_3_n_0 ),
-        .I2(r_Bit_Index[0]),
-        .O(\r_RX_Byte[6]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFAAAA8880)) 
+    .INIT(64'h0000000055554000)) 
+    \r_RX_Byte[6]_i_2 
+       (.I0(\r_Clk_Count[0]_i_3_n_0 ),
+        .I1(\r_Clk_Count_reg_n_0_[0] ),
+        .I2(\r_Clk_Count_reg_n_0_[1] ),
+        .I3(\r_Clk_Count_reg_n_0_[2] ),
+        .I4(\r_RX_Byte[6]_i_3_n_0 ),
+        .I5(r_Bit_Index[0]),
+        .O(\r_RX_Byte[6]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \r_RX_Byte[6]_i_3 
-       (.I0(\r_Clk_Count_reg_n_0_[4] ),
-        .I1(\r_Clk_Count_reg_n_0_[2] ),
-        .I2(\r_Clk_Count_reg_n_0_[0] ),
-        .I3(\r_Clk_Count_reg_n_0_[1] ),
-        .I4(\r_Clk_Count_reg_n_0_[3] ),
-        .I5(\r_Clk_Count_reg_n_0_[5] ),
+       (.I0(\r_Clk_Count_reg_n_0_[3] ),
+        .I1(\r_Clk_Count_reg_n_0_[4] ),
         .O(\r_RX_Byte[6]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hFFEF0020)) 
@@ -693,7 +696,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
         .I3(\r_RX_Byte[7]_i_3_n_0 ),
         .I4(o_RX_Byte[7]),
         .O(\r_RX_Byte[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \r_RX_Byte[7]_i_2 
@@ -782,22 +785,15 @@ module DemoInterconnect_uart_transceiver_0_1_UART_RX
         .I4(o_RX_Done),
         .O(r_RX_DV_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFEEEAAAA00000000)) 
+    .INIT(64'h00000000FEEEEEEE)) 
     r_RX_DV_i_2
-       (.I0(\r_Clk_Count_reg_n_0_[5] ),
-        .I1(\r_Clk_Count_reg_n_0_[3] ),
-        .I2(r_RX_DV_i_3_n_0),
-        .I3(\r_Clk_Count_reg_n_0_[2] ),
-        .I4(\r_Clk_Count_reg_n_0_[4] ),
-        .I5(\r_Clk_Count_reg_n_0_[6] ),
+       (.I0(\r_Clk_Count_reg_n_0_[3] ),
+        .I1(\r_Clk_Count_reg_n_0_[4] ),
+        .I2(\r_Clk_Count_reg_n_0_[2] ),
+        .I3(\r_Clk_Count_reg_n_0_[1] ),
+        .I4(\r_Clk_Count_reg_n_0_[0] ),
+        .I5(\r_Clk_Count[0]_i_3_n_0 ),
         .O(r_RX_DV_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    r_RX_DV_i_3
-       (.I0(\r_Clk_Count_reg_n_0_[0] ),
-        .I1(\r_Clk_Count_reg_n_0_[1] ),
-        .O(r_RX_DV_i_3_n_0));
   FDRE #(
     .INIT(1'b0)) 
     r_RX_DV_reg
@@ -863,11 +859,11 @@ module DemoInterconnect_uart_transceiver_0_1_UART_TX
   wire [6:0]r_Clk_Count;
   wire \r_Clk_Count[0]_i_1__0_n_0 ;
   wire \r_Clk_Count[1]_i_1__0_n_0 ;
-  wire \r_Clk_Count[2]_i_1_n_0 ;
+  wire \r_Clk_Count[2]_i_1__0_n_0 ;
   wire \r_Clk_Count[3]_i_1__0_n_0 ;
-  wire \r_Clk_Count[3]_i_2_n_0 ;
   wire \r_Clk_Count[4]_i_1__0_n_0 ;
   wire \r_Clk_Count[4]_i_2__0_n_0 ;
+  wire \r_Clk_Count[4]_i_3_n_0 ;
   wire \r_Clk_Count[5]_i_1__0_n_0 ;
   wire \r_Clk_Count[6]_i_1__0_n_0 ;
   wire \r_Clk_Count[6]_i_2__0_n_0 ;
@@ -883,7 +879,6 @@ module DemoInterconnect_uart_transceiver_0_1_UART_TX
   wire \r_TX_Data_reg_n_0_[7] ;
   wire r_TX_Done_i_1_n_0;
   wire r_TX_Done_i_2_n_0;
-  wire r_TX_Done_i_3_n_0;
 
   LUT6 #(
     .INIT(64'h3030013330300100)) 
@@ -1085,48 +1080,47 @@ module DemoInterconnect_uart_transceiver_0_1_UART_TX
         .O(\r_Clk_Count[1]_i_1__0_n_0 ));
   LUT6 #(
     .INIT(64'h7800780078000000)) 
-    \r_Clk_Count[2]_i_1 
-       (.I0(r_Clk_Count[0]),
-        .I1(r_Clk_Count[1]),
+    \r_Clk_Count[2]_i_1__0 
+       (.I0(r_Clk_Count[1]),
+        .I1(r_Clk_Count[0]),
         .I2(r_Clk_Count[2]),
         .I3(r_TX_Done_i_2_n_0),
         .I4(r_SM_Main[1]),
         .I5(r_SM_Main[0]),
-        .O(\r_Clk_Count[2]_i_1_n_0 ));
+        .O(\r_Clk_Count[2]_i_1__0_n_0 ));
   LUT6 #(
     .INIT(64'h000000007F800000)) 
     \r_Clk_Count[3]_i_1__0 
-       (.I0(r_Clk_Count[1]),
-        .I1(r_Clk_Count[0]),
+       (.I0(r_Clk_Count[0]),
+        .I1(r_Clk_Count[1]),
         .I2(r_Clk_Count[2]),
         .I3(r_Clk_Count[3]),
         .I4(r_TX_Done_i_2_n_0),
-        .I5(\r_Clk_Count[3]_i_2_n_0 ),
+        .I5(\r_Clk_Count[4]_i_3_n_0 ),
         .O(\r_Clk_Count[3]_i_1__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000DF200000)) 
+    \r_Clk_Count[4]_i_1__0 
+       (.I0(r_Clk_Count[2]),
+        .I1(\r_Clk_Count[4]_i_2__0_n_0 ),
+        .I2(r_Clk_Count[3]),
+        .I3(r_Clk_Count[4]),
+        .I4(r_TX_Done_i_2_n_0),
+        .I5(\r_Clk_Count[4]_i_3_n_0 ),
+        .O(\r_Clk_Count[4]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \r_Clk_Count[4]_i_2__0 
+       (.I0(r_Clk_Count[0]),
+        .I1(r_Clk_Count[1]),
+        .O(\r_Clk_Count[4]_i_2__0_n_0 ));
   LUT2 #(
     .INIT(4'h1)) 
-    \r_Clk_Count[3]_i_2 
+    \r_Clk_Count[4]_i_3 
        (.I0(r_SM_Main[0]),
         .I1(r_SM_Main[1]),
-        .O(\r_Clk_Count[3]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'h60606000)) 
-    \r_Clk_Count[4]_i_1__0 
-       (.I0(\r_Clk_Count[4]_i_2__0_n_0 ),
-        .I1(r_Clk_Count[4]),
-        .I2(r_TX_Done_i_2_n_0),
-        .I3(r_SM_Main[1]),
-        .I4(r_SM_Main[0]),
-        .O(\r_Clk_Count[4]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \r_Clk_Count[4]_i_2__0 
-       (.I0(r_Clk_Count[3]),
-        .I1(r_Clk_Count[1]),
-        .I2(r_Clk_Count[0]),
-        .I3(r_Clk_Count[2]),
-        .O(\r_Clk_Count[4]_i_2__0_n_0 ));
+        .O(\r_Clk_Count[4]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'h60606000)) 
     \r_Clk_Count[5]_i_1__0 
@@ -1146,14 +1140,14 @@ module DemoInterconnect_uart_transceiver_0_1_UART_TX
         .I4(r_SM_Main[1]),
         .I5(r_SM_Main[0]),
         .O(\r_Clk_Count[6]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \r_Clk_Count[6]_i_2__0 
        (.I0(r_Clk_Count[4]),
         .I1(r_Clk_Count[2]),
-        .I2(r_Clk_Count[0]),
-        .I3(r_Clk_Count[1]),
+        .I2(r_Clk_Count[1]),
+        .I3(r_Clk_Count[0]),
         .I4(r_Clk_Count[3]),
         .O(\r_Clk_Count[6]_i_2__0_n_0 ));
   FDRE #(
@@ -1177,7 +1171,7 @@ module DemoInterconnect_uart_transceiver_0_1_UART_TX
     \r_Clk_Count_reg[2] 
        (.C(i_Clk),
         .CE(o_TX_Serial_i_1_n_0),
-        .D(\r_Clk_Count[2]_i_1_n_0 ),
+        .D(\r_Clk_Count[2]_i_1__0_n_0 ),
         .Q(r_Clk_Count[2]),
         .R(1'b0));
   FDRE #(
@@ -1293,23 +1287,16 @@ module DemoInterconnect_uart_transceiver_0_1_UART_TX
         .I3(r_SM_Main[1]),
         .I4(o_TX_Done),
         .O(r_TX_Done_i_1_n_0));
-  LUT4 #(
-    .INIT(16'h1FFF)) 
+  LUT6 #(
+    .INIT(64'h0FFF0FFF0FFFDFFF)) 
     r_TX_Done_i_2
-       (.I0(r_Clk_Count[4]),
-        .I1(r_Clk_Count[5]),
+       (.I0(r_Clk_Count[2]),
+        .I1(\r_Clk_Count[4]_i_2__0_n_0 ),
         .I2(r_Clk_Count[6]),
-        .I3(r_TX_Done_i_3_n_0),
+        .I3(r_Clk_Count[5]),
+        .I4(r_Clk_Count[4]),
+        .I5(r_Clk_Count[3]),
         .O(r_TX_Done_i_2_n_0));
-  LUT5 #(
-    .INIT(32'hFFFEEEEE)) 
-    r_TX_Done_i_3
-       (.I0(r_Clk_Count[3]),
-        .I1(r_Clk_Count[5]),
-        .I2(r_Clk_Count[1]),
-        .I3(r_Clk_Count[0]),
-        .I4(r_Clk_Count[2]),
-        .O(r_TX_Done_i_3_n_0));
   FDRE #(
     .INIT(1'b0)) 
     r_TX_Done_reg

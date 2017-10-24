@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Mon Oct 23 23:27:24 2017
-// Host        : CHRIS-PC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_auto_pc_0 -prefix
-//               DemoInterconnect_auto_pc_0_ DemoInterconnect_auto_pc_0_sim_netlist.v
+// Date        : Wed Oct 25 01:39:34 2017
+// Host        : egk-pc running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_auto_pc_0/DemoInterconnect_auto_pc_0_sim_netlist.v
 // Design      : DemoInterconnect_auto_pc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -75,7 +75,7 @@ module DemoInterconnect_auto_pc_0
     m_axi_rresp,
     m_axi_rvalid,
     m_axi_rready);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN" *) input aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK, FREQ_HZ 72000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN" *) input aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *) input aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWID" *) input [0:0]s_axi_awid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) input [31:0]s_axi_awaddr;
@@ -115,7 +115,7 @@ module DemoInterconnect_auto_pc_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RLAST" *) output s_axi_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 72000000, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_rready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [31:0]m_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWPROT" *) output [2:0]m_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWVALID" *) output m_axi_awvalid;
@@ -134,7 +134,7 @@ module DemoInterconnect_auto_pc_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RDATA" *) input [31:0]m_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RRESP" *) input [1:0]m_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input m_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 72000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_axi_rready;
 
   wire aclk;
   wire aresetn;
@@ -346,10 +346,10 @@ endmodule
 (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_READ = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_SUPPORTS_WRITE = "1" *) (* C_AXI_WUSER_WIDTH = "1" *) (* C_FAMILY = "artix7" *) 
 (* C_IGNORE_ID = "0" *) (* C_M_AXI_PROTOCOL = "2" *) (* C_S_AXI_PROTOCOL = "0" *) 
-(* C_TRANSLATION_MODE = "2" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* P_AXI3 = "1" *) 
-(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
-(* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) (* P_INCR = "2'b01" *) 
-(* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
+(* C_TRANSLATION_MODE = "2" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_axi_protocol_converter" *) 
+(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
+(* P_AXILITE_SIZE = "3'b010" *) (* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) 
+(* P_INCR = "2'b01" *) (* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_axi_protocol_converter
    (aclk,
     aresetn,
@@ -697,6 +697,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_axi_protocol_co
         .s_axi_rvalid(s_axi_rvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s
    (s_axi_rvalid,
     s_axi_awready,
@@ -1095,6 +1096,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_ar_channel" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_ar_channel
    (s_arid_r,
     \wrap_boundary_axaddr_r_reg[11] ,
@@ -1303,6 +1305,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_ar_channel
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_aw_channel" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_aw_channel
    (in,
     \wrap_boundary_axaddr_r_reg[11] ,
@@ -1545,6 +1548,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_aw_channel
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_b_channel" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_b_channel
    (si_rs_bvalid,
     \cnt_read_reg[0]_rep ,
@@ -1821,6 +1825,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_b_channel
         .R(areset_d1));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_cmd_translator" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_cmd_translator
    (next_pending_r_reg,
     next_pending_r_reg_0,
@@ -2236,6 +2241,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_cmd_transla
         .\wrap_second_len_r_reg[3]_2 (\wrap_second_len_r_reg[3]_1 ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_incr_cmd" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_incr_cmd
    (next_pending_r_reg_0,
     \axaddr_incr_reg[0]_0 ,
@@ -3325,6 +3331,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_incr_cmd_2
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_r_channel" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_r_channel
    (\state_reg[1]_rep ,
     m_axi_rready,
@@ -3425,6 +3432,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_r_channel
         .\state_reg[1]_rep (\state_reg[1]_rep ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_rd_cmd_fsm" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_rd_cmd_fsm
    (\axlen_cnt_reg[5] ,
     Q,
@@ -3843,6 +3851,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_rd_cmd_fsm
         .O(\wrap_second_len_r_reg[3] [3]));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_simple_fifo" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_simple_fifo
    (\cnt_read_reg[0]_rep_0 ,
     \cnt_read_reg[1]_rep_0 ,
@@ -5412,6 +5421,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_simple_fifo
         .O(\state_reg[1]_rep ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_wr_cmd_fsm" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_wr_cmd_fsm
    (Q,
     D,
@@ -5834,6 +5844,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_wr_cmd_fsm
         .O(\wrap_second_len_r_reg[3] [3]));
 endmodule
 
+(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_14_b2s_wrap_cmd" *) 
 module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_wrap_cmd
    (next_pending_r_reg_0,
     sel_first_reg_0,
@@ -7344,6 +7355,7 @@ module DemoInterconnect_auto_pc_0_axi_protocol_converter_v2_1_14_b2s_wrap_cmd_3
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_14_axi_register_slice" *) 
 module DemoInterconnect_auto_pc_0_axi_register_slice_v2_1_14_axi_register_slice
    (s_axi_awready,
     s_axi_arready,
@@ -7657,6 +7669,7 @@ module DemoInterconnect_auto_pc_0_axi_register_slice_v2_1_14_axi_register_slice
         .\skid_buffer_reg[0]_0 (si_rs_rready));
 endmodule
 
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_14_axic_register_slice" *) 
 module DemoInterconnect_auto_pc_0_axi_register_slice_v2_1_14_axic_register_slice
    (s_axi_arready,
     s_ready_i_reg_0,

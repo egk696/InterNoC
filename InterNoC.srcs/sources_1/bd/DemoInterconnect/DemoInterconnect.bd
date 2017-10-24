@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xF9E67FDE5AD07127" bd:device="xc7a15tcpg236-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.3" bd:top="DemoInterconnect" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x315B656B2D7EDBC6" bd:device="xc7a15tcpg236-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.3" bd:top="DemoInterconnect" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -33,7 +33,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
-            <spirit:value>100000000</spirit:value>
+            <spirit:value>12000000</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
                 <bd:configElementInfo bd:valueSource="user"/>
@@ -854,6 +854,18 @@
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>LED0_pll_aclk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>LED1_pll_uart</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -888,7 +900,7 @@
         <spirit:componentRef spirit:library="user" spirit:name="axi_spi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_axi_spi_master_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">4</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -896,7 +908,7 @@
         <spirit:componentRef spirit:library="user" spirit:name="axi_spi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_axi_spi_master_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">4</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -904,7 +916,7 @@
         <spirit:componentRef spirit:library="user" spirit:name="axi_spi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_axi_spi_master_1_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">4</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -912,7 +924,7 @@
         <spirit:componentRef spirit:library="user" spirit:name="axi_spi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_axi_spi_master_1_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">4</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -920,13 +932,17 @@
         <spirit:componentRef spirit:library="ip" spirit:name="clk_wiz" spirit:vendor="xilinx.com" spirit:version="5.4"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_clk_wiz_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="JITTER_SEL">Min_O_Jitter</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PRIM_IN_FREQ">12</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKIN1_JITTER_PS">833.33</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT2_USED">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT3_USED">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_OUT_CLKS">2</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLK_OUT1_PORT">aclk</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLK_OUT2_PORT">uart</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLK_OUT3_PORT">clk_out3</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">10</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_REQUESTED_OUT_FREQ">72</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_REQUESTED_OUT_FREQ">12</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT3_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT1_DRIVES">BUFGCE</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT2_DRIVES">BUFGCE</spirit:configurableElementValue>
@@ -938,14 +954,19 @@
           <spirit:configurableElementValue spirit:referenceId="FEEDBACK_SOURCE">FDBK_AUTO</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="RESET_PORT">reset</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="MMCM_DIVCLK_DIVIDE">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN1_PERIOD">10.000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN2_PERIOD">10.000</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">100</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_BANDWIDTH">HIGH</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKFBOUT_MULT_F">63.000</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN1_PERIOD">83.333</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKIN2_PERIOD">10.0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT0_DIVIDE_F">10.500</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT1_DIVIDE">63</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="MMCM_CLKOUT2_DIVIDE">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="RESET_TYPE">ACTIVE_HIGH</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USE_SAFE_CLOCK_STARTUP">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">209.588</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">98.575</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_JITTER">499.161</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT1_PHASE_ERROR">686.541</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_JITTER">680.336</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLKOUT2_PHASE_ERROR">686.541</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT3_JITTER">209.588</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="CLKOUT3_PHASE_ERROR">98.575</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -987,6 +1008,7 @@
         <spirit:componentRef spirit:library="user" spirit:name="uart_transceiver" spirit:vendor="ekyr" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_uart_transceiver_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLK_FREQ">12000000</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -994,6 +1016,7 @@
         <spirit:componentRef spirit:library="user" spirit:name="uart_transceiver" spirit:vendor="ekyr" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_uart_transceiver_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CLK_FREQ">12000000</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -1074,6 +1097,7 @@
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M05_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M06_ACLK"/>
+        <spirit:externalPortReference spirit:portRef="LED0_pll_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_locked</spirit:name>
@@ -1110,6 +1134,7 @@
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="uart"/>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_0" spirit:portRef="i_Clk"/>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_1" spirit:portRef="i_Clk"/>
+        <spirit:externalPortReference spirit:portRef="LED1_pll_uart"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>uart_transceiver_0_o_TX_Done</spirit:name>

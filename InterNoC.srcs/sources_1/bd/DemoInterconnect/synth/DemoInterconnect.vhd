@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
---Date        : Tue Oct 24 01:34:24 2017
---Host        : CHRIS-PC running 64-bit major release  (build 9200)
+--Date        : Wed Oct 25 01:35:53 2017
+--Host        : egk-pc running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect.bd
 --Design      : DemoInterconnect
 --Purpose     : IP block netlist
@@ -2818,6 +2818,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity DemoInterconnect is
   port (
+    LED0_pll_aclk : out STD_LOGIC;
+    LED1_pll_uart : out STD_LOGIC;
     UART_RX_0 : in STD_LOGIC;
     UART_RX_1 : in STD_LOGIC;
     UART_TX_0 : out STD_LOGIC;
@@ -3444,10 +3446,12 @@ architecture STRUCTURE of DemoInterconnect is
   attribute X_INTERFACE_INFO of m_spi_ss_3 : signal is "xilinx.com:signal:clockenable:1.0 CE.M_SPI_SS_3 CE";
   attribute X_INTERFACE_PARAMETER of m_spi_ss_3 : signal is "XIL_INTERFACENAME CE.M_SPI_SS_3, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of sys_clk : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of sys_clk : signal is "XIL_INTERFACENAME CLK.SYS_CLK, CLK_DOMAIN DemoInterconnect_sys_clk, FREQ_HZ 100000000, PHASE 0.000";
+  attribute X_INTERFACE_PARAMETER of sys_clk : signal is "XIL_INTERFACENAME CLK.SYS_CLK, CLK_DOMAIN DemoInterconnect_sys_clk, FREQ_HZ 12000000, PHASE 0.000";
   attribute X_INTERFACE_INFO of sys_reset : signal is "xilinx.com:signal:reset:1.0 RST.SYS_RESET RST";
   attribute X_INTERFACE_PARAMETER of sys_reset : signal is "XIL_INTERFACENAME RST.SYS_RESET, POLARITY ACTIVE_HIGH";
 begin
+  LED0_pll_aclk <= clk_wiz_0_clk_out1;
+  LED1_pll_uart <= clk_wiz_0_uart;
   UART_RX_0_1 <= UART_RX_0;
   UART_RX_1_1 <= UART_RX_1;
   UART_TX_0 <= uart_transceiver_0_o_TX_Serial;

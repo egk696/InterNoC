@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Tue Oct 24 22:24:07 2017
+# Process ID: 21016
+# Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_0_synth_1
+# Command line: vivado.exe -log DemoInterconnect_axi_spi_master_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_axi_spi_master_1_0.tcl
+# Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_0_synth_1/DemoInterconnect_axi_spi_master_1_0.vds
+# Journal file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DemoInterconnect_axi_spi_master_1_0.tcl -notrace

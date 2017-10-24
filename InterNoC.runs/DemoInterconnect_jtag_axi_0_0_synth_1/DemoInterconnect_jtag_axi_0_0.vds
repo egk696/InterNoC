@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Oct 25 01:36:11 2017
+# Process ID: 8488
+# Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_jtag_axi_0_0_synth_1
+# Command line: vivado.exe -log DemoInterconnect_jtag_axi_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_jtag_axi_0_0.tcl
+# Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_jtag_axi_0_0_synth_1/DemoInterconnect_jtag_axi_0_0.vds
+# Journal file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_jtag_axi_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source DemoInterconnect_jtag_axi_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 347.832 ; gain = 98.906
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_jtag_axi_0_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/synth/DemoInterconnect_jtag_axi_0_0.vhd:103]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2017.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_gray' (10#1) [C:/Xilinx/Vivado/2017.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_gray__parameterized0' [C:/Xilinx/Vivado/2017.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_gray__parameterized0' (33#1) [C:/Xilinx/Vivado/2017.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_jtag_axi_0_0' (39#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/synth/DemoInterconnect_jtag_axi_0_0.vhd:103]
+Finished RTL Elaboration : Time (s): cpu = 00:03:22 ; elapsed = 00:03:23 . Memory (MB): peak = 632.148 ; gain = 383.223
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:22 ; elapsed = 00:03:24 . Memory (MB): peak = 632.148 ; gain = 383.223
+INFO: [Device 21-403] Loading part xc7a15tcpg236-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 723.637 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:03:44 ; elapsed = 00:03:47 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:44 ; elapsed = 00:03:47 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:44 ; elapsed = 00:03:47 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:47 ; elapsed = 00:03:50 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:53 ; elapsed = 00:03:56 . Memory (MB): peak = 723.637 ; gain = 474.711
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+-----------------------------+
+|Module Name | RTL Object                                                                                                | Inference      | Size (Depth x Width) | Primitives                  | 
++------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+-----------------------------+
+|U0          | jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 256 x 32             | RAM64X1D x 8  RAM64M x 40   | 
++------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+-----------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:08 ; elapsed = 00:04:12 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Timing Optimization : Time (s): cpu = 00:04:09 ; elapsed = 00:04:12 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Technology Mapping : Time (s): cpu = 00:04:10 ; elapsed = 00:04:14 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished IO Insertion : Time (s): cpu = 00:04:12 ; elapsed = 00:04:15 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:12 ; elapsed = 00:04:15 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:12 ; elapsed = 00:04:16 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:12 ; elapsed = 00:04:16 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:12 ; elapsed = 00:04:16 . Memory (MB): peak = 723.637 ; gain = 474.711
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:12 ; elapsed = 00:04:16 . Memory (MB): peak = 723.637 ; gain = 474.711
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    19|
+|2     |LUT2     |   111|
+|3     |LUT3     |   109|
+|4     |LUT4     |   106|
+|5     |LUT5     |    91|
+|6     |LUT6     |   197|
+|7     |RAM64M   |    40|
+|8     |RAM64X1D |     8|
+|9     |RAMB18E1 |     1|
+|10    |RAMB36E1 |     2|
+|11    |SRL16E   |     2|
+|12    |FDRE     |  1704|
+|13    |FDSE     |    12|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:12 ; elapsed = 00:04:16 . Memory (MB): peak = 723.637 ; gain = 474.711
+synth_design: Time (s): cpu = 00:04:18 ; elapsed = 00:04:22 . Memory (MB): peak = 1140.027 ; gain = 900.934

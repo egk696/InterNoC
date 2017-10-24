@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Tue Oct 24 01:42:39 2017
-| Host             : CHRIS-PC running 64-bit major release  (build 9200)
+| Date             : Wed Oct 25 01:46:17 2017
+| Host             : egk-pc running 64-bit major release  (build 9200)
 | Command          : report_power -file DemoInterconnect_wrapper_power_routed.rpt -pb DemoInterconnect_wrapper_power_summary_routed.pb -rpx DemoInterconnect_wrapper_power_routed.rpx
 | Design           : DemoInterconnect_wrapper
 | Device           : xc7a15tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.202        |
+| Total On-Chip Power (W)  | 0.194        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.130        |
+| Dynamic (W)              | 0.122        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |       11 |       --- |             --- |
-| Slice Logic              |     0.003 |     7689 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     2396 |     10400 |           23.04 |
-|   Register               |    <0.001 |     4082 |     20800 |           19.63 |
+| Clocks                   |     0.010 |       11 |       --- |             --- |
+| Slice Logic              |     0.002 |     7677 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     2357 |     10400 |           22.66 |
+|   Register               |    <0.001 |     4078 |     20800 |           19.61 |
 |   CARRY4                 |    <0.001 |       79 |      8150 |            0.97 |
 |   LUT as Distributed RAM |    <0.001 |      244 |      9600 |            2.54 |
 |   LUT as Shift Register  |    <0.001 |       43 |      9600 |            0.45 |
 |   Others                 |     0.000 |      283 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |        1 |     32600 |           <0.01 |
-| Signals                  |     0.004 |     5864 |       --- |             --- |
+| Signals                  |     0.002 |     5852 |       --- |             --- |
 | Block RAM                |    <0.001 |      2.5 |        25 |           10.00 |
-| MMCM                     |     0.106 |        1 |         5 |           20.00 |
-| I/O                      |     0.003 |       18 |       106 |           16.98 |
+| MMCM                     |     0.104 |        1 |         5 |           20.00 |
+| I/O                      |     0.002 |       18 |       106 |           16.98 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.202 |          |           |                 |
+| Total                    |     0.194 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,8 +76,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.022 |      0.010 |
-| Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |
+| Vccint    |       1.000 |     0.025 |       0.015 |      0.010 |
+| Vccaux    |       1.800 |     0.071 |       0.058 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -132,15 +132,11 @@ Table of Contents
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+-----------------+
 | Clock                                                                                      | Domain                                                                  | Constraint (ns) |
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+-----------------+
-| aclk_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/aclk_DemoInterconnect_clk_wiz_0_0     |            10.0 |
-| aclk_DemoInterconnect_clk_wiz_0_0_1                                                        | DemoInterconnect_i/clk_wiz_0/inst/aclk_DemoInterconnect_clk_wiz_0_0     |            10.0 |
-| clkfbout_DemoInterconnect_clk_wiz_0_0                                                      | DemoInterconnect_i/clk_wiz_0/inst/clkfbout_DemoInterconnect_clk_wiz_0_0 |            10.0 |
-| clkfbout_DemoInterconnect_clk_wiz_0_0_1                                                    | DemoInterconnect_i/clk_wiz_0/inst/clkfbout_DemoInterconnect_clk_wiz_0_0 |            10.0 |
+| aclk_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/aclk_DemoInterconnect_clk_wiz_0_0     |            13.9 |
+| clkfbout_DemoInterconnect_clk_wiz_0_0                                                      | DemoInterconnect_i/clk_wiz_0/inst/clkfbout_DemoInterconnect_clk_wiz_0_0 |            83.3 |
 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs    |            33.0 |
-| sys_clk                                                                                    | sys_clk                                                                 |            10.0 |
-| sys_clk_pin                                                                                | sys_clk                                                                 |            10.0 |
-| uart_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/uart_DemoInterconnect_clk_wiz_0_0     |           100.0 |
-| uart_DemoInterconnect_clk_wiz_0_0_1                                                        | DemoInterconnect_i/clk_wiz_0/inst/uart_DemoInterconnect_clk_wiz_0_0     |           100.0 |
+| sys_clk                                                                                    | sys_clk                                                                 |            83.3 |
+| uart_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/uart_DemoInterconnect_clk_wiz_0_0     |            83.3 |
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------------+-----------------+
 
 
@@ -153,8 +149,8 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| DemoInterconnect_wrapper                                                           |     0.130 |
-|   DemoInterconnect_i                                                               |     0.124 |
+| DemoInterconnect_wrapper                                                           |     0.122 |
+|   DemoInterconnect_i                                                               |     0.117 |
 |     axi_spi_master_0                                                               |    <0.001 |
 |       U0                                                                           |    <0.001 |
 |         axi_spi_master_v1_0_S00_AXI_inst                                           |    <0.001 |
@@ -175,13 +171,13 @@ Table of Contents
 |         axi_spi_master_v1_0_S00_AXI_inst                                           |    <0.001 |
 |           spi_master_inst                                                          |    <0.001 |
 |           word2byte                                                                |    <0.001 |
-|     clk_wiz_0                                                                      |     0.107 |
-|       inst                                                                         |     0.107 |
-|     interconnect                                                                   |     0.004 |
-|       s02_couplers                                                                 |     0.003 |
-|         auto_pc                                                                    |     0.003 |
-|           inst                                                                     |     0.003 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s                                   |     0.003 |
+|     clk_wiz_0                                                                      |     0.105 |
+|       inst                                                                         |     0.105 |
+|     interconnect                                                                   |     0.003 |
+|       s02_couplers                                                                 |     0.002 |
+|         auto_pc                                                                    |     0.002 |
+|           inst                                                                     |     0.002 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s                                   |     0.002 |
 |               RD.ar_channel_0                                                      |    <0.001 |
 |                 ar_cmd_fsm_0                                                       |    <0.001 |
 |                 cmd_translator_0                                                   |    <0.001 |
@@ -203,9 +199,9 @@ Table of Contents
 |               WR.b_channel_0                                                       |    <0.001 |
 |                 bid_fifo_0                                                         |    <0.001 |
 |                 bresp_fifo_0                                                       |    <0.001 |
-|       xbar                                                                         |     0.001 |
-|         inst                                                                       |     0.001 |
-|           gen_sasd.crossbar_sasd_0                                                 |     0.001 |
+|       xbar                                                                         |    <0.001 |
+|         inst                                                                       |    <0.001 |
+|           gen_sasd.crossbar_sasd_0                                                 |    <0.001 |
 |             addr_arbiter_inst                                                      |    <0.001 |
 |             gen_decerr.decerr_slave_inst                                           |    <0.001 |
 |             reg_slice_r                                                            |    <0.001 |
@@ -221,12 +217,12 @@ Table of Contents
 |         interface2packet_inst                                                      |    <0.001 |
 |         interface_axi_master_v1_0_M00_AXI_inst                                     |    <0.001 |
 |         packet2interface_inst                                                      |    <0.001 |
-|     jtag_axi_0                                                                     |     0.008 |
-|       U0                                                                           |     0.008 |
+|     jtag_axi_0                                                                     |     0.006 |
+|       U0                                                                           |     0.006 |
 |         axi_bridge_u                                                               |    <0.001 |
 |           read_axi_full_u                                                          |    <0.001 |
 |           write_axi_full_u                                                         |    <0.001 |
-|         jtag_axi_engine_u                                                          |     0.008 |
+|         jtag_axi_engine_u                                                          |     0.005 |
 |           U_XSDB_SLAVE                                                             |    <0.001 |
 |           cmd_decode_rd_channel                                                    |    <0.001 |
 |           cmd_decode_wr_channel                                                    |    <0.001 |
@@ -272,10 +268,10 @@ Table of Contents
 |                           valid.cstr                                               |    <0.001 |
 |                             ramloop[0].ram.r                                       |    <0.001 |
 |                               prim_noinit.ram                                      |    <0.001 |
-|           tx_fifo_i                                                                |     0.001 |
-|             inst_fifo_gen                                                          |     0.001 |
-|               gconvfifo.rf                                                         |     0.001 |
-|                 grf.rf                                                             |     0.001 |
+|           tx_fifo_i                                                                |    <0.001 |
+|             inst_fifo_gen                                                          |    <0.001 |
+|               gconvfifo.rf                                                         |    <0.001 |
+|                 grf.rf                                                             |    <0.001 |
 |                   gntv_or_sync_fifo.gcx.clkx                                       |    <0.001 |
 |                     rd_pntr_cdc_inst                                               |    <0.001 |
 |                     wr_pntr_cdc_inst                                               |    <0.001 |
@@ -336,7 +332,7 @@ Table of Contents
 |                       RAM_reg_64_127_3_5                                           |    <0.001 |
 |                       RAM_reg_64_127_6_8                                           |    <0.001 |
 |                       RAM_reg_64_127_9_11                                          |    <0.001 |
-|           u_xsdb_fifo_interface                                                    |     0.002 |
+|           u_xsdb_fifo_interface                                                    |     0.001 |
 |             rxfifo2xsdb_i                                                          |    <0.001 |
 |             xsdb2read_cmdfifo                                                      |    <0.001 |
 |             xsdb2txfifo_i                                                          |    <0.001 |
@@ -362,8 +358,8 @@ Table of Contents
 |                           valid.cstr                                               |    <0.001 |
 |                             ramloop[0].ram.r                                       |    <0.001 |
 |                               prim_noinit.ram                                      |    <0.001 |
-|     master_comm_mutex                                                              |     0.002 |
-|       U0                                                                           |     0.002 |
+|     master_comm_mutex                                                              |     0.001 |
+|       U0                                                                           |     0.001 |
 |         SingleAccess                                                               |    <0.001 |
 |           Using_HW_Protection.Protected_Mutex_Inst                                 |    <0.001 |
 |             Mutex_Store                                                            |    <0.001 |
@@ -425,9 +421,9 @@ Table of Contents
 |       U0                                                                           |    <0.001 |
 |         uart_rx_inst                                                               |    <0.001 |
 |         uart_tx_inst                                                               |    <0.001 |
-|   dbg_hub                                                                          |     0.003 |
-|     inst                                                                           |     0.003 |
-|       BSCANID.u_xsdbm_id                                                           |     0.003 |
+|   dbg_hub                                                                          |     0.002 |
+|     inst                                                                           |     0.002 |
+|       BSCANID.u_xsdbm_id                                                           |     0.002 |
 |         CORE_XSDB.UUT_MASTER                                                       |     0.002 |
 |           U_ICON_INTERFACE                                                         |     0.001 |
 |             U_CMD1                                                                 |    <0.001 |
