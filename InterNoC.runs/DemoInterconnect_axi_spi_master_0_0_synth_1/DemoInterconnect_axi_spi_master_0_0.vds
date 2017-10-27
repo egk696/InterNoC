@@ -2,12 +2,12 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Fri Oct 27 04:12:54 2017
-# Process ID: 13400
-# Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1
+# Start of session at: Fri Oct 27 13:34:55 2017
+# Process ID: 3060
+# Current directory: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1
 # Command line: vivado.exe -log DemoInterconnect_axi_spi_master_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_axi_spi_master_0_0.tcl
-# Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.vds
-# Journal file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1\vivado.jou
+# Log file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.vds
+# Journal file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source DemoInterconnect_axi_spi_master_0_0.tcl -notrace
 Command: synth_design -top DemoInterconnect_axi_spi_master_0_0 -part xc7a15tcpg236-1 -mode out_of_context
@@ -15,17 +15,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11876 
+INFO: Helper process launched with PID 12116 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 343.953 ; gain = 96.086
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 346.531 ; gain = 95.332
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_0_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/synth/DemoInterconnect_axi_spi_master_0_0.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_0_0' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/synth/DemoInterconnect_axi_spi_master_0_0.vhd:86]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter SPI_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter SPI_CLK_DIV bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'axi_spi_master_v1_0' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:5' bound to instance 'U0' of component 'axi_spi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/synth/DemoInterconnect_axi_spi_master_0_0.vhd:163]
-INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:53]
+INFO: [Synth 8-3491] module 'axi_spi_master_v1_0' declared at 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:5' bound to instance 'U0' of component 'axi_spi_master_v1_0' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/synth/DemoInterconnect_axi_spi_master_0_0.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:53]
 	Parameter SPI_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter SPI_CLK_DIV bound to: 4 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -34,41 +34,41 @@ INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0' [d:/Development/FP
 	Parameter SPI_CLK_DIV bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'axi_spi_master_v1_0_S00_AXI' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:5' bound to instance 'axi_spi_master_v1_0_S00_AXI_inst' of component 'axi_spi_master_v1_0_S00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:95]
-INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0_S00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
+INFO: [Synth 8-3491] module 'axi_spi_master_v1_0_S00_AXI' declared at 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:5' bound to instance 'axi_spi_master_v1_0_S00_AXI_inst' of component 'axi_spi_master_v1_0_S00_AXI' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'axi_spi_master_v1_0_S00_AXI' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
 	Parameter SPI_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter SPI_CLK_DIV bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter TX_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'parallel2serial' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:13' bound to instance 'word2byte' of component 'parallel2serial' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:337]
-INFO: [Synth 8-638] synthesizing module 'parallel2serial' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:30]
+INFO: [Synth 8-3491] module 'parallel2serial' declared at 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:13' bound to instance 'word2byte' of component 'parallel2serial' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:337]
+INFO: [Synth 8-638] synthesizing module 'parallel2serial' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:30]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter TX_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'parallel2serial' (1#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'parallel2serial' (1#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/parallel2serial.vhd:30]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter TX_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'serial2parallel' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:16' bound to instance 'byte2word' of component 'serial2parallel' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:352]
-INFO: [Synth 8-638] synthesizing module 'serial2parallel' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:30]
+INFO: [Synth 8-3491] module 'serial2parallel' declared at 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:16' bound to instance 'byte2word' of component 'serial2parallel' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:352]
+INFO: [Synth 8-638] synthesizing module 'serial2parallel' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:30]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter TX_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'serial2parallel' (2#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:30]
+INFO: [Synth 8-5534] Detected attribute (* shreg_extract = "yes" *) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'serial2parallel' (2#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/serial2parallel.vhd:30]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter CLK_DIV bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'spi_master' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:8' bound to instance 'spi_master_inst' of component 'spi_master' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:365]
-INFO: [Synth 8-638] synthesizing module 'spi_master' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:31]
+INFO: [Synth 8-3491] module 'spi_master' declared at 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:8' bound to instance 'spi_master_inst' of component 'spi_master' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:365]
+INFO: [Synth 8-638] synthesizing module 'spi_master' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:31]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter CLK_DIV bound to: 4 - type: integer 
-INFO: [Synth 8-226] default block is never used [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:109]
-INFO: [Synth 8-226] default block is never used [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:138]
-INFO: [Synth 8-256] done synthesizing module 'spi_master' (3#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:31]
-WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:216]
-WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:293]
-INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0_S00_AXI' (4#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
-INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0' (5#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:53]
-INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_axi_spi_master_0_0' (6#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/synth/DemoInterconnect_axi_spi_master_0_0.vhd:86]
+INFO: [Synth 8-226] default block is never used [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:109]
+INFO: [Synth 8-226] default block is never used [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:138]
+INFO: [Synth 8-256] done synthesizing module 'spi_master' (3#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:31]
+WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:216]
+WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:293]
+INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0_S00_AXI' (4#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0' (5#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_axi_spi_master_0_0' (6#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/synth/DemoInterconnect_axi_spi_master_0_0.vhd:86]
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[3]
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[2]
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[1]
@@ -88,7 +88,7 @@ WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port 
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 386.035 ; gain = 138.168
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 388.988 ; gain = 137.789
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -98,7 +98,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 386.035 ; gain = 138.168
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 388.988 ; gain = 137.789
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a15tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -110,29 +110,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.832 . Memory (MB): peak = 682.094 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.262 . Memory (MB): peak = 685.629 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:01:11 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a15tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:01:11 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:11 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rx_done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "sclk_fall" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'st_next_reg' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:73]
+WARNING: [Synth 8-327] inferring latch for variable 'st_next_reg' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:73]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:01:11 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,7 +244,7 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/Tx_Rx_Done_reg was removed.  [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/Tx_Rx_Done_reg was removed.  [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:63]
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_0_0 has unconnected port s00_axi_awaddr[3]
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_0_0 has unconnected port s00_axi_awaddr[2]
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_0_0 has unconnected port s00_axi_awaddr[1]
@@ -364,7 +364,7 @@ INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byt
 INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[31]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:15 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:42 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -376,13 +376,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:46 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:46 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -394,7 +394,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:46 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:56 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -418,7 +418,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:49 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -431,7 +431,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:49 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -443,25 +443,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:49 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:49 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:49 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:49 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -500,11 +500,11 @@ Report Instance Areas:
 |5     |      word2byte                      |parallel2serial             |    72|
 +------+-------------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:49 . Memory (MB): peak = 682.094 ; gain = 434.227
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 685.629 ; gain = 434.430
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:01:17 . Memory (MB): peak = 682.094 ; gain = 138.168
-Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:50 . Memory (MB): peak = 682.094 ; gain = 434.227
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 685.629 ; gain = 137.789
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:58 . Memory (MB): peak = 685.629 ; gain = 434.430
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -517,11 +517,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 134 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:55 . Memory (MB): peak = 682.094 ; gain = 442.625
-INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/DemoInterconnect_axi_spi_master_0_0.xci
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:01 . Memory (MB): peak = 685.629 ; gain = 442.969
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/DemoInterconnect_axi_spi_master_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 4 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DemoInterconnect_axi_spi_master_0_0_utilization_synth.rpt -pb DemoInterconnect_axi_spi_master_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.142 . Memory (MB): peak = 682.094 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 27 04:15:40 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 685.629 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 27 13:36:04 2017...

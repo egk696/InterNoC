@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc rfile:../../../InterNoC.srcs/constrs_1/new/timing.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc rfile:../../../InterNoC.srcs/constrs_1/new/pinout.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc rfile:../../../InterNoC.srcs/constrs_1/new/timing.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc rfile:../../../InterNoC.srcs/constrs_1/new/pinout.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 create_generated_clock -name m_spi_0_sck -source [get_pins DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/o_sclk_reg/Q] -divide_by 4 -master_clock [get_clocks -filter {NAME=~"aclk_DemoInterconnect_clk_wiz_0_0"} ] -add [get_ports "m_spi_sclk"];
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
