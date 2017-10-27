@@ -19,7 +19,6 @@
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val=""/>
-    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/ip_repo/axi_native_register_space_1.0"/>
@@ -36,20 +35,20 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="143"/>
+    <Option Name="WTXSimLaunchSim" Val="152"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="33"/>
-    <Option Name="WTModelSimExportSim" Val="33"/>
-    <Option Name="WTQuestaExportSim" Val="33"/>
-    <Option Name="WTIesExportSim" Val="33"/>
-    <Option Name="WTVcsExportSim" Val="33"/>
-    <Option Name="WTRivieraExportSim" Val="33"/>
-    <Option Name="WTActivehdlExportSim" Val="33"/>
+    <Option Name="WTXSimExportSim" Val="41"/>
+    <Option Name="WTModelSimExportSim" Val="41"/>
+    <Option Name="WTQuestaExportSim" Val="41"/>
+    <Option Name="WTIesExportSim" Val="41"/>
+    <Option Name="WTVcsExportSim" Val="41"/>
+    <Option Name="WTRivieraExportSim" Val="41"/>
+    <Option Name="WTActivehdlExportSim" Val="41"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -66,9 +65,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_auto_pc_0/DemoInterconnect_auto_pc_0.xci">
-          <Proxy FileSetName="DemoInterconnect_auto_pc_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0.xci">
           <Proxy FileSetName="DemoInterconnect_interface_axi_master_0_0"/>
         </CompFileExtendedInfo>
@@ -105,6 +101,12 @@
         <CompFileExtendedInfo CompFileName="DemoInterconnect.bd" FileRelPathName="ip/DemoInterconnect_xbar_0/DemoInterconnect_xbar_0.xci">
           <Proxy FileSetName="DemoInterconnect_xbar_0"/>
         </CompFileExtendedInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/DemoConfigDesign/DemoConfigDesign.bd">
         <FileInfo>
@@ -153,14 +155,6 @@
           <Proxy FileSetName="DemoConfigDesign_auto_pc_0"/>
         </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/hdl/DemoInterconnect_wrapper.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd"/>
-          <Attr Name="ImportTime" Val="1508798027"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="DemoInterconnect_wrapper"/>
@@ -187,31 +181,7 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/ip_repo/interface_axi_master_1.0/src/serial2parallel.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/ip_repo/interface_axi_master_1.0/src/parallel2serial.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sim_1/new/DemoInterconnect_TestBench.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/ip_repo/uart_transceiver_v1_0/uart_top.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/ip_repo/uart_transceiver_v1_0/uart_rx.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -219,6 +189,33 @@
       </File>
       <File Path="$PPRDIR/ip_repo/uart_transceiver_v1_0/uart_tx.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/new/DemoInterconnect_TestBench.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip_repo/interface_axi_master_1.0/src/serial2parallel.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip_repo/uart_transceiver_v1_0/uart_top.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip_repo/uart_transceiver_v1_0/uart_rx.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -352,6 +349,18 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="DemoInterconnect_mutex_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_mutex_0_0">
+      <Config>
+        <Option Name="TopModule" Val="DemoInterconnect_mutex_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="DemoInterconnect_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_xbar_0">
+      <Config>
+        <Option Name="TopModule" Val="DemoInterconnect_xbar_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="DemoInterconnect_axi_spi_master_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_axi_spi_master_0_0">
       <Config>
         <Option Name="TopModule" Val="DemoInterconnect_axi_spi_master_0_0"/>
@@ -373,24 +382,6 @@
     <FileSet Name="DemoInterconnect_axi_spi_master_1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_axi_spi_master_1_1">
       <Config>
         <Option Name="TopModule" Val="DemoInterconnect_axi_spi_master_1_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="DemoInterconnect_mutex_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_mutex_0_0">
-      <Config>
-        <Option Name="TopModule" Val="DemoInterconnect_mutex_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="DemoInterconnect_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_xbar_0">
-      <Config>
-        <Option Name="TopModule" Val="DemoInterconnect_xbar_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="DemoInterconnect_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DemoInterconnect_auto_pc_0">
-      <Config>
-        <Option Name="TopModule" Val="DemoInterconnect_auto_pc_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -757,74 +748,6 @@
       </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="DemoInterconnect_axi_spi_master_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_spi_master_0_0" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_axi_spi_master_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_0_0_utilization_synth.rpt" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="DemoInterconnect_axi_spi_master_0_0_utilization_synth.pb"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_0_0.vds">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_spi_master_0_1_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_spi_master_0_1" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_0_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_axi_spi_master_0_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_0_1_utilization_synth.rpt" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_0_1.vds">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_spi_master_1_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_spi_master_1_0" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_1_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_axi_spi_master_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_1_0_utilization_synth.rpt" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_1_0.vds">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_spi_master_1_1_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_spi_master_1_1" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_1_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_axi_spi_master_1_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_1_1_utilization_synth.rpt" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_1_1.vds">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="DemoInterconnect_mutex_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_mutex_0_0" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_mutex_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_mutex_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
@@ -859,7 +782,7 @@
       </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="DemoInterconnect_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_auto_pc_0" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_auto_pc_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_auto_pc_0_synth_1" IncludeInArchive="true">
+    <Run Id="DemoInterconnect_axi_spi_master_0_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_spi_master_0_0" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_axi_spi_master_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -868,11 +791,68 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_auto_pc_0_utilization_synth.rpt" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_0_0_utilization_synth.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value="DemoInterconnect_auto_pc_0_utilization_synth.pb"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value="DemoInterconnect_axi_spi_master_0_0_utilization_synth.pb"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_auto_pc_0.vds">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_0_0.vds">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_spi_master_0_1_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_spi_master_0_1" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_0_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_axi_spi_master_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_0_1_utilization_synth.rpt" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_0_1.vds">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_spi_master_1_0_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_spi_master_1_0" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_1_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_axi_spi_master_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_1_0_utilization_synth.rpt" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_1_0.vds">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_spi_master_1_1_synth_1" Type="Ft3:Synth" SrcSet="DemoInterconnect_axi_spi_master_1_1" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_1_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/DemoInterconnect_axi_spi_master_1_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_1_1_utilization_synth.rpt" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="DemoInterconnect_axi_spi_master_1_1.vds">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
       </ReportStrategy>
@@ -2959,422 +2939,6 @@
       </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="DemoInterconnect_axi_spi_master_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_axi_spi_master_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_spi_master_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_0_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_axi_spi_master_0_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_spi_master_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_1_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_axi_spi_master_1_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="DemoInterconnect_axi_spi_master_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_1_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_axi_spi_master_1_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="DemoInterconnect_mutex_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_mutex_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_mutex_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
@@ -3583,7 +3147,7 @@
       </ReportStrategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="DemoInterconnect_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_auto_pc_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_auto_pc_0_synth_1" IncludeInArchive="false">
+    <Run Id="DemoInterconnect_axi_spi_master_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_axi_spi_master_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
           <Desc>Default settings for Implementation.</Desc>
@@ -3599,91 +3163,409 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
           <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig Name="DemoInterconnect_auto_pc_0_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_0_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_spi_master_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_0_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_axi_spi_master_0_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_0_1_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_spi_master_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_1_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_axi_spi_master_1_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_0_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+      </ReportStrategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="DemoInterconnect_axi_spi_master_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a15tcpg236-1" ConstrsSet="DemoInterconnect_axi_spi_master_1_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="DemoInterconnect_axi_spi_master_1_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
+          <ReportConfigOption Name="dummy_option" Type="string"/>
+        </ReportConfig>
+        <ReportConfig Name="DemoInterconnect_axi_spi_master_1_1_impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
       </ReportStrategy>

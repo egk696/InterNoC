@@ -35,7 +35,7 @@ set_property ip_repo_paths {
 } [current_project]
 set_property ip_output_repo d:/Development/FPGA/InterNoC/InterNoC.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/imports/hdl/DemoInterconnect_wrapper.vhd
+read_vhdl -library xil_defaultlib D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd
 add_files D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/DemoInterconnect.bd
 set_property used_in_implementation false [get_files -all d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/constraints/jtag_axi.xdc]
 set_property used_in_synthesis false [get_files -all d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/constraints/DemoInterconnect_jtag_axi_0_0_impl.xdc]

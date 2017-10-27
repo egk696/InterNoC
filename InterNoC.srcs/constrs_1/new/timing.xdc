@@ -1,5 +1,5 @@
 ## LEDs
-set_false_path -to [get_ports {LED0_pll_aclk LED1_pll_uart}];
+set_false_path -to [get_ports {LED0_pll_aclk LED1_pll_uart LED2_pll_lock}];
 
 ## SPI MASTERS
 create_generated_clock -name m_spi_0_sck -source [get_pins DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/o_sclk_reg/Q] -divide_by 4 -master_clock [get_clocks -filter {NAME=~"aclk_DemoInterconnect_clk_wiz_0_0"} ] -add [get_ports "m_spi_sclk"];

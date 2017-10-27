@@ -4,8 +4,8 @@ set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports { sys_cl
 # LEDs
 set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { LED0_pll_aclk }]; #IO_L12N_T1_MRCC_16 Sch=led[1]
 set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { LED1_pll_uart }]; #IO_L13P_T2_MRCC_16 Sch=led[2]
+set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33 } [get_ports { LED2_pll_lock }]; #IO_L14N_T2_SRCC_16 Sch=led0_b
 
-#set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33 } [get_ports { RGB0_Red }]; #IO_L14N_T2_SRCC_16 Sch=led0_b
 #set_property -dict { PACKAGE_PIN B16   IOSTANDARD LVCMOS33 } [get_ports { RGB0_Green }]; #IO_L13N_T2_MRCC_16 Sch=led0_g
 #set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { RGB0_Blue }]; #IO_L14P_T2_SRCC_16 Sch=led0_r
 

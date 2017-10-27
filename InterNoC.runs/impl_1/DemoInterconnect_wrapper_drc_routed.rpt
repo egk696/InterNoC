@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Oct 25 01:46:08 2017
+| Date         : Fri Oct 27 04:56:47 2017
 | Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_drc -file DemoInterconnect_wrapper_drc_routed.rpt -pb DemoInterconnect_wrapper_drc_routed.pb -rpx DemoInterconnect_wrapper_drc_routed.rpx
 | Design       : DemoInterconnect_wrapper
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 23
+             Violations found: 22
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | PDRC-153  | Warning  | Gated clock check                                   | 4          |
-| PLIO-8    | Warning  | Placement Constraints Check for IO constraints      | 10         |
+| PLIO-8    | Warning  | Placement Constraints Check for IO constraints      | 9          |
 | REQP-1617 | Warning  | use_IOB_register                                    | 4          |
 | RTSTAT-10 | Warning  | No routable loads                                   | 1          |
 | REQP-165  | Advisory | writefirst                                          | 1          |
@@ -74,50 +74,45 @@ Related violations: <none>
 
 PLIO-8#1 Warning
 Placement Constraints Check for IO constraints  
-Terminal m_spi_mosi has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Terminal LED0_pll_aclk has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
 
 PLIO-8#2 Warning
 Placement Constraints Check for IO constraints  
-Terminal m_spi_mosi_1 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Terminal LED1_pll_uart has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
 
 PLIO-8#3 Warning
 Placement Constraints Check for IO constraints  
-Terminal m_spi_mosi_2 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Terminal LED2_pll_lock has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
 
 PLIO-8#4 Warning
 Placement Constraints Check for IO constraints  
-Terminal m_spi_mosi_3 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Terminal m_spi_sclk has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
 
 PLIO-8#5 Warning
 Placement Constraints Check for IO constraints  
-Terminal m_spi_sclk has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Terminal m_spi_sclk_1 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
 
 PLIO-8#6 Warning
 Placement Constraints Check for IO constraints  
-Terminal m_spi_sclk_1 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Terminal m_spi_sclk_2 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
 
 PLIO-8#7 Warning
 Placement Constraints Check for IO constraints  
-Terminal m_spi_sclk_2 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Terminal m_spi_sclk_3 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
 
 PLIO-8#8 Warning
 Placement Constraints Check for IO constraints  
-Terminal m_spi_sclk_3 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
-Related violations: <none>
-
-PLIO-8#9 Warning
-Placement Constraints Check for IO constraints  
 Terminal sys_clk has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
 
-PLIO-8#10 Warning
+PLIO-8#9 Warning
 Placement Constraints Check for IO constraints  
 Terminal sys_reset has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 Related violations: <none>
@@ -144,7 +139,7 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-33 net(s) have no routable loads. The problem bus(es) and/or net(s) are DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0] (the first 15 of 31 listed).
+33 net(s) have no routable loads. The problem bus(es) and/or net(s) are DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, DemoInterconnect_i/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0] (the first 15 of 31 listed).
 Related violations: <none>
 
 REQP-165#1 Advisory

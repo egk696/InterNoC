@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date             : Wed Oct 25 01:46:17 2017
+| Date             : Fri Oct 27 04:56:58 2017
 | Host             : egk-pc running 64-bit major release  (build 9200)
 | Command          : report_power -file DemoInterconnect_wrapper_power_routed.rpt -pb DemoInterconnect_wrapper_power_summary_routed.pb -rpx DemoInterconnect_wrapper_power_routed.rpx
 | Design           : DemoInterconnect_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.194        |
+| Total On-Chip Power (W)  | 0.206        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.122        |
+| Dynamic (W)              | 0.134        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.010 |       11 |       --- |             --- |
-| Slice Logic              |     0.002 |     7677 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     2357 |     10400 |           22.66 |
-|   Register               |    <0.001 |     4078 |     20800 |           19.61 |
+| Slice Logic              |     0.002 |     7661 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     2353 |     10400 |           22.63 |
+|   Register               |    <0.001 |     4070 |     20800 |           19.57 |
 |   CARRY4                 |    <0.001 |       79 |      8150 |            0.97 |
 |   LUT as Distributed RAM |    <0.001 |      244 |      9600 |            2.54 |
 |   LUT as Shift Register  |    <0.001 |       43 |      9600 |            0.45 |
-|   Others                 |     0.000 |      283 |       --- |             --- |
+|   Others                 |     0.000 |      279 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |        1 |     32600 |           <0.01 |
-| Signals                  |     0.002 |     5852 |       --- |             --- |
+| Signals                  |     0.002 |     5842 |       --- |             --- |
 | Block RAM                |    <0.001 |      2.5 |        25 |           10.00 |
 | MMCM                     |     0.104 |        1 |         5 |           20.00 |
-| I/O                      |     0.002 |       18 |       106 |           16.98 |
+| I/O                      |     0.014 |       21 |       106 |           19.81 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.194 |          |           |                 |
+| Total                    |     0.206 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.025 |       0.015 |      0.010 |
 | Vccaux    |       1.800 |     0.071 |       0.058 |      0.013 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.005 |       0.004 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -149,7 +149,7 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| DemoInterconnect_wrapper                                                           |     0.122 |
+| DemoInterconnect_wrapper                                                           |     0.134 |
 |   DemoInterconnect_i                                                               |     0.117 |
 |     axi_spi_master_0                                                               |    <0.001 |
 |       U0                                                                           |    <0.001 |

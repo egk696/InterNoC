@@ -1,7 +1,5 @@
 set_property SRC_FILE_INFO {cfile:D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc rfile:../../../InterNoC.srcs/constrs_1/new/timing.xdc id:1} [current_design]
 set_property SRC_FILE_INFO {cfile:D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc rfile:../../../InterNoC.srcs/constrs_1/new/pinout.xdc id:2} [current_design]
-set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-set_false_path -to [get_ports {LED0_pll_aclk LED1_pll_uart}];
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 create_generated_clock -name m_spi_0_sck -source [get_pins DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/o_sclk_reg/Q] -divide_by 4 -master_clock [get_clocks -filter {NAME=~"aclk_DemoInterconnect_clk_wiz_0_0"} ] -add [get_ports "m_spi_sclk"];
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
@@ -72,6 +70,8 @@ set_property src_info {type:XDC file:2 line:5 export:INPUT save:INPUT read:READ}
 set_property -dict { PACKAGE_PIN A17   IOSTANDARD LVCMOS33 } [get_ports { LED0_pll_aclk }]; #IO_L12N_T1_MRCC_16 Sch=led[1]
 set_property src_info {type:XDC file:2 line:6 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN C16   IOSTANDARD LVCMOS33 } [get_ports { LED1_pll_uart }]; #IO_L13P_T2_MRCC_16 Sch=led[2]
+set_property src_info {type:XDC file:2 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN B17   IOSTANDARD LVCMOS33 } [get_ports { LED2_pll_lock }]; #IO_L14N_T2_SRCC_16 Sch=led0_b
 set_property src_info {type:XDC file:2 line:14 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN A18   IOSTANDARD LVCMOS33 } [get_ports { sys_reset }]; #IO_L19N_T3_VREF_16 Sch=btn[0]
 set_property src_info {type:XDC file:2 line:39 export:INPUT save:INPUT read:READ} [current_design]

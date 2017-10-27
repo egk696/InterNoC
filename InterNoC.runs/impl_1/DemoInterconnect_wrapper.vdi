@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Oct 25 01:42:03 2017
-# Process ID: 20124
+# Start of session at: Fri Oct 27 04:51:43 2017
+# Process ID: 22028
 # Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1
 # Command line: vivado.exe -log DemoInterconnect_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DemoInterconnect_wrapper.tcl -notrace
 # Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.vdi
@@ -22,12 +22,10 @@ WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_jtag_axi_0_0' generated file not
 WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_clk_wiz_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/stats.txt'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_uart_transceiver_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/stats.txt'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_uart_transceiver_0_1' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_1/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_axi_spi_master_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_axi_spi_master_0_1' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_1/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_axi_spi_master_1_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_axi_spi_master_1_1' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/stats.txt'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_mutex_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_mutex_0_0/stats.txt'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_xbar_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_xbar_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_auto_pc_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_auto_pc_0/stats.txt'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 263.199 ; gain = 26.129
 Command: link_design -top DemoInterconnect_wrapper -part xc7a15tcpg236-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
@@ -57,22 +55,12 @@ Finished Parsing XDC File [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/
 Parsing XDC File [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0.xdc] for cell 'DemoInterconnect_i/clk_wiz_0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1077.730 ; gain = 513.176
+get_clocks: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1077.648 ; gain = 512.242
 WARNING: [Vivado 12-2489] -input_jitter contains time 0.833330 which will be rounded to 0.833 to ensure it is an integer multiple of 1 picosecond [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0.xdc:57]
 Finished Parsing XDC File [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0.xdc] for cell 'DemoInterconnect_i/clk_wiz_0/inst'
 Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc]
-WARNING: [Vivado 12-584] No ports matched 'LED0_pll_aclk'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:2]
-WARNING: [Vivado 12-584] No ports matched 'LED1_pll_uart'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:2]
-CRITICAL WARNING: [Vivado 12-4739] set_false_path:No valid object(s) found for '-to [get_ports {LED0_pll_aclk LED1_pll_uart}]'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:2]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
 Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc]
 Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc]
-WARNING: [Vivado 12-584] No ports matched 'LED0_pll_aclk'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc:5]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc:5]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED1_pll_uart'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc:6]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc:6]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc]
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/DemoInterconnect_jtag_axi_0_0.dcp'
 Parsing XDC File [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0_late.xdc] for cell 'DemoInterconnect_i/clk_wiz_0/inst'
@@ -108,9 +96,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 40 instances
   RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 8 instances
 
-30 Infos, 25 Warnings, 3 Critical Warnings and 0 Errors encountered.
+30 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1079.734 ; gain = 816.391
+link_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 1078.652 ; gain = 815.453
 zip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create fileszip_exception: Failed to open zip archive D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.hwdef. This may indicate that the file is corrupt, that there is insufficient free disk space available to uncompress it, or that you do not have permission to create filesCommand: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a15t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a15t'
@@ -121,7 +109,7 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1079.734 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1078.652 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
@@ -129,57 +117,57 @@ Starting Logic Optimization Task
 Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-318] Generating core instance : dbg_hub
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1079.734 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 19ae1b4e4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1078.652 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 13707c06a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:01:59 . Memory (MB): peak = 1079.734 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:02:26 . Memory (MB): peak = 1078.652 ; gain = 0.000
 
 Phase 2 Retarget
 INFO: [Opt 31-138] Pushed 6 inverter(s) to 10 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 17dca461f
+Phase 2 Retarget | Checksum: 1c9971685
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:02:00 . Memory (MB): peak = 1079.734 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:02:28 . Memory (MB): peak = 1078.652 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 135 cells and removed 184 cells
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 3 Constant propagation | Checksum: 1765c8757
+Phase 3 Constant propagation | Checksum: 179c8ab14
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:02:01 . Memory (MB): peak = 1079.734 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:02:28 . Memory (MB): peak = 1078.652 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 28 cells and removed 119 cells
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: 172729861
+Phase 4 Sweep | Checksum: 1b0367d08
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:02:02 . Memory (MB): peak = 1079.734 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:02:29 . Memory (MB): peak = 1078.652 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 185 cells
 
 Phase 5 BUFG optimization
-Phase 5 BUFG optimization | Checksum: 172729861
+Phase 5 BUFG optimization | Checksum: 1b0367d08
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:02:02 . Memory (MB): peak = 1079.734 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:02:30 . Memory (MB): peak = 1078.652 ; gain = 0.000
 INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
 Phase 6 Shift Register Optimization
-Phase 6 Shift Register Optimization | Checksum: 172729861
+Phase 6 Shift Register Optimization | Checksum: 1b0367d08
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:02:02 . Memory (MB): peak = 1079.734 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:02:30 . Memory (MB): peak = 1078.652 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1079.734 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1993dd3f2
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1078.652 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 186fe4df3
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:02:03 . Memory (MB): peak = 1079.734 ; gain = 0.000
+Time (s): cpu = 00:00:06 ; elapsed = 00:02:30 . Memory (MB): peak = 1078.652 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.154 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=3.036 | TNS=0.000 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -191,21 +179,21 @@ INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 4 newly gated: 0 Total Ports: 6
 Number of Flops added for Enable Generation: 6
 
-Ending PowerOpt Patch Enables Task | Checksum: 1c7317156
+Ending PowerOpt Patch Enables Task | Checksum: 170bc05f5
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 1c7317156
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 170bc05f5
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1319.570 ; gain = 239.836
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1322.445 ; gain = 243.793
 INFO: [Common 17-83] Releasing license: Implementation
-57 Infos, 33 Warnings, 3 Critical Warnings and 0 Errors encountered.
+57 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:02:09 . Memory (MB): peak = 1319.570 ; gain = 239.836
+opt_design: Time (s): cpu = 00:00:19 ; elapsed = 00:02:41 . Memory (MB): peak = 1322.445 ; gain = 243.793
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file DemoInterconnect_wrapper_drc_opted.rpt -pb DemoInterconnect_wrapper_drc_opted.pb -rpx DemoInterconnect_wrapper_drc_opted.rpx
 Command: report_drc -file DemoInterconnect_wrapper_drc_opted.rpt -pb DemoInterconnect_wrapper_drc_opted.pb -rpx DemoInterconnect_wrapper_drc_opted.rpx
@@ -234,18 +222,17 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 145ba99f2
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 14c016850
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.176 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-CRITICAL WARNING: [Place 30-722] Terminal 'm_spi_mosi' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
-CRITICAL WARNING: [Place 30-722] Terminal 'm_spi_mosi_1' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
-CRITICAL WARNING: [Place 30-722] Terminal 'm_spi_mosi_2' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
-CRITICAL WARNING: [Place 30-722] Terminal 'm_spi_mosi_3' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'LED0_pll_aclk' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'LED1_pll_uart' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
+CRITICAL WARNING: [Place 30-722] Terminal 'LED2_pll_lock' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
 CRITICAL WARNING: [Place 30-722] Terminal 'm_spi_sclk' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
 CRITICAL WARNING: [Place 30-722] Terminal 'm_spi_sclk_1' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
 CRITICAL WARNING: [Place 30-722] Terminal 'm_spi_sclk_2' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
@@ -253,82 +240,67 @@ CRITICAL WARNING: [Place 30-722] Terminal 'm_spi_sclk_3' has IOB constraint set 
 CRITICAL WARNING: [Place 30-722] Terminal 'sys_clk' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
 CRITICAL WARNING: [Place 30-722] Terminal 'sys_reset' has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 12736434f
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 71b0446c
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 115c34fdf
+Phase 1.3 Build Placer Netlist Model | Checksum: 123662928
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 115c34fdf
+Phase 1.4 Constrain Clocks/Macros | Checksum: 123662928
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 115c34fdf
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 123662928
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 1a34503c5
+Phase 2 Global Placement | Checksum: 1465aafdd
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1a34503c5
+Phase 3.1 Commit Multi Column Macros | Checksum: 1465aafdd
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1bd9c1be3
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c152b146
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: e63ad4a7
+Phase 3.3 Area Swap Optimization | Checksum: 1511216ad
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 17c0db6e0
+Phase 3.4 Pipeline Register Optimization | Checksum: 208d2140a
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
-Phase 3.5 Timing Path Optimizer
-Phase 3.5 Timing Path Optimizer | Checksum: 17c0db6e0
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1a61b0300
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
-Phase 3.6 Fast Optimization
-Phase 3.6 Fast Optimization | Checksum: 17c0db6e0
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 189d79613
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:20 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
-Phase 3.7 Small Shape Detail Placement
-Phase 3.7 Small Shape Detail Placement | Checksum: b47ae248
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 184992d93
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 184992d93
 
-Phase 3.8 Re-assign LUT pins
-Phase 3.8 Re-assign LUT pins | Checksum: e4063e07
-
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 1319.570 ; gain = 0.000
-
-Phase 3.9 Pipeline Register Optimization
-Phase 3.9 Pipeline Register Optimization | Checksum: c0e1c40b
-
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 1319.570 ; gain = 0.000
-
-Phase 3.10 Fast Optimization
-Phase 3.10 Fast Optimization | Checksum: c0e1c40b
-
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: c0e1c40b
-
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -336,199 +308,191 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 15f317b10
+Post Placement Optimization Initialization | Checksum: bf25a37c
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
 INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 15f317b10
+Phase 4.1.1.1 BUFG Insertion | Checksum: bf25a37c
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 1319.570 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=2.122. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1967b6090
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1322.445 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=3.916. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 170eca7fe
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 1967b6090
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:23 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 170eca7fe
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:18 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1967b6090
+Phase 4.2 Post Placement Cleanup | Checksum: 170eca7fe
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1967b6090
+Phase 4.3 Placer Reporting | Checksum: 170eca7fe
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1e595f659
+Phase 4.4 Final Placement Cleanup | Checksum: 181e7d249
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1e595f659
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 181e7d249
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Ending Placer Task | Checksum: 108b30a65
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Ending Placer Task | Checksum: 9cef05a0
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:19 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:24 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-78 Infos, 33 Warnings, 13 Critical Warnings and 0 Errors encountered.
+78 Infos, 26 Warnings, 9 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 1319.570 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 1322.445 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.943 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file DemoInterconnect_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1319.570 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file DemoInterconnect_wrapper_utilization_placed.rpt -pb DemoInterconnect_wrapper_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 1319.570 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.162 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -file DemoInterconnect_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1319.570 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1322.445 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a15t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a15t'
 Running DRC as a precondition to command route_design
 INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal m_spi_mosi has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
-WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal m_spi_mosi_1 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
-WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal m_spi_mosi_2 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
-WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal m_spi_mosi_3 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal LED0_pll_aclk has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal LED1_pll_uart has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal LED2_pll_lock has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal m_spi_sclk has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal m_spi_sclk_1 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal m_spi_sclk_2 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal m_spi_sclk_3 has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal sys_clk has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
 WARNING: [DRC PLIO-8] Placement Constraints Check for IO constraints: Terminal sys_reset has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 10 Warnings
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 9 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 66eb35c2 ConstDB: 0 ShapeSum: a1c7d4a3 RouteDB: 0
+Checksum: PlaceDB: 7aef1b16 ConstDB: 0 ShapeSum: 21ffea8a RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: f2a5bf75
+Phase 1 Build RT Design | Checksum: a9f876e8
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Post Restoration Checksum: NetGraph: ca98c18c NumContArr: 280cfde9 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 5e7f1499 NumContArr: 4b79624f Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: f2a5bf75
+Phase 2.1 Create Timer | Checksum: a9f876e8
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: f2a5bf75
+Phase 2.2 Fix Topology Constraints | Checksum: a9f876e8
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: f2a5bf75
+Phase 2.3 Pre Route Cleanup | Checksum: a9f876e8
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:27 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 1322.445 ; gain = 0.000
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 2493673fe
+Phase 2.4 Update Timing | Checksum: 1aad825e7
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1319.570 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.751  | TNS=0.000  | WHS=-0.607 | THS=-221.019|
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1322.445 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.924  | TNS=0.000  | WHS=-0.601 | THS=-243.686|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: 1eb38a161
+Phase 2.5.1 Update Timing | Checksum: 17065c9f3
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1319.570 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.751  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:39 . Memory (MB): peak = 1322.445 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.924  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: 2b2331f63
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1bf918a0e
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 2 Router Initialization | Checksum: 2daf4a5eb
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:39 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 1f60670d1
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:39 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1abe93309
+Phase 3 Initial Routing | Checksum: 21f1f543e
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:33 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:41 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 438
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 349
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.009  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.075  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 21360b318
+Phase 4.1 Global Iteration 0 | Checksum: 1b1bbfb8d
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:43 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.009  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=4.075  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: c883b983
+Phase 4.2 Global Iteration 1 | Checksum: 12df524f0
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: c883b983
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:43 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 12df524f0
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:43 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 12df524f0
 
-Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 137c16149
-
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1319.570 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.102  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 5.1 Delay CleanUp | Checksum: 1a1c85721
-
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:43 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1a1c85721
+Phase 5.2 Clock Skew Optimization | Checksum: 12df524f0
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 1a1c85721
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 12df524f0
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 163dfcc6e
+Phase 6.1.1 Update Timing | Checksum: 102bd9cdf
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1319.570 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.102  | TNS=0.000  | WHS=0.025  | THS=0.000  |
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1322.445 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.119  | TNS=0.000  | WHS=0.014  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: e5514d1d
+Phase 6.1 Hold Fix Iter | Checksum: 934909c2
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1319.570 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: e5514d1d
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1322.445 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 934909c2
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.35016 %
-  Global Horizontal Routing Utilization  = 1.6753 %
+  Global Vertical Routing Utilization    = 1.33086 %
+  Global Horizontal Routing Utilization  = 1.55102 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -537,43 +501,43 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 18687ef86
+Phase 7 Route finalize | Checksum: 8714798c
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 18687ef86
+Phase 8 Verifying routed nets | Checksum: 8714798c
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:44 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 193b34bb1
+Phase 9 Depositing Routes | Checksum: 6f7c5800
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:45 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=2.102  | TNS=0.000  | WHS=0.025  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=3.119  | TNS=0.000  | WHS=0.014  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 193b34bb1
+Phase 10 Post Router Timing | Checksum: 6f7c5800
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:45 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:45 . Memory (MB): peak = 1322.445 ; gain = 0.000
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-97 Infos, 43 Warnings, 13 Critical Warnings and 0 Errors encountered.
+96 Infos, 35 Warnings, 9 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:40 . Memory (MB): peak = 1319.570 ; gain = 0.000
+route_design: Time (s): cpu = 00:01:01 ; elapsed = 00:00:48 . Memory (MB): peak = 1322.445 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 1319.570 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file DemoInterconnect_wrapper_drc_routed.rpt -pb DemoInterconnect_wrapper_drc_routed.pb -rpx DemoInterconnect_wrapper_drc_routed.rpx
 Command: report_drc -file DemoInterconnect_wrapper_drc_routed.rpt -pb DemoInterconnect_wrapper_drc_routed.pb -rpx DemoInterconnect_wrapper_drc_routed.rpx
@@ -587,14 +551,14 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1319.570 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1322.445 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file DemoInterconnect_wrapper_power_routed.rpt -pb DemoInterconnect_wrapper_power_summary_routed.pb -rpx DemoInterconnect_wrapper_power_routed.rpx
 Command: report_power -file DemoInterconnect_wrapper_power_routed.rpt -pb DemoInterconnect_wrapper_power_summary_routed.pb -rpx DemoInterconnect_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-108 Infos, 43 Warnings, 13 Critical Warnings and 0 Errors encountered.
+107 Infos, 35 Warnings, 9 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file DemoInterconnect_wrapper_route_status.rpt -pb DemoInterconnect_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -file DemoInterconnect_wrapper_timing_summary_routed.rpt -warn_on_violation  -rpx DemoInterconnect_wrapper_timing_summary_routed.rpx
@@ -604,4 +568,4 @@ WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Pl
 INFO: [runtcl-4] Executing : report_incremental_reuse -file DemoInterconnect_wrapper_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
 INFO: [runtcl-4] Executing : report_clock_utilization -file DemoInterconnect_wrapper_clock_utilization_routed.rpt
-INFO: [Common 17-206] Exiting Vivado at Wed Oct 25 01:46:19 2017...
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 27 04:57:02 2017...

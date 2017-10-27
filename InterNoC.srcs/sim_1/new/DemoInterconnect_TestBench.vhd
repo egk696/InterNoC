@@ -60,6 +60,9 @@ architecture Behavioral of DemoInterconnect_TestBench is
 --comopennt declaration
 component DemoInterconnect_wrapper is
   port (
+  LED0_pll_aclk : out STD_LOGIC;
+  LED1_pll_uart : out STD_LOGIC;
+  LED2_pll_lock : out STD_LOGIC;
   UART_RX_0 : in STD_LOGIC;
   UART_RX_1 : in STD_LOGIC;
   UART_TX_0 : out STD_LOGIC;
@@ -80,11 +83,8 @@ component DemoInterconnect_wrapper is
   m_spi_ss_1 : out STD_LOGIC;
   m_spi_ss_2 : out STD_LOGIC;
   m_spi_ss_3 : out STD_LOGIC;
-  pll_aclk : out STD_LOGIC;
-  pll_lock : out STD_LOGIC;
-  pll_uart : out STD_LOGIC;
   sys_clk : in STD_LOGIC;
-  sys_resetn : in STD_LOGIC
+  sys_reset : in STD_LOGIC
 );
 end component;
 
@@ -213,6 +213,7 @@ end process;
 
 --Send packet
 send_packet: process(AXICLK)
+    variable send_delay_countdown : integer := 32;
 begin
     if rising_edge(AXICLK) then
         if (resetn_ext_logic = '0') then
@@ -220,7 +221,12 @@ begin
             p2s_en <= '0';
         else
             if (master_packet_send_en='0' and p2s_en='0' and p2s_busy='0' and uart_tx_active='0' and uart_tx_en='0') then
-                master_packet_send_en <= '1';
+                if (send_delay_countdown = 0) then
+                    master_packet_send_en <= '1';
+                    send_delay_countdown := 32;
+                else
+                    send_delay_countdown := send_delay_countdown - 1;
+                end if;
             else
                 master_packet_send_en <= '0';
             end if;
@@ -275,9 +281,9 @@ port map(
     UART_RX_1   => UART_RX_1_wire,
     UART_TX_0   => UART_TX_0_wire,
     UART_TX_1   => UART_TX_1_wire,
-    pll_aclk    => AXICLK,
-    pll_lock    => resetn_ext_logic,
-    pll_uart    => UARTCLK, 
+    LED0_pll_aclk    => AXICLK,
+    LED2_pll_lock    => resetn_ext_logic,
+    LED1_pll_uart    => UARTCLK, 
     m_spi_mosi  => spi_0_mosi_wire,
     m_spi_miso  => spi_0_miso_wire,
     m_spi_sclk   => spi_0_sck_wire,
@@ -295,7 +301,7 @@ port map(
     m_spi_sclk_3   => spi_3_sck_wire,
     m_spi_ss_3    => spi_3_ss_wire,      
     sys_clk     => SYSCLK,
-    sys_resetn  => NSYSRESET
+    sys_reset  => not(NSYSRESET)
 );
 
 end Behavioral;

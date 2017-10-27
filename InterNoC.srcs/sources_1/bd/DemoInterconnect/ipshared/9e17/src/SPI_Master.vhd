@@ -2,6 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use IEEE.NUMERIC_STD.ALL;
 use ieee.math_real.all;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 
 entity spi_master is
     generic(
@@ -11,7 +13,7 @@ entity spi_master is
     port(
         --Out port
        o_sclk       : out std_logic := '1';
-       o_mosi       : out std_logic := '0';
+       o_mosi       : out std_logic := '1';
        o_ss         : out std_logic := '1';
        o_tx_rx_busy : out std_logic := '0'; 
        o_tx_rx_end  : out std_logic := '0';
@@ -30,8 +32,10 @@ architecture behave of spi_master is
 
     signal clock_counter : integer range 0 to CLK_DIV*2;
     signal sclk_enable  : std_logic := '0';
+    signal mosi_enable  : std_logic := '0';
     signal sclk_rise    : std_logic := '0';
     signal sclk_fall    : std_logic := '0';
+    signal sclk         : std_logic := '0';
     
     signal tx_rx_pulse_ff2, tx_rx_pulse_ff : std_logic := '0';
     
@@ -136,9 +140,10 @@ begin
                     Tx_Data <= i_data_tx;
                     Bit_Index <= DATA_WIDTH-1;
                     Tx_Rx_Done <= '0';
+                    sclk_enable <= '0';
                     o_sclk <= '1';
                     o_ss <= '1';
-                    o_mosi <= 'Z';
+                    o_mosi <= '1';
                     
                 when ST_TX_RX =>
                     sclk_enable <= '1';
@@ -167,7 +172,7 @@ begin
                     sclk_enable <= '0';
                     o_sclk <= '1';
                     o_ss <= '1';
-                    o_mosi <= 'Z';
+                    o_mosi <= '1';
                 
                 when others =>
                     Tx_Data <= (others => '0');
@@ -177,7 +182,7 @@ begin
                     sclk_enable <= '0';
                     o_sclk <= '1';
                     o_ss <= '1';
-                    o_mosi <= 'Z';
+                    o_mosi <= '1';
                     
                 end case;
             end if;
