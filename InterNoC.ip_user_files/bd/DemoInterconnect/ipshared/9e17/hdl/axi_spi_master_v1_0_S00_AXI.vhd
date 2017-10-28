@@ -89,61 +89,6 @@ end axi_spi_master_v1_0_S00_AXI;
 
 architecture arch_imp of axi_spi_master_v1_0_S00_AXI is
     
-    --component instantation
-    component spi_master is
-        generic(
-            DATA_WIDTH      : integer := 8;
-            CLK_DIV         : integer := 100  -- input clock divider to generate output serial clock; o_sclk frequency = i_clk/(2*CLK_DIV)
-        ); 
-        port(
-           --Out port
-           o_sclk       : out std_logic := '1';
-           o_mosi       : out std_logic := '0';
-           o_ss         : out std_logic := '1';
-           o_tx_rx_busy : out std_logic := '0'; 
-           o_tx_rx_end  : out std_logic := '0';
-           o_data_rx    : out std_logic_vector(DATA_WIDTH-1 downto 0) := (others=>'0');
-            --In port
-           i_miso       : in std_logic := '0';
-           i_data_tx    : in std_logic_vector(DATA_WIDTH-1 downto 0) := (others=>'0'); -- data to send
-           --Control
-           i_clk        : in std_logic := '0';
-           i_reset      : in std_logic := '0';
-           i_tx_rx_start: in std_logic := '0' -- Start TX
-        );
-    end component;
-    
-    component parallel2serial is
-      generic (
-        DATA_WIDTH : integer := 8;
-        TX_WIDTH : integer := 1
-      );
-      port (
-        clk_i : in std_logic;
-        en_i : in std_logic;
-        send_i : in std_logic;
-        data_i : in std_logic_vector(DATA_WIDTH-1 downto 0);
-        busy_o : out std_logic;
-        done_o : out std_logic;
-        shift_o : out std_logic_vector(TX_WIDTH-1 downto 0);
-        ss_o : out std_logic
-      );
-    end component;
-    
-    component serial2parallel is
-      generic (
-        DATA_WIDTH : integer := 8;
-        TX_WIDTH : integer := 1
-      );
-      port (
-        clk_i : in std_logic;
-        en_i : in std_logic;
-        shift_i : in std_logic_vector(TX_WIDTH-1 downto 0);
-        done_o : out std_logic;
-        data_o : out std_logic_vector(DATA_WIDTH-1 downto 0)
-      );
-    end component;
-    
 	-- AXI4LITE signals
 	signal axi_awaddr	: std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
 	signal axi_awready	: std_logic;
@@ -334,7 +279,7 @@ rd_response:    process (S_AXI_ACLK)
 
 
 	-- Add user logic here
-word2byte:  parallel2serial
+word2byte:  entity work.parallel2serial
 	generic map(
         DATA_WIDTH => C_S_AXI_DATA_WIDTH,
         TX_WIDTH => SPI_DATA_WIDTH
@@ -349,7 +294,7 @@ word2byte:  parallel2serial
         ss_o    => p2s_ss
     );
     
-byte2word:  serial2parallel
+byte2word:  entity work.serial2parallel
     generic map(
         DATA_WIDTH => C_S_AXI_DATA_WIDTH,
         TX_WIDTH => SPI_DATA_WIDTH
@@ -362,7 +307,7 @@ byte2word:  serial2parallel
         data_o  => axi_reg_rdata
     );
 	
-spi_master_inst:    spi_master
+spi_master_inst: entity work.spi_master(behave_v2)
 generic map(
     DATA_WIDTH => SPI_DATA_WIDTH,
     CLK_DIV => SPI_CLK_DIV

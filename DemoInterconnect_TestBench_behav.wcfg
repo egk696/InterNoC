@@ -11,9 +11,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="699154999000fs"></ZoomStartTime>
-      <ZoomEndTime time="771554999001fs"></ZoomEndTime>
-      <Cursor1Time time="713354999000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="362000000001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="185"></NameColumnWidth>
@@ -50,6 +50,10 @@
          <obj_property name="ObjectShortName">master_packet[39:0]</obj_property>
          <obj_property name="CustomSignalColor">#FF0080</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/DemoInterconnect_TestBench/p2s_inst/shift_o" type="array">
+         <obj_property name="ElementShortName">shift_o[7:0]</obj_property>
+         <obj_property name="ObjectShortName">shift_o[7:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/DemoInterconnect_TestBench/master_packet_send_en" type="logic">
          <obj_property name="ElementShortName">master_packet_send_en</obj_property>
