@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Oct 27 04:56:54 2017
-| Host         : egk-pc running 64-bit major release  (build 9200)
+| Date         : Fri Oct 27 13:40:58 2017
+| Host         : CHRIS-PC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file DemoInterconnect_wrapper_methodology_drc_routed.rpt -pb DemoInterconnect_wrapper_methodology_drc_routed.pb -rpx DemoInterconnect_wrapper_methodology_drc_routed.rpx
 | Design       : DemoInterconnect_wrapper
 | Device       : xc7a15tcpg236-1
@@ -163,7 +163,7 @@ Related violations: <none>
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option 'objects : [get_pins -hierarchical -filter {NAME =~ "*BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK"}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '61' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: d:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/.Xil/Vivado-22028-egk-pc/dbg_hub_CV.0/out/xsdbm.xdc (Line: 5)
+Current XDC: c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/impl_1/.Xil/Vivado-15468-CHRIS-PC/dbg_hub_CV.0/out/xsdbm.xdc (Line: 5)
 Related violations: <none>
 
 

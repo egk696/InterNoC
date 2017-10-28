@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Fri Oct 27 14:11:31 2017
-# Process ID: 17468
+# Start of session at: Fri Oct 27 13:37:56 2017
+# Process ID: 15468
 # Current directory: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/impl_1
 # Command line: vivado.exe -log DemoInterconnect_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DemoInterconnect_wrapper.tcl -notrace
 # Log file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.vdi

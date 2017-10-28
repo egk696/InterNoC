@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Oct 27 04:56:59 2017
-| Host         : egk-pc running 64-bit major release  (build 9200)
+| Date         : Fri Oct 27 13:41:03 2017
+| Host         : CHRIS-PC running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file DemoInterconnect_wrapper_timing_summary_routed.rpt -warn_on_violation -rpx DemoInterconnect_wrapper_timing_summary_routed.rpx
 | Design       : DemoInterconnect_wrapper
 | Device       : 7a15t-cpg236
