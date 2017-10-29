@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Sun Oct 29 02:40:24 2017
+| Date         : Sun Oct 29 16:41:01 2017
 | Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_utilization -file DemoInterconnect_axi_spi_master_0_0_utilization_synth.rpt -pb DemoInterconnect_axi_spi_master_0_0_utilization_synth.pb
 | Design       : DemoInterconnect_axi_spi_master_0_0
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |   43 |     0 |     10400 |  0.41 |
 |   LUT as Logic          |   43 |     0 |     10400 |  0.41 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |   81 |     0 |     20800 |  0.39 |
-|   Register as Flip Flop |   81 |     0 |     20800 |  0.39 |
+| Slice Registers         |   82 |     0 |     20800 |  0.39 |
+|   Register as Flip Flop |   82 |     0 |     20800 |  0.39 |
 |   Register as Latch     |    0 |     0 |     20800 |  0.00 |
 | F7 Muxes                |    0 |     0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 81    |          Yes |       Reset |            - |
+| 82    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,13 +149,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   81 |        Flop & Latch |
-| LUT6     |   19 |                 LUT |
+| FDRE     |   82 |        Flop & Latch |
+| LUT6     |   20 |                 LUT |
 | LUT3     |   16 |                 LUT |
-| LUT4     |    8 |                 LUT |
-| LUT2     |    7 |                 LUT |
+| LUT4     |    7 |                 LUT |
+| LUT2     |    5 |                 LUT |
+| LUT1     |    5 |                 LUT |
 | LUT5     |    4 |                 LUT |
-| LUT1     |    4 |                 LUT |
 +----------+------+---------------------+
 
 

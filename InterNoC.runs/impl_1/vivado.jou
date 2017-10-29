@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sun Oct 29 02:56:34 2017
-# Process ID: 21076
+# Start of session at: Sun Oct 29 16:46:54 2017
+# Process ID: 2672
 # Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1
 # Command line: vivado.exe -log DemoInterconnect_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DemoInterconnect_wrapper.tcl -notrace
 # Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/impl_1/DemoInterconnect_wrapper.vdi

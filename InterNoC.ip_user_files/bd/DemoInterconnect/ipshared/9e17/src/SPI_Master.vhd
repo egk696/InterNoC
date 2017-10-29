@@ -207,15 +207,14 @@ architecture behave_v2 of spi_master is
             signal spi_clock_counter : integer range 0 to CLK_DIV := 0;
     
             --I/O reg
-            signal mosi_reg : std_logic := '1';
-            signal ss_reg : std_logic := '1';
-            signal sclk_reg : std_logic := '1';
+            signal mosi : std_logic := '1';
+            signal ss : std_logic := '1';
+            signal sclk : std_logic := '1';
         begin
     
     -- I/O Connections assignments
-        o_sclk <= sclk_reg when spi_en='1' else '1';
-        o_mosi <= mosi_reg when spi_en='1' else '1';
-        o_ss <= ss_reg;
+        o_mosi <= mosi;
+        o_ss <= ss;
         o_tx_rx_busy <= spi_busy;
         o_tx_rx_end <= spi_done;
         o_data_rx <= tx_rx_buffer;
@@ -223,9 +222,14 @@ architecture behave_v2 of spi_master is
     p_gen_sclk: process(i_clk)
         begin
             if rising_edge(i_clk) then
-                if spi_clock_counter=CLK_DIV then
+                if spi_clock_counter=CLK_DIV-1 then
                     spi_clock_counter <= 0;
-                    sclk_reg <= not(sclk_reg);
+                    sclk <= not(sclk);
+                    if (spi_en='1') then
+                        o_sclk <= sclk;
+                    else
+                        o_sclk <= '1';
+                    end if;
                 else
                     spi_clock_counter <= spi_clock_counter + 1;
                 end if;
@@ -254,11 +258,11 @@ architecture behave_v2 of spi_master is
             end if;
         end process;
         
-    p_count: process(sclk_reg)
+    p_count: process(sclk)
         begin
-            if rising_edge(sclk_reg) then
+            if rising_edge(sclk) then
                 if (spi_en='1') then
-                    if (spi_bit_counter=DATA_WIDTH-1) then
+                    if (spi_bit_counter=DATA_WIDTH) then
                         spi_bit_counter <= 0;
                         spi_done <= '1';
                     else
@@ -271,25 +275,26 @@ architecture behave_v2 of spi_master is
             end if;
         end process;
         
-    p_ss: process(sclk_reg)
+    p_ss: process(sclk)
         begin
-            if rising_edge(sclk_reg) then 
+            if rising_edge(sclk) then 
                 if (spi_en='1') then
-                    ss_reg <= '0'; --active LOW 'ss' is asserted on rising edge before data   
+                    ss <= '0'; --active LOW 'ss' is asserted on rising edge before data   
                 else
-                    ss_reg <= '1';
+                    ss <= '1';
                 end if;
             end if;
         end process;
         
-    p_tx_rx: process(sclk_reg)
+    p_tx_rx: process(sclk)
         begin
-            if falling_edge(sclk_reg) then
+            if falling_edge(sclk) then
+                mosi <= '1';
                 if (load_buffer='1') then
                     tx_rx_buffer <= load_buffer_val; --load buffer in parallel with user data
                     buffer_ready <= '1';
                 elsif (spi_en='1') then
-                    mosi_reg <= tx_rx_buffer(DATA_WIDTH-1); --shift out TX MSB
+                    mosi <= tx_rx_buffer(DATA_WIDTH-1); --shift out TX MSB
                     tx_rx_buffer <= tx_rx_buffer(DATA_WIDTH-2 downto 0) & i_miso; --shift in RX MSB
                 end if;
                 if (buffer_ready = '1') then
