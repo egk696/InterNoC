@@ -52,3 +52,9 @@ set_input_delay    -clock [get_clocks -filter {NAME=~"uart_DemoInterconnect_clk_
 ## IO REGISTERS
 set_property IOB TRUE [all_inputs];
 set_property IOB TRUE [all_outputs];
+
+## ILA CORE
+set_property C_CLK_INPUT_FREQ_HZ 72000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER true [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk]

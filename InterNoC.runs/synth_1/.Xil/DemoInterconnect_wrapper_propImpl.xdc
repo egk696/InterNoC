@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc rfile:../../../InterNoC.srcs/constrs_1/new/timing.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc rfile:../../../InterNoC.srcs/constrs_1/new/pinout.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc rfile:../../../InterNoC.srcs/constrs_1/new/timing.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc rfile:../../../InterNoC.srcs/constrs_1/new/pinout.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 create_generated_clock -name m_spi_0_sck -source [get_pins DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/o_sclk_reg/Q] -divide_by 4 -master_clock [get_clocks -filter {NAME=~"aclk_DemoInterconnect_clk_wiz_0_0"} ] -add [get_ports "m_spi_sclk"];
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
@@ -64,6 +64,14 @@ set_property src_info {type:XDC file:1 line:49 export:INPUT save:INPUT read:READ
 set_input_delay    -clock [get_clocks -filter {NAME=~"uart_DemoInterconnect_clk_wiz_0_0"} ] -max 10 [get_ports -filter { NAME =~  "UART_RX_*" }];
 set_property src_info {type:XDC file:1 line:50 export:INPUT save:INPUT read:READ} [current_design]
 set_input_delay    -clock [get_clocks -filter {NAME=~"uart_DemoInterconnect_clk_wiz_0_0"} ] -min 8 [get_ports -filter { NAME =~  "UART_RX_*" }];
+set_property src_info {type:XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
+set_property C_CLK_INPUT_FREQ_HZ 72000000 [get_debug_cores dbg_hub]
+set_property src_info {type:XDC file:1 line:58 export:INPUT save:INPUT read:READ} [current_design]
+set_property C_ENABLE_CLK_DIVIDER true [get_debug_cores dbg_hub]
+set_property src_info {type:XDC file:1 line:59 export:INPUT save:INPUT read:READ} [current_design]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+set_property src_info {type:XDC file:1 line:60 export:INPUT save:INPUT read:READ} [current_design]
+connect_debug_port dbg_hub/clk [get_nets clk]
 set_property src_info {type:XDC file:2 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN L17   IOSTANDARD LVCMOS33 } [get_ports { sys_clk }]; #IO_L12P_T1_MRCC_14 Sch=gclk
 set_property src_info {type:XDC file:2 line:5 export:INPUT save:INPUT read:READ} [current_design]

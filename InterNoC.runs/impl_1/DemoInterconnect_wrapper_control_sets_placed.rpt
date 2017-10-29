@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Fri Oct 27 13:40:09 2017
-| Host         : CHRIS-PC running 64-bit major release  (build 9200)
+| Date         : Sun Oct 29 03:01:20 2017
+| Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file DemoInterconnect_wrapper_control_sets_placed.rpt
 | Design       : DemoInterconnect_wrapper
 | Device       : xc7a15t
@@ -21,7 +21,7 @@ Table of Contents
 +-------------------------------+-------+
 |             Status            | Count |
 +-------------------------------+-------+
-| Number of unique control sets |   196 |
+| Number of unique control sets |   277 |
 +-------------------------------+-------+
 
 
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             804 |          244 |
-| No           | No                    | Yes                    |             169 |           50 |
-| No           | Yes                   | No                     |             459 |          143 |
-| Yes          | No                    | No                     |            1304 |          342 |
-| Yes          | No                    | Yes                    |              82 |           13 |
-| Yes          | Yes                   | No                     |            1252 |          295 |
+| No           | No                    | No                     |            1742 |          511 |
+| No           | No                    | Yes                    |             151 |           46 |
+| No           | Yes                   | No                     |             695 |          245 |
+| Yes          | No                    | No                     |            2010 |          548 |
+| Yes          | No                    | Yes                    |              82 |           16 |
+| Yes          | Yes                   | No                     |            1167 |          305 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 

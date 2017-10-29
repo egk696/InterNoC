@@ -30,10 +30,9 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity DemoInterconnect_TestBench is
     Generic(
-        CLKFREQ : integer := 100000000;
-        UARTFREQ : integer := 10000000;
-        SYSCLK_PERIOD : time := 10.000 ns; -- 100MHZ
-        UARTCLK_PERIOD : time := 100.000 ns; --10MHz
+        CLKFREQ : integer   := 72000000;
+        UARTFREQ : integer  := 12000000;
+        SYSCLK_PERIOD : time := 83.333 ns; -- 12MHZ
         BAUD_RATE : integer := 115200;
         TRACE_DLY : time := 3 ns
     );

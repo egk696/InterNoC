@@ -47,6 +47,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnec
 # IP: bd/DemoInterconnect/ip/DemoInterconnect_xbar_0/DemoInterconnect_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_xbar_0 || ORIG_REF_NAME==DemoInterconnect_xbar_0} -quiet] -quiet
 
+# IP: bd/DemoInterconnect/ip/DemoInterconnect_ila_0_0/DemoInterconnect_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_ila_0_0 || ORIG_REF_NAME==DemoInterconnect_ila_0_0} -quiet] -quiet
+
 # IP: bd/DemoInterconnect/ip/DemoInterconnect_auto_pc_0/DemoInterconnect_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_auto_pc_0 || ORIG_REF_NAME==DemoInterconnect_auto_pc_0} -quiet] -quiet
 

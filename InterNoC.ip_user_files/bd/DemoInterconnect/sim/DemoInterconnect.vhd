@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
---Date        : Fri Oct 27 17:36:14 2017
+--Date        : Sun Oct 29 02:39:04 2017
 --Host        : egk-pc running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect.bd
 --Design      : DemoInterconnect
@@ -2845,7 +2845,7 @@ entity DemoInterconnect is
     sys_reset : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of DemoInterconnect : entity is "DemoInterconnect,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=DemoInterconnect,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=24,numReposBlks=13,numNonXlnxBlks=8,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=5,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of DemoInterconnect : entity is "DemoInterconnect,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=DemoInterconnect,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=25,numReposBlks=14,numNonXlnxBlks=8,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=5,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of DemoInterconnect : entity is "DemoInterconnect.hwdef";
 end DemoInterconnect;
@@ -3052,6 +3052,19 @@ architecture STRUCTURE of DemoInterconnect is
     o_TX_Done : out STD_LOGIC
   );
   end component DemoInterconnect_uart_transceiver_0_1;
+  component DemoInterconnect_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component DemoInterconnect_ila_0_0;
   component DemoInterconnect_axi_spi_master_0_0 is
   port (
     m_spi_mosi : out STD_LOGIC;
@@ -3594,6 +3607,25 @@ clk_wiz_0: component DemoInterconnect_clk_wiz_0_0
       locked => clk_wiz_0_locked,
       reset => sys_reset,
       uart => clk_wiz_0_uart
+    );
+ila_0: component DemoInterconnect_ila_0_0
+     port map (
+      clk => clk_wiz_0_clk_out1,
+      probe0(0) => uart_transceiver_0_o_RX_Done,
+      probe1(7 downto 0) => uart_transceiver_0_o_RX_Byte(7 downto 0),
+      probe2(0) => interface_axi_master_0_if00_load_out,
+      probe3(7 downto 0) => interface_axi_master_0_if00_data_out(7 downto 0),
+      probe4(0) => uart_transceiver_1_o_RX_Done,
+      probe5(7) => uart_transceiver_1_o_RX_Done,
+      probe5(6) => uart_transceiver_1_o_RX_Done,
+      probe5(5) => uart_transceiver_1_o_RX_Done,
+      probe5(4) => uart_transceiver_1_o_RX_Done,
+      probe5(3) => uart_transceiver_1_o_RX_Done,
+      probe5(2) => uart_transceiver_1_o_RX_Done,
+      probe5(1) => uart_transceiver_1_o_RX_Done,
+      probe5(0) => uart_transceiver_1_o_RX_Done,
+      probe6(0) => interface_axi_master_1_if00_load_out,
+      probe7(7 downto 0) => interface_axi_master_1_if00_data_out(7 downto 0)
     );
 interconnect: entity work.DemoInterconnect_axi_interconnect_0_0
      port map (
