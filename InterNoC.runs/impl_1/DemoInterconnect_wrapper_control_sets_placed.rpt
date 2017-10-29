@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Sun Oct 29 16:49:36 2017
+| Date         : Sun Oct 29 17:19:53 2017
 | Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file DemoInterconnect_wrapper_control_sets_placed.rpt
 | Design       : DemoInterconnect_wrapper
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            1742 |          504 |
-| No           | No                    | Yes                    |             151 |           48 |
-| No           | Yes                   | No                     |             695 |          246 |
-| Yes          | No                    | No                     |            2010 |          548 |
-| Yes          | No                    | Yes                    |              82 |           15 |
-| Yes          | Yes                   | No                     |            1167 |          297 |
+| No           | No                    | No                     |            1746 |          492 |
+| No           | No                    | Yes                    |             151 |           42 |
+| No           | Yes                   | No                     |             695 |          247 |
+| Yes          | No                    | No                     |            2010 |          540 |
+| Yes          | No                    | Yes                    |              82 |           17 |
+| Yes          | Yes                   | No                     |            1167 |          289 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
