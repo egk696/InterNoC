@@ -225,7 +225,7 @@ architecture behave_v2 of spi_master is
                 if spi_clock_counter=CLK_DIV-1 then
                     spi_clock_counter <= 0;
                     sclk <= not(sclk);
-                    if (spi_en='1') then
+                    if (ss='0' and spi_en='1') then
                         o_sclk <= sclk;
                     else
                         o_sclk <= '1';
@@ -293,7 +293,7 @@ architecture behave_v2 of spi_master is
                 if (load_buffer='1') then
                     tx_rx_buffer <= load_buffer_val; --load buffer in parallel with user data
                     buffer_ready <= '1';
-                elsif (spi_en='1') then
+                elsif (ss='0' and spi_en='1') then
                     mosi <= tx_rx_buffer(DATA_WIDTH-1); --shift out TX MSB
                     tx_rx_buffer <= tx_rx_buffer(DATA_WIDTH-2 downto 0) & i_miso; --shift in RX MSB
                 end if;

@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
 // Date        : Sun Oct 29 17:12:06 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_axi_spi_master_1_1 -prefix
-//               DemoInterconnect_axi_spi_master_1_1_ DemoInterconnect_axi_spi_master_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ DemoInterconnect_axi_spi_master_0_0_sim_netlist.v
 // Design      : DemoInterconnect_axi_spi_master_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@
 
 (* CHECK_LICENSE_TYPE = "DemoInterconnect_axi_spi_master_0_0,axi_spi_master_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_spi_master_v1_0,Vivado 2017.3" *) 
 (* NotValidForBitStream *)
-module DemoInterconnect_axi_spi_master_1_1
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (m_spi_mosi,
     m_spi_miso,
     m_spi_ss,
@@ -122,7 +122,7 @@ module DemoInterconnect_axi_spi_master_1_1
   assign s00_axi_rvalid = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0 U0
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_spi_master_v1_0 U0
        (.S_AXI_AWREADY(s00_axi_awready),
         .S_AXI_WREADY(s00_axi_wready),
         .m_spi_miso(m_spi_miso),
@@ -140,7 +140,7 @@ module DemoInterconnect_axi_spi_master_1_1
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_spi_master_v1_0
    (S_AXI_WREADY,
     S_AXI_AWREADY,
     s00_axi_arready,
@@ -188,7 +188,7 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0
   wire [31:0]s00_axi_wdata;
   wire s00_axi_wvalid;
 
-  DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI axi_spi_master_v1_0_S00_AXI_inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_spi_master_v1_0_S00_AXI axi_spi_master_v1_0_S00_AXI_inst
        (.S_AXI_AWREADY(S_AXI_AWREADY),
         .S_AXI_WREADY(S_AXI_WREADY),
         .m_spi_miso(m_spi_miso),
@@ -206,7 +206,7 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axi_spi_master_v1_0_S00_AXI
    (S_AXI_WREADY,
     S_AXI_AWREADY,
     s00_axi_arready,
@@ -324,7 +324,7 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
         .D(axi_wready_i_1_n_0),
         .Q(S_AXI_WREADY),
         .R(axi_awready_i_1_n_0));
-  DemoInterconnect_axi_spi_master_1_1_spi_master_behave_v2 spi_master_inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_spi_master_behave_v2 spi_master_inst
        (.E(spi_tx_rx_start),
         .Q(shift_o),
         .m_spi_miso(m_spi_miso),
@@ -334,7 +334,7 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
         .s00_axi_aclk(s00_axi_aclk),
         .spi_tx_rx_busy(spi_tx_rx_busy),
         .ss_o(ss_o));
-  DemoInterconnect_axi_spi_master_1_1_parallel2serial word2byte
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_parallel2serial word2byte
        (.E(spi_tx_rx_start),
         .Q(shift_o),
         .axi_awready_reg(S_AXI_AWREADY),
@@ -347,7 +347,7 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
         .ss_o(ss_o));
 endmodule
 
-module DemoInterconnect_axi_spi_master_1_1_parallel2serial
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_parallel2serial
    (ss_o,
     E,
     Q,
@@ -1008,7 +1008,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
         .R(1'b0));
 endmodule
 
-module DemoInterconnect_axi_spi_master_1_1_spi_master_behave_v2
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_spi_master_behave_v2
    (m_spi_mosi,
     m_spi_ss,
     m_spi_sclk,

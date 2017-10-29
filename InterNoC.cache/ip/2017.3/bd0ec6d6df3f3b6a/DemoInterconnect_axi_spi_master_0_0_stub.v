@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
 // Date        : Sun Oct 29 17:12:06 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top DemoInterconnect_axi_spi_master_1_0 -prefix
-//               DemoInterconnect_axi_spi_master_1_0_ DemoInterconnect_axi_spi_master_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ DemoInterconnect_axi_spi_master_0_0_stub.v
 // Design      : DemoInterconnect_axi_spi_master_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a15tcpg236-1
@@ -14,7 +14,7 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "axi_spi_master_v1_0,Vivado 2017.3" *)
-module DemoInterconnect_axi_spi_master_1_0(m_spi_mosi, m_spi_miso, m_spi_ss, m_spi_sclk, 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(m_spi_mosi, m_spi_miso, m_spi_ss, m_spi_sclk, 
   s00_axi_awaddr, s00_axi_awprot, s00_axi_awvalid, s00_axi_awready, s00_axi_wdata, 
   s00_axi_wstrb, s00_axi_wvalid, s00_axi_wready, s00_axi_bresp, s00_axi_bvalid, 
   s00_axi_bready, s00_axi_araddr, s00_axi_arprot, s00_axi_arvalid, s00_axi_arready, 
