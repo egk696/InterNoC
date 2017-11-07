@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7a15tcpg236-1
 
@@ -29,6 +30,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_repo_paths {
+  d:/Development/FPGA/InterNoC/ip_repo/axi_i2c_master_1.0
   d:/Development/FPGA/InterNoC/ip_repo/axi_native_register_space_1.0
   d:/Development/FPGA/InterNoC/ip_repo/uart_transceiver_v1_0
   d:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0

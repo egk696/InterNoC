@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
---Date        : Sun Oct 29 17:10:39 2017
+--Date        : Tue Nov  7 04:23:04 2017
 --Host        : egk-pc running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect.bd
 --Design      : DemoInterconnect
@@ -2860,68 +2860,6 @@ architecture STRUCTURE of DemoInterconnect is
     locked : out STD_LOGIC
   );
   end component DemoInterconnect_clk_wiz_0_0;
-  component DemoInterconnect_interface_axi_master_0_0 is
-  port (
-    if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    if00_load_in : in STD_LOGIC;
-    if00_data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    if00_load_out : out STD_LOGIC;
-    if00_send_done : in STD_LOGIC;
-    if00_send_busy : in STD_LOGIC;
-    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axi_awvalid : out STD_LOGIC;
-    m00_axi_awready : in STD_LOGIC;
-    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m00_axi_wvalid : out STD_LOGIC;
-    m00_axi_wready : in STD_LOGIC;
-    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m00_axi_bvalid : in STD_LOGIC;
-    m00_axi_bready : out STD_LOGIC;
-    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axi_arvalid : out STD_LOGIC;
-    m00_axi_arready : in STD_LOGIC;
-    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m00_axi_rvalid : in STD_LOGIC;
-    m00_axi_rready : out STD_LOGIC;
-    m00_axi_aclk : in STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC
-  );
-  end component DemoInterconnect_interface_axi_master_0_0;
-  component DemoInterconnect_interface_axi_master_0_1 is
-  port (
-    if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    if00_load_in : in STD_LOGIC;
-    if00_data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    if00_load_out : out STD_LOGIC;
-    if00_send_done : in STD_LOGIC;
-    if00_send_busy : in STD_LOGIC;
-    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axi_awvalid : out STD_LOGIC;
-    m00_axi_awready : in STD_LOGIC;
-    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m00_axi_wvalid : out STD_LOGIC;
-    m00_axi_wready : in STD_LOGIC;
-    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m00_axi_bvalid : in STD_LOGIC;
-    m00_axi_bready : out STD_LOGIC;
-    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axi_arvalid : out STD_LOGIC;
-    m00_axi_arready : in STD_LOGIC;
-    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m00_axi_rvalid : in STD_LOGIC;
-    m00_axi_rready : out STD_LOGIC;
-    m00_axi_aclk : in STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC
-  );
-  end component DemoInterconnect_interface_axi_master_0_1;
   component DemoInterconnect_jtag_axi_0_0 is
   port (
     aclk : in STD_LOGIC;
@@ -3065,6 +3003,68 @@ architecture STRUCTURE of DemoInterconnect is
     probe7 : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component DemoInterconnect_ila_0_0;
+  component DemoInterconnect_interface_axi_master_0_0 is
+  port (
+    if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    if00_load_in : in STD_LOGIC;
+    if00_data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    if00_load_out : out STD_LOGIC;
+    if00_send_done : in STD_LOGIC;
+    if00_send_busy : in STD_LOGIC;
+    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_awvalid : out STD_LOGIC;
+    m00_axi_awready : in STD_LOGIC;
+    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axi_wvalid : out STD_LOGIC;
+    m00_axi_wready : in STD_LOGIC;
+    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_bvalid : in STD_LOGIC;
+    m00_axi_bready : out STD_LOGIC;
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_arvalid : out STD_LOGIC;
+    m00_axi_arready : in STD_LOGIC;
+    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_rvalid : in STD_LOGIC;
+    m00_axi_rready : out STD_LOGIC;
+    m00_axi_aclk : in STD_LOGIC;
+    m00_axi_aresetn : in STD_LOGIC
+  );
+  end component DemoInterconnect_interface_axi_master_0_0;
+  component DemoInterconnect_interface_axi_master_0_1 is
+  port (
+    if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    if00_load_in : in STD_LOGIC;
+    if00_data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    if00_load_out : out STD_LOGIC;
+    if00_send_done : in STD_LOGIC;
+    if00_send_busy : in STD_LOGIC;
+    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_awvalid : out STD_LOGIC;
+    m00_axi_awready : in STD_LOGIC;
+    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axi_wvalid : out STD_LOGIC;
+    m00_axi_wready : in STD_LOGIC;
+    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_bvalid : in STD_LOGIC;
+    m00_axi_bready : out STD_LOGIC;
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_arvalid : out STD_LOGIC;
+    m00_axi_arready : in STD_LOGIC;
+    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_rvalid : in STD_LOGIC;
+    m00_axi_rready : out STD_LOGIC;
+    m00_axi_aclk : in STD_LOGIC;
+    m00_axi_aresetn : in STD_LOGIC
+  );
+  end component DemoInterconnect_interface_axi_master_0_1;
   component DemoInterconnect_axi_spi_master_0_0 is
   port (
     m_spi_mosi : out STD_LOGIC;

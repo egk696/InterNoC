@@ -42,52 +42,52 @@ preplace inst ila_0 -pg 1 -lvl 4 -y 240 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 3 -y 1030 -defaultsOSRD
 preplace netloc sys_reset 1 0 3 NJ 1020 NJ 1020 NJ
 preplace netloc m_spi_miso_3_1 1 0 4 NJ 1170 NJ 1170 NJ 1170 NJ
-preplace netloc uart_transceiver_0_o_RX_Byte 1 1 3 320 230 NJ 230 1080
+preplace netloc uart_transceiver_0_o_RX_Byte 1 1 3 320 230 NJ 230 1100
 preplace netloc UART_RX_0_1 1 0 1 NJ
-preplace netloc interface_axi_master_0_if00_load_out 1 0 4 30 230 300J 220 680 220 NJ
-preplace netloc clk_wiz_0_locked 1 1 4 350 600 710 300 1070 790 NJ
+preplace netloc interface_axi_master_0_if00_load_out 1 0 4 20 230 300J 220 700 220 NJ
+preplace netloc clk_wiz_0_locked 1 1 4 350 600 730 300 1090 790 NJ
 preplace netloc axi_spi_master_2_m_spi_ss 1 4 1 NJ
 preplace netloc axi_spi_master_1_m_spi_sclk 1 4 1 NJ
 preplace netloc axi_spi_master_1_m_spi_mosi 1 4 1 NJ
 preplace netloc axi_spi_master_2_m_spi_mosi 1 4 1 NJ
 preplace netloc axi_spi_master_1_m_spi_ss 1 4 1 NJ
-preplace netloc m_spi_miso_1_1 1 0 4 30J 920 NJ 920 NJ 920 1140J
-preplace netloc interface_axi_master_1_if00_load_out 1 0 4 30 590 NJ 590 740 290 1130J
-preplace netloc axi_interconnect_0_M02_AXI 1 3 1 1090
+preplace netloc m_spi_miso_1_1 1 0 4 20J 920 NJ 920 NJ 920 1160J
+preplace netloc interface_axi_master_1_if00_load_out 1 0 4 20 590 NJ 590 760 290 1150J
+preplace netloc axi_interconnect_0_M02_AXI 1 3 1 1110
 preplace netloc axi_spi_master_0_m_spi_sclk 1 4 1 NJ
-preplace netloc m_spi_miso_1 1 0 4 NJ 930 NJ 930 NJ 930 1130J
+preplace netloc m_spi_miso_1 1 0 4 NJ 930 NJ 930 NJ 930 1150J
 preplace netloc uart_transceiver_1_o_TX_Active 1 1 1 320
-preplace netloc uart_transceiver_0_o_TX_Serial 1 1 4 310J 210 660J 100 NJ 100 1410J
-preplace netloc interface_axi_master_0_if00_data_out 1 0 4 40 240 NJ 240 650 240 NJ
+preplace netloc uart_transceiver_0_o_TX_Serial 1 1 4 310J 210 680J 100 NJ 100 1430J
+preplace netloc interface_axi_master_0_if00_data_out 1 0 4 30 240 NJ 240 670 240 NJ
 preplace netloc sys_clk_1 1 0 3 NJ 1040 NJ 1040 NJ
-preplace netloc jtag_axi_0_M_AXI 1 2 1 770
-preplace netloc m_spi_miso_2_1 1 0 4 30J 960 NJ 960 NJ 960 1030J
+preplace netloc jtag_axi_0_M_AXI 1 2 1 790
+preplace netloc m_spi_miso_2_1 1 0 4 20J 960 NJ 960 NJ 960 1050J
 preplace netloc axi_spi_master_0_m_spi_mosi 1 4 1 NJ
 preplace netloc UART_RX_1_1 1 0 1 NJ
 preplace netloc uart_transceiver_0_o_TX_Done 1 1 1 300
-preplace netloc axi_interconnect_0_M04_AXI 1 3 1 1060
+preplace netloc axi_interconnect_0_M04_AXI 1 3 1 1080
 preplace netloc axi_spi_master_3_m_spi_sclk 1 4 1 NJ
-preplace netloc uart_transceiver_1_o_RX_Done 1 1 3 330 450 700J 280 1130
+preplace netloc uart_transceiver_1_o_RX_Done 1 1 3 330 450 720J 280 1150
 preplace netloc uart_transceiver_1_o_TX_Done 1 1 1 310
-preplace netloc interface_axi_master_1_M00_AXI 1 2 1 720
-preplace netloc clk_wiz_0_clk_out1 1 1 4 340 610 760 260 1120 780 1410J
-preplace netloc axi_interconnect_0_M05_AXI 1 3 1 1100
-preplace netloc axi_interconnect_0_M00_AXI 1 3 1 1040
-preplace netloc interface_axi_master_1_if00_data_out 1 0 4 40 470 NJ 470 750 320 NJ
-preplace netloc axi_interconnect_0_M01_AXI 1 3 1 1030
-preplace netloc interface_axi_master_0_M00_AXI 1 2 1 730
+preplace netloc interface_axi_master_1_M00_AXI 1 2 1 740
+preplace netloc clk_wiz_0_clk_out1 1 1 4 340 610 780 260 1140 780 1430J
+preplace netloc axi_interconnect_0_M05_AXI 1 3 1 1120
+preplace netloc axi_interconnect_0_M00_AXI 1 3 1 1060
+preplace netloc interface_axi_master_1_if00_data_out 1 0 4 30 470 NJ 470 770 320 NJ
+preplace netloc axi_interconnect_0_M01_AXI 1 3 1 1050
+preplace netloc interface_axi_master_0_M00_AXI 1 2 1 750
 preplace netloc axi_spi_master_3_m_spi_ss 1 4 1 NJ
-preplace netloc uart_transceiver_0_o_RX_Done 1 1 3 330 200 670J 180 N
-preplace netloc axi_interconnect_0_M06_AXI 1 3 1 1110
+preplace netloc uart_transceiver_0_o_RX_Done 1 1 3 330 200 690J 180 N
+preplace netloc axi_interconnect_0_M06_AXI 1 3 1 1130
 preplace netloc axi_spi_master_3_m_spi_mosi 1 4 1 NJ
 preplace netloc axi_spi_master_2_m_spi_sclk 1 4 1 NJ
 preplace netloc uart_transceiver_1_o_RX_Byte 1 1 1 300
-preplace netloc clk_wiz_0_uart 1 0 5 20 250 NJ 250 NJ 250 1080 800 1400J
-preplace netloc axi_interconnect_0_M03_AXI 1 3 1 1050
+preplace netloc clk_wiz_0_uart 1 0 5 10 250 NJ 250 NJ 250 1100 800 1420J
+preplace netloc axi_interconnect_0_M03_AXI 1 3 1 1070
 preplace netloc axi_spi_master_0_m_spi_ss 1 4 1 NJ
-preplace netloc uart_transceiver_1_o_TX_Serial 1 1 4 300J 460 690J 110 NJ 110 1400J
+preplace netloc uart_transceiver_1_o_TX_Serial 1 1 4 300J 460 710J 110 NJ 110 1420J
 preplace netloc uart_transceiver_0_o_TX_Active 1 1 1 310
-levelinfo -pg 1 0 170 500 900 1270 1430 -top 0 -bot 1260
+levelinfo -pg 1 -10 170 520 920 1290 1450 -top 0 -bot 1260
 ",
 }
 {

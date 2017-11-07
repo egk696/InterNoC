@@ -955,20 +955,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>interface_axi_master_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_interface_axi_master_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>interface_axi_master_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_interface_axi_master_0_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>jtag_axi_0</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="jtag_axi" spirit:vendor="xilinx.com" spirit:version="1.2"/>
         <spirit:configurableElementValues>
@@ -1028,6 +1014,20 @@
           <spirit:configurableElementValue spirit:referenceId="ALL_PROBE_SAME_MU_CNT">2</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_ENABLE_ILA_AXI_MON">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>interface_axi_master_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_interface_axi_master_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>interface_axi_master_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_interface_axi_master_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -1120,12 +1120,11 @@
         <spirit:name>clk_wiz_0_clk_out1</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="aclk"/>
         <spirit:externalPortReference spirit:portRef="LED0_pll_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="jtag_axi_0" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S0_AXI_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S1_AXI_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S2_AXI_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S01_ACLK"/>
@@ -1137,7 +1136,8 @@
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M05_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M06_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_0" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_1" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_2" spirit:portRef="s00_axi_aclk"/>
@@ -1147,8 +1147,6 @@
         <spirit:name>clk_wiz_0_locked</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="locked"/>
         <spirit:externalPortReference spirit:portRef="LED2_pll_lock"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="jtag_axi_0" spirit:portRef="aresetn"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S0_AXI_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S1_AXI_ARESETN"/>
@@ -1164,6 +1162,8 @@
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M04_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M05_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M06_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_0" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_1" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_2" spirit:portRef="s00_axi_aresetn"/>
@@ -1194,14 +1194,14 @@
       <spirit:adHocConnection>
         <spirit:name>uart_transceiver_0_o_RX_Done</spirit:name>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_0" spirit:portRef="o_RX_Done"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="if00_load_in"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe0"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="if00_load_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>uart_transceiver_0_o_RX_Byte</spirit:name>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_0" spirit:portRef="o_RX_Byte"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="if00_data_in"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe1"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="if00_data_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>interface_axi_master_0_if00_load_out</spirit:name>
@@ -1248,9 +1248,9 @@
       <spirit:adHocConnection>
         <spirit:name>uart_transceiver_1_o_RX_Done</spirit:name>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_1" spirit:portRef="o_RX_Done"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_load_in"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe4"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe5"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_load_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>uart_transceiver_1_o_RX_Byte</spirit:name>
@@ -4217,6 +4217,74 @@
   </spirit:design>
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>Addressing/jtag_axi_0</spirit:library>
+    <spirit:name>jtag_axi</spirit:name>
+    <spirit:version>1.2</spirit:version>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>M_AXI</spirit:name>
+        <spirit:master>
+          <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
+        </spirit:master>
+        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:addressSpaces>
+      <spirit:addressSpace>
+        <spirit:name>Data</spirit:name>
+        <spirit:range>4G</spirit:range>
+        <spirit:width>32</spirit:width>
+        <spirit:segments>
+          <spirit:segment>
+            <spirit:name>SEG_axi_spi_master_0_S00_AXI_reg</spirit:name>
+            <spirit:displayName>/axi_spi_master_0/S00_AXI/S00_AXI_reg</spirit:displayName>
+            <spirit:addressOffset>0x00000000</spirit:addressOffset>
+            <spirit:range>4K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_spi_master_1_S00_AXI_reg</spirit:name>
+            <spirit:displayName>/axi_spi_master_1/S00_AXI/S00_AXI_reg</spirit:displayName>
+            <spirit:addressOffset>0x00010000</spirit:addressOffset>
+            <spirit:range>4K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_spi_master_2_S00_AXI_reg</spirit:name>
+            <spirit:displayName>/axi_spi_master_2/S00_AXI/S00_AXI_reg</spirit:displayName>
+            <spirit:addressOffset>0x00020000</spirit:addressOffset>
+            <spirit:range>4K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_spi_master_3_S00_AXI_reg</spirit:name>
+            <spirit:displayName>/axi_spi_master_3/S00_AXI/S00_AXI_reg</spirit:displayName>
+            <spirit:addressOffset>0x00030000</spirit:addressOffset>
+            <spirit:range>4K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_mutex_0_Reg</spirit:name>
+            <spirit:displayName>/master_comm_mutex/S0_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x00100000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_mutex_0_S1_AXI_Reg</spirit:name>
+            <spirit:displayName>/master_comm_mutex/S1_AXI/S1_AXI_Reg</spirit:displayName>
+            <spirit:addressOffset>0x00200000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_mutex_0_S2_AXI_Reg</spirit:name>
+            <spirit:displayName>/master_comm_mutex/S2_AXI/S2_AXI_Reg</spirit:displayName>
+            <spirit:addressOffset>0x00300000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+        </spirit:segments>
+      </spirit:addressSpace>
+    </spirit:addressSpaces>
+  </spirit:component>
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>ekyr.kth.se</spirit:vendor>
     <spirit:library>Addressing/interface_axi_master_0</spirit:library>
     <spirit:name>interface_axi_master</spirit:name>
@@ -4302,74 +4370,6 @@
     <spirit:addressSpaces>
       <spirit:addressSpace>
         <spirit:name>M00_AXI</spirit:name>
-        <spirit:range>4G</spirit:range>
-        <spirit:width>32</spirit:width>
-        <spirit:segments>
-          <spirit:segment>
-            <spirit:name>SEG_axi_spi_master_0_S00_AXI_reg</spirit:name>
-            <spirit:displayName>/axi_spi_master_0/S00_AXI/S00_AXI_reg</spirit:displayName>
-            <spirit:addressOffset>0x00000000</spirit:addressOffset>
-            <spirit:range>4K</spirit:range>
-          </spirit:segment>
-          <spirit:segment>
-            <spirit:name>SEG_axi_spi_master_1_S00_AXI_reg</spirit:name>
-            <spirit:displayName>/axi_spi_master_1/S00_AXI/S00_AXI_reg</spirit:displayName>
-            <spirit:addressOffset>0x00010000</spirit:addressOffset>
-            <spirit:range>4K</spirit:range>
-          </spirit:segment>
-          <spirit:segment>
-            <spirit:name>SEG_axi_spi_master_2_S00_AXI_reg</spirit:name>
-            <spirit:displayName>/axi_spi_master_2/S00_AXI/S00_AXI_reg</spirit:displayName>
-            <spirit:addressOffset>0x00020000</spirit:addressOffset>
-            <spirit:range>4K</spirit:range>
-          </spirit:segment>
-          <spirit:segment>
-            <spirit:name>SEG_axi_spi_master_3_S00_AXI_reg</spirit:name>
-            <spirit:displayName>/axi_spi_master_3/S00_AXI/S00_AXI_reg</spirit:displayName>
-            <spirit:addressOffset>0x00030000</spirit:addressOffset>
-            <spirit:range>4K</spirit:range>
-          </spirit:segment>
-          <spirit:segment>
-            <spirit:name>SEG_mutex_0_Reg</spirit:name>
-            <spirit:displayName>/master_comm_mutex/S0_AXI/Reg</spirit:displayName>
-            <spirit:addressOffset>0x00100000</spirit:addressOffset>
-            <spirit:range>64K</spirit:range>
-          </spirit:segment>
-          <spirit:segment>
-            <spirit:name>SEG_mutex_0_S1_AXI_Reg</spirit:name>
-            <spirit:displayName>/master_comm_mutex/S1_AXI/S1_AXI_Reg</spirit:displayName>
-            <spirit:addressOffset>0x00200000</spirit:addressOffset>
-            <spirit:range>64K</spirit:range>
-          </spirit:segment>
-          <spirit:segment>
-            <spirit:name>SEG_mutex_0_S2_AXI_Reg</spirit:name>
-            <spirit:displayName>/master_comm_mutex/S2_AXI/S2_AXI_Reg</spirit:displayName>
-            <spirit:addressOffset>0x00300000</spirit:addressOffset>
-            <spirit:range>64K</spirit:range>
-          </spirit:segment>
-        </spirit:segments>
-      </spirit:addressSpace>
-    </spirit:addressSpaces>
-  </spirit:component>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>Addressing/jtag_axi_0</spirit:library>
-    <spirit:name>jtag_axi</spirit:name>
-    <spirit:version>1.2</spirit:version>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>M_AXI</spirit:name>
-        <spirit:master>
-          <spirit:addressSpaceRef spirit:addressSpaceRef="Data"/>
-        </spirit:master>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:addressSpaces>
-      <spirit:addressSpace>
-        <spirit:name>Data</spirit:name>
         <spirit:range>4G</spirit:range>
         <spirit:width>32</spirit:width>
         <spirit:segments>

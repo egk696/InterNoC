@@ -198,9 +198,10 @@ wr_data_valid:    process (S_AXI_ACLK)
 	-- These registers are cleared when reset (active low) is applied.
 	-- Slave register write enable is asserted when valid address and data are available
 	-- and the slave is ready to accept the write address and write data.
-	p2s_load <= axi_wready and S_AXI_WVALID and axi_awready and S_AXI_AWVALID ;
+	p2s_load <= (axi_wready and S_AXI_WVALID and axi_awready and S_AXI_AWVALID) or (S_AXI_ARVALID and axi_arready) ;
 	p2s_send <= not(spi_tx_rx_busy) and not(spi_tx_rx_start);
-    spi_tx_rx_start <= not(p2s_ss);
+	s2p_en <= spi_tx_rx_done;
+  spi_tx_rx_start <= not(p2s_ss);
     
 	-- Implement write response logic generation
 	-- The write response and response valid signals are asserted by the slave 
@@ -214,7 +215,7 @@ wr_response:    process (S_AXI_ACLK)
 	      axi_bvalid  <= '0';
 	      axi_bresp   <= "00"; --need to work more on the responses
 	    else
-	      if (axi_awready = '1' and S_AXI_AWVALID = '1' and axi_wready = '1' and S_AXI_WVALID = '1' and axi_bvalid = '0'  ) then
+	      if (axi_awready = '1' and S_AXI_AWVALID = '1' and axi_wready = '1' and S_AXI_WVALID = '1' and axi_bvalid = '0' ) then
 	        axi_bvalid <= '1';
 	        axi_bresp  <= "00"; 
 	      elsif (S_AXI_BREADY = '1' and axi_bvalid = '1') then   --check if bready is asserted while bvalid is high)

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Tue Oct 24 18:24:30 2017
+| Date         : Tue Nov  7 03:40:44 2017
 | Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_utilization -file DemoInterconnect_interface_axi_master_0_0_utilization_synth.rpt -pb DemoInterconnect_interface_axi_master_0_0_utilization_synth.pb
 | Design       : DemoInterconnect_interface_axi_master_0_0
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   47 |     0 |     10400 |  0.45 |
-|   LUT as Logic          |   47 |     0 |     10400 |  0.45 |
+| Slice LUTs*             |  173 |     0 |     10400 |  1.66 |
+|   LUT as Logic          |  173 |     0 |     10400 |  1.66 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  143 |     0 |     20800 |  0.69 |
-|   Register as Flip Flop |  143 |     0 |     20800 |  0.69 |
-|   Register as Latch     |    0 |     0 |     20800 |  0.00 |
-| F7 Muxes                |    0 |     0 |     16300 |  0.00 |
+| Slice Registers         |  194 |     0 |     20800 |  0.93 |
+|   Register as Flip Flop |  185 |     0 |     20800 |  0.89 |
+|   Register as Latch     |    9 |     0 |     20800 |  0.04 |
+| F7 Muxes                |    1 |     0 |     16300 | <0.01 |
 | F8 Muxes                |    0 |     0 |      8150 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 9     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 143   |          Yes |       Reset |            - |
+| 185   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,13 +149,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  143 |        Flop & Latch |
-| LUT6     |   18 |                 LUT |
-| LUT2     |   14 |                 LUT |
+| FDRE     |  185 |        Flop & Latch |
+| LUT2     |   97 |                 LUT |
+| LUT6     |   37 |                 LUT |
+| LUT3     |   29 |                 LUT |
+| LUT5     |   22 |                 LUT |
 | LUT4     |    9 |                 LUT |
-| LUT3     |    8 |                 LUT |
-| LUT5     |    5 |                 LUT |
-| LUT1     |    2 |                 LUT |
+| LDCE     |    9 |        Flop & Latch |
+| CARRY4   |    4 |          CarryLogic |
+| MUXF7    |    1 |               MuxFx |
+| LUT1     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

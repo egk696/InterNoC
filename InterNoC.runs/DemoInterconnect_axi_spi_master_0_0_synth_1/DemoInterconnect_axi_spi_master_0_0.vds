@@ -2,8 +2,8 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Sun Oct 29 17:11:02 2017
-# Process ID: 11956
+# Start of session at: Tue Nov  7 04:23:24 2017
+# Process ID: 8296
 # Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1
 # Command line: vivado.exe -log DemoInterconnect_axi_spi_master_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_axi_spi_master_0_0.tcl
 # Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13624 
+INFO: Helper process launched with PID 4372 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 344.832 ; gain = 96.254
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 344.855 ; gain = 96.109
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_0_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/synth/DemoInterconnect_axi_spi_master_0_0.vhd:86]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -54,7 +54,7 @@ INFO: [Synth 8-638] synthesizing module 'spi_master_behave_v2' [d:/Development/F
 	Parameter CLK_DIV bound to: 6 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'spi_master_behave_v2' (3#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/src/SPI_Master.vhd:192]
 WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:161]
-WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:238]
+WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:239]
 INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0_S00_AXI' (4#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0_S00_AXI.vhd:90]
 INFO: [Synth 8-256] done synthesizing module 'axi_spi_master_v1_0' (5#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/9e17/hdl/axi_spi_master_v1_0.vhd:53]
 INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_axi_spi_master_0_0' (6#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/synth/DemoInterconnect_axi_spi_master_0_0.vhd:86]
@@ -78,7 +78,7 @@ WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port 
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design axi_spi_master_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 387.297 ; gain = 138.719
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 387.938 ; gain = 139.191
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -88,7 +88,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 387.297 ; gain = 138.719
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 387.938 ; gain = 139.191
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a15tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -100,29 +100,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 682.992 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 683.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a15tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rx_done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "sclk" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "spi_done" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -238,100 +238,14 @@ WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_0_0 has unconnect
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_0_0 has unconnected port s00_axi_arprot[2]
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_0_0 has unconnected port s00_axi_arprot[1]
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_spi_master_0_0 has unconnected port s00_axi_arprot[0]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/init_rx_ff_reg )
 INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/init_rx_ff2_reg' (FD) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_en_reg'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/init_rx_ff_reg' (FD) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_en_reg'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_en_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[7] )
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[8]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[9]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[9]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[10]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[11]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[11]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[12]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[13]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[14]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15] )
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[16]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[17]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[18]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[19]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[20]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[21]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[22]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[23]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[24]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[25]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[26]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[27]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[28]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[29]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[30]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_done_reg )
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[0]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[1]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[1]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[2]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[2]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[3]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[4]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[4]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[5]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[5]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[6]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[6]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[7]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[7]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[8]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[8]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[9]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[9]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[10]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[10]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[11]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[11]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[12]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[12]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[13]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[13]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[14]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[14]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[15]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[15]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[24]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[16]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[17]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[17]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[18]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[18]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[19]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[19]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[20]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[20]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[21]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[21]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[22]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[22]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[24]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[25]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[25]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[26]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[26]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[27]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[27]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[28]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[28]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[29]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[29]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[30]'
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[30]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15] )
-INFO: [Synth 8-3886] merging instance 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[23]' (FDE) to 'U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[31] )
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_en_reg) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_count_reg[1]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_count_reg[0]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/rx_done_reg) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rvalid_reg) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[31]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[15]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[7]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[6]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[5]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[4]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[3]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[2]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[1]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/byte2word/shift_data_reg[0]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
-INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rdata_reg[31]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/axi_spi_master_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module DemoInterconnect_axi_spi_master_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -343,13 +257,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -361,7 +275,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -385,7 +299,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -398,7 +312,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -410,25 +324,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -445,30 +359,31 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT1 |     5|
-|2     |LUT2 |     5|
-|3     |LUT3 |    16|
-|4     |LUT4 |     8|
-|5     |LUT5 |     4|
+|2     |LUT2 |     9|
+|3     |LUT3 |    17|
+|4     |LUT4 |    10|
+|5     |LUT5 |     6|
 |6     |LUT6 |    20|
-|7     |FDRE |    82|
+|7     |FDRE |   153|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+-------------------------------------+----------------------------+------+
 |      |Instance                             |Module                      |Cells |
 +------+-------------------------------------+----------------------------+------+
-|1     |top                                  |                            |   140|
-|2     |  U0                                 |axi_spi_master_v1_0         |   140|
-|3     |    axi_spi_master_v1_0_S00_AXI_inst |axi_spi_master_v1_0_S00_AXI |   140|
-|4     |      spi_master_inst                |spi_master_behave_v2        |    59|
-|5     |      word2byte                      |parallel2serial             |    72|
+|1     |top                                  |                            |   220|
+|2     |  U0                                 |axi_spi_master_v1_0         |   220|
+|3     |    axi_spi_master_v1_0_S00_AXI_inst |axi_spi_master_v1_0_S00_AXI |   220|
+|4     |      byte2word                      |serial2parallel             |    45|
+|5     |      spi_master_inst                |spi_master_behave_v2        |    59|
+|6     |      word2byte                      |parallel2serial             |    74|
 +------+-------------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 682.992 ; gain = 434.414
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 683.109 ; gain = 434.363
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 682.992 ; gain = 138.719
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 682.992 ; gain = 434.414
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:43 . Memory (MB): peak = 683.109 ; gain = 139.191
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 683.109 ; gain = 434.363
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -476,13 +391,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-120 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
+34 Infos, 39 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 682.992 ; gain = 442.938
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 683.109 ; gain = 443.633
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_0_0/DemoInterconnect_axi_spi_master_0_0.xci
-INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_0_synth_1/DemoInterconnect_axi_spi_master_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DemoInterconnect_axi_spi_master_0_0_utilization_synth.rpt -pb DemoInterconnect_axi_spi_master_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 682.992 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 29 17:12:07 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 683.109 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  7 04:24:26 2017...

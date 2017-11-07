@@ -131,7 +131,7 @@ signal spi_0_miso_wire, spi_1_miso_wire, spi_2_miso_wire, spi_3_miso_wire : STD_
 
 signal dest_address : unsigned(4 downto 0) := (others=>'0'); --5bits
 signal dest_data : unsigned(31 downto 0) := (others=>'0'); --32bits
-signal dest_ctrl : std_logic_vector(2 downto 0) := (others=>'0'); --3bits
+signal dest_ctrl : std_logic_vector(2 downto 0) := "011"; --3bits
 
 signal master_packet : std_logic_vector(39 downto 0) := (others=>'0'); --40bits
 signal master_packet_send_en : std_logic := '0';
@@ -148,6 +148,37 @@ constant slave_2_addr : unsigned(4 downto 0) := "00010";
 constant slave_3_addr : unsigned(4 downto 0) := "00011";
 
 begin
+
+drive_miso: process(dest_address)
+begin
+    case dest_address is
+        when "00000"=>
+            spi_0_miso_wire <= '1';
+            spi_1_miso_wire <= 'Z';
+            spi_2_miso_wire <= 'Z';
+            spi_3_miso_wire <= 'Z';
+        when "00001"=>
+            spi_0_miso_wire <= 'Z';
+            spi_1_miso_wire <= '1';
+            spi_2_miso_wire <= 'Z';
+            spi_3_miso_wire <= 'Z';
+        when "00010"=>
+            spi_0_miso_wire <= 'Z';
+            spi_1_miso_wire <= 'Z';
+            spi_2_miso_wire <= '1';
+            spi_3_miso_wire <= 'Z';
+        when "00011"=>
+            spi_0_miso_wire <= 'Z';
+            spi_1_miso_wire <= 'Z';
+            spi_2_miso_wire <= 'Z';
+            spi_3_miso_wire <= '1';
+        when others=>
+            spi_0_miso_wire <= 'Z';
+            spi_1_miso_wire <= 'Z';
+            spi_2_miso_wire <= 'Z';
+            spi_3_miso_wire <= 'Z';
+    end case;
+end process;
 
 process
     variable vhdl_initial : BOOLEAN := TRUE;
@@ -179,7 +210,7 @@ begin
             elsif (dest_address = slave_2_addr) then
                 dest_address <= slave_3_addr;
             else
-                dest_ctrl(0) <= not(dest_ctrl(0));
+                dest_ctrl(2) <= not(dest_ctrl(2));
                 dest_address <= slave_0_addr;
             end if;
         end if;
