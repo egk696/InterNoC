@@ -197,11 +197,7 @@ wr_data_valid:    process (S_AXI_ACLK)
 	-- select byte enables of slave registers while writing.
 	-- These registers are cleared when reset (active low) is applied.
 	-- Slave register write enable is asserted when valid address and data are available
-	-- and the slave is ready to accept the write address and write data.
-	p2s_load <= (axi_wready and S_AXI_WVALID and axi_awready and S_AXI_AWVALID) or (S_AXI_ARVALID and axi_arready) ;
-	p2s_send <= not(spi_tx_rx_busy) and not(spi_tx_rx_start);
-	s2p_en <= spi_tx_rx_done;
-  spi_tx_rx_start <= not(p2s_ss);
+	-- and the slave is ready to accept the write address and write data
     
 	-- Implement write response logic generation
 	-- The write response and response valid signals are asserted by the slave 
@@ -238,7 +234,7 @@ rd_addr_valid:    process (S_AXI_ACLK)
 	      axi_arready <= '0';
 	      axi_araddr  <= (others => '1');
 	    else
-	      if (axi_arready = '0' and S_AXI_ARVALID = '1') then
+	      if (axi_arready = '0' and S_AXI_ARVALID = '1' and s2p_done='1') then
 	        -- indicates that the slave has acceped the valid read address
 	        axi_arready <= '1';
 	        -- Read Address latching 
@@ -265,7 +261,7 @@ rd_response:    process (S_AXI_ACLK)
 	      axi_rvalid <= '0';
 	      axi_rresp  <= "00";
 	    else
-	      if (axi_arready = '1' and S_AXI_ARVALID = '1' and axi_rvalid = '0' and s2p_done='1') then
+	      if (axi_arready = '1' and S_AXI_ARVALID = '1' and axi_rvalid = '0') then
 	        -- Valid read data is available at the read data bus
 	        axi_rvalid <= '1';
 	        axi_rresp  <= "00"; -- 'OKAY' response
@@ -280,6 +276,26 @@ rd_response:    process (S_AXI_ACLK)
 
 
 	-- Add user logic here
+start_interface: process(S_AXI_ACLK)
+	begin
+		if rising_edge(S_AXI_ACLK) then
+			if S_AXI_ARESETN = '0' then
+				p2s_load <= '0';
+			else
+				if (p2s_load='0' and p2s_busy='0') and ((axi_wready='1' and S_AXI_WVALID='1' and axi_awready='1' and S_AXI_AWVALID='1') or (S_AXI_ARVALID='1')) then
+					p2s_load <= '1';
+				else
+					p2s_load <= '0';
+				end if;
+			end if;
+		end if;
+	end process;
+
+	p2s_send <= not(spi_tx_rx_busy) and not(spi_tx_rx_start);
+	s2p_en <= spi_tx_rx_done;
+	spi_tx_rx_start <= not(p2s_ss);
+	
+
 word2byte:  entity work.parallel2serial
 	generic map(
         DATA_WIDTH => C_S_AXI_DATA_WIDTH,

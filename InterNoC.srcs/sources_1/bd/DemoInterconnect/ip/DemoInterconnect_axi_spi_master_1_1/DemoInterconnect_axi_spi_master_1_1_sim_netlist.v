@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Tue Nov  7 04:24:26 2017
+// Date        : Mon Nov 13 18:38:27 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_axi_spi_master_1_1 -prefix
 //               DemoInterconnect_axi_spi_master_1_1_ DemoInterconnect_axi_spi_master_0_0_sim_netlist.v
@@ -114,38 +114,38 @@ module DemoInterconnect_axi_spi_master_1_1
 endmodule
 
 module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0
-   (S_AXI_AWREADY,
-    S_AXI_WREADY,
-    S_AXI_ARREADY,
+   (S_AXI_WREADY,
+    S_AXI_AWREADY,
     m_spi_ss,
+    S_AXI_ARREADY,
     s00_axi_rdata,
     m_spi_sclk,
     s00_axi_rvalid,
     s00_axi_bvalid,
     m_spi_mosi,
-    s00_axi_arvalid,
     s00_axi_wvalid,
     s00_axi_awvalid,
     s00_axi_aclk,
     s00_axi_wdata,
+    s00_axi_arvalid,
     s00_axi_aresetn,
     m_spi_miso,
     s00_axi_bready,
     s00_axi_rready);
-  output S_AXI_AWREADY;
   output S_AXI_WREADY;
-  output S_AXI_ARREADY;
+  output S_AXI_AWREADY;
   output m_spi_ss;
+  output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output m_spi_sclk;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
   output m_spi_mosi;
-  input s00_axi_arvalid;
   input s00_axi_wvalid;
   input s00_axi_awvalid;
   input s00_axi_aclk;
   input [31:0]s00_axi_wdata;
+  input s00_axi_arvalid;
   input s00_axi_aresetn;
   input m_spi_miso;
   input s00_axi_bready;
@@ -192,38 +192,38 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0
 endmodule
 
 module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
-   (S_AXI_AWREADY,
-    S_AXI_WREADY,
-    S_AXI_ARREADY,
+   (S_AXI_WREADY,
+    S_AXI_AWREADY,
     m_spi_ss,
+    S_AXI_ARREADY,
     s00_axi_rdata,
     m_spi_sclk,
     s00_axi_rvalid,
     s00_axi_bvalid,
     m_spi_mosi,
-    s00_axi_arvalid,
     s00_axi_wvalid,
     s00_axi_awvalid,
     s00_axi_aclk,
     s00_axi_wdata,
+    s00_axi_arvalid,
     s00_axi_aresetn,
     m_spi_miso,
     s00_axi_bready,
     s00_axi_rready);
-  output S_AXI_AWREADY;
   output S_AXI_WREADY;
-  output S_AXI_ARREADY;
+  output S_AXI_AWREADY;
   output m_spi_ss;
+  output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output m_spi_sclk;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
   output m_spi_mosi;
-  input s00_axi_arvalid;
   input s00_axi_wvalid;
   input s00_axi_awvalid;
   input s00_axi_aclk;
   input [31:0]s00_axi_wdata;
+  input s00_axi_arvalid;
   input s00_axi_aresetn;
   input m_spi_miso;
   input s00_axi_bready;
@@ -232,17 +232,20 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
   wire S_AXI_ARREADY;
   wire S_AXI_AWREADY;
   wire S_AXI_WREADY;
-  wire axi_arready_i_1_n_0;
-  wire axi_awready0;
+  wire axi_arready0;
   wire axi_awready_i_1_n_0;
+  wire axi_awready_i_2_n_0;
   wire axi_bvalid_i_1_n_0;
   wire axi_rdata;
+  wire axi_rvalid_i_1_n_0;
   wire axi_wready_i_1_n_0;
-  wire byte2word_n_1;
   wire m_spi_miso;
   wire m_spi_mosi;
   wire m_spi_sclk;
   wire m_spi_ss;
+  wire p2s_load;
+  wire p2s_load0;
+  wire p2s_load_i_2_n_0;
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
   wire s00_axi_arvalid;
@@ -262,16 +265,10 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
   wire spi_tx_rx_start;
   wire ss_o;
 
-  LUT2 #(
-    .INIT(4'h2)) 
-    axi_arready_i_1
-       (.I0(s00_axi_arvalid),
-        .I1(S_AXI_ARREADY),
-        .O(axi_arready_i_1_n_0));
   FDRE axi_arready_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(axi_arready_i_1_n_0),
+        .D(axi_arready0),
         .Q(S_AXI_ARREADY),
         .R(axi_awready_i_1_n_0));
   LUT1 #(
@@ -279,18 +276,18 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
     axi_awready_i_1
        (.I0(s00_axi_aresetn),
         .O(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h08)) 
     axi_awready_i_2
-       (.I0(S_AXI_AWREADY),
-        .I1(s00_axi_wvalid),
-        .I2(s00_axi_awvalid),
-        .O(axi_awready0));
+       (.I0(s00_axi_wvalid),
+        .I1(s00_axi_awvalid),
+        .I2(S_AXI_AWREADY),
+        .O(axi_awready_i_2_n_0));
   FDRE axi_awready_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(axi_awready0),
+        .D(axi_awready_i_2_n_0),
         .Q(S_AXI_AWREADY),
         .R(axi_awready_i_1_n_0));
   LUT6 #(
@@ -309,6 +306,14 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
         .D(axi_bvalid_i_1_n_0),
         .Q(s00_axi_bvalid),
         .R(axi_awready_i_1_n_0));
+  LUT4 #(
+    .INIT(16'h0080)) 
+    \axi_rdata[31]_i_1 
+       (.I0(s00_axi_aresetn),
+        .I1(s00_axi_arvalid),
+        .I2(S_AXI_ARREADY),
+        .I3(s00_axi_rvalid),
+        .O(axi_rdata));
   FDRE \axi_rdata_reg[0] 
        (.C(s00_axi_aclk),
         .CE(axi_rdata),
@@ -501,19 +506,27 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
         .D(shift_data[9]),
         .Q(s00_axi_rdata[9]),
         .R(1'b0));
+  LUT4 #(
+    .INIT(16'h08F8)) 
+    axi_rvalid_i_1
+       (.I0(s00_axi_arvalid),
+        .I1(S_AXI_ARREADY),
+        .I2(s00_axi_rvalid),
+        .I3(s00_axi_rready),
+        .O(axi_rvalid_i_1_n_0));
   FDRE axi_rvalid_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(byte2word_n_1),
+        .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h08)) 
     axi_wready_i_1
-       (.I0(S_AXI_WREADY),
-        .I1(s00_axi_wvalid),
-        .I2(s00_axi_awvalid),
+       (.I0(s00_axi_wvalid),
+        .I1(s00_axi_awvalid),
+        .I2(S_AXI_WREADY),
         .O(axi_wready_i_1_n_0));
   FDRE axi_wready_reg
        (.C(s00_axi_aclk),
@@ -522,17 +535,27 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
         .Q(S_AXI_WREADY),
         .R(axi_awready_i_1_n_0));
   DemoInterconnect_axi_spi_master_1_1_serial2parallel byte2word
-       (.E(axi_rdata),
-        .Q(shift_data),
+       (.Q(shift_data),
+        .axi_arready0(axi_arready0),
         .axi_arready_reg(S_AXI_ARREADY),
-        .axi_rvalid_reg(byte2word_n_1),
         .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_aresetn(s00_axi_aresetn),
         .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
         .spi_tx_rx_done(spi_tx_rx_done),
         .\tx_rx_buffer_reg[7] (spi_rx_byte));
+  LUT2 #(
+    .INIT(4'h8)) 
+    p2s_load_i_2
+       (.I0(s00_axi_awvalid),
+        .I1(s00_axi_wvalid),
+        .O(p2s_load_i_2_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    p2s_load_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(p2s_load0),
+        .Q(p2s_load),
+        .R(axi_awready_i_1_n_0));
   DemoInterconnect_axi_spi_master_1_1_spi_master_behave_v2 spi_master_inst
        (.E(spi_tx_rx_start),
         .Q(spi_rx_byte),
@@ -548,60 +571,60 @@ module DemoInterconnect_axi_spi_master_1_1_axi_spi_master_v1_0_S00_AXI
   DemoInterconnect_axi_spi_master_1_1_parallel2serial word2byte
        (.E(spi_tx_rx_start),
         .Q(shift_o),
-        .axi_arready_reg(S_AXI_ARREADY),
         .axi_awready_reg(S_AXI_AWREADY),
         .axi_wready_reg(S_AXI_WREADY),
+        .p2s_load(p2s_load),
+        .p2s_load0(p2s_load0),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awvalid(s00_axi_awvalid),
         .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wvalid(s00_axi_wvalid),
+        .s00_axi_wvalid(p2s_load_i_2_n_0),
         .spi_tx_rx_busy(spi_tx_rx_busy),
         .ss_o(ss_o));
 endmodule
 
 module DemoInterconnect_axi_spi_master_1_1_parallel2serial
    (ss_o,
+    p2s_load0,
     E,
     Q,
     s00_axi_aclk,
+    p2s_load,
+    spi_tx_rx_busy,
+    s00_axi_wvalid,
     axi_awready_reg,
     axi_wready_reg,
-    axi_arready_reg,
     s00_axi_arvalid,
-    s00_axi_wvalid,
-    s00_axi_awvalid,
-    spi_tx_rx_busy,
     s00_axi_wdata);
   output ss_o;
+  output p2s_load0;
   output [0:0]E;
   output [7:0]Q;
   input s00_axi_aclk;
+  input p2s_load;
+  input spi_tx_rx_busy;
+  input s00_axi_wvalid;
   input axi_awready_reg;
   input axi_wready_reg;
-  input axi_arready_reg;
   input s00_axi_arvalid;
-  input s00_axi_wvalid;
-  input s00_axi_awvalid;
-  input spi_tx_rx_busy;
   input [31:0]s00_axi_wdata;
 
   wire [0:0]E;
   wire [7:0]Q;
-  wire axi_arready_reg;
   wire axi_awready_reg;
   wire axi_wready_reg;
   wire [7:0]data1;
   wire [7:0]data2;
   wire [7:0]data3;
+  wire p2s_busy;
+  wire p2s_load;
+  wire p2s_load0;
   wire [7:0]p_1_in;
   wire s00_axi_aclk;
   wire s00_axi_arvalid;
-  wire s00_axi_awvalid;
   wire [31:0]s00_axi_wdata;
   wire s00_axi_wvalid;
   wire \send_data[31]_i_1_n_0 ;
-  wire \send_data[31]_i_2_n_0 ;
   wire \send_data_reg_n_0_[0] ;
   wire \send_data_reg_n_0_[1] ;
   wire \send_data_reg_n_0_[2] ;
@@ -611,8 +634,6 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
   wire \send_data_reg_n_0_[6] ;
   wire \send_data_reg_n_0_[7] ;
   wire sending_i_1_n_0;
-  wire sending_i_2_n_0;
-  wire sending_reg_n_0;
   wire [2:0]shift_count;
   wire \shift_count[0]_i_1_n_0 ;
   wire \shift_count[1]_i_1_n_0 ;
@@ -639,22 +660,21 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(ss_o),
         .O(E));
   LUT6 #(
-    .INIT(64'h00000000FF404040)) 
-    \send_data[31]_i_1 
-       (.I0(\send_data[31]_i_2_n_0 ),
+    .INIT(64'h000000000000FF80)) 
+    p2s_load_i_1
+       (.I0(s00_axi_wvalid),
         .I1(axi_awready_reg),
         .I2(axi_wready_reg),
-        .I3(axi_arready_reg),
-        .I4(s00_axi_arvalid),
-        .I5(sending_reg_n_0),
-        .O(\send_data[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+        .I3(s00_axi_arvalid),
+        .I4(p2s_busy),
+        .I5(p2s_load),
+        .O(p2s_load0));
   LUT2 #(
-    .INIT(4'h7)) 
-    \send_data[31]_i_2 
-       (.I0(s00_axi_awvalid),
-        .I1(s00_axi_wvalid),
-        .O(\send_data[31]_i_2_n_0 ));
+    .INIT(4'h2)) 
+    \send_data[31]_i_1 
+       (.I0(p2s_load),
+        .I1(p2s_busy),
+        .O(\send_data[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \send_data_reg[0] 
@@ -911,40 +931,29 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
         .D(s00_axi_wdata[9]),
         .Q(data1[1]),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'h74447777)) 
+  LUT3 #(
+    .INIT(8'h74)) 
     sending_i_1
        (.I0(tx_done_reg_n_0),
-        .I1(sending_reg_n_0),
-        .I2(s00_axi_arvalid),
-        .I3(axi_arready_reg),
-        .I4(sending_i_2_n_0),
+        .I1(p2s_busy),
+        .I2(p2s_load),
         .O(sending_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    sending_i_2
-       (.I0(s00_axi_wvalid),
-        .I1(s00_axi_awvalid),
-        .I2(axi_awready_reg),
-        .I3(axi_wready_reg),
-        .O(sending_i_2_n_0));
   FDRE #(
     .INIT(1'b0)) 
     sending_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(sending_i_1_n_0),
-        .Q(sending_reg_n_0),
+        .Q(p2s_busy),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \shift_count[0]_i_1 
        (.I0(shift_o1),
         .I1(shift_count[0]),
         .O(\shift_count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB4)) 
     \shift_count[1]_i_1 
@@ -966,7 +975,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
     .INIT(16'h0040)) 
     \shift_count[2]_i_2 
        (.I0(tx_done_reg_n_0),
-        .I1(sending_reg_n_0),
+        .I1(p2s_busy),
         .I2(ss_o),
         .I3(spi_tx_rx_busy),
         .O(shift_o1));
@@ -1000,7 +1009,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(\shift_o[0]_i_2_n_0 ),
         .I1(shift_count[2]),
         .I2(tx_done_reg_n_0),
-        .I3(sending_reg_n_0),
+        .I3(p2s_busy),
         .I4(ss_o),
         .I5(spi_tx_rx_busy),
         .O(p_1_in[0]));
@@ -1020,7 +1029,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(\shift_o[1]_i_2_n_0 ),
         .I1(shift_count[2]),
         .I2(tx_done_reg_n_0),
-        .I3(sending_reg_n_0),
+        .I3(p2s_busy),
         .I4(ss_o),
         .I5(spi_tx_rx_busy),
         .O(p_1_in[1]));
@@ -1040,7 +1049,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(\shift_o[2]_i_2_n_0 ),
         .I1(shift_count[2]),
         .I2(tx_done_reg_n_0),
-        .I3(sending_reg_n_0),
+        .I3(p2s_busy),
         .I4(ss_o),
         .I5(spi_tx_rx_busy),
         .O(p_1_in[2]));
@@ -1060,7 +1069,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(\shift_o[3]_i_2_n_0 ),
         .I1(shift_count[2]),
         .I2(tx_done_reg_n_0),
-        .I3(sending_reg_n_0),
+        .I3(p2s_busy),
         .I4(ss_o),
         .I5(spi_tx_rx_busy),
         .O(p_1_in[3]));
@@ -1080,7 +1089,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(\shift_o[4]_i_2_n_0 ),
         .I1(shift_count[2]),
         .I2(tx_done_reg_n_0),
-        .I3(sending_reg_n_0),
+        .I3(p2s_busy),
         .I4(ss_o),
         .I5(spi_tx_rx_busy),
         .O(p_1_in[4]));
@@ -1100,7 +1109,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(\shift_o[5]_i_2_n_0 ),
         .I1(shift_count[2]),
         .I2(tx_done_reg_n_0),
-        .I3(sending_reg_n_0),
+        .I3(p2s_busy),
         .I4(ss_o),
         .I5(spi_tx_rx_busy),
         .O(p_1_in[5]));
@@ -1120,7 +1129,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(\shift_o[6]_i_2_n_0 ),
         .I1(shift_count[2]),
         .I2(tx_done_reg_n_0),
-        .I3(sending_reg_n_0),
+        .I3(p2s_busy),
         .I4(ss_o),
         .I5(spi_tx_rx_busy),
         .O(p_1_in[6]));
@@ -1139,7 +1148,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
     \shift_o[7]_i_1 
        (.I0(spi_tx_rx_busy),
         .I1(ss_o),
-        .I2(sending_reg_n_0),
+        .I2(p2s_busy),
         .I3(tx_done_reg_n_0),
         .O(\shift_o[7]_i_1_n_0 ));
   LUT6 #(
@@ -1148,7 +1157,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
        (.I0(\shift_o[7]_i_3_n_0 ),
         .I1(shift_count[2]),
         .I2(tx_done_reg_n_0),
-        .I3(sending_reg_n_0),
+        .I3(p2s_busy),
         .I4(ss_o),
         .I5(spi_tx_rx_busy),
         .O(p_1_in[7]));
@@ -1216,7 +1225,7 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
     ss_o_i_1
        (.I0(spi_tx_rx_busy),
         .I1(ss_o),
-        .I2(sending_reg_n_0),
+        .I2(p2s_busy),
         .I3(tx_done_reg_n_0),
         .O(ss_o_i_1_n_0));
   FDRE ss_o_reg
@@ -1246,43 +1255,31 @@ module DemoInterconnect_axi_spi_master_1_1_parallel2serial
 endmodule
 
 module DemoInterconnect_axi_spi_master_1_1_serial2parallel
-   (E,
-    axi_rvalid_reg,
+   (axi_arready0,
     Q,
     spi_tx_rx_done,
     s00_axi_aclk,
-    s00_axi_aresetn,
-    s00_axi_arvalid,
     axi_arready_reg,
-    s00_axi_rvalid,
-    s00_axi_rready,
+    s00_axi_arvalid,
     \tx_rx_buffer_reg[7] );
-  output [0:0]E;
-  output axi_rvalid_reg;
+  output axi_arready0;
   output [31:0]Q;
   input spi_tx_rx_done;
   input s00_axi_aclk;
-  input s00_axi_aresetn;
-  input s00_axi_arvalid;
   input axi_arready_reg;
-  input s00_axi_rvalid;
-  input s00_axi_rready;
+  input s00_axi_arvalid;
   input [7:0]\tx_rx_buffer_reg[7] ;
 
-  wire [0:0]E;
   wire [31:0]Q;
+  wire axi_arready0;
   wire axi_arready_reg;
-  wire axi_rvalid_reg;
   wire init_rx_ff;
   wire init_rx_ff2;
   wire rx_done_i_1_n_0;
   wire rx_en;
   wire rx_en_i_1_n_0;
   wire s00_axi_aclk;
-  wire s00_axi_aresetn;
   wire s00_axi_arvalid;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
   wire s2p_done;
   wire [1:0]shift_count;
   wire \shift_count[0]_i_1_n_0 ;
@@ -1291,24 +1288,13 @@ module DemoInterconnect_axi_spi_master_1_1_serial2parallel
   wire spi_tx_rx_done;
   wire [7:0]\tx_rx_buffer_reg[7] ;
 
-  LUT5 #(
-    .INIT(32'h00008000)) 
-    \axi_rdata[31]_i_1 
-       (.I0(s00_axi_aresetn),
-        .I1(s00_axi_arvalid),
-        .I2(axi_arready_reg),
-        .I3(s2p_done),
-        .I4(s00_axi_rvalid),
-        .O(E));
-  LUT5 #(
-    .INIT(32'h0080FF80)) 
-    axi_rvalid_i_1
-       (.I0(s00_axi_arvalid),
-        .I1(axi_arready_reg),
-        .I2(s2p_done),
-        .I3(s00_axi_rvalid),
-        .I4(s00_axi_rready),
-        .O(axi_rvalid_reg));
+  LUT3 #(
+    .INIT(8'h40)) 
+    axi_arready_i_1
+       (.I0(axi_arready_reg),
+        .I1(s2p_done),
+        .I2(s00_axi_arvalid),
+        .O(axi_arready0));
   FDRE #(
     .INIT(1'b0)) 
     init_rx_ff2_reg
