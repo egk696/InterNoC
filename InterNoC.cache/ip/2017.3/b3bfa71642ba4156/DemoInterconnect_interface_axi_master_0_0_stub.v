@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Tue Nov 14 02:15:39 2017
+// Date        : Tue Nov 14 02:15:38 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ DemoInterconnect_interface_axi_master_0_0_stub.v
 // Design      : DemoInterconnect_interface_axi_master_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a15tcpg236-1
@@ -14,7 +14,7 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "interface_axi_master_v1_0,Vivado 2017.3" *)
-module DemoInterconnect_interface_axi_master_0_0(if00_data_in, if00_load_in, if00_data_out, 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(if00_data_in, if00_load_in, if00_data_out, 
   if00_load_out, if00_send_done, if00_send_busy, m00_axi_awaddr, m00_axi_awprot, 
   m00_axi_awvalid, m00_axi_awready, m00_axi_wdata, m00_axi_wstrb, m00_axi_wvalid, 
   m00_axi_wready, m00_axi_bresp, m00_axi_bvalid, m00_axi_bready, m00_axi_araddr, 

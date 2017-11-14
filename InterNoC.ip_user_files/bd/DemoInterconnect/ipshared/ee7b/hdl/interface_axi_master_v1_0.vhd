@@ -169,6 +169,7 @@ comb_logic: process(m00_axi_aclk)
 		next_head <= current_head;
 		next_body <= current_body;
 		next_timeout_count <= current_timeout_count;
+		if00_load_out <= '0';
 		-- Drive FSM
 		case current_state is
 			when ST_IDLE=>
@@ -242,11 +243,10 @@ comb_logic: process(m00_axi_aclk)
 				end if;
 				
 			when ST_TX_DATA=>
-				if00_load_out <= '0';
 				if (current_body_count=0) then 
 					next_state <= ST_IDLE;
 				else
-					if (if00_send_busy='0') then
+					if (if00_send_busy='0' and if00_send_done='0') then
 						if00_load_out <= '1';
 						case current_body_count is
 							when "001"=>
@@ -266,12 +266,14 @@ comb_logic: process(m00_axi_aclk)
 				end if;
 			
 			when ST_TX_WAIT=>
+				if (if00_send_busy='0') then
+					if00_load_out <= '1';
+				end if;
 				if (if00_send_done='1') then
 					next_state <= ST_TX_DATA;
 				end if;
 				
 			when ST_RESET=>
-				if00_load_out <= '0';
 				if00_data_out <= (others=>'0');
 				next_init_axi_rx <= '0';
 				next_init_axi_tx <= '0';

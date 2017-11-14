@@ -11,9 +11,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4048228000fs"></ZoomStartTime>
-      <ZoomEndTime time="12764048228001fs"></ZoomEndTime>
-      <Cursor1Time time="2194048228000fs"></Cursor1Time>
+      <ZoomStartTime time="727083333fs"></ZoomStartTime>
+      <ZoomEndTime time="1054583334fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="221"></NameColumnWidth>
@@ -73,6 +73,15 @@
          <wvobject fp_name="group65" type="group">
             <obj_property name="label">UART_0</obj_property>
             <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/i_Clk" type="logic">
+               <obj_property name="ElementShortName">i_Clk</obj_property>
+               <obj_property name="ObjectShortName">i_Clk</obj_property>
+            </wvobject>
+            <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/uart_rx_inst/r_SM_Main" type="other">
+               <obj_property name="ElementShortName">r_SM_Main</obj_property>
+               <obj_property name="ObjectShortName">r_SM_Main</obj_property>
+            </wvobject>
             <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/i_RX_Serial" type="logic">
                <obj_property name="ElementShortName">i_RX_Serial</obj_property>
                <obj_property name="ObjectShortName">i_RX_Serial</obj_property>
@@ -93,6 +102,10 @@
                <obj_property name="ElementShortName">i_TX_Byte[7:0]</obj_property>
                <obj_property name="ObjectShortName">i_TX_Byte[7:0]</obj_property>
             </wvobject>
+            <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/U0/uart_tx_inst/r_SM_Main" type="other">
+               <obj_property name="ElementShortName">r_SM_Main</obj_property>
+               <obj_property name="ObjectShortName">r_SM_Main</obj_property>
+            </wvobject>
             <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/uart_transceiver_0/o_TX_Active" type="logic">
                <obj_property name="ElementShortName">o_TX_Active</obj_property>
                <obj_property name="ObjectShortName">o_TX_Active</obj_property>
@@ -109,6 +122,7 @@
          <wvobject fp_name="group71" type="group">
             <obj_property name="label">PROTOCOL</obj_property>
             <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
             <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_data_in" type="array">
                <obj_property name="ElementShortName">if00_data_in[7:0]</obj_property>
                <obj_property name="ObjectShortName">if00_data_in[7:0]</obj_property>
@@ -124,6 +138,14 @@
             <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_load_out" type="logic">
                <obj_property name="ElementShortName">if00_load_out</obj_property>
                <obj_property name="ObjectShortName">if00_load_out</obj_property>
+            </wvobject>
+            <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_send_done" type="logic">
+               <obj_property name="ElementShortName">if00_send_done</obj_property>
+               <obj_property name="ObjectShortName">if00_send_done</obj_property>
+            </wvobject>
+            <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/if00_send_busy" type="logic">
+               <obj_property name="ElementShortName">if00_send_busy</obj_property>
+               <obj_property name="ObjectShortName">if00_send_busy</obj_property>
             </wvobject>
             <wvobject fp_name="/DemoInterconnect_TestBench/DemoInterconnect_Inst/DemoInterconnect_i/interface_axi_master_0/U0/current_state" type="other">
                <obj_property name="ElementShortName">current_state</obj_property>

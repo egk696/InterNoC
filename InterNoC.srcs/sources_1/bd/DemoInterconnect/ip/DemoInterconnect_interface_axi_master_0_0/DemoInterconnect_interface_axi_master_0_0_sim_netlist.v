@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Tue Nov  7 03:40:45 2017
+// Date        : Tue Nov 14 02:15:39 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0_sim_netlist.v
@@ -192,8 +192,8 @@ endmodule
 module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
    (m00_axi_bready,
     m00_axi_rready,
-    if00_data_out,
     if00_load_out,
+    if00_data_out,
     m00_axi_araddr,
     m00_axi_wdata,
     m00_axi_awvalid,
@@ -213,8 +213,8 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
     if00_load_in);
   output m00_axi_bready;
   output m00_axi_rready;
-  output [7:0]if00_data_out;
   output if00_load_out;
+  output [7:0]if00_data_out;
   output [4:0]m00_axi_araddr;
   output [31:0]m00_axi_wdata;
   output m00_axi_awvalid;
@@ -274,14 +274,15 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   wire \current_body[7]_i_2_n_0 ;
   wire \current_body[7]_i_3_n_0 ;
   wire \current_body_count[0]_i_1_n_0 ;
-  wire \current_body_count[0]_i_3_n_0 ;
+  wire \current_body_count[0]_i_2_n_0 ;
   wire \current_body_count[1]_i_1_n_0 ;
   wire \current_body_count[1]_i_3_n_0 ;
+  wire \current_body_count[1]_i_5_n_0 ;
+  wire \current_body_count[1]_i_6_n_0 ;
   wire \current_body_count[2]_i_1_n_0 ;
+  wire \current_body_count[2]_i_2_n_0 ;
   wire \current_body_count[2]_i_4_n_0 ;
   wire \current_body_count[2]_i_5_n_0 ;
-  wire \current_body_count[2]_i_6_n_0 ;
-  wire \current_body_count[2]_i_7_n_0 ;
   wire \current_body_count_reg_n_0_[0] ;
   wire \current_body_count_reg_n_0_[1] ;
   wire \current_body_count_reg_n_0_[2] ;
@@ -364,6 +365,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   wire \current_timeout_count[14]_i_5_n_0 ;
   wire \current_timeout_count[14]_i_6_n_0 ;
   wire \current_timeout_count[14]_i_7_n_0 ;
+  wire \current_timeout_count[14]_i_8_n_0 ;
   wire \current_timeout_count[1]_i_1_n_0 ;
   wire \current_timeout_count[2]_i_1_n_0 ;
   wire \current_timeout_count[3]_i_1_n_0 ;
@@ -398,11 +400,9 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   wire \if00_data_out_reg[7]_i_2_n_0 ;
   wire \if00_data_out_reg[7]_i_3_n_0 ;
   wire \if00_data_out_reg[7]_i_4_n_0 ;
-  wire \if00_data_out_reg[7]_i_5_n_0 ;
   wire if00_load_in;
   wire if00_load_out;
-  wire if00_load_out_reg_i_1_n_0;
-  wire if00_load_out_reg_i_2_n_0;
+  wire if00_load_out_INST_0_i_1_n_0;
   wire if00_send_busy;
   wire if00_send_done;
   wire interface_axi_master_v1_0_M00_AXI_inst_n_0;
@@ -437,6 +437,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   wire interface_axi_master_v1_0_M00_AXI_inst_n_38;
   wire interface_axi_master_v1_0_M00_AXI_inst_n_39;
   wire interface_axi_master_v1_0_M00_AXI_inst_n_40;
+  wire interface_axi_master_v1_0_M00_AXI_inst_n_41;
   wire interface_axi_master_v1_0_M00_AXI_inst_n_5;
   wire interface_axi_master_v1_0_M00_AXI_inst_n_6;
   wire interface_axi_master_v1_0_M00_AXI_inst_n_7;
@@ -457,7 +458,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   wire [31:0]m00_axi_wdata;
   wire m00_axi_wready;
   wire m00_axi_wvalid;
-  wire [2:0]next_body_count;
+  wire [1:1]next_body_count;
   wire next_if00_load;
   wire next_if00_load_i_1_n_0;
   wire next_timeout_count0_carry__0_n_0;
@@ -500,8 +501,8 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   LUT6 #(
     .INIT(64'h8888888000000000)) 
     \FSM_sequential_current_state[3]_i_2 
-       (.I0(current_state[1]),
-        .I1(current_state[2]),
+       (.I0(current_state[2]),
+        .I1(current_state[1]),
         .I2(\current_body_count_reg_n_0_[1] ),
         .I3(\current_body_count_reg_n_0_[0] ),
         .I4(\current_body_count_reg_n_0_[2] ),
@@ -521,21 +522,22 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
     .INIT(64'hAAAAAAABAAAAAAAA)) 
     \FSM_sequential_current_state[3]_i_7 
        (.I0(\FSM_sequential_current_state[3]_i_9_n_0 ),
-        .I1(\current_timeout_count[14]_i_7_n_0 ),
-        .I2(\current_timeout_count[14]_i_6_n_0 ),
-        .I3(\current_timeout_count[14]_i_5_n_0 ),
-        .I4(\current_timeout_count[14]_i_4_n_0 ),
+        .I1(\current_timeout_count[14]_i_8_n_0 ),
+        .I2(\current_timeout_count[14]_i_7_n_0 ),
+        .I3(\current_timeout_count[14]_i_6_n_0 ),
+        .I4(\current_timeout_count[14]_i_5_n_0 ),
         .I5(\current_body[31]_i_4_n_0 ),
         .O(\FSM_sequential_current_state[3]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'h01FF)) 
+  LUT5 #(
+    .INIT(32'h1111111F)) 
     \FSM_sequential_current_state[3]_i_8 
-       (.I0(\current_body_count_reg_n_0_[2] ),
-        .I1(\current_body_count_reg_n_0_[0] ),
-        .I2(\current_body_count_reg_n_0_[1] ),
-        .I3(if00_send_busy),
+       (.I0(if00_send_done),
+        .I1(if00_send_busy),
+        .I2(\current_body_count_reg_n_0_[2] ),
+        .I3(\current_body_count_reg_n_0_[0] ),
+        .I4(\current_body_count_reg_n_0_[1] ),
         .O(\FSM_sequential_current_state[3]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'h4040400F)) 
     \FSM_sequential_current_state[3]_i_9 
@@ -558,7 +560,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   FDRE \FSM_sequential_current_state_reg[1] 
        (.C(m00_axi_aclk),
         .CE(interface_axi_master_v1_0_M00_AXI_inst_n_37),
-        .D(interface_axi_master_v1_0_M00_AXI_inst_n_40),
+        .D(interface_axi_master_v1_0_M00_AXI_inst_n_41),
         .Q(current_state[1]),
         .R(interface_axi_master_v1_0_M00_AXI_inst_n_0));
   (* FSM_ENCODED_STATES = "st_idle:0001,st_rx_head:0010,st_rx_body:0011,st_pack:0100,st_axi_init:0101,st_axi_resp:0110,st_tx_data:0111,st_tx_wait:1000,st_reset:0000" *) 
@@ -566,7 +568,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   FDRE \FSM_sequential_current_state_reg[2] 
        (.C(m00_axi_aclk),
         .CE(interface_axi_master_v1_0_M00_AXI_inst_n_37),
-        .D(interface_axi_master_v1_0_M00_AXI_inst_n_39),
+        .D(interface_axi_master_v1_0_M00_AXI_inst_n_40),
         .Q(current_state[2]),
         .R(interface_axi_master_v1_0_M00_AXI_inst_n_0));
   (* FSM_ENCODED_STATES = "st_idle:0001,st_rx_head:0010,st_rx_body:0011,st_pack:0100,st_axi_init:0101,st_axi_resp:0110,st_tx_data:0111,st_tx_wait:1000,st_reset:0000" *) 
@@ -878,7 +880,6 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I4(current_state[1]),
         .I5(\current_body[31]_i_5_n_0 ),
         .O(\current_body[23]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \current_body[23]_i_3 
@@ -978,7 +979,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I4(current_state[1]),
         .I5(\current_body[31]_i_5_n_0 ),
         .O(\current_body[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \current_body[7]_i_3 
@@ -986,110 +987,109 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I1(\current_body_count_reg_n_0_[0] ),
         .I2(\current_body_count_reg_n_0_[1] ),
         .O(\current_body[7]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hBFFF8000)) 
-    \current_body_count[0]_i_1 
-       (.I0(next_body_count[0]),
-        .I1(m00_axi_aresetn),
-        .I2(interface_axi_master_v1_0_M00_AXI_inst_n_38),
-        .I3(\current_body_count[2]_i_4_n_0 ),
-        .I4(\current_body_count_reg_n_0_[0] ),
-        .O(\current_body_count[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h000002A2AAAA02A2)) 
-    \current_body_count[0]_i_2 
-       (.I0(\current_body_count[0]_i_3_n_0 ),
-        .I1(L[0]),
-        .I2(current_state[2]),
-        .I3(\current_packet_reg_n_0_[37] ),
-        .I4(current_state[0]),
+    .INIT(64'h40FFFFFF40000000)) 
+    \current_body_count[0]_i_1 
+       (.I0(current_state[3]),
+        .I1(current_state[1]),
+        .I2(\current_body_count[0]_i_2_n_0 ),
+        .I3(m00_axi_aresetn),
+        .I4(interface_axi_master_v1_0_M00_AXI_inst_n_38),
         .I5(\current_body_count_reg_n_0_[0] ),
-        .O(next_body_count[0]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \current_body_count[0]_i_3 
-       (.I0(current_state[1]),
-        .I1(current_state[3]),
-        .O(\current_body_count[0]_i_3_n_0 ));
+        .O(\current_body_count[0]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hBFFF8000)) 
+    .INIT(32'h47444777)) 
+    \current_body_count[0]_i_2 
+       (.I0(\current_body_count_reg_n_0_[0] ),
+        .I1(current_state[0]),
+        .I2(\current_packet_reg_n_0_[37] ),
+        .I3(current_state[2]),
+        .I4(L[0]),
+        .O(\current_body_count[0]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBFFFFF88800000)) 
     \current_body_count[1]_i_1 
-       (.I0(next_body_count[1]),
+       (.I0(next_body_count),
         .I1(m00_axi_aresetn),
-        .I2(interface_axi_master_v1_0_M00_AXI_inst_n_38),
-        .I3(\current_body_count[2]_i_4_n_0 ),
-        .I4(\current_body_count_reg_n_0_[1] ),
+        .I2(\current_body_count[1]_i_3_n_0 ),
+        .I3(interface_axi_master_v1_0_M00_AXI_inst_n_39),
+        .I4(\current_body_count[1]_i_5_n_0 ),
+        .I5(\current_body_count_reg_n_0_[1] ),
         .O(\current_body_count[1]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h4440004000404440)) 
     \current_body_count[1]_i_2 
        (.I0(current_state[3]),
         .I1(current_state[1]),
-        .I2(\current_body_count[1]_i_3_n_0 ),
+        .I2(\current_body_count[1]_i_6_n_0 ),
         .I3(current_state[0]),
         .I4(\current_body_count_reg_n_0_[0] ),
         .I5(\current_body_count_reg_n_0_[1] ),
-        .O(next_body_count[1]));
+        .O(next_body_count));
+  LUT6 #(
+    .INIT(64'h0000000044444440)) 
+    \current_body_count[1]_i_3 
+       (.I0(current_state[2]),
+        .I1(current_state[1]),
+        .I2(\current_body_count_reg_n_0_[2] ),
+        .I3(\current_body_count_reg_n_0_[0] ),
+        .I4(\current_body_count_reg_n_0_[1] ),
+        .I5(\current_body[31]_i_4_n_0 ),
+        .O(\current_body_count[1]_i_3_n_0 ));
+  LUT3 #(
+    .INIT(8'h45)) 
+    \current_body_count[1]_i_5 
+       (.I0(current_state[3]),
+        .I1(current_state[1]),
+        .I2(current_state[2]),
+        .O(\current_body_count[1]_i_5_n_0 ));
   LUT5 #(
     .INIT(32'h606F6F60)) 
-    \current_body_count[1]_i_3 
+    \current_body_count[1]_i_6 
        (.I0(\current_packet_reg_n_0_[37] ),
         .I1(\current_packet_reg_n_0_[38] ),
         .I2(current_state[2]),
         .I3(L[0]),
         .I4(L[1]),
-        .O(\current_body_count[1]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'hBFFF8000)) 
-    \current_body_count[2]_i_1 
-       (.I0(next_body_count[2]),
-        .I1(m00_axi_aresetn),
-        .I2(interface_axi_master_v1_0_M00_AXI_inst_n_38),
-        .I3(\current_body_count[2]_i_4_n_0 ),
-        .I4(\current_body_count_reg_n_0_[2] ),
-        .O(\current_body_count[2]_i_1_n_0 ));
+        .O(\current_body_count[1]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h4440004000404440)) 
-    \current_body_count[2]_i_2 
+    .INIT(64'h40FFFFFF40000000)) 
+    \current_body_count[2]_i_1 
        (.I0(current_state[3]),
         .I1(current_state[1]),
-        .I2(\current_body_count[2]_i_5_n_0 ),
-        .I3(current_state[0]),
-        .I4(\current_body_count[2]_i_6_n_0 ),
+        .I2(\current_body_count[2]_i_2_n_0 ),
+        .I3(m00_axi_aresetn),
+        .I4(interface_axi_master_v1_0_M00_AXI_inst_n_38),
         .I5(\current_body_count_reg_n_0_[2] ),
-        .O(next_body_count[2]));
-  LUT3 #(
-    .INIT(8'h45)) 
-    \current_body_count[2]_i_4 
-       (.I0(current_state[3]),
-        .I1(current_state[1]),
-        .I2(current_state[2]),
-        .O(\current_body_count[2]_i_4_n_0 ));
+        .O(\current_body_count[2]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hA9FFA900)) 
+    \current_body_count[2]_i_2 
+       (.I0(\current_body_count_reg_n_0_[2] ),
+        .I1(\current_body_count_reg_n_0_[0] ),
+        .I2(\current_body_count_reg_n_0_[1] ),
+        .I3(current_state[0]),
+        .I4(\current_body_count[2]_i_4_n_0 ),
+        .O(\current_body_count[2]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h8F808080)) 
-    \current_body_count[2]_i_5 
+    \current_body_count[2]_i_4 
        (.I0(\current_packet_reg_n_0_[38] ),
         .I1(\current_packet_reg_n_0_[37] ),
         .I2(current_state[2]),
         .I3(L[1]),
         .I4(L[0]),
-        .O(\current_body_count[2]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \current_body_count[2]_i_6 
-       (.I0(\current_body_count_reg_n_0_[0] ),
-        .I1(\current_body_count_reg_n_0_[1] ),
-        .O(\current_body_count[2]_i_6_n_0 ));
+        .O(\current_body_count[2]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hBBBBBBBFFFFFFFFF)) 
-    \current_body_count[2]_i_7 
+    \current_body_count[2]_i_5 
        (.I0(current_if00_load),
         .I1(next_if00_load),
         .I2(\current_body_count_reg_n_0_[1] ),
         .I3(\current_body_count_reg_n_0_[0] ),
         .I4(\current_body_count_reg_n_0_[2] ),
         .I5(current_state[1]),
-        .O(\current_body_count[2]_i_7_n_0 ));
+        .O(\current_body_count[2]_i_5_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \current_body_count_reg[0] 
@@ -2144,34 +2144,34 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
     \current_timeout_count[10]_i_1 
        (.I0(current_state[1]),
         .I1(data0[10]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[10]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[11]_i_1 
        (.I0(current_state[1]),
         .I1(data0[11]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[11]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[12]_i_1 
        (.I0(current_state[1]),
         .I1(data0[12]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[12]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[13]_i_1 
        (.I0(current_state[1]),
         .I1(data0[13]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[13]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h000000000000800A)) 
     \current_timeout_count[14]_i_1 
        (.I0(m00_axi_aresetn),
-        .I1(\if00_data_out_reg[7]_i_5_n_0 ),
+        .I1(\current_timeout_count[14]_i_3_n_0 ),
         .I2(current_state[0]),
         .I3(current_state[1]),
         .I4(current_state[2]),
@@ -2182,111 +2182,119 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
     \current_timeout_count[14]_i_2 
        (.I0(current_state[1]),
         .I1(data0[14]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[14]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \current_timeout_count[14]_i_3 
+       (.I0(\current_body_count_reg_n_0_[1] ),
+        .I1(\current_body_count_reg_n_0_[0] ),
+        .I2(\current_body_count_reg_n_0_[2] ),
+        .O(\current_timeout_count[14]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hFFFEFFFE0000FFFE)) 
-    \current_timeout_count[14]_i_3 
-       (.I0(\current_timeout_count[14]_i_4_n_0 ),
-        .I1(\current_timeout_count[14]_i_5_n_0 ),
-        .I2(\current_timeout_count[14]_i_6_n_0 ),
-        .I3(\current_timeout_count[14]_i_7_n_0 ),
+    \current_timeout_count[14]_i_4 
+       (.I0(\current_timeout_count[14]_i_5_n_0 ),
+        .I1(\current_timeout_count[14]_i_6_n_0 ),
+        .I2(\current_timeout_count[14]_i_7_n_0 ),
+        .I3(\current_timeout_count[14]_i_8_n_0 ),
         .I4(next_if00_load),
         .I5(current_if00_load),
-        .O(\current_timeout_count[14]_i_3_n_0 ));
+        .O(\current_timeout_count[14]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
-    \current_timeout_count[14]_i_4 
+    \current_timeout_count[14]_i_5 
        (.I0(current_timeout_count[10]),
         .I1(current_timeout_count[9]),
         .I2(current_timeout_count[12]),
         .I3(current_timeout_count[11]),
-        .O(\current_timeout_count[14]_i_4_n_0 ));
+        .O(\current_timeout_count[14]_i_5_n_0 ));
   LUT3 #(
     .INIT(8'hDF)) 
-    \current_timeout_count[14]_i_5 
+    \current_timeout_count[14]_i_6 
        (.I0(current_timeout_count[13]),
         .I1(current_timeout_count[14]),
         .I2(current_timeout_count[0]),
-        .O(\current_timeout_count[14]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \current_timeout_count[14]_i_6 
-       (.I0(current_timeout_count[2]),
-        .I1(current_timeout_count[1]),
-        .I2(current_timeout_count[4]),
-        .I3(current_timeout_count[3]),
         .O(\current_timeout_count[14]_i_6_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
     \current_timeout_count[14]_i_7 
+       (.I0(current_timeout_count[2]),
+        .I1(current_timeout_count[1]),
+        .I2(current_timeout_count[4]),
+        .I3(current_timeout_count[3]),
+        .O(\current_timeout_count[14]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    \current_timeout_count[14]_i_8 
        (.I0(current_timeout_count[6]),
         .I1(current_timeout_count[5]),
         .I2(current_timeout_count[8]),
         .I3(current_timeout_count[7]),
-        .O(\current_timeout_count[14]_i_7_n_0 ));
+        .O(\current_timeout_count[14]_i_8_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[1]_i_1 
        (.I0(current_state[1]),
         .I1(data0[1]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[1]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[2]_i_1 
        (.I0(current_state[1]),
         .I1(data0[2]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[2]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[3]_i_1 
        (.I0(current_state[1]),
         .I1(data0[3]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[3]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[4]_i_1 
        (.I0(current_state[1]),
         .I1(data0[4]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[4]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[5]_i_1 
        (.I0(current_state[1]),
         .I1(data0[5]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[5]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[6]_i_1 
        (.I0(current_state[1]),
         .I1(data0[6]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[6]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[7]_i_1 
        (.I0(current_state[1]),
         .I1(data0[7]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[7]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[8]_i_1 
        (.I0(current_state[1]),
         .I1(data0[8]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[8]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     \current_timeout_count[9]_i_1 
        (.I0(current_state[1]),
         .I1(data0[9]),
-        .I2(\current_timeout_count[14]_i_3_n_0 ),
+        .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[9]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -2622,15 +2630,14 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I3(current_state[2]),
         .I4(current_state[3]),
         .O(\if00_data_out_reg[7]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0400000F0000000F)) 
+  LUT5 #(
+    .INIT(32'h20030003)) 
     \if00_data_out_reg[7]_i_2 
-       (.I0(if00_send_busy),
-        .I1(\if00_data_out_reg[7]_i_5_n_0 ),
-        .I2(current_state[3]),
-        .I3(current_state[2]),
-        .I4(current_state[1]),
-        .I5(current_state[0]),
+       (.I0(if00_load_out_INST_0_i_1_n_0),
+        .I1(current_state[3]),
+        .I2(current_state[2]),
+        .I3(current_state[1]),
+        .I4(current_state[0]),
         .O(\if00_data_out_reg[7]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
@@ -2650,46 +2657,32 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I4(\current_body_count_reg_n_0_[0] ),
         .I5(\current_body_count_reg_n_0_[1] ),
         .O(\if00_data_out_reg[7]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
-    \if00_data_out_reg[7]_i_5 
-       (.I0(\current_body_count_reg_n_0_[1] ),
-        .I1(\current_body_count_reg_n_0_[0] ),
-        .I2(\current_body_count_reg_n_0_[2] ),
-        .O(\if00_data_out_reg[7]_i_5_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    if00_load_out_reg
-       (.CLR(1'b0),
-        .D(if00_load_out_reg_i_1_n_0),
-        .G(if00_load_out_reg_i_2_n_0),
-        .GE(1'b1),
-        .Q(if00_load_out));
   LUT6 #(
-    .INIT(64'h0000000044444440)) 
-    if00_load_out_reg_i_1
-       (.I0(current_state[3]),
-        .I1(current_state[2]),
+    .INIT(64'h0088010000000100)) 
+    if00_load_out_INST_0
+       (.I0(current_state[1]),
+        .I1(current_state[0]),
+        .I2(if00_send_busy),
+        .I3(current_state[3]),
+        .I4(current_state[2]),
+        .I5(if00_load_out_INST_0_i_1_n_0),
+        .O(if00_load_out));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT5 #(
+    .INIT(32'h11111110)) 
+    if00_load_out_INST_0_i_1
+       (.I0(if00_send_done),
+        .I1(if00_send_busy),
         .I2(\current_body_count_reg_n_0_[2] ),
         .I3(\current_body_count_reg_n_0_[0] ),
         .I4(\current_body_count_reg_n_0_[1] ),
-        .I5(if00_send_busy),
-        .O(if00_load_out_reg_i_1_n_0));
-  LUT4 #(
-    .INIT(16'h4101)) 
-    if00_load_out_reg_i_2
-       (.I0(current_state[3]),
-        .I1(current_state[2]),
-        .I2(current_state[1]),
-        .I3(current_state[0]),
-        .O(if00_load_out_reg_i_2_n_0));
+        .O(if00_load_out_INST_0_i_1_n_0));
   DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_AXI interface_axi_master_v1_0_M00_AXI_inst
-       (.D({interface_axi_master_v1_0_M00_AXI_inst_n_39,interface_axi_master_v1_0_M00_AXI_inst_n_40}),
+       (.D({interface_axi_master_v1_0_M00_AXI_inst_n_40,interface_axi_master_v1_0_M00_AXI_inst_n_41}),
         .E(interface_axi_master_v1_0_M00_AXI_inst_n_37),
         .\FSM_sequential_current_state_reg[0] (\FSM_sequential_current_state[3]_i_5_n_0 ),
         .\FSM_sequential_current_state_reg[2] (\FSM_sequential_current_state_reg[3]_i_4_n_0 ),
+        .\FSM_sequential_current_state_reg[3] (\current_body_count[1]_i_5_n_0 ),
         .SR(interface_axi_master_v1_0_M00_AXI_inst_n_0),
         .current_axi_data(current_axi_data),
         .\current_axi_data_reg[0] (interface_axi_master_v1_0_M00_AXI_inst_n_36),
@@ -2724,10 +2717,12 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .\current_axi_data_reg[7] (interface_axi_master_v1_0_M00_AXI_inst_n_29),
         .\current_axi_data_reg[8] (interface_axi_master_v1_0_M00_AXI_inst_n_28),
         .\current_axi_data_reg[9] (interface_axi_master_v1_0_M00_AXI_inst_n_27),
-        .\current_body_count_reg[1] (\if00_data_out_reg[7]_i_5_n_0 ),
+        .\current_body_count_reg[1] (interface_axi_master_v1_0_M00_AXI_inst_n_39),
+        .\current_body_count_reg[1]_0 (\current_timeout_count[14]_i_3_n_0 ),
         .\current_body_count_reg[2] (interface_axi_master_v1_0_M00_AXI_inst_n_38),
-        .\current_body_count_reg[2]_0 (\FSM_sequential_current_state[2]_i_2_n_0 ),
-        .current_if00_load_reg(\current_body_count[2]_i_7_n_0 ),
+        .\current_body_count_reg[2]_0 (if00_load_out_INST_0_i_1_n_0),
+        .\current_body_count_reg[2]_1 (\FSM_sequential_current_state[2]_i_2_n_0 ),
+        .current_if00_load_reg(\current_body_count[2]_i_5_n_0 ),
         .current_init_axi_rx_reg(current_init_axi_rx_reg_n_0),
         .current_init_axi_tx_reg(current_init_axi_tx_reg_n_0),
         .if00_send_busy(if00_send_busy),
@@ -2833,6 +2828,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
     \current_axi_data_reg[0] ,
     E,
     \current_body_count_reg[2] ,
+    \current_body_count_reg[1] ,
     D,
     current_axi_data,
     m00_axi_bready,
@@ -2844,10 +2840,12 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
     \FSM_sequential_current_state_reg[2] ,
     \FSM_sequential_current_state_reg[0] ,
     if00_send_done,
-    current_if00_load_reg,
-    if00_send_busy,
-    \current_body_count_reg[1] ,
+    \FSM_sequential_current_state_reg[3] ,
     \current_body_count_reg[2]_0 ,
+    current_if00_load_reg,
+    \current_body_count_reg[1]_0 ,
+    if00_send_busy,
+    \current_body_count_reg[2]_1 ,
     m00_axi_rvalid,
     m00_axi_awready,
     m00_axi_wready,
@@ -2893,6 +2891,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   output \current_axi_data_reg[0] ;
   output [0:0]E;
   output \current_body_count_reg[2] ;
+  output \current_body_count_reg[1] ;
   output [1:0]D;
   output current_axi_data;
   output m00_axi_bready;
@@ -2904,10 +2903,12 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   input \FSM_sequential_current_state_reg[2] ;
   input \FSM_sequential_current_state_reg[0] ;
   input if00_send_done;
-  input current_if00_load_reg;
-  input if00_send_busy;
-  input \current_body_count_reg[1] ;
+  input \FSM_sequential_current_state_reg[3] ;
   input \current_body_count_reg[2]_0 ;
+  input current_if00_load_reg;
+  input \current_body_count_reg[1]_0 ;
+  input if00_send_busy;
+  input \current_body_count_reg[2]_1 ;
   input m00_axi_rvalid;
   input m00_axi_awready;
   input m00_axi_wready;
@@ -2922,6 +2923,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   wire \FSM_sequential_current_state[3]_i_6_n_0 ;
   wire \FSM_sequential_current_state_reg[0] ;
   wire \FSM_sequential_current_state_reg[2] ;
+  wire \FSM_sequential_current_state_reg[3] ;
   wire \FSM_sequential_mst_exec_state[0]_i_1_n_0 ;
   wire \FSM_sequential_mst_exec_state[0]_i_2_n_0 ;
   wire \FSM_sequential_mst_exec_state[1]_i_1_n_0 ;
@@ -2971,8 +2973,10 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   wire \current_axi_data_reg[8] ;
   wire \current_axi_data_reg[9] ;
   wire \current_body_count_reg[1] ;
+  wire \current_body_count_reg[1]_0 ;
   wire \current_body_count_reg[2] ;
   wire \current_body_count_reg[2]_0 ;
+  wire \current_body_count_reg[2]_1 ;
   wire current_if00_load_reg;
   wire current_init_axi_rx_reg;
   wire current_init_axi_tx_reg;
@@ -3029,7 +3033,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
        (.I0(out[0]),
         .I1(RXN_DONE),
         .I2(out[1]),
-        .I3(\current_body_count_reg[2]_0 ),
+        .I3(\current_body_count_reg[2]_1 ),
         .I4(out[3]),
         .O(D[1]));
   LUT6 #(
@@ -3216,70 +3220,70 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
        (.I0(out[2]),
         .I1(RXN_DATA[0]),
         .O(\current_axi_data_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[10]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[10]),
         .O(\current_axi_data_reg[10] ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[11]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[11]),
         .O(\current_axi_data_reg[11] ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[12]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[12]),
         .O(\current_axi_data_reg[12] ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[13]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[13]),
         .O(\current_axi_data_reg[13] ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[14]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[14]),
         .O(\current_axi_data_reg[14] ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[15]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[15]),
         .O(\current_axi_data_reg[15] ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[16]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[16]),
         .O(\current_axi_data_reg[16] ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[17]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[17]),
         .O(\current_axi_data_reg[17] ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[18]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[18]),
         .O(\current_axi_data_reg[18] ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[19]_i_1 
@@ -3293,7 +3297,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
        (.I0(out[2]),
         .I1(RXN_DATA[1]),
         .O(\current_axi_data_reg[1] ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[20]_i_1 
@@ -3394,14 +3398,14 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
        (.I0(out[2]),
         .I1(RXN_DATA[31]),
         .O(\current_axi_data_reg[31] ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[3]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[3]),
         .O(\current_axi_data_reg[3] ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[4]_i_1 
@@ -3422,21 +3426,21 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
        (.I0(out[2]),
         .I1(RXN_DATA[6]),
         .O(\current_axi_data_reg[6] ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[7]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[7]),
         .O(\current_axi_data_reg[7] ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[8]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[8]),
         .O(\current_axi_data_reg[8] ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[9]_i_1 
@@ -3444,14 +3448,24 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .I1(RXN_DATA[9]),
         .O(\current_axi_data_reg[9] ));
   LUT6 #(
-    .INIT(64'h11F3DDF311F311F3)) 
-    \current_body_count[2]_i_3 
-       (.I0(current_if00_load_reg),
-        .I1(out[2]),
-        .I2(RXN_DONE),
+    .INIT(64'h02FF020000FF00FF)) 
+    \current_body_count[1]_i_4 
+       (.I0(\current_body_count_reg[1]_0 ),
+        .I1(if00_send_busy),
+        .I2(if00_send_done),
         .I3(out[0]),
-        .I4(if00_send_busy),
-        .I5(\current_body_count_reg[1] ),
+        .I4(RXN_DONE),
+        .I5(out[2]),
+        .O(\current_body_count_reg[1] ));
+  LUT6 #(
+    .INIT(64'h8A800A0A8A80AAAA)) 
+    \current_body_count[2]_i_3 
+       (.I0(\FSM_sequential_current_state_reg[3] ),
+        .I1(\current_body_count_reg[2]_0 ),
+        .I2(out[0]),
+        .I3(RXN_DONE),
+        .I4(out[2]),
+        .I5(current_if00_load_reg),
         .O(\current_body_count_reg[2] ));
   FDRE init_rxn_ff_reg
        (.C(m00_axi_aclk),
