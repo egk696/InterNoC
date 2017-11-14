@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Tue Nov 14 02:15:39 2017
+// Date        : Tue Nov 14 04:02:57 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_interface_axi_master_0_0 -prefix
+//               DemoInterconnect_interface_axi_master_0_0_ DemoInterconnect_interface_axi_master_0_0_sim_netlist.v
 // Design      : DemoInterconnect_interface_axi_master_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -92,6 +92,7 @@ module DemoInterconnect_interface_axi_master_0_0
   wire m00_axi_rvalid;
   wire [31:0]m00_axi_wdata;
   wire m00_axi_wready;
+  wire [3:0]m00_axi_wstrb;
   wire m00_axi_wvalid;
 
   assign m00_axi_araddr[31] = \<const0> ;
@@ -156,10 +157,6 @@ module DemoInterconnect_interface_axi_master_0_0
   assign m00_axi_awprot[2] = \<const0> ;
   assign m00_axi_awprot[1] = \<const0> ;
   assign m00_axi_awprot[0] = \<const0> ;
-  assign m00_axi_wstrb[3] = \<const1> ;
-  assign m00_axi_wstrb[2] = \<const1> ;
-  assign m00_axi_wstrb[1] = \<const1> ;
-  assign m00_axi_wstrb[0] = \<const1> ;
   GND GND
        (.G(\<const0> ));
   DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0 U0
@@ -183,14 +180,15 @@ module DemoInterconnect_interface_axi_master_0_0
         .m00_axi_rvalid(m00_axi_rvalid),
         .m00_axi_wdata(m00_axi_wdata),
         .m00_axi_wready(m00_axi_wready),
+        .m00_axi_wstrb(m00_axi_wstrb),
         .m00_axi_wvalid(m00_axi_wvalid));
   VCC VCC
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "interface_axi_master_v1_0" *) 
 module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
-   (m00_axi_bready,
+   (m00_axi_wstrb,
+    m00_axi_bready,
     m00_axi_rready,
     if00_load_out,
     if00_data_out,
@@ -211,6 +209,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
     m00_axi_wready,
     m00_axi_arready,
     if00_load_in);
+  output [3:0]m00_axi_wstrb;
   output m00_axi_bready;
   output m00_axi_rready;
   output if00_load_out;
@@ -457,6 +456,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
   wire m00_axi_rvalid;
   wire [31:0]m00_axi_wdata;
   wire m00_axi_wready;
+  wire [3:0]m00_axi_wstrb;
   wire m00_axi_wvalid;
   wire [1:1]next_body_count;
   wire next_if00_load;
@@ -856,7 +856,6 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I4(current_state[1]),
         .I5(\current_body[31]_i_5_n_0 ),
         .O(\current_body[15]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \current_body[15]_i_3 
@@ -880,6 +879,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I4(current_state[1]),
         .I5(\current_body[31]_i_5_n_0 ),
         .O(\current_body[23]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \current_body[23]_i_3 
@@ -979,7 +979,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I4(current_state[1]),
         .I5(\current_body[31]_i_5_n_0 ),
         .O(\current_body[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \current_body[7]_i_3 
@@ -2184,7 +2184,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I1(data0[14]),
         .I2(\current_timeout_count[14]_i_4_n_0 ),
         .O(\current_timeout_count[14]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \current_timeout_count[14]_i_3 
@@ -2639,7 +2639,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I3(current_state[1]),
         .I4(current_state[0]),
         .O(\if00_data_out_reg[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \if00_data_out_reg[7]_i_3 
@@ -2667,7 +2667,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .I4(current_state[2]),
         .I5(if00_load_out_INST_0_i_1_n_0),
         .O(if00_load_out));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT5 #(
     .INIT(32'h11111110)) 
     if00_load_out_INST_0_i_1
@@ -2725,6 +2725,8 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .current_if00_load_reg(\current_body_count[2]_i_5_n_0 ),
         .current_init_axi_rx_reg(current_init_axi_rx_reg_n_0),
         .current_init_axi_tx_reg(current_init_axi_tx_reg_n_0),
+        .\current_packet_reg[37] (\current_packet_reg_n_0_[37] ),
+        .\current_packet_reg[38] (\current_packet_reg_n_0_[38] ),
         .if00_send_busy(if00_send_busy),
         .if00_send_done(if00_send_done),
         .m00_axi_aclk(m00_axi_aclk),
@@ -2739,8 +2741,23 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .m00_axi_rready(m00_axi_rready),
         .m00_axi_rvalid(m00_axi_rvalid),
         .m00_axi_wready(m00_axi_wready),
+        .m00_axi_wstrb({m00_axi_wstrb[3],m00_axi_wstrb[0]}),
         .m00_axi_wvalid(m00_axi_wvalid),
         .out(current_state));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \m00_axi_wstrb[1]_INST_0 
+       (.I0(\current_packet_reg_n_0_[37] ),
+        .I1(\current_packet_reg_n_0_[38] ),
+        .O(m00_axi_wstrb[1]));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \m00_axi_wstrb[2]_INST_0 
+       (.I0(\current_packet_reg_n_0_[38] ),
+        .I1(\current_packet_reg_n_0_[37] ),
+        .O(m00_axi_wstrb[2]));
   (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
@@ -2787,7 +2804,6 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0
         .S({1'b0,1'b0,current_timeout_count[14:13]}));
 endmodule
 
-(* ORIG_REF_NAME = "interface_axi_master_v1_0_M00_AXI" *) 
 module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_AXI
    (SR,
     m00_axi_rready,
@@ -2832,6 +2848,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
     D,
     current_axi_data,
     m00_axi_bready,
+    m00_axi_wstrb,
     current_init_axi_tx_reg,
     m00_axi_aclk,
     current_init_axi_rx_reg,
@@ -2851,7 +2868,9 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
     m00_axi_wready,
     m00_axi_arready,
     m00_axi_bvalid,
-    m00_axi_rdata);
+    m00_axi_rdata,
+    \current_packet_reg[37] ,
+    \current_packet_reg[38] );
   output [0:0]SR;
   output m00_axi_rready;
   output m00_axi_awvalid;
@@ -2895,6 +2914,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   output [1:0]D;
   output current_axi_data;
   output m00_axi_bready;
+  output [1:0]m00_axi_wstrb;
   input current_init_axi_tx_reg;
   input m00_axi_aclk;
   input current_init_axi_rx_reg;
@@ -2915,6 +2935,8 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   input m00_axi_arready;
   input m00_axi_bvalid;
   input [31:0]m00_axi_rdata;
+  input \current_packet_reg[37] ;
+  input \current_packet_reg[38] ;
 
   wire \/i___0/i__n_0 ;
   wire [1:0]D;
@@ -2980,6 +3002,8 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   wire current_if00_load_reg;
   wire current_init_axi_rx_reg;
   wire current_init_axi_tx_reg;
+  wire \current_packet_reg[37] ;
+  wire \current_packet_reg[38] ;
   wire if00_send_busy;
   wire if00_send_done;
   wire init_rxn_ff;
@@ -2997,6 +3021,7 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
   wire m00_axi_rready;
   wire m00_axi_rvalid;
   wire m00_axi_wready;
+  wire [1:0]m00_axi_wstrb;
   wire m00_axi_wvalid;
   (* RTL_KEEP = "yes" *) wire [2:0]mst_exec_state;
   wire [3:0]out;
@@ -3398,28 +3423,28 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
        (.I0(out[2]),
         .I1(RXN_DATA[31]),
         .O(\current_axi_data_reg[31] ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[3]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[3]),
         .O(\current_axi_data_reg[3] ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[4]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[4]),
         .O(\current_axi_data_reg[4] ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[5]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[5]),
         .O(\current_axi_data_reg[5] ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[6]_i_1 
@@ -3433,14 +3458,14 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
        (.I0(out[2]),
         .I1(RXN_DATA[7]),
         .O(\current_axi_data_reg[7] ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[8]_i_1 
        (.I0(out[2]),
         .I1(RXN_DATA[8]),
         .O(\current_axi_data_reg[8] ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \current_axi_data[9]_i_1 
@@ -3485,6 +3510,20 @@ module DemoInterconnect_interface_axi_master_0_0_interface_axi_master_v1_0_M00_A
         .D(current_init_axi_tx_reg),
         .Q(init_txn_ff),
         .R(SR));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \m00_axi_wstrb[0]_INST_0 
+       (.I0(\current_packet_reg[37] ),
+        .I1(\current_packet_reg[38] ),
+        .O(m00_axi_wstrb[0]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \m00_axi_wstrb[3]_INST_0 
+       (.I0(\current_packet_reg[37] ),
+        .I1(\current_packet_reg[38] ),
+        .O(m00_axi_wstrb[1]));
   LUT5 #(
     .INIT(32'h00000080)) 
     \reads_data[31]_i_1 

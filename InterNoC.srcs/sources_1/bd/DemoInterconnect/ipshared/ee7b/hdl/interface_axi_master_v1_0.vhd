@@ -62,7 +62,8 @@ architecture arch_imp of interface_axi_master_v1_0 is
         C_PACKET_DATA_WIDTH : integer;
         C_AXI_PACKET_ADDR_OFFSET : integer;
         C_M_AXI_DATA_WIDTH  : integer;
-        C_M_AXI_ADDR_WIDTH  : integer
+		C_M_AXI_ADDR_WIDTH  : integer;
+		C_PACKET_CTRL_WIDTH : integer
 		);
 		port (
 		PACKET_TX          : in std_logic_vector(C_PACKET_WIDTH-1 downto 0);
@@ -294,6 +295,7 @@ generic map (
    C_PACKET_WIDTH       => C_PACKET_WIDTH,
    C_PACKET_ADDR_WIDTH  => C_PACKET_ADDR_WIDTH,
    C_PACKET_DATA_WIDTH  => C_PACKET_DATA_WIDTH,
+   C_PACKET_CTRL_WIDTH	=> C_PACKET_CTRL_WIDTH,
    C_AXI_PACKET_ADDR_OFFSET => C_AXI_PACKET_ADDR_OFFSET,
    C_M_AXI_ADDR_WIDTH	=> C_M00_AXI_ADDR_WIDTH,
    C_M_AXI_DATA_WIDTH	=> C_PACKET_DATA_WIDTH

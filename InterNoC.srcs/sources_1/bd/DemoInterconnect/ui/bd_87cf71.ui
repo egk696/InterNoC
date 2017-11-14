@@ -29,10 +29,10 @@ preplace port m_spi_ss_1 -pg 1 -y 880 -defaultsOSRD
 preplace port m_spi_miso -pg 1 -y 930 -defaultsOSRD
 preplace inst axi_spi_master_0 -pg 1 -lvl 4 -y 700 -defaultsOSRD
 preplace inst axi_spi_master_1 -pg 1 -lvl 4 -y 880 -defaultsOSRD
-preplace inst interface_axi_master_0 -pg 1 -lvl 2 -y 100 -defaultsOSRD
 preplace inst axi_spi_master_2 -pg 1 -lvl 4 -y 1030 -defaultsOSRD
-preplace inst interface_axi_master_1 -pg 1 -lvl 2 -y 350 -defaultsOSRD
+preplace inst interface_axi_master_0 -pg 1 -lvl 2 -y 100 -defaultsOSRD
 preplace inst axi_spi_master_3 -pg 1 -lvl 4 -y 1180 -defaultsOSRD
+preplace inst interface_axi_master_1 -pg 1 -lvl 2 -y 350 -defaultsOSRD
 preplace inst jtag_axi_0 -pg 1 -lvl 2 -y 530 -defaultsOSRD
 preplace inst uart_transceiver_0 -pg 1 -lvl 1 -y 140 -defaultsOSRD
 preplace inst master_comm_mutex -pg 1 -lvl 4 -y 500 -defaultsOSRD

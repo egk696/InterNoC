@@ -1017,6 +1017,20 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>interface_axi_master_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_interface_axi_master_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>interface_axi_master_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_interface_axi_master_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>axi_spi_master_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="axi_spi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -1046,20 +1060,6 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_axi_spi_master_1_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">6</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>interface_axi_master_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_interface_axi_master_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>interface_axi_master_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_interface_axi_master_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -1125,6 +1125,8 @@
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S1_AXI_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S2_AXI_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S01_ACLK"/>
@@ -1140,8 +1142,6 @@
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_1" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_2" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_3" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_locked</spirit:name>
@@ -1151,6 +1151,8 @@
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S0_AXI_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S1_AXI_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S2_AXI_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S01_ARESETN"/>
@@ -1166,8 +1168,6 @@
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_1" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_2" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="axi_spi_master_3" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sys_clk_1</spirit:name>

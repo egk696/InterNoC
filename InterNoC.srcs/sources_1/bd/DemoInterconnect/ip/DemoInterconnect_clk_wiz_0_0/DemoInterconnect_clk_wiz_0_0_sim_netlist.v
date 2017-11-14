@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
 // Date        : Wed Oct 25 01:37:20 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/DemoInterconnect_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_clk_wiz_0_0 -prefix
+//               DemoInterconnect_clk_wiz_0_0_ DemoInterconnect_clk_wiz_0_0_sim_netlist.v
 // Design      : DemoInterconnect_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,7 +39,6 @@ module DemoInterconnect_clk_wiz_0_0
         .uart(uart));
 endmodule
 
-(* ORIG_REF_NAME = "DemoInterconnect_clk_wiz_0_0_clk_wiz" *) 
 module DemoInterconnect_clk_wiz_0_0_DemoInterconnect_clk_wiz_0_0_clk_wiz
    (aclk,
     uart,

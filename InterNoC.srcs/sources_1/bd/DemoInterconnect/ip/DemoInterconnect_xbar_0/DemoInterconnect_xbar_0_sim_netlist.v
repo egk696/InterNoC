@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Wed Oct 25 01:38:52 2017
+// Date        : Wed Oct 25 01:38:51 2017
 // Host        : egk-pc running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_xbar_0/DemoInterconnect_xbar_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top DemoInterconnect_xbar_0 -prefix
+//               DemoInterconnect_xbar_0_ DemoInterconnect_xbar_0_sim_netlist.v
 // Design      : DemoInterconnect_xbar_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -305,7 +305,6 @@ module DemoInterconnect_xbar_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_15_addr_arbiter_sasd" *) 
 module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_addr_arbiter_sasd
    (reset,
     m_valid_i,
@@ -3668,13 +3667,13 @@ endmodule
 (* C_NUM_MASTER_SLOTS = "7" *) (* C_NUM_SLAVE_SLOTS = "3" *) (* C_R_REGISTER = "1" *) 
 (* C_S_AXI_ARB_PRIORITY = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_BASE_ID = "96'b000000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000000" *) (* C_S_AXI_READ_ACCEPTANCE = "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001" *) 
 (* C_S_AXI_SINGLE_THREAD = "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001" *) (* C_S_AXI_THREAD_ID_WIDTH = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_WRITE_ACCEPTANCE = "96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_crossbar_v2_1_15_axi_crossbar" *) (* P_ADDR_DECODE = "1" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_AXILITE_SIZE = "3'b010" *) (* P_FAMILY = "artix7" *) (* P_INCR = "2'b01" *) 
-(* P_LEN = "8" *) (* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "224'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_M_AXI_SUPPORTS_READ = "7'b1111111" *) (* P_M_AXI_SUPPORTS_WRITE = "7'b1111111" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) 
-(* P_RANGE_CHECK = "1" *) (* P_S_AXI_BASE_ID = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_S_AXI_SUPPORTS_READ = "3'b111" *) (* P_S_AXI_SUPPORTS_WRITE = "3'b111" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_ADDR_DECODE = "1" *) (* P_AXI3 = "1" *) 
+(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
+(* P_FAMILY = "artix7" *) (* P_INCR = "2'b01" *) (* P_LEN = "8" *) 
+(* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "224'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* P_M_AXI_SUPPORTS_READ = "7'b1111111" *) 
+(* P_M_AXI_SUPPORTS_WRITE = "7'b1111111" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) (* P_RANGE_CHECK = "1" *) 
+(* P_S_AXI_BASE_ID = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_SUPPORTS_READ = "3'b111" *) 
+(* P_S_AXI_SUPPORTS_WRITE = "3'b111" *) 
 module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_axi_crossbar
    (aclk,
     aresetn,
@@ -4432,7 +4431,6 @@ module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_axi_crossbar
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_15_crossbar_sasd" *) 
 module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_crossbar_sasd
    (s_axi_awready,
     Q,
@@ -4905,7 +4903,6 @@ module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_crossbar_sasd
         .s_ready_i0__2(s_ready_i0__2[2]));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_15_decerr_slave" *) 
 module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_decerr_slave
    (mi_bvalid,
     mi_wready,
@@ -5097,7 +5094,6 @@ module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_decerr_slave
         .O(\gen_arbiter.any_grant_reg_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_15_splitter" *) 
 module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_splitter
    (\gen_arbiter.any_grant_reg ,
     s_ready_i0__2,
@@ -5399,7 +5395,6 @@ module DemoInterconnect_xbar_0_axi_crossbar_v2_1_15_splitter__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_14_axic_register_slice" *) 
 module DemoInterconnect_xbar_0_axi_register_slice_v2_1_14_axic_register_slice
    (sr_rvalid,
     aa_rready,

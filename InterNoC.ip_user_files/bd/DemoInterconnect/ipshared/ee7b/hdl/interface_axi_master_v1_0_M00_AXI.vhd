@@ -8,7 +8,8 @@ entity interface_axi_master_v1_0_M00_AXI is
         C_IF00_DATA_WIDTH   : integer := 8;
         C_PACKET_WIDTH      : integer := 40;
         C_PACKET_ADDR_WIDTH : integer := 5;
-        C_PACKET_DATA_WIDTH : integer := 16;
+				C_PACKET_DATA_WIDTH : integer := 16;
+				C_PACKET_CTRL_WIDTH : integer := 3;
         
         C_AXI_PACKET_ADDR_OFFSET : integer := 16;
         
@@ -173,6 +174,7 @@ architecture implementation of interface_axi_master_v1_0_M00_AXI is
 	
 	alias packet_dest_data : std_logic_vector(C_PACKET_DATA_WIDTH-1 downto 0) is PACKET_TX(C_PACKET_DATA_WIDTH-1 downto 0);
 	alias packet_dest_address : std_logic_vector(C_PACKET_ADDR_WIDTH-1 downto 0) is PACKET_TX(C_PACKET_DATA_WIDTH+C_PACKET_ADDR_WIDTH-1 downto C_PACKET_DATA_WIDTH);
+	alias packet_byte_cnt : std_logic_vector(C_PACKET_CTRL_WIDTH-2 downto 0) is PACKET_TX(C_PACKET_WIDTH-2 downto C_PACKET_WIDTH-C_PACKET_CTRL_WIDTH);
 
 
 begin
@@ -187,7 +189,11 @@ begin
 	--Write Data(W)
 	M_AXI_WVALID	<= axi_wvalid;
 	--Set all byte strobes in this example
-	M_AXI_WSTRB	<= (others=>'1');
+	M_AXI_WSTRB <= "0001" when packet_byte_cnt="00" else
+								 "0010" when packet_byte_cnt="01" else
+								 "0100" when packet_byte_cnt="10" else
+								 "1000" when packet_byte_cnt="11" else (others=>'1');
+	-- M_AXI_WSTRB	<= (others=>'1');
 	--Write Response (B)
 	M_AXI_BREADY	<= axi_bready;
 	--Read Address (AR)
