@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Nov 15 01:19:34 2017
+# Process ID: 9952
+# Current directory: d:/development/fpga/internoc/ip_repo/axi_spi_master_v1_0_project/axi_spi_master_v1_0_project.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source d:/development/fpga/internoc/ip_repo/axi_spi_master_v1_0_project/axi_spi_master_v1_0_project.sim/sim_1/behav/xsim/xsim.dir/axi_spi_master_v1_0_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: d:/development/fpga/internoc/ip_repo/axi_spi_master_v1_0_project/axi_spi_master_v1_0_project.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: d:/development/fpga/internoc/ip_repo/axi_spi_master_v1_0_project/axi_spi_master_v1_0_project.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source d:/development/fpga/internoc/ip_repo/axi_spi_master_v1_0_project/axi_spi_master_v1_0_project.sim/sim_1/behav/xsim/xsim.dir/axi_spi_master_v1_0_behav/webtalk/xsim_webtalk.tcl -notrace

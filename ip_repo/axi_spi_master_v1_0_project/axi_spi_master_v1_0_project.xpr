@@ -6,7 +6,7 @@
 <Project Version="7" Minor="32" Path="d:/development/fpga/internoc/ip_repo/axi_spi_master_v1_0_project/axi_spi_master_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="ec03d9d3f3514a1a8a42ace6871ebf31"/>
+    <Option Name="Id" Val="945479ff7a6b41258c034685adf60af2"/>
     <Option Name="Part" Val="xc7a15tcpg236-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -36,7 +36,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="1"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -62,18 +62,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/src/SPI_Master.vhd">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/src/parallel2serial.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/src/serial2parallel.vhd">
-        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -84,15 +73,22 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0.vhd">
+      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/src/parallel2serial.vhd">
         <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/src/SPI_Slave.vhd">
+      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/src/serial2parallel.vhd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../../Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0/hdl/axi_spi_master_v1_0.vhd">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
