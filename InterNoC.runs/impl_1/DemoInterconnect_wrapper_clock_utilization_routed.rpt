@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Wed Nov 15 02:19:20 2017
+| Date         : Wed Nov 15 18:21:31 2017
 | Host         : egk-pc running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file DemoInterconnect_wrapper_clock_utilization_routed.rpt
 | Design       : DemoInterconnect_wrapper
@@ -54,11 +54,11 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                      | Driver Pin                                                           | Net                                                                         |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------------------------------------------------------------------+
-| g0        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y0 | n/a          |                 5 |        3002 |               1 |       13.889 | aclk_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/clkout1_buf/O                      | DemoInterconnect_i/clk_wiz_0/inst/aclk                                      |
+| g0        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y0 | n/a          |                 5 |        3142 |               1 |       13.889 | aclk_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/clkout1_buf/O                      | DemoInterconnect_i/clk_wiz_0/inst/aclk                                      |
 | g1        | src0      | BUFH/O          | None       | BUFHCE_X0Y0   | X0Y0         |                 1 |           8 |               0 |       13.889 | aclk_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/clkout1_buf_en/O                   | DemoInterconnect_i/clk_wiz_0/inst/aclk_DemoInterconnect_clk_wiz_0_0_en_clk  |
 | g2        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 4 |        2936 |               0 |       13.889 | USE_DIVIDER.dclk_mmcm                                                                      | dbg_hub/inst/BSCANID.u_xsdbm_id/USE_DIVIDER.BUFG_inst_div/O          | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1]                              |
-| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 2 |         462 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                      |
-| g4        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y1 | n/a          |                 3 |          96 |               1 |       83.333 | uart_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/clkout2_buf/O                      | DemoInterconnect_i/clk_wiz_0/inst/uart                                      |
+| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 4 |         462 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                      |
+| g4        | src0      | BUFGCTRL/O      | None       | BUFGCTRL_X0Y1 | n/a          |                 4 |          96 |               1 |       83.333 | uart_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/clkout2_buf/O                      | DemoInterconnect_i/clk_wiz_0/inst/uart                                      |
 | g5        | src0      | BUFH/O          | None       | BUFHCE_X0Y1   | X0Y0         |                 1 |           8 |               0 |       83.333 | uart_DemoInterconnect_clk_wiz_0_0                                                          | DemoInterconnect_i/clk_wiz_0/inst/clkout2_buf_en/O                   | DemoInterconnect_i/clk_wiz_0/inst/uart_DemoInterconnect_clk_wiz_0_0_en_clk  |
 | g6        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y4 | n/a          |                 1 |           1 |               0 |       83.333 | clkfbout_DemoInterconnect_clk_wiz_0_0                                                      | DemoInterconnect_i/clk_wiz_0/inst/clkf_buf/O                         | DemoInterconnect_i/clk_wiz_0/inst/clkfbout_buf_DemoInterconnect_clk_wiz_0_0 |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------------------------------------------------------------------+
@@ -88,10 +88,10 @@ Table of Contents
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                                                         | Net                                                                                          |
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------||
-| 0        | FDRE/Q          | None       | SLICE_X64Y18/BFF | X1Y0         |          17 |               2 |              |       | DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q | DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk - Static -
-| 1        | FDRE/Q          | None       | SLICE_X63Y24/BFF | X1Y0         |          17 |               2 |              |       | DemoInterconnect_i/axi_spi_master_1/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q | DemoInterconnect_i/axi_spi_master_1/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk - Static -
-| 2        | FDRE/Q          | None       | SLICE_X64Y24/BFF | X1Y0         |          17 |               2 |              |       | DemoInterconnect_i/axi_spi_master_2/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q | DemoInterconnect_i/axi_spi_master_2/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk - Static -
-| 3        | FDRE/Q          | None       | SLICE_X65Y19/BFF | X1Y0         |          17 |               2 |              |       | DemoInterconnect_i/axi_spi_master_3/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q | DemoInterconnect_i/axi_spi_master_3/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk - Static -
+| 0        | FDRE/Q          | None       | SLICE_X63Y7/BFF  | X1Y0         |          17 |               2 |              |       | DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q | DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk - Static -
+| 1        | FDRE/Q          | None       | SLICE_X64Y12/BFF | X1Y0         |          17 |               2 |              |       | DemoInterconnect_i/axi_spi_master_1/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q | DemoInterconnect_i/axi_spi_master_1/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk - Static -
+| 2        | FDRE/Q          | None       | SLICE_X64Y11/BFF | X1Y0         |          17 |               2 |              |       | DemoInterconnect_i/axi_spi_master_2/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q | DemoInterconnect_i/axi_spi_master_2/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk - Static -
+| 3        | FDRE/Q          | None       | SLICE_X65Y27/BFF | X1Y0         |          17 |               2 |              |       | DemoInterconnect_i/axi_spi_master_3/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q | DemoInterconnect_i/axi_spi_master_3/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk - Static -
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -106,10 +106,10 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1476 |  1200 |  477 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 | 3884 |  1500 | 1025 |   450 |    0 |    40 |    6 |    20 |    0 |    20 |
-| X0Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  229 |  1200 |   68 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    1 |    50 |    2 |    50 |  619 |  1500 |  208 |   450 |    0 |    40 |    3 |    20 |    0 |    20 |
+| X0Y0              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  745 |  1200 |  254 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 | 3292 |  1500 |  929 |   450 |    0 |    40 |    3 |    20 |    0 |    20 |
+| X0Y1              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  489 |  1200 |  135 |   400 |    0 |    20 |    2 |    10 |    0 |    20 |
+| X1Y1              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    1 |    50 |    2 |    50 | 1854 |  1500 |  517 |   450 |    0 |    40 |    4 |    20 |    0 |    20 |
 | X0Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    1 |    50 |    0 |    50 |    1 |  1800 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |   950 |    0 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
@@ -124,7 +124,7 @@ All Modules
 |    | X0 | X1 |
 +----+----+----+
 | Y2 |  2 |  0 |
-| Y1 |  2 |  3 |
+| Y1 |  4 |  4 |
 | Y0 |  6 |  4 |
 +----+----+----+
 
@@ -135,7 +135,7 @@ All Modules
 +-----------+-----------------+-------------------+-----------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                             | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                    |
 +-----------+-----------------+-------------------+-----------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------+
-| g0        | BUFGCTRL/O      | n/a               | aclk_DemoInterconnect_clk_wiz_0_0 |      13.889 | {0.000 6.944} |        2957 |        1 |              1 |        0 | DemoInterconnect_i/clk_wiz_0/inst/aclk |
+| g0        | BUFGCTRL/O      | n/a               | aclk_DemoInterconnect_clk_wiz_0_0 |      13.889 | {0.000 6.944} |        3097 |        1 |              1 |        0 | DemoInterconnect_i/clk_wiz_0/inst/aclk |
 +-----------+-----------------+-------------------+-----------------------------------+-------------+---------------+-------------+----------+----------------+----------+----------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -147,8 +147,8 @@ All Modules
 |    | X0   | X1    |
 +----+------+-------+
 | Y2 |    1 |     0 |
-| Y1 |    6 |   173 |
-| Y0 |  232 |  2547 |
+| Y1 |  142 |   235 |
+| Y0 |  163 |  2558 |
 +----+------+-------+
 
 
@@ -193,8 +193,8 @@ All Modules
 |    | X0   | X1    |
 +----+------+-------+
 | Y2 |    0 |     0 |
-| Y1 |  224 |   481 |
-| Y0 |  928 |  1156 |
+| Y1 |  295 |  1571 |
+| Y0 |  335 |   588 |
 +----+------+-------+
 
 
@@ -212,13 +212,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+------+------+
-|    | X0   | X1   |
-+----+------+------+
-| Y2 |    0 |    0 |
-| Y1 |    0 |    0 |
-| Y0 |  304 |  155 |
-+----+------+------+
++----+------+-----+
+|    | X0   | X1  |
++----+------+-----+
+| Y2 |    0 |   0 |
+| Y1 |   74 |  99 |
+| Y0 |  232 |  54 |
++----+------+-----+
 
 
 11. Device Cell Placement Summary for Global Clock g4
@@ -239,8 +239,8 @@ All Modules
 |    | X0 | X1  |
 +----+----+-----+
 | Y2 |  2 |   0 |
-| Y1 |  0 |   4 |
-| Y0 |  0 |  91 |
+| Y1 |  1 |   7 |
+| Y0 |  0 |  87 |
 +----+----+-----+
 
 
@@ -296,9 +296,9 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                         |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |         232 |               0 | 231 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk                                      |
-| g2        | n/a   | BUFG/O          | None       |         928 |               0 | 925 |      3 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1]                              |
-| g3        | n/a   | BUFG/O          | None       |         304 |               0 | 304 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                      |
+| g0        | n/a   | BUFGCTRL/O      | None       |         163 |               0 | 162 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk                                      |
+| g2        | n/a   | BUFG/O          | None       |         335 |               0 | 335 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1]                              |
+| g3        | n/a   | BUFG/O          | None       |         232 |               0 | 232 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                                      |
 | g1        | n/a   | BUFH/O          | None       |           8 |               0 |   8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk_DemoInterconnect_clk_wiz_0_0_en_clk  |
 | g5        | n/a   | BUFH/O          | None       |           8 |               0 |   8 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/uart_DemoInterconnect_clk_wiz_0_0_en_clk  |
 | g6        | n/a   | BUFG/O          | None       |           1 |               0 |   0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/clkfbout_buf_DemoInterconnect_clk_wiz_0_0 |
@@ -314,10 +314,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |        2547 |               0 | 2438 |    101 |    6 |   0 |  0 |    1 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk         |
-| g2        | n/a   | BUFG/O          | None       |        1156 |               0 | 1132 |     17 |    6 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1] |
-| g3        | n/a   | BUFG/O          | None       |         155 |               0 |  155 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i         |
-| g4        | n/a   | BUFGCTRL/O      | None       |          91 |               0 |   91 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/uart         |
+| g0        | n/a   | BUFGCTRL/O      | None       |        2558 |               0 | 2500 |     53 |    3 |   0 |  0 |    1 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk         |
+| g2        | n/a   | BUFG/O          | None       |         588 |               0 |  583 |      1 |    3 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1] |
+| g3        | n/a   | BUFG/O          | None       |          54 |               0 |   54 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i         |
+| g4        | n/a   | BUFGCTRL/O      | None       |          87 |               0 |   87 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/uart         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -330,8 +330,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |           6 |               0 |   6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk         |
-| g2        | n/a   | BUFG/O          | None       |         224 |               0 | 223 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1] |
+| g0        | n/a   | BUFGCTRL/O      | None       |         142 |               0 | 140 |      0 |    2 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk         |
+| g2        | n/a   | BUFG/O          | None       |         295 |               0 | 274 |     19 |    2 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1] |
+| g3        | n/a   | BUFG/O          | None       |          74 |               0 |  74 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i         |
+| g4        | n/a   | BUFGCTRL/O      | None       |           1 |               0 |   1 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/uart         |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -341,13 +343,14 @@ All Modules
 17. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
-| g0        | n/a   | BUFGCTRL/O      | None       |         173 |               0 | 161 |      8 |    3 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk         |
-| g2        | n/a   | BUFG/O          | None       |         481 |               0 | 454 |     23 |    3 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1] |
-| g4        | n/a   | BUFGCTRL/O      | None       |           4 |               0 |   4 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/uart         |
-+-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                            |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------+
+| g0        | n/a   | BUFGCTRL/O      | None       |         235 |               0 |  206 |     24 |    4 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/aclk         |
+| g2        | n/a   | BUFG/O          | None       |        1571 |               0 | 1542 |     24 |    4 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1] |
+| g3        | n/a   | BUFG/O          | None       |          99 |               0 |   99 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i         |
+| g4        | n/a   | BUFGCTRL/O      | None       |           7 |               0 |    7 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | DemoInterconnect_i/clk_wiz_0/inst/uart         |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -397,7 +400,7 @@ resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1]
 #startgroup
 create_pblock {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}
 add_cells_to_pblock [get_pblocks  {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i"}]]]
-resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+resize_pblock [get_pblocks {CLKAG_dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "DemoInterconnect_i/clk_wiz_0/inst/uart_DemoInterconnect_clk_wiz_0_0_en_clk" driven by instance "DemoInterconnect_i/clk_wiz_0/inst/clkout2_buf_en" located at site "BUFHCE_X0Y1"
@@ -411,7 +414,7 @@ resize_pblock [get_pblocks {CLKAG_DemoInterconnect_i/clk_wiz_0/inst/uart_DemoInt
 #startgroup
 create_pblock {CLKAG_DemoInterconnect_i/clk_wiz_0/inst/uart}
 add_cells_to_pblock [get_pblocks  {CLKAG_DemoInterconnect_i/clk_wiz_0/inst/uart}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=LED1_pll_uart_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="DemoInterconnect_i/clk_wiz_0/inst/uart"}]]]
-resize_pblock [get_pblocks {CLKAG_DemoInterconnect_i/clk_wiz_0/inst/uart}] -add {CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_DemoInterconnect_i/clk_wiz_0/inst/uart}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "DemoInterconnect_i/clk_wiz_0/inst/aclk_DemoInterconnect_clk_wiz_0_0_en_clk" driven by instance "DemoInterconnect_i/clk_wiz_0/inst/clkout1_buf_en" located at site "BUFHCE_X0Y0"

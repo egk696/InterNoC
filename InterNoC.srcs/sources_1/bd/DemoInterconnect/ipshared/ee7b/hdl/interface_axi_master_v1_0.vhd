@@ -236,6 +236,9 @@ comb_logic: process(m00_axi_aclk)
 			when ST_AXI_RESP=>
 				if (axi_write_done='1') then
 					next_state <= ST_IDLE;
+					next_head <= (others=>'0');
+					next_body <= (others=>'0');
+					next_packet <= (others=>'0');
 				end if;
 				if (axi_read_done='1') then
 					next_state <= ST_TX_DATA;
@@ -246,6 +249,9 @@ comb_logic: process(m00_axi_aclk)
 			when ST_TX_DATA=>
 				if (current_body_count=0) then 
 					next_state <= ST_IDLE;
+					next_head <= (others=>'0');
+					next_body <= (others=>'0');
+					next_packet <= (others=>'0');
 				else
 					if (if00_send_busy='0' and if00_send_done='0') then
 						if00_load_out <= '1';

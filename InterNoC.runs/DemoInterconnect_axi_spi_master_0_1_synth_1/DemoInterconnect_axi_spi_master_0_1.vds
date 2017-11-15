@@ -2,13 +2,13 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Nov 15 03:21:20 2017
-# Process ID: 2892
+# Start of session at: Wed Nov 15 18:00:01 2017
+# Process ID: 18132
 # Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_1_synth_1
 # Command line: vivado.exe -log DemoInterconnect_axi_spi_master_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_axi_spi_master_0_1.tcl
 # Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_1_synth_1/DemoInterconnect_axi_spi_master_0_1.vds
 # Journal file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_0_1_synth_1\vivado.jou
 #-----------------------------------------------------------
 source DemoInterconnect_axi_spi_master_0_1.tcl -notrace
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP DemoInterconnect_axi_spi_master_0_1, cache-ID = 20f72ae8aa048e82.
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 03:21:35 2017...
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP DemoInterconnect_axi_spi_master_0_1, cache-ID = fe65be782483b8b6.
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 18:00:11 2017...

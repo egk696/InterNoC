@@ -97,6 +97,7 @@ architecture arch_imp of axi_spi_master_v1_0_S00_AXI is
       port (
         clk_i : in std_logic;
         en_i : in std_logic;
+        rstn_i : in std_logic;
         shift_cnt_i : in std_logic_vector(2 downto 0);
         send_i : in std_logic;
         data_i : in std_logic_vector(DATA_WIDTH-1 downto 0);
@@ -114,6 +115,7 @@ architecture arch_imp of axi_spi_master_v1_0_S00_AXI is
       port (
         clk_i : in std_logic;
         en_i : in std_logic;
+        rstn_i : in std_logic;
         shift_cnt_i : in std_logic_vector(2 downto 0);
         shift_i : in std_logic_vector(7 downto 0);
         done_o : out std_logic;
@@ -172,7 +174,8 @@ architecture arch_imp of axi_spi_master_v1_0_S00_AXI is
 	signal s2p_en          : std_logic := '0';
 	signal s2p_done        : std_logic := '0';
 	-- Registers
-	signal axi_reg_rdata   : std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	signal slv_rdata   : std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+	signal slv_wdata   : std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 
 begin
 	-- I/O Connections assignments
@@ -241,6 +244,19 @@ wr_data_valid:    process (S_AXI_ACLK)
 	          -- on the write address and data bus. This design 
 	          -- expects no outstanding transactions.           
 	          axi_wready <= '1';
+	          slv_wdata <= S_AXI_WDATA;
+	          case S_AXI_WSTRB is
+	           when "0001"=> 
+	               packet_byte_cnt <= "001";
+	           when "0011"=>
+	               packet_byte_cnt <= "010";
+	           when "0111"=>
+	               packet_byte_cnt <= "011";
+	           when "1111"=>
+	               packet_byte_cnt <= "100";
+	           when others=>
+	               packet_byte_cnt <= "100";
+	          end case;
 	      else
 	        axi_wready <= '0';
 	      end if;
@@ -322,7 +338,7 @@ rd_response:    process (S_AXI_ACLK)
 	        -- Valid read data is available at the read data bus
 	        axi_rvalid <= '1';
 	        axi_rresp  <= "00"; -- 'OKAY' response
-	        axi_rdata <= axi_reg_rdata;
+	        axi_rdata <= slv_rdata;
 	      elsif (axi_rvalid = '1' and S_AXI_RREADY = '1') then
 	        -- Read data is accepted by the master
 	        axi_rvalid <= '0';
@@ -339,7 +355,7 @@ start_interface: process(S_AXI_ACLK)
 			if S_AXI_ARESETN = '0' then
 				p2s_load <= '0';
 			else
-				if (p2s_load='0' and p2s_busy='0') and ((axi_wready='1' and S_AXI_WVALID='1' and axi_awready='1' and S_AXI_AWVALID='1') or (S_AXI_ARVALID='1')) then
+				if (p2s_load='0' and p2s_busy='0') and ((axi_bvalid='1') or (S_AXI_ARVALID='1')) then
 					p2s_load <= '1';
 				else
 					p2s_load <= '0';
@@ -351,11 +367,6 @@ start_interface: process(S_AXI_ACLK)
 	p2s_send <= not(spi_tx_rx_busy) and not(spi_tx_rx_start);
 	s2p_en <= spi_tx_rx_done;
 	spi_tx_rx_start <= not(p2s_ss);
-
-	packet_byte_cnt <= "001" when S_AXI_WSTRB="0001" else
-										 "010" when S_AXI_WSTRB="0010" else
-										 "011" when S_AXI_WSTRB="0100" else
-										 "100";
 	
 word2byte_inst: word2byte
 	generic map(
@@ -364,10 +375,11 @@ word2byte_inst: word2byte
     port map(
         clk_i   => S_AXI_ACLK,
 	    en_i    => p2s_load,
+	    rstn_i  => S_AXI_ARESETN,
 		shift_cnt_i => packet_byte_cnt,
 		send_i  => p2s_send,
 		busy_o => p2s_busy,
-        data_i  => S_AXI_WDATA,
+        data_i  => slv_wdata,
         shift_o => spi_tx_byte,
         ss_o    => p2s_ss
     );
@@ -379,10 +391,11 @@ byte2word_inst: byte2word
     port map(
         clk_i   => S_AXI_ACLK,
 		en_i    => s2p_en,
+		rstn_i  => S_AXI_ARESETN,
 		shift_cnt_i => packet_byte_cnt,
         shift_i => spi_rx_byte,
         done_o  => s2p_done,
-        data_o  => axi_reg_rdata
+        data_o  => slv_rdata
     );
 	
 spi_master_inst: spi_master

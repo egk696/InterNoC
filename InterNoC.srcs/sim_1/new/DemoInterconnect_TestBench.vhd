@@ -151,37 +151,10 @@ begin
 
 drive_miso: process(dest_address)
 begin
-      spi_0_miso_wire <= '1';
-      spi_1_miso_wire <= '1';
-      spi_2_miso_wire <= '1';
-      spi_3_miso_wire <= '1';
---    case dest_address is
---        when slave_0_addr=>
---            spi_0_miso_wire <= '1';
---            spi_1_miso_wire <= 'Z';
---            spi_2_miso_wire <= 'Z';
---            spi_3_miso_wire <= 'Z';
---        when slave_1_addr=>
---            spi_0_miso_wire <= 'Z';
---            spi_1_miso_wire <= '1';
---            spi_2_miso_wire <= 'Z';
---            spi_3_miso_wire <= 'Z';
---        when slave_2_addr=>
---            spi_0_miso_wire <= 'Z';
---            spi_1_miso_wire <= 'Z';
---            spi_2_miso_wire <= '1';
---            spi_3_miso_wire <= 'Z';
---        when slave_3_addr=>
---            spi_0_miso_wire <= 'Z';
---            spi_1_miso_wire <= 'Z';
---            spi_2_miso_wire <= 'Z';
---            spi_3_miso_wire <= '1';
---        when others=>
---            spi_0_miso_wire <= 'Z';
---            spi_1_miso_wire <= 'Z';
---            spi_2_miso_wire <= 'Z';
---            spi_3_miso_wire <= 'Z';
---    end case;
+      spi_0_miso_wire <= SYSCLK;
+      spi_1_miso_wire <= SYSCLK;
+      spi_2_miso_wire <= SYSCLK;
+      spi_3_miso_wire <= SYSCLK;
 end process;
 
 process

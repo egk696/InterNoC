@@ -190,9 +190,9 @@ begin
 	M_AXI_WVALID	<= axi_wvalid;
 	--Set all byte strobes in this example
 	M_AXI_WSTRB <= "0001" when packet_byte_cnt="00" else
-								 "0010" when packet_byte_cnt="01" else
-								 "0100" when packet_byte_cnt="10" else
-								 "1000" when packet_byte_cnt="11" else (others=>'1');
+								 "0011" when packet_byte_cnt="01" else
+								 "0111" when packet_byte_cnt="10" else
+								 "1111" when packet_byte_cnt="11" else (others=>'1');
 	-- M_AXI_WSTRB	<= (others=>'1');
 	--Write Response (B)
 	M_AXI_BREADY	<= axi_bready;
