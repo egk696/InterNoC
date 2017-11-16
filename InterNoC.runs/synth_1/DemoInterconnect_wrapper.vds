@@ -2,94 +2,94 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Nov 15 18:16:08 2017
-# Process ID: 7344
-# Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1
+# Start of session at: Thu Nov 16 01:12:23 2017
+# Process ID: 14136
+# Current directory: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1
 # Command line: vivado.exe -log DemoInterconnect_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_wrapper.tcl
-# Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/DemoInterconnect_wrapper.vds
-# Journal file: D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1\vivado.jou
+# Log file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/DemoInterconnect_wrapper.vds
+# Journal file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source DemoInterconnect_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Development/FPGA/InterNoC/ip_repo/axi_i2c_master_1.0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Development/FPGA/InterNoC/ip_repo/axi_native_register_space_1.0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Development/FPGA/InterNoC/ip_repo/uart_transceiver_v1_0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/axi_i2c_master_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/axi_native_register_space_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/uart_transceiver_v1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/interface_axi_master_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/axi_spi_master_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.3/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_jtag_axi_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_clk_wiz_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_uart_transceiver_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_uart_transceiver_0_1' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_1/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_mutex_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_mutex_0_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_xbar_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_xbar_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_ila_0_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_ila_0_0/stats.txt'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_auto_pc_0' generated file not found 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_auto_pc_0/stats.txt'. Please regenerate to continue.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 290.938 ; gain = 53.191
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_jtag_axi_0_0' generated file not found 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_clk_wiz_0_0' generated file not found 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_clk_wiz_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_uart_transceiver_0_0' generated file not found 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_uart_transceiver_0_1' generated file not found 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_uart_transceiver_0_1/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_mutex_0_0' generated file not found 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_mutex_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_xbar_0' generated file not found 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_xbar_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_ila_0_0' generated file not found 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_ila_0_0/stats.txt'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'DemoInterconnect_auto_pc_0' generated file not found 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_auto_pc_0/stats.txt'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 294.133 ; gain = 56.086
 Command: synth_design -top DemoInterconnect_wrapper -part xc7a15tcpg236-1 -gated_clock_conversion auto -retiming
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14768 
+INFO: Helper process launched with PID 10324 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 387.426 ; gain = 95.699
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 390.543 ; gain = 95.664
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_wrapper' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd:44]
-INFO: [Synth 8-3491] module 'DemoInterconnect' declared at 'D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:2819' bound to instance 'DemoInterconnect_i' of component 'DemoInterconnect' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd:75]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:2853]
-INFO: [Synth 8-3491] module 'DemoInterconnect_axi_spi_master_0_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_axi_spi_master_0_0_stub.vhdl:5' bound to instance 'axi_spi_master_0' of component 'DemoInterconnect_axi_spi_master_0_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3491]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_0_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_axi_spi_master_0_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'DemoInterconnect_axi_spi_master_0_1' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_axi_spi_master_0_1_stub.vhdl:5' bound to instance 'axi_spi_master_1' of component 'DemoInterconnect_axi_spi_master_0_1' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3519]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_0_1' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_axi_spi_master_0_1_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'DemoInterconnect_axi_spi_master_1_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_axi_spi_master_1_0_stub.vhdl:5' bound to instance 'axi_spi_master_2' of component 'DemoInterconnect_axi_spi_master_1_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3547]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_1_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_axi_spi_master_1_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'DemoInterconnect_axi_spi_master_1_1' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_axi_spi_master_1_1_stub.vhdl:5' bound to instance 'axi_spi_master_3' of component 'DemoInterconnect_axi_spi_master_1_1' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3575]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_1_1' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_axi_spi_master_1_1_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'DemoInterconnect_clk_wiz_0_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'DemoInterconnect_clk_wiz_0_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3603]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_clk_wiz_0_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_clk_wiz_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'DemoInterconnect_ila_0_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'DemoInterconnect_ila_0_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3611]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_ila_0_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_ila_0_0_stub.vhdl:20]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_interconnect_0_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1527]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_4EB6IN' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:61]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_4EB6IN' (1#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:61]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1SL2GIW' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:172]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1SL2GIW' (2#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:172]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7DG2C0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:283]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7DG2C0' (3#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:283]
-INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1YCPS1Z' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:394]
-INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1YCPS1Z' (4#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:394]
-INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_ACM7VL' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:501]
-INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_ACM7VL' (5#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:501]
-INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1HWY5FA' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:602]
-INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1HWY5FA' (6#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:602]
-INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_DBR4EM' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:703]
-INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_DBR4EM' (7#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:703]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_7XIH8P' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:808]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_7XIH8P' (8#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:808]
-INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1XSI6OU' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:919]
-INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1XSI6OU' (9#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:919]
-INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_2QLUHY' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1048]
-INFO: [Synth 8-3491] module 'DemoInterconnect_auto_pc_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'DemoInterconnect_auto_pc_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1230]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_auto_pc_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_auto_pc_0_stub.vhdl:71]
-INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_2QLUHY' (10#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1048]
-INFO: [Synth 8-3491] module 'DemoInterconnect_xbar_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'DemoInterconnect_xbar_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:2623]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_xbar_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_axi_interconnect_0_0' (11#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1527]
-INFO: [Synth 8-3491] module 'DemoInterconnect_interface_axi_master_0_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_interface_axi_master_0_0_stub.vhdl:5' bound to instance 'interface_axi_master_0' of component 'DemoInterconnect_interface_axi_master_0_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3857]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_interface_axi_master_0_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_interface_axi_master_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'DemoInterconnect_interface_axi_master_0_1' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_interface_axi_master_0_1_stub.vhdl:5' bound to instance 'interface_axi_master_1' of component 'DemoInterconnect_interface_axi_master_0_1' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3887]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_interface_axi_master_0_1' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_interface_axi_master_0_1_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'DemoInterconnect_jtag_axi_0_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_jtag_axi_0_0_stub.vhdl:5' bound to instance 'jtag_axi_0' of component 'DemoInterconnect_jtag_axi_0_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3917]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_jtag_axi_0_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_jtag_axi_0_0_stub.vhdl:50]
-INFO: [Synth 8-3491] module 'DemoInterconnect_mutex_0_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_mutex_0_0_stub.vhdl:5' bound to instance 'master_comm_mutex' of component 'DemoInterconnect_mutex_0_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3959]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_mutex_0_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_mutex_0_0_stub.vhdl:68]
-INFO: [Synth 8-3491] module 'DemoInterconnect_uart_transceiver_0_0' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_uart_transceiver_0_0_stub.vhdl:5' bound to instance 'uart_transceiver_0' of component 'DemoInterconnect_uart_transceiver_0_0' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:4019]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_uart_transceiver_0_0' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_uart_transceiver_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'DemoInterconnect_uart_transceiver_0_1' declared at 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_uart_transceiver_0_1_stub.vhdl:5' bound to instance 'uart_transceiver_1' of component 'DemoInterconnect_uart_transceiver_0_1' [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:4031]
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_uart_transceiver_0_1' [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/realtime/DemoInterconnect_uart_transceiver_0_1_stub.vhdl:20]
-INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect' (12#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:2853]
-INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_wrapper' (13#1) [D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd:44]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_wrapper' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd:44]
+INFO: [Synth 8-3491] module 'DemoInterconnect' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:2819' bound to instance 'DemoInterconnect_i' of component 'DemoInterconnect' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:2853]
+INFO: [Synth 8-3491] module 'DemoInterconnect_axi_spi_master_0_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_axi_spi_master_0_0_stub.vhdl:5' bound to instance 'axi_spi_master_0' of component 'DemoInterconnect_axi_spi_master_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3491]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_axi_spi_master_0_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'DemoInterconnect_axi_spi_master_0_1' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_axi_spi_master_0_1_stub.vhdl:5' bound to instance 'axi_spi_master_1' of component 'DemoInterconnect_axi_spi_master_0_1' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3519]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_0_1' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_axi_spi_master_0_1_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'DemoInterconnect_axi_spi_master_1_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_axi_spi_master_1_0_stub.vhdl:5' bound to instance 'axi_spi_master_2' of component 'DemoInterconnect_axi_spi_master_1_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3547]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_1_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_axi_spi_master_1_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'DemoInterconnect_axi_spi_master_1_1' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_axi_spi_master_1_1_stub.vhdl:5' bound to instance 'axi_spi_master_3' of component 'DemoInterconnect_axi_spi_master_1_1' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3575]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_spi_master_1_1' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_axi_spi_master_1_1_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'DemoInterconnect_clk_wiz_0_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'DemoInterconnect_clk_wiz_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3603]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_clk_wiz_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'DemoInterconnect_ila_0_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'DemoInterconnect_ila_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3611]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_ila_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_ila_0_0_stub.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_axi_interconnect_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1527]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_4EB6IN' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_4EB6IN' (1#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1SL2GIW' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1SL2GIW' (2#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7DG2C0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:283]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7DG2C0' (3#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1YCPS1Z' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:394]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1YCPS1Z' (4#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:394]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_ACM7VL' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:501]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_ACM7VL' (5#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:501]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1HWY5FA' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:602]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1HWY5FA' (6#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:602]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_DBR4EM' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:703]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_DBR4EM' (7#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:703]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_7XIH8P' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:808]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_7XIH8P' (8#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:808]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_1XSI6OU' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:919]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_1XSI6OU' (9#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:919]
+INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_2QLUHY' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1048]
+INFO: [Synth 8-3491] module 'DemoInterconnect_auto_pc_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'DemoInterconnect_auto_pc_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1230]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_auto_pc_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_2QLUHY' (10#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1048]
+INFO: [Synth 8-3491] module 'DemoInterconnect_xbar_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'DemoInterconnect_xbar_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:2623]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_xbar_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_axi_interconnect_0_0' (11#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:1527]
+INFO: [Synth 8-3491] module 'DemoInterconnect_interface_axi_master_0_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_interface_axi_master_0_0_stub.vhdl:5' bound to instance 'interface_axi_master_0' of component 'DemoInterconnect_interface_axi_master_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3850]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_interface_axi_master_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_interface_axi_master_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'DemoInterconnect_interface_axi_master_0_1' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_interface_axi_master_0_1_stub.vhdl:5' bound to instance 'interface_axi_master_1' of component 'DemoInterconnect_interface_axi_master_0_1' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3880]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_interface_axi_master_0_1' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_interface_axi_master_0_1_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'DemoInterconnect_jtag_axi_0_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_jtag_axi_0_0_stub.vhdl:5' bound to instance 'jtag_axi_0' of component 'DemoInterconnect_jtag_axi_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3910]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_jtag_axi_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_jtag_axi_0_0_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'DemoInterconnect_mutex_0_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_mutex_0_0_stub.vhdl:5' bound to instance 'master_comm_mutex' of component 'DemoInterconnect_mutex_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:3952]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_mutex_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_mutex_0_0_stub.vhdl:68]
+INFO: [Synth 8-3491] module 'DemoInterconnect_uart_transceiver_0_0' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_uart_transceiver_0_0_stub.vhdl:5' bound to instance 'uart_transceiver_0' of component 'DemoInterconnect_uart_transceiver_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:4012]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_uart_transceiver_0_0' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_uart_transceiver_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'DemoInterconnect_uart_transceiver_0_1' declared at 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_uart_transceiver_0_1_stub.vhdl:5' bound to instance 'uart_transceiver_1' of component 'DemoInterconnect_uart_transceiver_0_1' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:4024]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_uart_transceiver_0_1' [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/realtime/DemoInterconnect_uart_transceiver_0_1_stub.vhdl:20]
+INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect' (12#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/synth/DemoInterconnect.vhd:2853]
+INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_wrapper' (13#1) [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/hdl/DemoInterconnect_wrapper.vhd:44]
 WARNING: [Synth 8-3331] design s02_couplers_imp_2QLUHY has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s02_couplers_imp_2QLUHY has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design s01_couplers_imp_1XSI6OU has unconnected port M_ACLK
@@ -149,7 +149,7 @@ WARNING: [Synth 8-3331] design DemoInterconnect_axi_interconnect_0_0 has unconne
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_interconnect_0_0 has unconnected port S02_ACLK
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_interconnect_0_0 has unconnected port S02_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 432.891 ; gain = 141.164
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 436.004 ; gain = 141.125
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -159,150 +159,150 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 432.891 ; gain = 141.164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 436.004 ; gain = 141.125
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a15tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp29/DemoInterconnect_interface_axi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/interface_axi_master_0'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp29/DemoInterconnect_interface_axi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/interface_axi_master_0'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp31/DemoInterconnect_interface_axi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/interface_axi_master_1'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp31/DemoInterconnect_interface_axi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/interface_axi_master_1'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp33/DemoInterconnect_jtag_axi_0_0_in_context.xdc] for cell 'DemoInterconnect_i/jtag_axi_0'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp33/DemoInterconnect_jtag_axi_0_0_in_context.xdc] for cell 'DemoInterconnect_i/jtag_axi_0'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp35/DemoInterconnect_clk_wiz_0_0_in_context.xdc] for cell 'DemoInterconnect_i/clk_wiz_0'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp35/DemoInterconnect_clk_wiz_0_0_in_context.xdc] for cell 'DemoInterconnect_i/clk_wiz_0'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp37/DemoInterconnect_uart_transceiver_0_0_in_context.xdc] for cell 'DemoInterconnect_i/uart_transceiver_0'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp37/DemoInterconnect_uart_transceiver_0_0_in_context.xdc] for cell 'DemoInterconnect_i/uart_transceiver_0'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp39/DemoInterconnect_uart_transceiver_0_0_in_context.xdc] for cell 'DemoInterconnect_i/uart_transceiver_1'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp39/DemoInterconnect_uart_transceiver_0_0_in_context.xdc] for cell 'DemoInterconnect_i/uart_transceiver_1'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp41/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_0'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp41/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_0'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp43/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_1'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp43/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_1'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp45/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_2'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp45/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_2'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp47/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_3'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp47/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_3'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp49/DemoInterconnect_mutex_0_0_in_context.xdc] for cell 'DemoInterconnect_i/master_comm_mutex'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp49/DemoInterconnect_mutex_0_0_in_context.xdc] for cell 'DemoInterconnect_i/master_comm_mutex'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp51/DemoInterconnect_xbar_0_in_context.xdc] for cell 'DemoInterconnect_i/interconnect/xbar'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp51/DemoInterconnect_xbar_0_in_context.xdc] for cell 'DemoInterconnect_i/interconnect/xbar'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp53/DemoInterconnect_ila_0_0_in_context.xdc] for cell 'DemoInterconnect_i/ila_0'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp53/DemoInterconnect_ila_0_0_in_context.xdc] for cell 'DemoInterconnect_i/ila_0'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp55/DemoInterconnect_auto_pc_0_in_context.xdc] for cell 'DemoInterconnect_i/interconnect/s02_couplers/auto_pc'
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp55/DemoInterconnect_auto_pc_0_in_context.xdc] for cell 'DemoInterconnect_i/interconnect/s02_couplers/auto_pc'
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc]
-WARNING: [Vivado 12-508] No pins matched 'DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:5]
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"aclk_DemoInterconnect_clk_wiz_0_0\"'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:5]
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp29/DemoInterconnect_interface_axi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/interface_axi_master_0'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp29/DemoInterconnect_interface_axi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/interface_axi_master_0'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp31/DemoInterconnect_interface_axi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/interface_axi_master_1'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp31/DemoInterconnect_interface_axi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/interface_axi_master_1'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp33/DemoInterconnect_jtag_axi_0_0_in_context.xdc] for cell 'DemoInterconnect_i/jtag_axi_0'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp33/DemoInterconnect_jtag_axi_0_0_in_context.xdc] for cell 'DemoInterconnect_i/jtag_axi_0'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp35/DemoInterconnect_clk_wiz_0_0_in_context.xdc] for cell 'DemoInterconnect_i/clk_wiz_0'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp35/DemoInterconnect_clk_wiz_0_0_in_context.xdc] for cell 'DemoInterconnect_i/clk_wiz_0'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp37/DemoInterconnect_uart_transceiver_0_0_in_context.xdc] for cell 'DemoInterconnect_i/uart_transceiver_0'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp37/DemoInterconnect_uart_transceiver_0_0_in_context.xdc] for cell 'DemoInterconnect_i/uart_transceiver_0'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp39/DemoInterconnect_uart_transceiver_0_0_in_context.xdc] for cell 'DemoInterconnect_i/uart_transceiver_1'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp39/DemoInterconnect_uart_transceiver_0_0_in_context.xdc] for cell 'DemoInterconnect_i/uart_transceiver_1'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp41/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_0'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp41/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_0'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp43/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_1'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp43/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_1'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp45/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_2'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp45/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_2'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp47/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_3'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp47/DemoInterconnect_axi_spi_master_0_0_in_context.xdc] for cell 'DemoInterconnect_i/axi_spi_master_3'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp49/DemoInterconnect_mutex_0_0_in_context.xdc] for cell 'DemoInterconnect_i/master_comm_mutex'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp49/DemoInterconnect_mutex_0_0_in_context.xdc] for cell 'DemoInterconnect_i/master_comm_mutex'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp51/DemoInterconnect_xbar_0_in_context.xdc] for cell 'DemoInterconnect_i/interconnect/xbar'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp51/DemoInterconnect_xbar_0_in_context.xdc] for cell 'DemoInterconnect_i/interconnect/xbar'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp53/DemoInterconnect_ila_0_0_in_context.xdc] for cell 'DemoInterconnect_i/ila_0'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp53/DemoInterconnect_ila_0_0_in_context.xdc] for cell 'DemoInterconnect_i/ila_0'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp55/DemoInterconnect_auto_pc_0_in_context.xdc] for cell 'DemoInterconnect_i/interconnect/s02_couplers/auto_pc'
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp55/DemoInterconnect_auto_pc_0_in_context.xdc] for cell 'DemoInterconnect_i/interconnect/s02_couplers/auto_pc'
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc]
+WARNING: [Vivado 12-508] No pins matched 'DemoInterconnect_i/axi_spi_master_0/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:5]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"aclk_DemoInterconnect_clk_wiz_0_0\"'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:5]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:5]
-WARNING: [Vivado 12-508] No pins matched 'DemoInterconnect_i/axi_spi_master_1/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:6]
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"aclk_DemoInterconnect_clk_wiz_0_0\"'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:6]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:5]
+WARNING: [Vivado 12-508] No pins matched 'DemoInterconnect_i/axi_spi_master_1/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:6]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"aclk_DemoInterconnect_clk_wiz_0_0\"'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:6]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:6]
-WARNING: [Vivado 12-508] No pins matched 'DemoInterconnect_i/axi_spi_master_2/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:7]
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"aclk_DemoInterconnect_clk_wiz_0_0\"'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:7]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:6]
+WARNING: [Vivado 12-508] No pins matched 'DemoInterconnect_i/axi_spi_master_2/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:7]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"aclk_DemoInterconnect_clk_wiz_0_0\"'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:7]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:7]
-WARNING: [Vivado 12-508] No pins matched 'DemoInterconnect_i/axi_spi_master_3/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:8]
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"aclk_DemoInterconnect_clk_wiz_0_0\"'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:7]
+WARNING: [Vivado 12-508] No pins matched 'DemoInterconnect_i/axi_spi_master_3/U0/axi_spi_master_v1_0_S00_AXI_inst/spi_master_inst/sclk_reg/Q'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:8]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"aclk_DemoInterconnect_clk_wiz_0_0\"'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:8]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:8]
-WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:19]
-WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:20]
-WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:21]
-WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:22]
-WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:23]
-WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:24]
-WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:26]
-WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:27]
-WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:28]
-WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:29]
-WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:30]
-WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:31]
-WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:33]
-WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:34]
-WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:35]
-WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:36]
-WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:37]
-WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:38]
-WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:40]
-WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:41]
-WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:42]
-WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:43]
-WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:44]
-WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:45]
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"uart_DemoInterconnect_clk_wiz_0_0\"'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:47]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:8]
+WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:19]
+WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:20]
+WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:21]
+WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:22]
+WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:23]
+WARNING: [Vivado 12-646] clock 'm_spi_0_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:24]
+WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:26]
+WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:27]
+WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:28]
+WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:29]
+WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:30]
+WARNING: [Vivado 12-646] clock 'm_spi_1_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:31]
+WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:33]
+WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:34]
+WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:35]
+WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:36]
+WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:37]
+WARNING: [Vivado 12-646] clock 'm_spi_2_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:38]
+WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:40]
+WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:41]
+WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:42]
+WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:43]
+WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:44]
+WARNING: [Vivado 12-646] clock 'm_spi_3_sck' not found. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:45]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"uart_DemoInterconnect_clk_wiz_0_0\"'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:47]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:47]
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"uart_DemoInterconnect_clk_wiz_0_0\"'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:48]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:47]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"uart_DemoInterconnect_clk_wiz_0_0\"'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:48]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:48]
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"uart_DemoInterconnect_clk_wiz_0_0\"'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:49]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:48]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"uart_DemoInterconnect_clk_wiz_0_0\"'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:49]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:49]
-WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"uart_DemoInterconnect_clk_wiz_0_0\"'. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:50]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:49]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -filter NAME=~\"uart_DemoInterconnect_clk_wiz_0_0\"'. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:50]
 Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:50]
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DemoInterconnect_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DemoInterconnect_wrapper_propImpl.xdc].
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc:50]
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/DemoInterconnect_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DemoInterconnect_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/DemoInterconnect_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc]
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DemoInterconnect_wrapper_propImpl.xdc].
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc]
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/DemoInterconnect_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/DemoInterconnect_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 720.086 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 723.188 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a15tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp35/DemoInterconnect_clk_wiz_0_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-7344-egk-pc/dcp35/DemoInterconnect_clk_wiz_0_0_in_context.xdc, line 5).
-Applied set_property IOB = TRUE for UART_RX_0. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
-Applied set_property IOB = TRUE for UART_RX_1. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
-Applied set_property IOB = TRUE for m_spi_miso. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
-Applied set_property IOB = TRUE for m_spi_miso_1. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
-Applied set_property IOB = TRUE for m_spi_miso_2. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
-Applied set_property IOB = TRUE for m_spi_miso_3. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
-Applied set_property IOB = TRUE for sys_clk. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
-Applied set_property IOB = TRUE for sys_reset. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
-Applied set_property IOB = TRUE for LED0_pll_aclk. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for LED1_pll_uart. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for LED2_pll_lock. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for UART_TX_0. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for UART_TX_1. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_mosi. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_mosi_1. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_mosi_2. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_mosi_3. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_sclk. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_sclk_1. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_sclk_2. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_sclk_3. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_ss. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_ss_1. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_ss_2. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
-Applied set_property IOB = TRUE for m_spi_ss_3. (constraint file  D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp35/DemoInterconnect_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/.Xil/Vivado-14136-CHRIS-PC/dcp35/DemoInterconnect_clk_wiz_0_0_in_context.xdc, line 5).
+Applied set_property IOB = TRUE for UART_RX_0. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
+Applied set_property IOB = TRUE for UART_RX_1. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
+Applied set_property IOB = TRUE for m_spi_miso. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
+Applied set_property IOB = TRUE for m_spi_miso_1. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
+Applied set_property IOB = TRUE for m_spi_miso_2. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
+Applied set_property IOB = TRUE for m_spi_miso_3. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
+Applied set_property IOB = TRUE for sys_clk. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
+Applied set_property IOB = TRUE for sys_reset. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 53).
+Applied set_property IOB = TRUE for LED0_pll_aclk. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for LED1_pll_uart. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for LED2_pll_lock. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for UART_TX_0. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for UART_TX_1. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_mosi. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_mosi_1. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_mosi_2. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_mosi_3. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_sclk. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_sclk_1. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_sclk_2. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_sclk_3. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_ss. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_ss_1. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_ss_2. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
+Applied set_property IOB = TRUE for m_spi_ss_3. (constraint file  C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc, line 54).
 Applied set_property DONT_TOUCH = true for DemoInterconnect_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DemoInterconnect_i/axi_spi_master_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DemoInterconnect_i/axi_spi_master_1. (constraint file  auto generated constraint, line ).
@@ -320,10 +320,10 @@ Applied set_property DONT_TOUCH = true for DemoInterconnect_i/master_comm_mutex.
 Applied set_property DONT_TOUCH = true for DemoInterconnect_i/uart_transceiver_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DemoInterconnect_i/uart_transceiver_1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-5866] 'dont_touch' attribute is found on instance 'DemoInterconnect_i' of module 'DemoInterconnect'. So gated clock conversion will not be possible for this module.
 WARNING: [Synth 8-5866] 'dont_touch' attribute is found on instance 'DemoInterconnect_i/interconnect' of module 'DemoInterconnect_axi_interconnect_0_0'. So gated clock conversion will not be possible for this module.
@@ -394,7 +394,7 @@ WARNING: [Synth 8-3331] design DemoInterconnect_axi_interconnect_0_0 has unconne
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_interconnect_0_0 has unconnected port S02_ACLK
 WARNING: [Synth 8-3331] design DemoInterconnect_axi_interconnect_0_0 has unconnected port S02_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -409,13 +409,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'DemoInterconnect_i/clk_wi
 INFO: [Synth 8-5578] Moved timing constraint from pin 'DemoInterconnect_i/clk_wiz_0/uart' to pin 'DemoInterconnect_i/clk_wiz_0/bbstub_uart/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -448,7 +448,7 @@ INFO: [Synth 8-5816] Retiming module `DemoInterconnect_wrapper' done
 
 
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -553,7 +553,7 @@ Report Gated Clocks:
 End Gated Clock Conversion
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -566,7 +566,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -578,25 +578,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -640,25 +640,26 @@ Report Cell Usage:
 |12    |DemoInterconnect_uart_transceiver_0_0_bbox_12    |     1|
 |13    |DemoInterconnect_uart_transceiver_0_1_bbox_13    |     1|
 |14    |DemoInterconnect_xbar_0_bbox_7                   |     1|
-|15    |IBUF                                             |     7|
-|16    |OBUF                                             |    17|
+|15    |LUT1                                             |    18|
+|16    |IBUF                                             |     7|
+|17    |OBUF                                             |    17|
 +------+-------------------------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+--------------------------------------+------+
 |      |Instance             |Module                                |Cells |
 +------+---------------------+--------------------------------------+------+
-|1     |top                  |                                      |  1803|
-|2     |  DemoInterconnect_i |DemoInterconnect                      |  1779|
+|1     |top                  |                                      |  1821|
+|2     |  DemoInterconnect_i |DemoInterconnect                      |  1797|
 |3     |    interconnect     |DemoInterconnect_axi_interconnect_0_0 |  1055|
 |4     |      s02_couplers   |s02_couplers_imp_2QLUHY               |   155|
 +------+---------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 720.086 ; gain = 428.359
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 723.188 ; gain = 428.309
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 36 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 720.086 ; gain = 141.164
-Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 720.086 ; gain = 428.359
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 723.188 ; gain = 141.125
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 723.188 ; gain = 428.309
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -670,8 +671,10 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 92 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 720.086 ; gain = 429.148
-INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/DemoInterconnect_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 723.188 ; gain = 429.055
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/synth_1/DemoInterconnect_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DemoInterconnect_wrapper_utilization_synth.rpt -pb DemoInterconnect_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 720.086 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 18:17:22 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 723.188 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 16 01:13:36 2017...

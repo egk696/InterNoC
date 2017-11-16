@@ -2,12 +2,12 @@
 # Vivado v2017.3 (64-bit)
 # SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
 # IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Wed Nov 15 17:38:36 2017
-# Process ID: 12224
-# Current directory: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1
+# Start of session at: Wed Nov 15 21:25:52 2017
+# Process ID: 7472
+# Current directory: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1
 # Command line: vivado.exe -log DemoInterconnect_interface_axi_master_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DemoInterconnect_interface_axi_master_0_0.tcl
-# Log file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.vds
-# Journal file: D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1\vivado.jou
+# Log file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.vds
+# Journal file: C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source DemoInterconnect_interface_axi_master_0_0.tcl -notrace
 Command: synth_design -top DemoInterconnect_interface_axi_master_0_0 -part xc7a15tcpg236-1 -mode out_of_context
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7136 
+INFO: Helper process launched with PID 14388 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 345.441 ; gain = 96.801
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 347.660 ; gain = 96.551
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_interface_axi_master_0_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_interface_axi_master_0_0' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:88]
 	Parameter C_IF00_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_PACKET_WIDTH bound to: 40 - type: integer 
 	Parameter C_PACKET_DATA_WIDTH bound to: 32 - type: integer 
@@ -29,8 +29,8 @@ INFO: [Synth 8-638] synthesizing module 'DemoInterconnect_interface_axi_master_0
 	Parameter C_M00_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_SELF_ADDR bound to: 16 - type: integer 
 	Parameter C_TIMEOUT_PERIOD bound to: 16384 - type: integer 
-INFO: [Synth 8-3491] module 'interface_axi_master_v1_0' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:5' bound to instance 'U0' of component 'interface_axi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:164]
-INFO: [Synth 8-638] synthesizing module 'interface_axi_master_v1_0' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:54]
+INFO: [Synth 8-3491] module 'interface_axi_master_v1_0' declared at 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:5' bound to instance 'U0' of component 'interface_axi_master_v1_0' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:164]
+INFO: [Synth 8-638] synthesizing module 'interface_axi_master_v1_0' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:54]
 	Parameter C_IF00_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_PACKET_WIDTH bound to: 40 - type: integer 
 	Parameter C_PACKET_CTRL_WIDTH bound to: 3 - type: integer 
@@ -40,23 +40,23 @@ INFO: [Synth 8-638] synthesizing module 'interface_axi_master_v1_0' [d:/Developm
 	Parameter C_M00_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_SELF_ADDR bound to: 16 - type: integer 
 	Parameter C_TIMEOUT_PERIOD bound to: 16384 - type: integer 
-WARNING: [Synth 8-614] signal 'current_state' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_init_axi_rx' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_init_axi_tx' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_axi_data' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_packet' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_body_count' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_head' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_body' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_timeout_count' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'current_if00_load' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'next_if00_load' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'if00_data_in' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'axi_write_done' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'axi_read_done' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'axi_data' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'if00_send_busy' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
-WARNING: [Synth 8-614] signal 'if00_send_done' is read in the process but is not in the sensitivity list [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_state' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_init_axi_rx' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_init_axi_tx' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_axi_data' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_packet' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_body_count' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_head' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_body' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_timeout_count' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'current_if00_load' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'next_if00_load' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'if00_data_in' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'axi_write_done' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'axi_read_done' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'axi_data' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'if00_send_busy' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
+WARNING: [Synth 8-614] signal 'if00_send_done' is read in the process but is not in the sensitivity list [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:161]
 	Parameter C_IF00_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_PACKET_WIDTH bound to: 40 - type: integer 
 	Parameter C_PACKET_ADDR_WIDTH bound to: 5 - type: integer 
@@ -65,8 +65,8 @@ WARNING: [Synth 8-614] signal 'if00_send_done' is read in the process but is not
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_PACKET_CTRL_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-3491] module 'interface_axi_master_v1_0_M00_AXI' declared at 'd:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:5' bound to instance 'interface_axi_master_v1_0_M00_AXI_inst' of component 'interface_axi_master_v1_0_M00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:298]
-INFO: [Synth 8-638] synthesizing module 'interface_axi_master_v1_0_M00_AXI' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:94]
+INFO: [Synth 8-3491] module 'interface_axi_master_v1_0_M00_AXI' declared at 'c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:5' bound to instance 'interface_axi_master_v1_0_M00_AXI_inst' of component 'interface_axi_master_v1_0_M00_AXI' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:298]
+INFO: [Synth 8-638] synthesizing module 'interface_axi_master_v1_0_M00_AXI' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:94]
 	Parameter C_IF00_DATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_PACKET_WIDTH bound to: 40 - type: integer 
 	Parameter C_PACKET_ADDR_WIDTH bound to: 5 - type: integer 
@@ -75,16 +75,16 @@ INFO: [Synth 8-638] synthesizing module 'interface_axi_master_v1_0_M00_AXI' [d:/
 	Parameter C_AXI_PACKET_ADDR_OFFSET bound to: 16 - type: integer 
 	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-4471] merging register 'init_rxn_ff2_reg' into 'init_txn_ff2_reg' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:217]
-WARNING: [Synth 8-6014] Unused sequential element init_rxn_ff2_reg was removed.  [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:217]
-INFO: [Synth 8-256] done synthesizing module 'interface_axi_master_v1_0_M00_AXI' (1#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:94]
-INFO: [Synth 8-256] done synthesizing module 'interface_axi_master_v1_0' (2#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_interface_axi_master_0_0' (3#1) [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:88]
+INFO: [Synth 8-4471] merging register 'init_rxn_ff2_reg' into 'init_txn_ff2_reg' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:217]
+WARNING: [Synth 8-6014] Unused sequential element init_rxn_ff2_reg was removed.  [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'interface_axi_master_v1_0_M00_AXI' (1#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'interface_axi_master_v1_0' (2#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'DemoInterconnect_interface_axi_master_0_0' (3#1) [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/synth/DemoInterconnect_interface_axi_master_0_0.vhd:88]
 WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port PACKET_TX[39]
 WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port M_AXI_BRESP[0]
 WARNING: [Synth 8-3331] design interface_axi_master_v1_0_M00_AXI has unconnected port M_AXI_RRESP[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 387.902 ; gain = 139.262
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 390.117 ; gain = 139.008
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -94,7 +94,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 387.902 ; gain = 139.262
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 390.117 ; gain = 139.008
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a15tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -106,22 +106,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 684.656 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.223 . Memory (MB): peak = 687.762 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a15tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'interface_axi_master_v1_0_M00_AXI'
 INFO: [Synth 8-5544] ROM "error_reg" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -159,9 +159,9 @@ INFO: [Synth 8-3354] encoded FSM with state register 'mst_exec_state_reg' using 
               st_tx_wait |                             1000 |                             0111
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'interface_axi_master_v1_0'
-WARNING: [Synth 8-327] inferring latch for variable 'if00_data_out_reg' [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:178]
+WARNING: [Synth 8-327] inferring latch for variable 'if00_data_out_reg' [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0.vhd:178]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -257,7 +257,7 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element U0/interface_axi_master_v1_0_M00_AXI_inst/error_reg_reg was removed.  [d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:213]
+WARNING: [Synth 8-6014] Unused sequential element U0/interface_axi_master_v1_0_M00_AXI_inst/error_reg_reg was removed.  [c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ipshared/ee7b/hdl/interface_axi_master_v1_0_M00_AXI.vhd:213]
 INFO: [Synth 8-5544] ROM "U0/next_body" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[31] driven by constant 0
 INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m00_axi_awaddr[30] driven by constant 0
@@ -323,7 +323,7 @@ INFO: [Synth 8-3917] design DemoInterconnect_interface_axi_master_0_0 has port m
 WARNING: [Synth 8-3331] design DemoInterconnect_interface_axi_master_0_0 has unconnected port m00_axi_bresp[0]
 WARNING: [Synth 8-3331] design DemoInterconnect_interface_axi_master_0_0 has unconnected port m00_axi_rresp[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -335,13 +335,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:57 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:57 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -353,7 +353,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:58 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -377,7 +377,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:59 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -390,7 +390,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:59 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -402,25 +402,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:59 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:59 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:59 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:59 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -457,11 +457,11 @@ Report Instance Areas:
 |3     |    interface_axi_master_v1_0_M00_AXI_inst |interface_axi_master_v1_0_M00_AXI |    88|
 +------+-------------------------------------------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 684.656 ; gain = 436.016
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:59 . Memory (MB): peak = 687.762 ; gain = 436.652
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:48 . Memory (MB): peak = 684.656 ; gain = 139.262
-Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 684.656 ; gain = 436.016
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:43 . Memory (MB): peak = 687.762 ; gain = 139.008
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:59 . Memory (MB): peak = 687.762 ; gain = 436.652
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -474,11 +474,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 96 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 684.656 ; gain = 445.602
-INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP d:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0.xci
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:02 . Memory (MB): peak = 687.762 ; gain = 443.746
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 2 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_interface_axi_master_0_0_synth_1/DemoInterconnect_interface_axi_master_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file DemoInterconnect_interface_axi_master_0_0_utilization_synth.rpt -pb DemoInterconnect_interface_axi_master_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 684.656 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 17:39:46 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 687.762 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 21:27:04 2017...

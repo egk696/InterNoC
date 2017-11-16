@@ -989,34 +989,6 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>ila_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="6.2"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_ila_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE6_TYPE">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_TYPE">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE2_TYPE">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_TYPE">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE7_WIDTH">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE5_WIDTH">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_WIDTH">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_WIDTH">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_DATA_DEPTH">8192</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">8</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE7_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE6_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE5_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE2_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="ALL_PROBE_SAME_MU_CNT">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_ENABLE_ILA_AXI_MON">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
         <spirit:instanceName>interface_axi_master_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="interface_axi_master" spirit:vendor="ekyr.kth.se" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -1060,6 +1032,40 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_axi_spi_master_1_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SPI_CLK_DIV">6</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ila_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="6.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">DemoInterconnect_ila_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE7_TYPE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE6_TYPE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE5_TYPE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_TYPE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_TYPE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE2_TYPE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_TYPE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_TYPE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE7_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE5_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_WIDTH">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_DATA_DEPTH">8192</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_EN_STRG_QUAL">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ADV_TRIGGER">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE7_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE6_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE5_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE2_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ALL_PROBE_SAME_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ENABLE_ILA_AXI_MON">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -1124,7 +1130,12 @@
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S0_AXI_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S1_AXI_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S2_AXI_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_spi_master_0" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_spi_master_1" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_spi_master_2" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_spi_master_3" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S01_ACLK"/>
@@ -1136,12 +1147,7 @@
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M04_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M05_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M06_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_spi_master_0" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_spi_master_1" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_spi_master_2" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="axi_spi_master_3" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clk_wiz_0_locked</spirit:name>
@@ -1151,6 +1157,12 @@
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S0_AXI_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S1_AXI_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="master_comm_mutex" spirit:portRef="S2_AXI_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_spi_master_0" spirit:portRef="s00_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_spi_master_1" spirit:portRef="s00_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_spi_master_2" spirit:portRef="s00_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_spi_master_3" spirit:portRef="s00_axi_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="S01_ARESETN"/>
@@ -1162,12 +1174,6 @@
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M04_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M05_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="interconnect" spirit:portRef="M06_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="m00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="m00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_spi_master_0" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_spi_master_1" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_spi_master_2" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="axi_spi_master_3" spirit:portRef="s00_axi_aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sys_clk_1</spirit:name>
@@ -1194,14 +1200,14 @@
       <spirit:adHocConnection>
         <spirit:name>uart_transceiver_0_o_RX_Done</spirit:name>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_0" spirit:portRef="o_RX_Done"/>
-        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe0"/>
         <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="if00_load_in"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe0"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>uart_transceiver_0_o_RX_Byte</spirit:name>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_0" spirit:portRef="o_RX_Byte"/>
-        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe1"/>
         <spirit:internalPortReference spirit:componentRef="interface_axi_master_0" spirit:portRef="if00_data_in"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>interface_axi_master_0_if00_load_out</spirit:name>
@@ -1246,28 +1252,14 @@
         <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_send_done"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>uart_transceiver_1_o_RX_Done</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="uart_transceiver_1" spirit:portRef="o_RX_Done"/>
-        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe4"/>
-        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe5"/>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_load_in"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>uart_transceiver_1_o_RX_Byte</spirit:name>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_1" spirit:portRef="o_RX_Byte"/>
         <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_data_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>interface_axi_master_1_if00_load_out</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_load_out"/>
-        <spirit:internalPortReference spirit:componentRef="uart_transceiver_1" spirit:portRef="i_TX_Load"/>
-        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe6"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>interface_axi_master_1_if00_data_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_data_out"/>
         <spirit:internalPortReference spirit:componentRef="uart_transceiver_1" spirit:portRef="i_TX_Byte"/>
-        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe7"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>m_spi_miso_1</spirit:name>
@@ -1353,6 +1345,16 @@
         <spirit:name>sys_reset</spirit:name>
         <spirit:externalPortReference spirit:portRef="sys_reset"/>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>uart_transceiver_1_o_RX_Done</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="uart_transceiver_1" spirit:portRef="o_RX_Done"/>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_load_in"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>interface_axi_master_1_if00_load_out</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="interface_axi_master_1" spirit:portRef="if00_load_out"/>
+        <spirit:internalPortReference spirit:componentRef="uart_transceiver_1" spirit:portRef="i_TX_Load"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

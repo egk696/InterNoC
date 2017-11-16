@@ -60,116 +60,15 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
-
-start_step init_design
-set ACTIVE_STEP init_design
-set rc [catch {
-  create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/Lefteris/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13324-egk-pc/incrSyn
-  create_project -in_memory -part xc7a15tcpg236-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/Development/FPGA/InterNoC/InterNoC.cache/wt [current_project]
-  set_property parent.project_path D:/Development/FPGA/InterNoC/InterNoC.xpr [current_project]
-  set_property ip_repo_paths {
-  D:/Development/FPGA/InterNoC/ip_repo/axi_i2c_master_1.0
-  D:/Development/FPGA/InterNoC/ip_repo/axi_native_register_space_1.0
-  D:/Development/FPGA/InterNoC/ip_repo/uart_transceiver_v1_0
-  D:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0
-  D:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0
-} [current_project]
-  set_property ip_output_repo D:/Development/FPGA/InterNoC/InterNoC.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet D:/Development/FPGA/InterNoC/InterNoC.runs/synth_1/DemoInterconnect_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/DemoInterconnect.bd
-  set_param project.isImplRun false
-  read_xdc D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/timing.xdc
-  read_xdc D:/Development/FPGA/InterNoC/InterNoC.srcs/constrs_1/new/pinout.xdc
-  set_param project.isImplRun true
-  link_design -top DemoInterconnect_wrapper -part xc7a15tcpg236-1
-  set_param project.isImplRun false
-  write_hwdef -force -file DemoInterconnect_wrapper.hwdef
-  close_msg_db -file init_design.pb
-} RESULT]
-if {$rc} {
-  step_failed init_design
-  return -code error $RESULT
-} else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force DemoInterconnect_wrapper_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file DemoInterconnect_wrapper_drc_opted.rpt -pb DemoInterconnect_wrapper_drc_opted.pb -rpx DemoInterconnect_wrapper_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  implement_debug_core 
-  place_design 
-  write_checkpoint -force DemoInterconnect_wrapper_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file DemoInterconnect_wrapper_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file DemoInterconnect_wrapper_utilization_placed.rpt -pb DemoInterconnect_wrapper_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -file DemoInterconnect_wrapper_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force DemoInterconnect_wrapper_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file DemoInterconnect_wrapper_drc_routed.rpt -pb DemoInterconnect_wrapper_drc_routed.pb -rpx DemoInterconnect_wrapper_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file DemoInterconnect_wrapper_methodology_drc_routed.rpt -pb DemoInterconnect_wrapper_methodology_drc_routed.pb -rpx DemoInterconnect_wrapper_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file DemoInterconnect_wrapper_power_routed.rpt -pb DemoInterconnect_wrapper_power_summary_routed.pb -rpx DemoInterconnect_wrapper_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file DemoInterconnect_wrapper_route_status.rpt -pb DemoInterconnect_wrapper_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -file DemoInterconnect_wrapper_timing_summary_routed.rpt -warn_on_violation  -rpx DemoInterconnect_wrapper_timing_summary_routed.rpx"
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file DemoInterconnect_wrapper_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file DemoInterconnect_wrapper_clock_utilization_routed.rpt"
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force DemoInterconnect_wrapper_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
-  unset ACTIVE_STEP 
-}
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param tcl.collectionResultDisplayLimit 0
+  set_param xicom.use_bs_reader 1
+  open_checkpoint DemoInterconnect_wrapper_routed.dcp
+  set_property webtalk.parent_dir C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force DemoInterconnect_wrapper.mmi }
   write_bitstream -force DemoInterconnect_wrapper.bit -bin_file

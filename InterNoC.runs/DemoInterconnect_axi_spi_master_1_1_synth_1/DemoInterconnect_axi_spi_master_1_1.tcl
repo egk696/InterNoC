@@ -16,10 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/Lefteris/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-13324-egk-pc/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7a15tcpg236-1
 
@@ -27,21 +23,21 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/Development/FPGA/InterNoC/InterNoC.cache/wt [current_project]
-set_property parent.project_path D:/Development/FPGA/InterNoC/InterNoC.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.cache/wt [current_project]
+set_property parent.project_path C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_repo_paths {
-  d:/Development/FPGA/InterNoC/ip_repo/axi_i2c_master_1.0
-  d:/Development/FPGA/InterNoC/ip_repo/axi_native_register_space_1.0
-  d:/Development/FPGA/InterNoC/ip_repo/uart_transceiver_v1_0
-  d:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0
-  d:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0
+  c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/axi_i2c_master_1.0
+  c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/axi_native_register_space_1.0
+  c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/uart_transceiver_v1_0
+  c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/interface_axi_master_1.0
+  c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/ip_repo/axi_spi_master_1.0
 } [current_project]
-set_property ip_output_repo d:/Development/FPGA/InterNoC/InterNoC.cache/ip [current_project]
+set_property ip_output_repo c:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1.xci
+read_ip -quiet C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -52,7 +48,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 
-set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1 -new_name DemoInterconnect_axi_spi_master_1_1 -ip [get_ips DemoInterconnect_axi_spi_master_1_1]]
+set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1 -new_name DemoInterconnect_axi_spi_master_1_1 -ip [get_ips DemoInterconnect_axi_spi_master_1_1]]
 
 if { $cached_ip eq {} } {
 
@@ -91,32 +87,32 @@ write_checkpoint -force -noxdef DemoInterconnect_axi_spi_master_1_1.dcp
 create_report "DemoInterconnect_axi_spi_master_1_1_synth_1_synth_report_utilization_0" "report_utilization -file DemoInterconnect_axi_spi_master_1_1_utilization_synth.rpt -pb DemoInterconnect_axi_spi_master_1_1_utilization_synth.pb"
 
 if { [catch {
-  file copy -force D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1.dcp D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1.dcp
+  file copy -force C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1.dcp C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.v
+  write_verilog -force -mode synth_stub C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -126,46 +122,46 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1.dcp D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1.dcp
+  file copy -force C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1.dcp C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1_stub.v D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.v
+  file rename -force C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1_stub.v C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1_stub.vhdl D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.vhdl
+  file rename -force C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1_stub.vhdl C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.v D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.v
+  file rename -force C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.v C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Development/FPGA/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.vhdl D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.vhdl
+  file rename -force C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.runs/DemoInterconnect_axi_spi_master_1_1_synth_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.vhdl C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir D:/Development/FPGA/InterNoC/InterNoC.ip_user_files/ip/DemoInterconnect_axi_spi_master_1_1]} {
+if {[file isdir C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.ip_user_files/ip/DemoInterconnect_axi_spi_master_1_1]} {
   catch { 
-    file copy -force D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.v D:/Development/FPGA/InterNoC/InterNoC.ip_user_files/ip/DemoInterconnect_axi_spi_master_1_1
+    file copy -force C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.v C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.ip_user_files/ip/DemoInterconnect_axi_spi_master_1_1
   }
 }
 
-if {[file isdir D:/Development/FPGA/InterNoC/InterNoC.ip_user_files/ip/DemoInterconnect_axi_spi_master_1_1]} {
+if {[file isdir C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.ip_user_files/ip/DemoInterconnect_axi_spi_master_1_1]} {
   catch { 
-    file copy -force D:/Development/FPGA/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.vhdl D:/Development/FPGA/InterNoC/InterNoC.ip_user_files/ip/DemoInterconnect_axi_spi_master_1_1
+    file copy -force C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.srcs/sources_1/bd/DemoInterconnect/ip/DemoInterconnect_axi_spi_master_1_1/DemoInterconnect_axi_spi_master_1_1_stub.vhdl C:/Users/chris/OneDrive/HW_Projects/InterNoC/Codebase/InterNoC/InterNoC.ip_user_files/ip/DemoInterconnect_axi_spi_master_1_1
   }
 }

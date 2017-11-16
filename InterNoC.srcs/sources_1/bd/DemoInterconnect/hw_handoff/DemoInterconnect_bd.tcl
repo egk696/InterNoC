@@ -260,25 +260,31 @@ proc create_root_design { parentCell } {
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
   set_property -dict [ list \
    CONFIG.ALL_PROBE_SAME_MU_CNT {2} \
+   CONFIG.C_ADV_TRIGGER {false} \
    CONFIG.C_DATA_DEPTH {8192} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_EN_STRG_QUAL {1} \
    CONFIG.C_MONITOR_TYPE {Native} \
    CONFIG.C_NUM_OF_PROBES {8} \
    CONFIG.C_PROBE0_MU_CNT {2} \
-   CONFIG.C_PROBE0_TYPE {2} \
+   CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE1_MU_CNT {2} \
+   CONFIG.C_PROBE1_TYPE {1} \
    CONFIG.C_PROBE1_WIDTH {8} \
    CONFIG.C_PROBE2_MU_CNT {2} \
-   CONFIG.C_PROBE2_TYPE {2} \
+   CONFIG.C_PROBE2_TYPE {0} \
    CONFIG.C_PROBE3_MU_CNT {2} \
+   CONFIG.C_PROBE3_TYPE {1} \
    CONFIG.C_PROBE3_WIDTH {8} \
    CONFIG.C_PROBE4_MU_CNT {2} \
-   CONFIG.C_PROBE4_TYPE {2} \
+   CONFIG.C_PROBE4_TYPE {0} \
    CONFIG.C_PROBE5_MU_CNT {2} \
+   CONFIG.C_PROBE5_TYPE {1} \
    CONFIG.C_PROBE5_WIDTH {8} \
    CONFIG.C_PROBE6_MU_CNT {2} \
-   CONFIG.C_PROBE6_TYPE {2} \
+   CONFIG.C_PROBE6_TYPE {0} \
    CONFIG.C_PROBE7_MU_CNT {2} \
+   CONFIG.C_PROBE7_TYPE {1} \
    CONFIG.C_PROBE7_WIDTH {8} \
  ] $ila_0
 
@@ -360,8 +366,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clk_wiz_0_uart [get_bd_ports LED1_pll_uart] [get_bd_pins clk_wiz_0/uart] [get_bd_pins uart_transceiver_0/i_Clk] [get_bd_pins uart_transceiver_1/i_Clk]
   connect_bd_net -net interface_axi_master_0_if00_data_out [get_bd_pins ila_0/probe3] [get_bd_pins interface_axi_master_0/if00_data_out] [get_bd_pins uart_transceiver_0/i_TX_Byte]
   connect_bd_net -net interface_axi_master_0_if00_load_out [get_bd_pins ila_0/probe2] [get_bd_pins interface_axi_master_0/if00_load_out] [get_bd_pins uart_transceiver_0/i_TX_Load]
-  connect_bd_net -net interface_axi_master_1_if00_data_out [get_bd_pins ila_0/probe7] [get_bd_pins interface_axi_master_1/if00_data_out] [get_bd_pins uart_transceiver_1/i_TX_Byte]
-  connect_bd_net -net interface_axi_master_1_if00_load_out [get_bd_pins ila_0/probe6] [get_bd_pins interface_axi_master_1/if00_load_out] [get_bd_pins uart_transceiver_1/i_TX_Load]
+  connect_bd_net -net interface_axi_master_1_if00_data_out [get_bd_pins interface_axi_master_1/if00_data_out] [get_bd_pins uart_transceiver_1/i_TX_Byte]
+  connect_bd_net -net interface_axi_master_1_if00_load_out [get_bd_pins interface_axi_master_1/if00_load_out] [get_bd_pins uart_transceiver_1/i_TX_Load]
   connect_bd_net -net m_spi_miso_1 [get_bd_ports m_spi_miso] [get_bd_pins axi_spi_master_0/m_spi_miso]
   connect_bd_net -net m_spi_miso_1_1 [get_bd_ports m_spi_miso_1] [get_bd_pins axi_spi_master_1/m_spi_miso]
   connect_bd_net -net m_spi_miso_2_1 [get_bd_ports m_spi_miso_2] [get_bd_pins axi_spi_master_2/m_spi_miso]
@@ -374,7 +380,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net uart_transceiver_0_o_TX_Done [get_bd_pins interface_axi_master_0/if00_send_done] [get_bd_pins uart_transceiver_0/o_TX_Done]
   connect_bd_net -net uart_transceiver_0_o_TX_Serial [get_bd_ports UART_TX_0] [get_bd_pins uart_transceiver_0/o_TX_Serial]
   connect_bd_net -net uart_transceiver_1_o_RX_Byte [get_bd_pins interface_axi_master_1/if00_data_in] [get_bd_pins uart_transceiver_1/o_RX_Byte]
-  connect_bd_net -net uart_transceiver_1_o_RX_Done [get_bd_pins ila_0/probe4] [get_bd_pins ila_0/probe5] [get_bd_pins interface_axi_master_1/if00_load_in] [get_bd_pins uart_transceiver_1/o_RX_Done]
+  connect_bd_net -net uart_transceiver_1_o_RX_Done [get_bd_pins interface_axi_master_1/if00_load_in] [get_bd_pins uart_transceiver_1/o_RX_Done]
   connect_bd_net -net uart_transceiver_1_o_TX_Active [get_bd_pins interface_axi_master_1/if00_send_busy] [get_bd_pins uart_transceiver_1/o_TX_Active]
   connect_bd_net -net uart_transceiver_1_o_TX_Done [get_bd_pins interface_axi_master_1/if00_send_done] [get_bd_pins uart_transceiver_1/o_TX_Done]
   connect_bd_net -net uart_transceiver_1_o_TX_Serial [get_bd_ports UART_TX_1] [get_bd_pins uart_transceiver_1/o_TX_Serial]

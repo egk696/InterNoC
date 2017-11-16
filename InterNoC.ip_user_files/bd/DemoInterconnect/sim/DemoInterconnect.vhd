@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
---Date        : Wed Nov 15 17:58:26 2017
---Host        : egk-pc running 64-bit major release  (build 9200)
+--Date        : Wed Nov 15 21:25:01 2017
+--Host        : CHRIS-PC running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect.bd
 --Design      : DemoInterconnect
 --Purpose     : IP block netlist
@@ -2990,19 +2990,6 @@ architecture STRUCTURE of DemoInterconnect is
     o_TX_Done : out STD_LOGIC
   );
   end component DemoInterconnect_uart_transceiver_0_1;
-  component DemoInterconnect_ila_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe7 : in STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component DemoInterconnect_ila_0_0;
   component DemoInterconnect_interface_axi_master_0_0 is
   port (
     if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -3181,6 +3168,19 @@ architecture STRUCTURE of DemoInterconnect is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component DemoInterconnect_axi_spi_master_1_1;
+  component DemoInterconnect_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component DemoInterconnect_ila_0_0;
   signal UART_RX_0_1 : STD_LOGIC;
   signal UART_RX_1_1 : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
