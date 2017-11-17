@@ -265,7 +265,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_EN_STRG_QUAL {1} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {8} \
+   CONFIG.C_NUM_OF_PROBES {4} \
    CONFIG.C_PROBE0_MU_CNT {2} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_PROBE1_MU_CNT {2} \
@@ -280,12 +280,12 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE4_TYPE {0} \
    CONFIG.C_PROBE5_MU_CNT {2} \
    CONFIG.C_PROBE5_TYPE {1} \
-   CONFIG.C_PROBE5_WIDTH {8} \
+   CONFIG.C_PROBE5_WIDTH {1} \
    CONFIG.C_PROBE6_MU_CNT {2} \
    CONFIG.C_PROBE6_TYPE {0} \
    CONFIG.C_PROBE7_MU_CNT {2} \
    CONFIG.C_PROBE7_TYPE {1} \
-   CONFIG.C_PROBE7_WIDTH {8} \
+   CONFIG.C_PROBE7_WIDTH {1} \
  ] $ila_0
 
   # Create instance: interconnect, and set properties
@@ -304,11 +304,19 @@ proc create_root_design { parentCell } {
    CONFIG.SYNCHRONIZATION_STAGES {2} \
  ] $interconnect
 
-  # Create instance: interface_axi_master_0, and set properties
-  set interface_axi_master_0 [ create_bd_cell -type ip -vlnv ekyr.kth.se:user:interface_axi_master:1.0 interface_axi_master_0 ]
+  # Create instance: internoc_ni_axi_master_0, and set properties
+  set internoc_ni_axi_master_0 [ create_bd_cell -type ip -vlnv e.kyriakakis:user:internoc_ni_axi_master:1.0 internoc_ni_axi_master_0 ]
+  set_property -dict [ list \
+   CONFIG.C_M00_SELF_ADDR {16} \
+   CONFIG.C_TIMEOUT_PERIOD {16383} \
+ ] $internoc_ni_axi_master_0
 
-  # Create instance: interface_axi_master_1, and set properties
-  set interface_axi_master_1 [ create_bd_cell -type ip -vlnv ekyr.kth.se:user:interface_axi_master:1.0 interface_axi_master_1 ]
+  # Create instance: internoc_ni_axi_master_1, and set properties
+  set internoc_ni_axi_master_1 [ create_bd_cell -type ip -vlnv e.kyriakakis:user:internoc_ni_axi_master:1.0 internoc_ni_axi_master_1 ]
+  set_property -dict [ list \
+   CONFIG.C_M00_SELF_ADDR {16} \
+   CONFIG.C_TIMEOUT_PERIOD {16383} \
+ ] $internoc_ni_axi_master_1
 
   # Create instance: jtag_axi_0, and set properties
   set jtag_axi_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:jtag_axi:1.2 jtag_axi_0 ]
@@ -342,8 +350,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_interconnect_0_M04_AXI [get_bd_intf_pins interconnect/M04_AXI] [get_bd_intf_pins master_comm_mutex/S0_AXI]
   connect_bd_intf_net -intf_net axi_interconnect_0_M05_AXI [get_bd_intf_pins interconnect/M05_AXI] [get_bd_intf_pins master_comm_mutex/S1_AXI]
   connect_bd_intf_net -intf_net axi_interconnect_0_M06_AXI [get_bd_intf_pins interconnect/M06_AXI] [get_bd_intf_pins master_comm_mutex/S2_AXI]
-  connect_bd_intf_net -intf_net interface_axi_master_0_M00_AXI [get_bd_intf_pins interconnect/S00_AXI] [get_bd_intf_pins interface_axi_master_0/M00_AXI]
-  connect_bd_intf_net -intf_net interface_axi_master_1_M00_AXI [get_bd_intf_pins interconnect/S01_AXI] [get_bd_intf_pins interface_axi_master_1/M00_AXI]
+  connect_bd_intf_net -intf_net internoc_ni_axi_master_0_M00_AXI [get_bd_intf_pins interconnect/S00_AXI] [get_bd_intf_pins internoc_ni_axi_master_0/M00_AXI]
+  connect_bd_intf_net -intf_net internoc_ni_axi_master_1_M00_AXI [get_bd_intf_pins interconnect/S01_AXI] [get_bd_intf_pins internoc_ni_axi_master_1/M00_AXI]
   connect_bd_intf_net -intf_net jtag_axi_0_M_AXI [get_bd_intf_pins interconnect/S02_AXI] [get_bd_intf_pins jtag_axi_0/M_AXI]
 
   # Create port connections
@@ -361,45 +369,45 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_spi_master_3_m_spi_mosi [get_bd_ports m_spi_mosi_3] [get_bd_pins axi_spi_master_3/m_spi_mosi]
   connect_bd_net -net axi_spi_master_3_m_spi_sclk [get_bd_ports m_spi_sclk_3] [get_bd_pins axi_spi_master_3/m_spi_sclk]
   connect_bd_net -net axi_spi_master_3_m_spi_ss [get_bd_ports m_spi_ss_3] [get_bd_pins axi_spi_master_3/m_spi_ss]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports LED0_pll_aclk] [get_bd_pins axi_spi_master_0/s00_axi_aclk] [get_bd_pins axi_spi_master_1/s00_axi_aclk] [get_bd_pins axi_spi_master_2/s00_axi_aclk] [get_bd_pins axi_spi_master_3/s00_axi_aclk] [get_bd_pins clk_wiz_0/aclk] [get_bd_pins ila_0/clk] [get_bd_pins interconnect/ACLK] [get_bd_pins interconnect/M00_ACLK] [get_bd_pins interconnect/M01_ACLK] [get_bd_pins interconnect/M02_ACLK] [get_bd_pins interconnect/M03_ACLK] [get_bd_pins interconnect/M04_ACLK] [get_bd_pins interconnect/M05_ACLK] [get_bd_pins interconnect/M06_ACLK] [get_bd_pins interconnect/S00_ACLK] [get_bd_pins interconnect/S01_ACLK] [get_bd_pins interconnect/S02_ACLK] [get_bd_pins interface_axi_master_0/m00_axi_aclk] [get_bd_pins interface_axi_master_1/m00_axi_aclk] [get_bd_pins jtag_axi_0/aclk] [get_bd_pins master_comm_mutex/S0_AXI_ACLK] [get_bd_pins master_comm_mutex/S1_AXI_ACLK] [get_bd_pins master_comm_mutex/S2_AXI_ACLK]
-  connect_bd_net -net clk_wiz_0_locked [get_bd_ports LED2_pll_lock] [get_bd_pins axi_spi_master_0/s00_axi_aresetn] [get_bd_pins axi_spi_master_1/s00_axi_aresetn] [get_bd_pins axi_spi_master_2/s00_axi_aresetn] [get_bd_pins axi_spi_master_3/s00_axi_aresetn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins interconnect/ARESETN] [get_bd_pins interconnect/M00_ARESETN] [get_bd_pins interconnect/M01_ARESETN] [get_bd_pins interconnect/M02_ARESETN] [get_bd_pins interconnect/M03_ARESETN] [get_bd_pins interconnect/M04_ARESETN] [get_bd_pins interconnect/M05_ARESETN] [get_bd_pins interconnect/M06_ARESETN] [get_bd_pins interconnect/S00_ARESETN] [get_bd_pins interconnect/S01_ARESETN] [get_bd_pins interconnect/S02_ARESETN] [get_bd_pins interface_axi_master_0/m00_axi_aresetn] [get_bd_pins interface_axi_master_1/m00_axi_aresetn] [get_bd_pins jtag_axi_0/aresetn] [get_bd_pins master_comm_mutex/S0_AXI_ARESETN] [get_bd_pins master_comm_mutex/S1_AXI_ARESETN] [get_bd_pins master_comm_mutex/S2_AXI_ARESETN]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports LED0_pll_aclk] [get_bd_pins axi_spi_master_0/s00_axi_aclk] [get_bd_pins axi_spi_master_1/s00_axi_aclk] [get_bd_pins axi_spi_master_2/s00_axi_aclk] [get_bd_pins axi_spi_master_3/s00_axi_aclk] [get_bd_pins clk_wiz_0/aclk] [get_bd_pins ila_0/clk] [get_bd_pins interconnect/ACLK] [get_bd_pins interconnect/M00_ACLK] [get_bd_pins interconnect/M01_ACLK] [get_bd_pins interconnect/M02_ACLK] [get_bd_pins interconnect/M03_ACLK] [get_bd_pins interconnect/M04_ACLK] [get_bd_pins interconnect/M05_ACLK] [get_bd_pins interconnect/M06_ACLK] [get_bd_pins interconnect/S00_ACLK] [get_bd_pins interconnect/S01_ACLK] [get_bd_pins interconnect/S02_ACLK] [get_bd_pins internoc_ni_axi_master_0/m00_axi_aclk] [get_bd_pins internoc_ni_axi_master_1/m00_axi_aclk] [get_bd_pins jtag_axi_0/aclk] [get_bd_pins master_comm_mutex/S0_AXI_ACLK] [get_bd_pins master_comm_mutex/S1_AXI_ACLK] [get_bd_pins master_comm_mutex/S2_AXI_ACLK]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_ports LED2_pll_lock] [get_bd_pins axi_spi_master_0/s00_axi_aresetn] [get_bd_pins axi_spi_master_1/s00_axi_aresetn] [get_bd_pins axi_spi_master_2/s00_axi_aresetn] [get_bd_pins axi_spi_master_3/s00_axi_aresetn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins interconnect/ARESETN] [get_bd_pins interconnect/M00_ARESETN] [get_bd_pins interconnect/M01_ARESETN] [get_bd_pins interconnect/M02_ARESETN] [get_bd_pins interconnect/M03_ARESETN] [get_bd_pins interconnect/M04_ARESETN] [get_bd_pins interconnect/M05_ARESETN] [get_bd_pins interconnect/M06_ARESETN] [get_bd_pins interconnect/S00_ARESETN] [get_bd_pins interconnect/S01_ARESETN] [get_bd_pins interconnect/S02_ARESETN] [get_bd_pins internoc_ni_axi_master_0/m00_axi_aresetn] [get_bd_pins internoc_ni_axi_master_1/m00_axi_aresetn] [get_bd_pins jtag_axi_0/aresetn] [get_bd_pins master_comm_mutex/S0_AXI_ARESETN] [get_bd_pins master_comm_mutex/S1_AXI_ARESETN] [get_bd_pins master_comm_mutex/S2_AXI_ARESETN]
   connect_bd_net -net clk_wiz_0_uart [get_bd_ports LED1_pll_uart] [get_bd_pins clk_wiz_0/uart] [get_bd_pins uart_transceiver_0/i_Clk] [get_bd_pins uart_transceiver_1/i_Clk]
-  connect_bd_net -net interface_axi_master_0_if00_data_out [get_bd_pins ila_0/probe3] [get_bd_pins interface_axi_master_0/if00_data_out] [get_bd_pins uart_transceiver_0/i_TX_Byte]
-  connect_bd_net -net interface_axi_master_0_if00_load_out [get_bd_pins ila_0/probe2] [get_bd_pins interface_axi_master_0/if00_load_out] [get_bd_pins uart_transceiver_0/i_TX_Load]
-  connect_bd_net -net interface_axi_master_1_if00_data_out [get_bd_pins interface_axi_master_1/if00_data_out] [get_bd_pins uart_transceiver_1/i_TX_Byte]
-  connect_bd_net -net interface_axi_master_1_if00_load_out [get_bd_pins interface_axi_master_1/if00_load_out] [get_bd_pins uart_transceiver_1/i_TX_Load]
+  connect_bd_net -net interface_axi_master_0_if00_data_out [get_bd_pins ila_0/probe3] [get_bd_pins internoc_ni_axi_master_0/if00_data_out] [get_bd_pins uart_transceiver_0/i_TX_Byte]
+  connect_bd_net -net interface_axi_master_0_if00_load_out [get_bd_pins ila_0/probe2] [get_bd_pins internoc_ni_axi_master_0/if00_load_out] [get_bd_pins uart_transceiver_0/i_TX_Load]
+  connect_bd_net -net internoc_ni_axi_master_1_if00_data_out [get_bd_pins internoc_ni_axi_master_1/if00_data_out] [get_bd_pins uart_transceiver_1/i_TX_Byte]
+  connect_bd_net -net internoc_ni_axi_master_1_if00_load_out [get_bd_pins internoc_ni_axi_master_1/if00_load_out] [get_bd_pins uart_transceiver_1/i_TX_Load]
   connect_bd_net -net m_spi_miso_1 [get_bd_ports m_spi_miso] [get_bd_pins axi_spi_master_0/m_spi_miso]
   connect_bd_net -net m_spi_miso_1_1 [get_bd_ports m_spi_miso_1] [get_bd_pins axi_spi_master_1/m_spi_miso]
   connect_bd_net -net m_spi_miso_2_1 [get_bd_ports m_spi_miso_2] [get_bd_pins axi_spi_master_2/m_spi_miso]
   connect_bd_net -net m_spi_miso_3_1 [get_bd_ports m_spi_miso_3] [get_bd_pins axi_spi_master_3/m_spi_miso]
   connect_bd_net -net sys_clk_1 [get_bd_ports sys_clk] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net sys_reset [get_bd_ports sys_reset] [get_bd_pins clk_wiz_0/reset]
-  connect_bd_net -net uart_transceiver_0_o_RX_Byte [get_bd_pins ila_0/probe1] [get_bd_pins interface_axi_master_0/if00_data_in] [get_bd_pins uart_transceiver_0/o_RX_Byte]
-  connect_bd_net -net uart_transceiver_0_o_RX_Done [get_bd_pins ila_0/probe0] [get_bd_pins interface_axi_master_0/if00_load_in] [get_bd_pins uart_transceiver_0/o_RX_Done]
-  connect_bd_net -net uart_transceiver_0_o_TX_Active [get_bd_pins interface_axi_master_0/if00_send_busy] [get_bd_pins uart_transceiver_0/o_TX_Active]
-  connect_bd_net -net uart_transceiver_0_o_TX_Done [get_bd_pins interface_axi_master_0/if00_send_done] [get_bd_pins uart_transceiver_0/o_TX_Done]
+  connect_bd_net -net uart_transceiver_0_o_RX_Byte [get_bd_pins ila_0/probe1] [get_bd_pins internoc_ni_axi_master_0/if00_data_in] [get_bd_pins uart_transceiver_0/o_RX_Byte]
+  connect_bd_net -net uart_transceiver_0_o_RX_Done [get_bd_pins ila_0/probe0] [get_bd_pins internoc_ni_axi_master_0/if00_load_in] [get_bd_pins uart_transceiver_0/o_RX_Done]
+  connect_bd_net -net uart_transceiver_0_o_TX_Active [get_bd_pins internoc_ni_axi_master_0/if00_send_busy] [get_bd_pins uart_transceiver_0/o_TX_Active]
+  connect_bd_net -net uart_transceiver_0_o_TX_Done [get_bd_pins internoc_ni_axi_master_0/if00_send_done] [get_bd_pins uart_transceiver_0/o_TX_Done]
   connect_bd_net -net uart_transceiver_0_o_TX_Serial [get_bd_ports UART_TX_0] [get_bd_pins uart_transceiver_0/o_TX_Serial]
-  connect_bd_net -net uart_transceiver_1_o_RX_Byte [get_bd_pins interface_axi_master_1/if00_data_in] [get_bd_pins uart_transceiver_1/o_RX_Byte]
-  connect_bd_net -net uart_transceiver_1_o_RX_Done [get_bd_pins interface_axi_master_1/if00_load_in] [get_bd_pins uart_transceiver_1/o_RX_Done]
-  connect_bd_net -net uart_transceiver_1_o_TX_Active [get_bd_pins interface_axi_master_1/if00_send_busy] [get_bd_pins uart_transceiver_1/o_TX_Active]
-  connect_bd_net -net uart_transceiver_1_o_TX_Done [get_bd_pins interface_axi_master_1/if00_send_done] [get_bd_pins uart_transceiver_1/o_TX_Done]
+  connect_bd_net -net uart_transceiver_1_o_RX_Byte [get_bd_pins internoc_ni_axi_master_1/if00_data_in] [get_bd_pins uart_transceiver_1/o_RX_Byte]
+  connect_bd_net -net uart_transceiver_1_o_RX_Done [get_bd_pins internoc_ni_axi_master_1/if00_load_in] [get_bd_pins uart_transceiver_1/o_RX_Done]
+  connect_bd_net -net uart_transceiver_1_o_TX_Active [get_bd_pins internoc_ni_axi_master_1/if00_send_busy] [get_bd_pins uart_transceiver_1/o_TX_Active]
+  connect_bd_net -net uart_transceiver_1_o_TX_Done [get_bd_pins internoc_ni_axi_master_1/if00_send_done] [get_bd_pins uart_transceiver_1/o_TX_Done]
   connect_bd_net -net uart_transceiver_1_o_TX_Serial [get_bd_ports UART_TX_1] [get_bd_pins uart_transceiver_1/o_TX_Serial]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00001000 -offset 0x00000000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_master_0/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_0_S00_AXI_reg
-  create_bd_addr_seg -range 0x00001000 -offset 0x00010000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_master_1/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_1_S00_AXI_reg
-  create_bd_addr_seg -range 0x00001000 -offset 0x00020000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_master_2/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_2_S00_AXI_reg
-  create_bd_addr_seg -range 0x00001000 -offset 0x00030000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_master_3/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_3_S00_AXI_reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x00100000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs master_comm_mutex/S0_AXI/Reg] SEG_mutex_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x00200000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs master_comm_mutex/S1_AXI/S1_AXI_Reg] SEG_mutex_0_S1_AXI_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x00300000 [get_bd_addr_spaces interface_axi_master_0/M00_AXI] [get_bd_addr_segs master_comm_mutex/S2_AXI/S2_AXI_Reg] SEG_mutex_0_S2_AXI_Reg
-  create_bd_addr_seg -range 0x00001000 -offset 0x00000000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_master_0/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_0_S00_AXI_reg
-  create_bd_addr_seg -range 0x00001000 -offset 0x00010000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_master_1/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_1_S00_AXI_reg
-  create_bd_addr_seg -range 0x00001000 -offset 0x00020000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_master_2/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_2_S00_AXI_reg
-  create_bd_addr_seg -range 0x00001000 -offset 0x00030000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_master_3/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_3_S00_AXI_reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x00100000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs master_comm_mutex/S0_AXI/Reg] SEG_mutex_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x00200000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs master_comm_mutex/S1_AXI/S1_AXI_Reg] SEG_mutex_0_S1_AXI_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x00300000 [get_bd_addr_spaces interface_axi_master_1/M00_AXI] [get_bd_addr_segs master_comm_mutex/S2_AXI/S2_AXI_Reg] SEG_mutex_0_S2_AXI_Reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x00000000 [get_bd_addr_spaces internoc_ni_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_master_0/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x00010000 [get_bd_addr_spaces internoc_ni_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_master_1/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_1_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x00020000 [get_bd_addr_spaces internoc_ni_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_master_2/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_2_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x00030000 [get_bd_addr_spaces internoc_ni_axi_master_0/M00_AXI] [get_bd_addr_segs axi_spi_master_3/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_3_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00100000 [get_bd_addr_spaces internoc_ni_axi_master_0/M00_AXI] [get_bd_addr_segs master_comm_mutex/S0_AXI/Reg] SEG_master_comm_mutex_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00200000 [get_bd_addr_spaces internoc_ni_axi_master_0/M00_AXI] [get_bd_addr_segs master_comm_mutex/S1_AXI/S1_AXI_Reg] SEG_master_comm_mutex_S1_AXI_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00300000 [get_bd_addr_spaces internoc_ni_axi_master_0/M00_AXI] [get_bd_addr_segs master_comm_mutex/S2_AXI/S2_AXI_Reg] SEG_master_comm_mutex_S2_AXI_Reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x00000000 [get_bd_addr_spaces internoc_ni_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_master_0/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_0_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x00010000 [get_bd_addr_spaces internoc_ni_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_master_1/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_1_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x00020000 [get_bd_addr_spaces internoc_ni_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_master_2/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_2_S00_AXI_reg
+  create_bd_addr_seg -range 0x00001000 -offset 0x00030000 [get_bd_addr_spaces internoc_ni_axi_master_1/M00_AXI] [get_bd_addr_segs axi_spi_master_3/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_3_S00_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00100000 [get_bd_addr_spaces internoc_ni_axi_master_1/M00_AXI] [get_bd_addr_segs master_comm_mutex/S0_AXI/Reg] SEG_master_comm_mutex_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00200000 [get_bd_addr_spaces internoc_ni_axi_master_1/M00_AXI] [get_bd_addr_segs master_comm_mutex/S1_AXI/S1_AXI_Reg] SEG_master_comm_mutex_S1_AXI_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00300000 [get_bd_addr_spaces internoc_ni_axi_master_1/M00_AXI] [get_bd_addr_segs master_comm_mutex/S2_AXI/S2_AXI_Reg] SEG_master_comm_mutex_S2_AXI_Reg
   create_bd_addr_seg -range 0x00001000 -offset 0x00000000 [get_bd_addr_spaces jtag_axi_0/Data] [get_bd_addr_segs axi_spi_master_0/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_0_S00_AXI_reg
   create_bd_addr_seg -range 0x00001000 -offset 0x00010000 [get_bd_addr_spaces jtag_axi_0/Data] [get_bd_addr_segs axi_spi_master_1/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_1_S00_AXI_reg
   create_bd_addr_seg -range 0x00001000 -offset 0x00020000 [get_bd_addr_spaces jtag_axi_0/Data] [get_bd_addr_segs axi_spi_master_2/S00_AXI/S00_AXI_reg] SEG_axi_spi_master_2_S00_AXI_reg

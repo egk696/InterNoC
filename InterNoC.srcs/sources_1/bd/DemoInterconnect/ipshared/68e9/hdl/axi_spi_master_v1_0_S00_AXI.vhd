@@ -238,7 +238,7 @@ wr_data_valid:    process (S_AXI_ACLK)
 	    if S_AXI_ARESETN = '0' then
 	      axi_wready <= '0';
 	    else
-	      if (axi_wready = '0' and S_AXI_WVALID = '1' and S_AXI_AWVALID = '1') then
+	      if (axi_wready = '0' and S_AXI_WVALID = '1' and S_AXI_AWVALID = '1' and p2s_busy='0' and spi_tx_rx_busy='0') then
 	          -- slave is ready to accept write data when 
 	          -- there is a valid write address and write data
 	          -- on the write address and data bus. This design 

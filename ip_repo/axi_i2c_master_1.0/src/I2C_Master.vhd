@@ -166,7 +166,7 @@ p_i2c_fsm: process(i_clk)
                 when ST_RX_ACK_1=>
                     if (old_scl_release='0' and scl_release='1') then --rising edge SCL
                         if (sda_in='0') then
-                            
+                            state <= ST_TX_REG_ADDR;
                         end if;
                     end if;
                 
@@ -183,16 +183,46 @@ p_i2c_fsm: process(i_clk)
                     end if;
                 
                 when ST_RX_ACK_2=>
+                    if (old_scl_release='0' and scl_release='1') then --rising edge SCL
+                        if (sda_in='0') then
+                            state <= ST_TX_DATA;
+                        end if;
+                    end if;
                 
                 when ST_TX_DATA=>
+                    if (old_scl_release='0' and scl_release='1') then --rising edge SCL
+                        if (scl_bit_count=0) then
+                            scl_bit_count <= BIT_COUNT;
+                            state <= ST_RX_ACK_2;
+                        else
+                            scl_bit_count <= scl_bit_count - 1;
+                        end if;
+                    elsif (old_scl_release='1' and scl_release='0') then --falling edge SCL
+                        sda_release <= tx_data(scl_bit_count); --shift out TX MSB
+                    end if;
                 
                 when ST_RX_ACK_3=>
+                    if (old_scl_release='0' and scl_release='1') then --rising edge SCL
+                        if (sda_in='0') then
+                            state <= ST_STOP;
+                        end if;
+                    end if;
                 
                 when ST_RX_DATA=>
+                    state <= ST_IDLE;
                 
                 when ST_TX_NACK=>
+                    state <= ST_IDLE;
                 
                 when ST_STOP=>
+                    if (old_scl_release='0' and scl_release='1') then --rising edge SCL
+                        sda_release <= '1';
+                        state <= ST_IDLE;
+                        slv_addr_rw <= (others=>'0'); --pack together with r/w for easier shift
+                        reg_addr <= (others=>'0');
+                        tx_data <= (others=>'0');
+                        tx_done <= '1';
+                    end if;
             end case;
             old_scl_release := scl_release; --register after the case because it is a variable
         end if;

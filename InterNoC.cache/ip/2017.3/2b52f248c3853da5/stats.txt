@@ -1,2 +1,0 @@
-NumberHits:1
-Timestamp: Wed Nov 15 14:40:11 UTC 2017

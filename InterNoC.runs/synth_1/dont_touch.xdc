@@ -8,14 +8,8 @@
 # Block Designs: bd/DemoInterconnect/DemoInterconnect.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect || ORIG_REF_NAME==DemoInterconnect} -quiet] -quiet
 
-# IP: bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_0/DemoInterconnect_interface_axi_master_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_interface_axi_master_0_0 || ORIG_REF_NAME==DemoInterconnect_interface_axi_master_0_0} -quiet] -quiet
-
 # IP: bd/DemoInterconnect/ip/DemoInterconnect_axi_interconnect_0_0/DemoInterconnect_axi_interconnect_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_axi_interconnect_0_0 || ORIG_REF_NAME==DemoInterconnect_axi_interconnect_0_0} -quiet] -quiet
-
-# IP: bd/DemoInterconnect/ip/DemoInterconnect_interface_axi_master_0_1/DemoInterconnect_interface_axi_master_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_interface_axi_master_0_1 || ORIG_REF_NAME==DemoInterconnect_interface_axi_master_0_1} -quiet] -quiet
 
 # IP: bd/DemoInterconnect/ip/DemoInterconnect_jtag_axi_0_0/DemoInterconnect_jtag_axi_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_jtag_axi_0_0 || ORIG_REF_NAME==DemoInterconnect_jtag_axi_0_0} -quiet] -quiet
@@ -49,6 +43,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnec
 
 # IP: bd/DemoInterconnect/ip/DemoInterconnect_ila_0_0/DemoInterconnect_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_ila_0_0 || ORIG_REF_NAME==DemoInterconnect_ila_0_0} -quiet] -quiet
+
+# IP: bd/DemoInterconnect/ip/DemoInterconnect_internoc_ni_axi_master_0_0/DemoInterconnect_internoc_ni_axi_master_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_internoc_ni_axi_master_0_0 || ORIG_REF_NAME==DemoInterconnect_internoc_ni_axi_master_0_0} -quiet] -quiet
+
+# IP: bd/DemoInterconnect/ip/DemoInterconnect_internoc_ni_axi_master_1_0/DemoInterconnect_internoc_ni_axi_master_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_internoc_ni_axi_master_1_0 || ORIG_REF_NAME==DemoInterconnect_internoc_ni_axi_master_1_0} -quiet] -quiet
 
 # IP: bd/DemoInterconnect/ip/DemoInterconnect_auto_pc_0/DemoInterconnect_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==DemoInterconnect_auto_pc_0 || ORIG_REF_NAME==DemoInterconnect_auto_pc_0} -quiet] -quiet

@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Fri Nov 17 15:31:53 2017
+# Process ID: 11512
+# Current directory: D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_v1_0_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9832 D:\Development\FPGA\InterNoC\ip_repo\internoc_ni_axi_master_v1_0_project\internoc_ni_axi_master_v1_0_project.xpr
+# Log file: D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_v1_0_project/vivado.log
+# Journal file: D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_v1_0_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_v1_0_project/internoc_ni_axi_master_v1_0_project.xpr
+update_compile_order -fileset sources_1
+update_files -from_files D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_1.0/src/internoc_pack.vhd -to_files D:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/src/internoc_pack.vhd -filesets [get_filesets *]
+update_files -from_files D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_1.0/src/internoc_ni_type_map.vhd -to_files D:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/src/internoc_ni_type_map.vhd -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+update_files -from_files D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_1.0/hdl/internoc_ni_axi_master_v1_0.vhd -to_files D:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/hdl/internoc_ni_axi_master_v1_0.vhd -filesets [get_filesets *]
+update_files -from_files D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_1.0/hdl/internoc_ni_axi_master_v1_0_M00_AXI.vhd -to_files D:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/hdl/internoc_ni_axi_master_v1_0_M00_AXI.vhd -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+update_files -from_files D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_1.0/component.xml -to_files D:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0/component.xml -filesets [get_filesets *]
+ipx::open_ipxact_file D:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_1.0/component.xml
+set_property core_revision 18 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  {d:/Development/FPGA/InterNoC/ip_repo/internoc_ni_axi_master_1.0 d:/Development/FPGA/InterNoC/ip_repo/axi_i2c_master_1.0 d:/Development/FPGA/InterNoC/ip_repo/uart_transceiver_v1_0 d:/Development/FPGA/InterNoC/ip_repo/interface_axi_master_1.0 d:/Development/FPGA/InterNoC/ip_repo/axi_spi_master_1.0} [current_project]
+update_ip_catalog
+ipx::check_integrity -quiet [ipx::current_core]
+ipx::archive_core {d:\Development\FPGA\InterNoC\ip_repo\internoc_ni_axi_master_1.0\e.kyriakakis_user_internoc_ni_axi_master_1.0.zip} [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]

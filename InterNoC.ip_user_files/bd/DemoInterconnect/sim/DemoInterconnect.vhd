@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
---Date        : Wed Nov 15 21:25:01 2017
---Host        : CHRIS-PC running 64-bit major release  (build 9200)
+--Date        : Fri Nov 17 16:04:47 2017
+--Host        : egk-pc running 64-bit major release  (build 9200)
 --Command     : generate_target DemoInterconnect.bd
 --Design      : DemoInterconnect
 --Purpose     : IP block netlist
@@ -2990,68 +2990,6 @@ architecture STRUCTURE of DemoInterconnect is
     o_TX_Done : out STD_LOGIC
   );
   end component DemoInterconnect_uart_transceiver_0_1;
-  component DemoInterconnect_interface_axi_master_0_0 is
-  port (
-    if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    if00_load_in : in STD_LOGIC;
-    if00_data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    if00_load_out : out STD_LOGIC;
-    if00_send_done : in STD_LOGIC;
-    if00_send_busy : in STD_LOGIC;
-    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axi_awvalid : out STD_LOGIC;
-    m00_axi_awready : in STD_LOGIC;
-    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m00_axi_wvalid : out STD_LOGIC;
-    m00_axi_wready : in STD_LOGIC;
-    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m00_axi_bvalid : in STD_LOGIC;
-    m00_axi_bready : out STD_LOGIC;
-    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axi_arvalid : out STD_LOGIC;
-    m00_axi_arready : in STD_LOGIC;
-    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m00_axi_rvalid : in STD_LOGIC;
-    m00_axi_rready : out STD_LOGIC;
-    m00_axi_aclk : in STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC
-  );
-  end component DemoInterconnect_interface_axi_master_0_0;
-  component DemoInterconnect_interface_axi_master_0_1 is
-  port (
-    if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    if00_load_in : in STD_LOGIC;
-    if00_data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    if00_load_out : out STD_LOGIC;
-    if00_send_done : in STD_LOGIC;
-    if00_send_busy : in STD_LOGIC;
-    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axi_awvalid : out STD_LOGIC;
-    m00_axi_awready : in STD_LOGIC;
-    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m00_axi_wvalid : out STD_LOGIC;
-    m00_axi_wready : in STD_LOGIC;
-    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m00_axi_bvalid : in STD_LOGIC;
-    m00_axi_bready : out STD_LOGIC;
-    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    m00_axi_arvalid : out STD_LOGIC;
-    m00_axi_arready : in STD_LOGIC;
-    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    m00_axi_rvalid : in STD_LOGIC;
-    m00_axi_rready : out STD_LOGIC;
-    m00_axi_aclk : in STD_LOGIC;
-    m00_axi_aresetn : in STD_LOGIC
-  );
-  end component DemoInterconnect_interface_axi_master_0_1;
   component DemoInterconnect_axi_spi_master_0_0 is
   port (
     m_spi_mosi : out STD_LOGIC;
@@ -3174,13 +3112,71 @@ architecture STRUCTURE of DemoInterconnect is
     probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe5 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe7 : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component DemoInterconnect_ila_0_0;
+  component DemoInterconnect_internoc_ni_axi_master_0_0 is
+  port (
+    if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    if00_load_in : in STD_LOGIC;
+    if00_data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    if00_load_out : out STD_LOGIC;
+    if00_send_done : in STD_LOGIC;
+    if00_send_busy : in STD_LOGIC;
+    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_awvalid : out STD_LOGIC;
+    m00_axi_awready : in STD_LOGIC;
+    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axi_wvalid : out STD_LOGIC;
+    m00_axi_wready : in STD_LOGIC;
+    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_bvalid : in STD_LOGIC;
+    m00_axi_bready : out STD_LOGIC;
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_arvalid : out STD_LOGIC;
+    m00_axi_arready : in STD_LOGIC;
+    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_rvalid : in STD_LOGIC;
+    m00_axi_rready : out STD_LOGIC;
+    m00_axi_aclk : in STD_LOGIC;
+    m00_axi_aresetn : in STD_LOGIC
+  );
+  end component DemoInterconnect_internoc_ni_axi_master_0_0;
+  component DemoInterconnect_internoc_ni_axi_master_1_0 is
+  port (
+    if00_data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    if00_load_in : in STD_LOGIC;
+    if00_data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    if00_load_out : out STD_LOGIC;
+    if00_send_done : in STD_LOGIC;
+    if00_send_busy : in STD_LOGIC;
+    m00_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_awvalid : out STD_LOGIC;
+    m00_axi_awready : in STD_LOGIC;
+    m00_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m00_axi_wvalid : out STD_LOGIC;
+    m00_axi_wready : in STD_LOGIC;
+    m00_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_bvalid : in STD_LOGIC;
+    m00_axi_bready : out STD_LOGIC;
+    m00_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m00_axi_arvalid : out STD_LOGIC;
+    m00_axi_arready : in STD_LOGIC;
+    m00_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m00_axi_rvalid : in STD_LOGIC;
+    m00_axi_rready : out STD_LOGIC;
+    m00_axi_aclk : in STD_LOGIC;
+    m00_axi_aresetn : in STD_LOGIC
+  );
+  end component DemoInterconnect_internoc_ni_axi_master_1_0;
   signal UART_RX_0_1 : STD_LOGIC;
   signal UART_RX_1_1 : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3325,48 +3321,48 @@ architecture STRUCTURE of DemoInterconnect is
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
   signal clk_wiz_0_uart : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal interface_axi_master_0_M00_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal interface_axi_master_0_M00_AXI_ARREADY : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_ARVALID : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal interface_axi_master_0_M00_AXI_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal interface_axi_master_0_M00_AXI_AWREADY : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_AWVALID : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_BREADY : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal interface_axi_master_0_M00_AXI_BVALID : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal interface_axi_master_0_M00_AXI_RREADY : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal interface_axi_master_0_M00_AXI_RVALID : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal interface_axi_master_0_M00_AXI_WREADY : STD_LOGIC;
-  signal interface_axi_master_0_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal interface_axi_master_0_M00_AXI_WVALID : STD_LOGIC;
   signal interface_axi_master_0_if00_data_out : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal interface_axi_master_0_if00_load_out : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal interface_axi_master_1_M00_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal interface_axi_master_1_M00_AXI_ARREADY : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_ARVALID : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal interface_axi_master_1_M00_AXI_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal interface_axi_master_1_M00_AXI_AWREADY : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_AWVALID : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_BREADY : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal interface_axi_master_1_M00_AXI_BVALID : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal interface_axi_master_1_M00_AXI_RREADY : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal interface_axi_master_1_M00_AXI_RVALID : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal interface_axi_master_1_M00_AXI_WREADY : STD_LOGIC;
-  signal interface_axi_master_1_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal interface_axi_master_1_M00_AXI_WVALID : STD_LOGIC;
-  signal interface_axi_master_1_if00_data_out : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal interface_axi_master_1_if00_load_out : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_ARREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_ARVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_AWREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_AWVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_BREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_BVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_RREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_RVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_WREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_0_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal internoc_ni_axi_master_0_M00_AXI_WVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_ARREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_ARVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_AWREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_AWVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_BREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_BVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_RREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_RVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_WREADY : STD_LOGIC;
+  signal internoc_ni_axi_master_1_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal internoc_ni_axi_master_1_M00_AXI_WVALID : STD_LOGIC;
+  signal internoc_ni_axi_master_1_if00_data_out : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal internoc_ni_axi_master_1_if00_load_out : STD_LOGIC;
   signal jtag_axi_0_M_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal jtag_axi_0_M_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal jtag_axi_0_M_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -3614,18 +3610,7 @@ ila_0: component DemoInterconnect_ila_0_0
       probe0(0) => uart_transceiver_0_o_RX_Done,
       probe1(7 downto 0) => uart_transceiver_0_o_RX_Byte(7 downto 0),
       probe2(0) => interface_axi_master_0_if00_load_out,
-      probe3(7 downto 0) => interface_axi_master_0_if00_data_out(7 downto 0),
-      probe4(0) => uart_transceiver_1_o_RX_Done,
-      probe5(7) => uart_transceiver_1_o_RX_Done,
-      probe5(6) => uart_transceiver_1_o_RX_Done,
-      probe5(5) => uart_transceiver_1_o_RX_Done,
-      probe5(4) => uart_transceiver_1_o_RX_Done,
-      probe5(3) => uart_transceiver_1_o_RX_Done,
-      probe5(2) => uart_transceiver_1_o_RX_Done,
-      probe5(1) => uart_transceiver_1_o_RX_Done,
-      probe5(0) => uart_transceiver_1_o_RX_Done,
-      probe6(0) => interface_axi_master_1_if00_load_out,
-      probe7(7 downto 0) => interface_axi_master_1_if00_data_out(7 downto 0)
+      probe3(7 downto 0) => interface_axi_master_0_if00_data_out(7 downto 0)
     );
 interconnect: entity work.DemoInterconnect_axi_interconnect_0_0
      port map (
@@ -3774,46 +3759,46 @@ interconnect: entity work.DemoInterconnect_axi_interconnect_0_0
       M06_AXI_wvalid => axi_interconnect_0_M06_AXI_WVALID,
       S00_ACLK => clk_wiz_0_clk_out1,
       S00_ARESETN => clk_wiz_0_locked,
-      S00_AXI_araddr(31 downto 0) => interface_axi_master_0_M00_AXI_ARADDR(31 downto 0),
-      S00_AXI_arprot(2 downto 0) => interface_axi_master_0_M00_AXI_ARPROT(2 downto 0),
-      S00_AXI_arready => interface_axi_master_0_M00_AXI_ARREADY,
-      S00_AXI_arvalid => interface_axi_master_0_M00_AXI_ARVALID,
-      S00_AXI_awaddr(31 downto 0) => interface_axi_master_0_M00_AXI_AWADDR(31 downto 0),
-      S00_AXI_awprot(2 downto 0) => interface_axi_master_0_M00_AXI_AWPROT(2 downto 0),
-      S00_AXI_awready => interface_axi_master_0_M00_AXI_AWREADY,
-      S00_AXI_awvalid => interface_axi_master_0_M00_AXI_AWVALID,
-      S00_AXI_bready => interface_axi_master_0_M00_AXI_BREADY,
-      S00_AXI_bresp(1 downto 0) => interface_axi_master_0_M00_AXI_BRESP(1 downto 0),
-      S00_AXI_bvalid => interface_axi_master_0_M00_AXI_BVALID,
-      S00_AXI_rdata(31 downto 0) => interface_axi_master_0_M00_AXI_RDATA(31 downto 0),
-      S00_AXI_rready => interface_axi_master_0_M00_AXI_RREADY,
-      S00_AXI_rresp(1 downto 0) => interface_axi_master_0_M00_AXI_RRESP(1 downto 0),
-      S00_AXI_rvalid => interface_axi_master_0_M00_AXI_RVALID,
-      S00_AXI_wdata(31 downto 0) => interface_axi_master_0_M00_AXI_WDATA(31 downto 0),
-      S00_AXI_wready => interface_axi_master_0_M00_AXI_WREADY,
-      S00_AXI_wstrb(3 downto 0) => interface_axi_master_0_M00_AXI_WSTRB(3 downto 0),
-      S00_AXI_wvalid => interface_axi_master_0_M00_AXI_WVALID,
+      S00_AXI_araddr(31 downto 0) => internoc_ni_axi_master_0_M00_AXI_ARADDR(31 downto 0),
+      S00_AXI_arprot(2 downto 0) => internoc_ni_axi_master_0_M00_AXI_ARPROT(2 downto 0),
+      S00_AXI_arready => internoc_ni_axi_master_0_M00_AXI_ARREADY,
+      S00_AXI_arvalid => internoc_ni_axi_master_0_M00_AXI_ARVALID,
+      S00_AXI_awaddr(31 downto 0) => internoc_ni_axi_master_0_M00_AXI_AWADDR(31 downto 0),
+      S00_AXI_awprot(2 downto 0) => internoc_ni_axi_master_0_M00_AXI_AWPROT(2 downto 0),
+      S00_AXI_awready => internoc_ni_axi_master_0_M00_AXI_AWREADY,
+      S00_AXI_awvalid => internoc_ni_axi_master_0_M00_AXI_AWVALID,
+      S00_AXI_bready => internoc_ni_axi_master_0_M00_AXI_BREADY,
+      S00_AXI_bresp(1 downto 0) => internoc_ni_axi_master_0_M00_AXI_BRESP(1 downto 0),
+      S00_AXI_bvalid => internoc_ni_axi_master_0_M00_AXI_BVALID,
+      S00_AXI_rdata(31 downto 0) => internoc_ni_axi_master_0_M00_AXI_RDATA(31 downto 0),
+      S00_AXI_rready => internoc_ni_axi_master_0_M00_AXI_RREADY,
+      S00_AXI_rresp(1 downto 0) => internoc_ni_axi_master_0_M00_AXI_RRESP(1 downto 0),
+      S00_AXI_rvalid => internoc_ni_axi_master_0_M00_AXI_RVALID,
+      S00_AXI_wdata(31 downto 0) => internoc_ni_axi_master_0_M00_AXI_WDATA(31 downto 0),
+      S00_AXI_wready => internoc_ni_axi_master_0_M00_AXI_WREADY,
+      S00_AXI_wstrb(3 downto 0) => internoc_ni_axi_master_0_M00_AXI_WSTRB(3 downto 0),
+      S00_AXI_wvalid => internoc_ni_axi_master_0_M00_AXI_WVALID,
       S01_ACLK => clk_wiz_0_clk_out1,
       S01_ARESETN => clk_wiz_0_locked,
-      S01_AXI_araddr(31 downto 0) => interface_axi_master_1_M00_AXI_ARADDR(31 downto 0),
-      S01_AXI_arprot(2 downto 0) => interface_axi_master_1_M00_AXI_ARPROT(2 downto 0),
-      S01_AXI_arready => interface_axi_master_1_M00_AXI_ARREADY,
-      S01_AXI_arvalid => interface_axi_master_1_M00_AXI_ARVALID,
-      S01_AXI_awaddr(31 downto 0) => interface_axi_master_1_M00_AXI_AWADDR(31 downto 0),
-      S01_AXI_awprot(2 downto 0) => interface_axi_master_1_M00_AXI_AWPROT(2 downto 0),
-      S01_AXI_awready => interface_axi_master_1_M00_AXI_AWREADY,
-      S01_AXI_awvalid => interface_axi_master_1_M00_AXI_AWVALID,
-      S01_AXI_bready => interface_axi_master_1_M00_AXI_BREADY,
-      S01_AXI_bresp(1 downto 0) => interface_axi_master_1_M00_AXI_BRESP(1 downto 0),
-      S01_AXI_bvalid => interface_axi_master_1_M00_AXI_BVALID,
-      S01_AXI_rdata(31 downto 0) => interface_axi_master_1_M00_AXI_RDATA(31 downto 0),
-      S01_AXI_rready => interface_axi_master_1_M00_AXI_RREADY,
-      S01_AXI_rresp(1 downto 0) => interface_axi_master_1_M00_AXI_RRESP(1 downto 0),
-      S01_AXI_rvalid => interface_axi_master_1_M00_AXI_RVALID,
-      S01_AXI_wdata(31 downto 0) => interface_axi_master_1_M00_AXI_WDATA(31 downto 0),
-      S01_AXI_wready => interface_axi_master_1_M00_AXI_WREADY,
-      S01_AXI_wstrb(3 downto 0) => interface_axi_master_1_M00_AXI_WSTRB(3 downto 0),
-      S01_AXI_wvalid => interface_axi_master_1_M00_AXI_WVALID,
+      S01_AXI_araddr(31 downto 0) => internoc_ni_axi_master_1_M00_AXI_ARADDR(31 downto 0),
+      S01_AXI_arprot(2 downto 0) => internoc_ni_axi_master_1_M00_AXI_ARPROT(2 downto 0),
+      S01_AXI_arready => internoc_ni_axi_master_1_M00_AXI_ARREADY,
+      S01_AXI_arvalid => internoc_ni_axi_master_1_M00_AXI_ARVALID,
+      S01_AXI_awaddr(31 downto 0) => internoc_ni_axi_master_1_M00_AXI_AWADDR(31 downto 0),
+      S01_AXI_awprot(2 downto 0) => internoc_ni_axi_master_1_M00_AXI_AWPROT(2 downto 0),
+      S01_AXI_awready => internoc_ni_axi_master_1_M00_AXI_AWREADY,
+      S01_AXI_awvalid => internoc_ni_axi_master_1_M00_AXI_AWVALID,
+      S01_AXI_bready => internoc_ni_axi_master_1_M00_AXI_BREADY,
+      S01_AXI_bresp(1 downto 0) => internoc_ni_axi_master_1_M00_AXI_BRESP(1 downto 0),
+      S01_AXI_bvalid => internoc_ni_axi_master_1_M00_AXI_BVALID,
+      S01_AXI_rdata(31 downto 0) => internoc_ni_axi_master_1_M00_AXI_RDATA(31 downto 0),
+      S01_AXI_rready => internoc_ni_axi_master_1_M00_AXI_RREADY,
+      S01_AXI_rresp(1 downto 0) => internoc_ni_axi_master_1_M00_AXI_RRESP(1 downto 0),
+      S01_AXI_rvalid => internoc_ni_axi_master_1_M00_AXI_RVALID,
+      S01_AXI_wdata(31 downto 0) => internoc_ni_axi_master_1_M00_AXI_WDATA(31 downto 0),
+      S01_AXI_wready => internoc_ni_axi_master_1_M00_AXI_WREADY,
+      S01_AXI_wstrb(3 downto 0) => internoc_ni_axi_master_1_M00_AXI_WSTRB(3 downto 0),
+      S01_AXI_wvalid => internoc_ni_axi_master_1_M00_AXI_WVALID,
       S02_ACLK => clk_wiz_0_clk_out1,
       S02_ARESETN => clk_wiz_0_locked,
       S02_AXI_araddr(31 downto 0) => jtag_axi_0_M_AXI_ARADDR(31 downto 0),
@@ -3854,7 +3839,7 @@ interconnect: entity work.DemoInterconnect_axi_interconnect_0_0
       S02_AXI_wstrb(3 downto 0) => jtag_axi_0_M_AXI_WSTRB(3 downto 0),
       S02_AXI_wvalid => jtag_axi_0_M_AXI_WVALID
     );
-interface_axi_master_0: component DemoInterconnect_interface_axi_master_0_0
+internoc_ni_axi_master_0: component DemoInterconnect_internoc_ni_axi_master_0_0
      port map (
       if00_data_in(7 downto 0) => uart_transceiver_0_o_RX_Byte(7 downto 0),
       if00_data_out(7 downto 0) => interface_axi_master_0_if00_data_out(7 downto 0),
@@ -3863,56 +3848,56 @@ interface_axi_master_0: component DemoInterconnect_interface_axi_master_0_0
       if00_send_busy => uart_transceiver_0_o_TX_Active,
       if00_send_done => uart_transceiver_0_o_TX_Done,
       m00_axi_aclk => clk_wiz_0_clk_out1,
-      m00_axi_araddr(31 downto 0) => interface_axi_master_0_M00_AXI_ARADDR(31 downto 0),
+      m00_axi_araddr(31 downto 0) => internoc_ni_axi_master_0_M00_AXI_ARADDR(31 downto 0),
       m00_axi_aresetn => clk_wiz_0_locked,
-      m00_axi_arprot(2 downto 0) => interface_axi_master_0_M00_AXI_ARPROT(2 downto 0),
-      m00_axi_arready => interface_axi_master_0_M00_AXI_ARREADY,
-      m00_axi_arvalid => interface_axi_master_0_M00_AXI_ARVALID,
-      m00_axi_awaddr(31 downto 0) => interface_axi_master_0_M00_AXI_AWADDR(31 downto 0),
-      m00_axi_awprot(2 downto 0) => interface_axi_master_0_M00_AXI_AWPROT(2 downto 0),
-      m00_axi_awready => interface_axi_master_0_M00_AXI_AWREADY,
-      m00_axi_awvalid => interface_axi_master_0_M00_AXI_AWVALID,
-      m00_axi_bready => interface_axi_master_0_M00_AXI_BREADY,
-      m00_axi_bresp(1 downto 0) => interface_axi_master_0_M00_AXI_BRESP(1 downto 0),
-      m00_axi_bvalid => interface_axi_master_0_M00_AXI_BVALID,
-      m00_axi_rdata(31 downto 0) => interface_axi_master_0_M00_AXI_RDATA(31 downto 0),
-      m00_axi_rready => interface_axi_master_0_M00_AXI_RREADY,
-      m00_axi_rresp(1 downto 0) => interface_axi_master_0_M00_AXI_RRESP(1 downto 0),
-      m00_axi_rvalid => interface_axi_master_0_M00_AXI_RVALID,
-      m00_axi_wdata(31 downto 0) => interface_axi_master_0_M00_AXI_WDATA(31 downto 0),
-      m00_axi_wready => interface_axi_master_0_M00_AXI_WREADY,
-      m00_axi_wstrb(3 downto 0) => interface_axi_master_0_M00_AXI_WSTRB(3 downto 0),
-      m00_axi_wvalid => interface_axi_master_0_M00_AXI_WVALID
+      m00_axi_arprot(2 downto 0) => internoc_ni_axi_master_0_M00_AXI_ARPROT(2 downto 0),
+      m00_axi_arready => internoc_ni_axi_master_0_M00_AXI_ARREADY,
+      m00_axi_arvalid => internoc_ni_axi_master_0_M00_AXI_ARVALID,
+      m00_axi_awaddr(31 downto 0) => internoc_ni_axi_master_0_M00_AXI_AWADDR(31 downto 0),
+      m00_axi_awprot(2 downto 0) => internoc_ni_axi_master_0_M00_AXI_AWPROT(2 downto 0),
+      m00_axi_awready => internoc_ni_axi_master_0_M00_AXI_AWREADY,
+      m00_axi_awvalid => internoc_ni_axi_master_0_M00_AXI_AWVALID,
+      m00_axi_bready => internoc_ni_axi_master_0_M00_AXI_BREADY,
+      m00_axi_bresp(1 downto 0) => internoc_ni_axi_master_0_M00_AXI_BRESP(1 downto 0),
+      m00_axi_bvalid => internoc_ni_axi_master_0_M00_AXI_BVALID,
+      m00_axi_rdata(31 downto 0) => internoc_ni_axi_master_0_M00_AXI_RDATA(31 downto 0),
+      m00_axi_rready => internoc_ni_axi_master_0_M00_AXI_RREADY,
+      m00_axi_rresp(1 downto 0) => internoc_ni_axi_master_0_M00_AXI_RRESP(1 downto 0),
+      m00_axi_rvalid => internoc_ni_axi_master_0_M00_AXI_RVALID,
+      m00_axi_wdata(31 downto 0) => internoc_ni_axi_master_0_M00_AXI_WDATA(31 downto 0),
+      m00_axi_wready => internoc_ni_axi_master_0_M00_AXI_WREADY,
+      m00_axi_wstrb(3 downto 0) => internoc_ni_axi_master_0_M00_AXI_WSTRB(3 downto 0),
+      m00_axi_wvalid => internoc_ni_axi_master_0_M00_AXI_WVALID
     );
-interface_axi_master_1: component DemoInterconnect_interface_axi_master_0_1
+internoc_ni_axi_master_1: component DemoInterconnect_internoc_ni_axi_master_1_0
      port map (
       if00_data_in(7 downto 0) => uart_transceiver_1_o_RX_Byte(7 downto 0),
-      if00_data_out(7 downto 0) => interface_axi_master_1_if00_data_out(7 downto 0),
+      if00_data_out(7 downto 0) => internoc_ni_axi_master_1_if00_data_out(7 downto 0),
       if00_load_in => uart_transceiver_1_o_RX_Done,
-      if00_load_out => interface_axi_master_1_if00_load_out,
+      if00_load_out => internoc_ni_axi_master_1_if00_load_out,
       if00_send_busy => uart_transceiver_1_o_TX_Active,
       if00_send_done => uart_transceiver_1_o_TX_Done,
       m00_axi_aclk => clk_wiz_0_clk_out1,
-      m00_axi_araddr(31 downto 0) => interface_axi_master_1_M00_AXI_ARADDR(31 downto 0),
+      m00_axi_araddr(31 downto 0) => internoc_ni_axi_master_1_M00_AXI_ARADDR(31 downto 0),
       m00_axi_aresetn => clk_wiz_0_locked,
-      m00_axi_arprot(2 downto 0) => interface_axi_master_1_M00_AXI_ARPROT(2 downto 0),
-      m00_axi_arready => interface_axi_master_1_M00_AXI_ARREADY,
-      m00_axi_arvalid => interface_axi_master_1_M00_AXI_ARVALID,
-      m00_axi_awaddr(31 downto 0) => interface_axi_master_1_M00_AXI_AWADDR(31 downto 0),
-      m00_axi_awprot(2 downto 0) => interface_axi_master_1_M00_AXI_AWPROT(2 downto 0),
-      m00_axi_awready => interface_axi_master_1_M00_AXI_AWREADY,
-      m00_axi_awvalid => interface_axi_master_1_M00_AXI_AWVALID,
-      m00_axi_bready => interface_axi_master_1_M00_AXI_BREADY,
-      m00_axi_bresp(1 downto 0) => interface_axi_master_1_M00_AXI_BRESP(1 downto 0),
-      m00_axi_bvalid => interface_axi_master_1_M00_AXI_BVALID,
-      m00_axi_rdata(31 downto 0) => interface_axi_master_1_M00_AXI_RDATA(31 downto 0),
-      m00_axi_rready => interface_axi_master_1_M00_AXI_RREADY,
-      m00_axi_rresp(1 downto 0) => interface_axi_master_1_M00_AXI_RRESP(1 downto 0),
-      m00_axi_rvalid => interface_axi_master_1_M00_AXI_RVALID,
-      m00_axi_wdata(31 downto 0) => interface_axi_master_1_M00_AXI_WDATA(31 downto 0),
-      m00_axi_wready => interface_axi_master_1_M00_AXI_WREADY,
-      m00_axi_wstrb(3 downto 0) => interface_axi_master_1_M00_AXI_WSTRB(3 downto 0),
-      m00_axi_wvalid => interface_axi_master_1_M00_AXI_WVALID
+      m00_axi_arprot(2 downto 0) => internoc_ni_axi_master_1_M00_AXI_ARPROT(2 downto 0),
+      m00_axi_arready => internoc_ni_axi_master_1_M00_AXI_ARREADY,
+      m00_axi_arvalid => internoc_ni_axi_master_1_M00_AXI_ARVALID,
+      m00_axi_awaddr(31 downto 0) => internoc_ni_axi_master_1_M00_AXI_AWADDR(31 downto 0),
+      m00_axi_awprot(2 downto 0) => internoc_ni_axi_master_1_M00_AXI_AWPROT(2 downto 0),
+      m00_axi_awready => internoc_ni_axi_master_1_M00_AXI_AWREADY,
+      m00_axi_awvalid => internoc_ni_axi_master_1_M00_AXI_AWVALID,
+      m00_axi_bready => internoc_ni_axi_master_1_M00_AXI_BREADY,
+      m00_axi_bresp(1 downto 0) => internoc_ni_axi_master_1_M00_AXI_BRESP(1 downto 0),
+      m00_axi_bvalid => internoc_ni_axi_master_1_M00_AXI_BVALID,
+      m00_axi_rdata(31 downto 0) => internoc_ni_axi_master_1_M00_AXI_RDATA(31 downto 0),
+      m00_axi_rready => internoc_ni_axi_master_1_M00_AXI_RREADY,
+      m00_axi_rresp(1 downto 0) => internoc_ni_axi_master_1_M00_AXI_RRESP(1 downto 0),
+      m00_axi_rvalid => internoc_ni_axi_master_1_M00_AXI_RVALID,
+      m00_axi_wdata(31 downto 0) => internoc_ni_axi_master_1_M00_AXI_WDATA(31 downto 0),
+      m00_axi_wready => internoc_ni_axi_master_1_M00_AXI_WREADY,
+      m00_axi_wstrb(3 downto 0) => internoc_ni_axi_master_1_M00_AXI_WSTRB(3 downto 0),
+      m00_axi_wvalid => internoc_ni_axi_master_1_M00_AXI_WVALID
     );
 jtag_axi_0: component DemoInterconnect_jtag_axi_0_0
      port map (
@@ -4032,8 +4017,8 @@ uart_transceiver_1: component DemoInterconnect_uart_transceiver_0_1
      port map (
       i_Clk => clk_wiz_0_uart,
       i_RX_Serial => UART_RX_1_1,
-      i_TX_Byte(7 downto 0) => interface_axi_master_1_if00_data_out(7 downto 0),
-      i_TX_Load => interface_axi_master_1_if00_load_out,
+      i_TX_Byte(7 downto 0) => internoc_ni_axi_master_1_if00_data_out(7 downto 0),
+      i_TX_Load => internoc_ni_axi_master_1_if00_load_out,
       o_RX_Byte(7 downto 0) => uart_transceiver_1_o_RX_Byte(7 downto 0),
       o_RX_Done => uart_transceiver_1_o_RX_Done,
       o_TX_Active => uart_transceiver_1_o_TX_Active,

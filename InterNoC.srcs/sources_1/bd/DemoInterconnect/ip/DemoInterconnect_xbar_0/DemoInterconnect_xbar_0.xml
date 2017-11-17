@@ -26247,7 +26247,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 15 02:38:21 UTC 2017</spirit:value>
+            <spirit:value>Fri Nov 17 14:04:51 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -26265,7 +26265,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 15 02:38:21 UTC 2017</spirit:value>
+            <spirit:value>Fri Nov 17 14:04:51 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -26284,7 +26284,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 15 02:38:21 UTC 2017</spirit:value>
+            <spirit:value>Fri Nov 17 14:04:51 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -26318,7 +26318,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 15 02:38:21 UTC 2017</spirit:value>
+            <spirit:value>Fri Nov 17 14:04:51 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -26337,7 +26337,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Nov 15 02:38:21 UTC 2017</spirit:value>
+            <spirit:value>Fri Nov 17 14:04:51 UTC 2017</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -26353,6 +26353,10 @@
           <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Nov 17 14:05:10 UTC 2017</spirit:value>
+          </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>7:5ba7d20d</spirit:value>
@@ -28890,11 +28894,6 @@
         <spirit:name>DemoInterconnect_xbar_0_stub.vhdl</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>stats.txt</spirit:name>
-        <spirit:userFileType>text</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
