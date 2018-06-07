@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Eleftherios Kyriakakis
 -- 
 -- Create Date: 11/02/2017 04:43:17 PM
 -- Design Name: 
